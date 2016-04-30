@@ -1,0 +1,52 @@
+*{
+	font-family: Avenir Next LT Pro;
+}*/
+
+*{
+    margin: 0;
+}
+.bouton a{
+    padding:20px;
+    margin-left: 550px;
+    margin-top: 30px;
+    border-radius : 4em;
+    background-color:rgba(120, 0, 120, 0.2);
+    text-align : center;
+    font-weight: bold;
+    color : white;
+    text-decoration: none;
+    font-size: 2em;
+    position: absolute;
+}
+
+@keyframes slide {
+0% {left: 0%;}
+20% {left: 0%;}
+25% {left: -100%;}
+45% {left: -100%;}
+50% {left: -198%;}
+70% {left: -198%;}
+75% {left: -298%;}
+95% {left: -298%;}
+100% {left: -400%;}
+}
+
+
+.slide figure {
+    position: relative;
+    width: 500%;
+    font-size: 40;
+    animation: 15s slide infinite;
+                }
+
+.slide {
+    overflow: hidden;
+        }
+
+.slide img {
+    width: : 20%;
+    height: 105vh;
+    margin: 0;
+            }
+
+}

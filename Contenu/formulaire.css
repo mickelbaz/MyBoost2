@@ -1,0 +1,56 @@
+
+@font-face{
+	font-family:"Avenir Next LT Pro";
+	src:url(AvenirNextLTPro-Demi.otf);
+}
+*{
+	font-family: Avenir Next LT Pro;
+}*/
+
+p{
+	margin-bottom: 2em;
+  margin-top: 2em;
+	text-align: center;
+  font-size: 40px;
+}
+
+td{
+	width: 13em;
+	height: 3em;
+}
+
+tr{
+	height: 1em;
+}
+tr td{
+	width: 15em;
+}
+
+.B{
+	margin:auto;
+	height:2em;
+	width: 7em;
+	border-radius:4em;
+	background-color:#FF5852;
+	text-align: center;
+	padding-top:0.8em;
+	color:white;
+}
+
+td img {
+	height: 8em;
+	width: 8em;
+}
+
+table{
+	margin-left: 7em;
+}
+
+.A{
+	padding-top: 6.7em;
+	padding-left:1em;
+}
+
+.C{
+  text-align:center;
+}
