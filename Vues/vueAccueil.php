@@ -4,7 +4,7 @@
 
 <div id="bloc_page">
   <p>
-    Bonjour!
+    Bonjour!!
   </p>
 
 
