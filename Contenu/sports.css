@@ -1,0 +1,174 @@
+.top {
+	width : auto;
+	height : 2em;
+	background-color:#33CCFF;
+	color :black;
+	text-align:center;
+	vertical-align:middle;
+	line-height:2em;
+	font-size:6em;
+}
+
+@font-face {
+
+	font-family:"Avenir Next LT Pro";
+	src : url(AvenirNextLTPro-Demi.otf);
+}
+
+* {
+	font-family: Avenir Next LT Pro;
+	margin:auto;
+}
+
+.imgsport {
+	width: 15em;
+	height:15em;
+    transition:transform .3s ease;
+    margin-left:10em;
+}
+
+.imgsport :hover {
+    transform: scale(1.3);
+}
+
+a :hover {
+    transform: scale(1.3);
+}
+
+.sports-aquatiques {
+	background-image:radial-gradient(#33CCFF,black);
+}
+
+.sports-plein-air {
+	background-image:radial-gradient(#33CCFF,black);
+}
+
+.sports-en-salle {
+	background-image:radial-gradient(#33CCFF,black);
+}
+
+.sports-co {
+	background-image:radial-gradient(#33CCFF,black);
+}
+
+
+/*en tête*/
+header{
+    background-attachment: fixed;
+
+}
+.logo, .logos{
+
+    width:300px;
+    height:100px;
+    margin: 10px 0px 0px 10px;
+}
+
+header h1{
+
+    font-weight:bold;
+    color: rgba(120, 0, 120, 0.6);
+    font-size: 1.8em;
+    position:absolute;
+    top:2em;
+    right:16em;
+
+}
+
+header .connexion a{
+	font-size: 1.2em;
+    position:absolute;
+    top:3em;
+    right:10em;
+    text-decoration: none;
+    font-weight: bold;
+    height:2em;
+    width: 5em;
+    border-radius:4em;
+    background-color:rgba(120, 0, 120, 0.2);
+    text-align: center;
+    padding-top:0.8em;
+    color:white;
+
+}
+
+
+/*barre de navigation*/
+header nav{
+    position: relative;
+    background-color: rgba(120, 0, 120, 0.5);
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    margin-top: 1em;
+}
+
+
+nav a{
+    font-size: 1.2em;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 3em;
+    margin-right:3em;
+    padding: 1em;
+
+}
+
+
+nav .nav-item{
+    margin-right: 5em;
+    transition:transform .3s ease;
+}
+
+nav .nav-item:hover{
+    transform: scale(1.4);
+}
+.categorie-sports {
+	color:lightgray;
+}
+
+/*barre de recherche*/
+header .search input{
+    border-radius: 6em;
+    border: grey solid 0.1em;
+    font-size: 1em;
+    outline:none;
+    text-align: center;
+    margin-left:70em;
+    margin-top: 1em;
+}
+
+.effet{
+
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+
+.effet img {
+    border-radius:1em;
+    width:3em;
+    height:3em;
+    vertical-align:middle;
+    transition:transform .3s ease;
+}
+
+
+footer{
+    border-bottom-left-radius: em;
+    border-bottom-right-radius: 12em;
+    background-color:rgba(120,0,120,0.5);
+    color:white;
+}
+
+.effet img:hover {
+    border-radius:3em;
+    transform: scale(1.4);
+} 

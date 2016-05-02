@@ -1,5 +1,5 @@
 <?php require "Vues/header.php"; ?>
-<link rel="stylesheet" href="Activitessportivescss.css" >
+<link rel="stylesheet" href="sports.css" >
 
 
 	<div id="bloc_page">
