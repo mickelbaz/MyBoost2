@@ -4,7 +4,7 @@
 <title>Sports</title>
 
 
-<link rel="stylesheet" href="sportchoisi.css">
+<link rel="stylesheet" href="../Contenu/sportchoisi.css">
 </head>
 
 <fieldset class="sport">
