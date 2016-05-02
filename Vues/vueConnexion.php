@@ -27,7 +27,7 @@
     </div>
     <nav>
         <ul>
-            <li class="nav-item"><a href="/MyBoost/index.php">Accueil</a></li>
+            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
             <li class="nav-item"><a href="#">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                <!--<ul class="sub-nav">
