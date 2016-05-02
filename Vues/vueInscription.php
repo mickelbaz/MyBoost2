@@ -12,8 +12,8 @@
 
 <link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
 
-<FORM name="formulaire" method="post" action="">
-	<p>INSCRIPTION</p>
+<p>INSCRIPTION</p>
+	<FORM name="formulaire" method="post" action="">
 	<table>
 	<tr>
 	<td>Nom :</td>
