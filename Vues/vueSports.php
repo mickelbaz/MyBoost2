@@ -40,7 +40,7 @@
 		<a href=""><img class="imgsport" src="Images/clipart_Volleyball.png"></a>
 	</div>
 	<div>
-			<a class="ajoutsport" href=".php">Ajouter un Sport</a>
+			<a class="ajoutsport" href="controleurSport.php">Ajouter un Sport</a>
 	</div>
         </div>
 <?php require "../Vues/header.php"; ?>
