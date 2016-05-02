@@ -14,7 +14,15 @@
 	font-family:"Avenir Next LT Pro";
 	src : url(AvenirNextLTPro-Demi.otf);
 }
-
+.ajoutsport {
+	border-radius: 35em;
+	border: grey solid 0,8em;
+	font-size: 1em;
+	outline:none;
+	text-align: center;
+	margin-left:200em;
+	margin-top: 2em;
+}
 * {
 	font-family: Avenir Next LT Pro;
 	margin:auto;
@@ -171,4 +179,4 @@ footer{
 .effet img:hover {
     border-radius:3em;
     transform: scale(1.4);
-} 
+}
