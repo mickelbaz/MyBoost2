@@ -35,8 +35,8 @@ header .inscription a{
     right:180px;
     text-decoration: none;
     font-weight: bold;
-    height:1.5em;
-    width: 5em;
+    height:2em;
+    width: 8em;
     border-radius:4em;
     background-color:rgba(120, 0, 120, 0.2);
     text-align: center;
@@ -44,6 +44,8 @@ header .inscription a{
     color:white;
 
 }
+
+
 header .connexion a{
 	font-size: 1.2em;
     position:absolute;
