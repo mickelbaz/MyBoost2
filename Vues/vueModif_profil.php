@@ -21,12 +21,13 @@
     </div>
     <FORM name="modif" method="post" action="">
     <table>
-      <tr><td>Coordonnées :</td></tr>
+      <tr><td>Coordonnées</td><td><INPUT type="button" name="modif1" value="Modifier"></td></tr>
       <tr><tr>
-      <tr><td>Adresse : </td><td>adresse</td>
-        <td>
-        </tr>
-      <tr><td>Code Postal : </td><td>cp</td><td>
+      <tr><td>Adresse : </td><td>adresse</td><td></tr>
+      <tr><td>Code Postal : </td><td>cp</td></tr>
+      <tr><td>Ville : </td><td>ville</td></tr>
+      <tr><td>Pays : </td><td>pays</td></tr>
+
 
     </table>
 
