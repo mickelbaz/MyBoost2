@@ -1,4 +1,4 @@
-<?php require 'Vues/header.php' ?>
+<?php require '../Vues/header.php'; ?>
 
 <link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
 

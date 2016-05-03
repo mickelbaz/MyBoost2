@@ -5,8 +5,10 @@
         <title>MyBoost - Le Site Web</title>
         <link rel="stylesheet" type="text/css" href="../Contenu/headerFooter.css">
     </head>
+    
     <body>
 <div id="bloc_page">
+
 <header>
 
     <div id="titre_principal">
@@ -27,15 +29,15 @@
     </div>
     <nav>
         <ul>
-            <li class="nav-item"><a href="/MyBoost/index.php">Accueil</a></li>
+            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
             <li class="nav-item"><a href="#">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
-               <!--<ul class="sub-nav">
+               <ul class="sub-nav">
                     <li class="sub-nav-item"><a href="#">Sports</a></li>
                     <li class="sub-nav-item"><a href="#">Annuaire</a></li>
                     <li class="sub-nav-item"><a href="#">Groupes</a></li>
                 </ul>
-            </li>-->
+            </li>
             <li class="nav-item"><a href="#">Forum</a></li>
             <li class="nav-item"><a href="#">À Propos</a></li>
         </ul>
@@ -44,6 +46,7 @@
         <input type="text" name="name" placeholder="rechercher">
     </div>
 </header>
+
 </div>
 
 <?php require '../Vues/footer.php'; ?>
