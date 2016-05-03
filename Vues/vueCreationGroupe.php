@@ -32,7 +32,7 @@
 
   <tr>
 	<tr></tr>
-	<td colspan="2">Choisissez votre avatar ou importez une image :</td>
+	<td colspan="2">Choisissez votre avatar :</td>
 	</tr>
 
 	<tr>
