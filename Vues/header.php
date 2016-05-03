@@ -26,7 +26,7 @@
     <nav>
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-            <li class="nav-item"><a href="#">Mon Compte</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurModif_Info.php">Mon Compte</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
                <!--<ul class="sub-nav">
                     <li class="sub-nav-item"><a href="#">Sports</a></li>

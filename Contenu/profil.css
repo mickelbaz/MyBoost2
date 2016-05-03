@@ -107,3 +107,16 @@ h1 .modifier{
 #sportimg:hover{
   transform: scale(1.1);
 }
+
+table{
+  text-align:center;
+}
+
+td{
+	width: 13em;
+	height: 3em;
+}
+
+tr{
+	height: 0.5em;
+}

@@ -44,7 +44,7 @@ function verif(){
           <script language="javascript">alert("Merci de votre inscription !");</script>
           <?php
             ajout();
-            // redirection vers une autre page
+            header("location: ../Vues/vueProfil.php");
         }
       }
     }

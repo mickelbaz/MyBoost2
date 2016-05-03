@@ -42,6 +42,23 @@
                     <td style="padding:1em;">Téléphone</td>
                     <td>06 00 00 00 00</td>
                 </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Adresse</td>
+                    <td>Blabla</td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Code Postal</td>
+                    <td>75 000</td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Ville</td>
+                    <td>Lala</td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Pays</td>
+                    <td>Lala</td>
+                </tr>
+
             </tbody>
         </table>
 
