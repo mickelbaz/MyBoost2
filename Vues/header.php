@@ -35,7 +35,7 @@
                 </ul>
             </li>-->
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="#">À Propos</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos">À Propos</a></li>
         </ul>
     </nav>
     <div class="search">
