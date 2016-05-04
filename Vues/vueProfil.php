@@ -21,9 +21,7 @@
                 <tr style="border-bottom:1px solid black;">
                     <th id="title" colspan="2">Informations</th>
                 </tr>
-
             </thead>
-
             <tbody>
               <tr style="border-bottom:1px solid black;">
                   <td style="padding:1em;">Nom</td>
