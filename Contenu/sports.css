@@ -130,7 +130,7 @@ nav ul{
 
 
 nav .nav-item{
-    position:absolute;
+    margin-right: 5em;
     transition:transform .3s ease;
 }
 
