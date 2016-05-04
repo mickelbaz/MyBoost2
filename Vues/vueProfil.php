@@ -13,8 +13,6 @@
       <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="../Controleurs/controleurModif_profil.php"><img id="logomodif" class="modifier" src="../Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
 
     </div>
-
-
     <div class="info">
       <table style="border-collapse:collapse;">
             <thead>
