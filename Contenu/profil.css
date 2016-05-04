@@ -68,9 +68,10 @@ h1 .modifier{
 
 .info{
   color: #7d8287;
-  margin: 2em;
+  margin:2em;
   display: flex;
   justify-content: center;
+  text-align:center;
 }
 
 .detail{
@@ -108,10 +109,6 @@ h1 .modifier{
   transform: scale(1.1);
 }
 
-table{
-  margin-top:5em;
-  margin-left:23em;
-}
 
 td{
 	width: 13em;
@@ -123,5 +120,5 @@ tr{
 }
 
 .Valider{
-  margin-left:33em;
+  text-align:center;
 }

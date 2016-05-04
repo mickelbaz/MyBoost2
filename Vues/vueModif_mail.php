@@ -10,18 +10,26 @@
 
   <body>
   <?php require '../Vues/header.php'; ?>
+
+  <br></br>
     <div class="content">
     <div class="avatar">
       <img id="avatar" src="../Images/Man_Silhouette.png"/>
     </div>
 
     <div class="top">
-      <h1>PRÉNOM NOM, <span>Ville</span></h1>
+      <h1><?php echo $_SESSION['pseudo'] ?></h1>
     </div>
 
+      <div class="info">
     <FORM name="modif" method="post" action="">
-    <table>
-      <caption>Modifier mon adresse mail :</caption>
+    <table style="border-collapse:collapse;">
+      <thead>
+          <tr style="border-bottom:1px solid black;">
+              <th id="title" colspan="2">Modifier mon adresse mail</th>
+          </tr>
+
+      </thead>
       <tr></tr><tr></tr>
       <tr><td>Ancienne adresse mail : </td><td><INPUT type="text" name="mail_old" /></td></tr>
       <tr><td>Nouvelle adresse mail : </td><td><INPUT type="text" name="mail_new" /></td></tr>
@@ -30,6 +38,7 @@
     <br></br>
     <div class="Valider"><INPUT type="submit" name="valider" value="Valider"/></div>
     </FORM>
+  </div>
 
   </body>
     <?php require '../Vues/footer.php'; ?>

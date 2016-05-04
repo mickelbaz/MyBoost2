@@ -5,7 +5,7 @@
         <title>MyBoost - Le Site Web</title>
         <link rel="stylesheet" type="text/css" href="../Contenu/headerFooter.css">
     </head>
-    
+
     <body>
 <div id="bloc_page">
 
@@ -30,19 +30,7 @@
     <nav>
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-            <li class="nav-item"><a href="#">Mon Compte</a></li>
-<<<<<<< HEAD
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
-               <!--<ul class="sub-nav">
-=======
-            <li class="nav-item"><a href="#">Communauté</a>
-               <ul class="sub-nav">
->>>>>>> 6d9d4b4df0190258122aaa6f9993beff1831dc7e
-                    <li class="sub-nav-item"><a href="#">Sports</a></li>
-                    <li class="sub-nav-item"><a href="#">Annuaire</a></li>
-                    <li class="sub-nav-item"><a href="#">Groupes</a></li>
-                </ul>
-            </li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a></li>
             <li class="nav-item"><a href="#">Forum</a></li>
             <li class="nav-item"><a href="#">À Propos</a></li>
         </ul>

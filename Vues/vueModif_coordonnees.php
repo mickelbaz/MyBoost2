@@ -10,29 +10,36 @@
 
   <body>
     <?php require '../Vues/header.php'; ?>
-
+    <br></br>
     <div class="content">
     <div class="avatar">
       <img id="avatar" src="../Images/Man_Silhouette.png"/>
     </div>
 
     <div class="top">
-      <h1>PRÉNOM NOM, <span>Ville</span></h1>
+      <h1><?php echo $_SESSION['pseudo'] ?></h1>
     </div>
 
+      <div class="info">
     <FORM name="modif" method="post" action="">
-    <table>
-      <caption>Modifier mes coordonnées</caption>
+    <table style="border-collapse:collapse;">
+      <thead>
+          <tr style="border-bottom:1px solid black;">
+              <th id="title" colspan="2">Modifier mes coordonnées</th>
+          </tr>
+
+      </thead>
       <tr></tr><tr></tr>
-      <tr><td>Adresse : </td><td><INPUT type="text" name="adresse" /></td></tr>
-      <tr><td>Code Postal : </td><td><INPUT type="text" name="cp" /></td></tr>
-      <tr><td>Ville : </td><td><INPUT type="text" name="ville" /></td></tr>
-      <tr><td>Pays : </td><td><INPUT type="text" name="pays" /></td></tr>
-      <tr><td>Téléphone : </td><td><INPUT type="text" name="tel" /></td></tr>
+      <tr><td>Adresse : </td><td><INPUT type="text" name="adresse" size="30" value="<?php echo $a[3] ?>"/></td></tr>
+      <tr><td>Code Postal : </td><td><INPUT type="text" name="cp" value="<?php echo $a[8] ?>"/></td></tr>
+      <tr><td>Ville : </td><td><INPUT type="text" name="ville" value="<?php echo $a[6] ?>"/></td></tr>
+      <tr><td>Pays : </td><td><INPUT type="text" name="pays" value="<?php echo $a[7] ?>"/></td></tr>
+      <tr><td>Téléphone : </td><td><INPUT type="text" name="tel" value ="<?php echo $a[5] ?>"/></td></tr>
     </table>
     <br></br>
     <div class="Valider"><INPUT type="submit" name="valider" value="Valider"/></div>
   </FORM>
+</div>
 
   <body>
       <?php require '../Vues/footer.php'; ?>
