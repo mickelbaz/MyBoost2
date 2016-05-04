@@ -18,10 +18,11 @@
 	border-radius: 35em;
 	border: grey solid 0,8em;
 	font-size: 1em;
-	outline:none;
+	outline : none;
 	text-align: center;
-	margin-left:200em;
+	margin-left:300em;
 	margin-top: 2em;
+	text-decoration: none;
 }
 * {
 	font-family: Avenir Next LT Pro;
