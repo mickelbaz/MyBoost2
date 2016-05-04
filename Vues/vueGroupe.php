@@ -4,19 +4,22 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>MyBoost - Le Site Web</title>
+    <title>Mon groupe</title>
   </head>
 
   <body>
-    
-  <div class="content">
-    <div class="avatar">
-      <img id="avatar" src="../Images/Man_Silhouette.png"/>
-    </div>
-  </div>
 
-<div class="top">
-  <h1>PRÉNOM NOM, <span>Ville</span><br><a href="vue/Profil/Modif_compte.php"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
+<div class="head_groupe">
+
+<div class="groupe">
+  <h1 class="name_groupe"><?php echo $_POST['nom']; ?><br><a href="vue/Profil/Modif_compte.php"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
+
+</div>
+
+
+<div class="sport">
+<h1 class="name_sport">NOM DU SPORT</h1>
+</div>
 
 </div>
 

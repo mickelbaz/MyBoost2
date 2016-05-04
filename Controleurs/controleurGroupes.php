@@ -11,12 +11,22 @@ function addgroupe(){
       header("location: ../Vues/vueGroupe.php");
     }
 
+    if ($_POST['sport']=="title") {?>
+      <script language="javascript">alert("Veuillez choisir un sport");</script>
+      <?php
+    }
+
     else {?>
         <script language="javascript">alert("Des champs n'ont pas été remplis");</script>
         <?php
     }
   }
 }
+
+function infogroupe(){
+  
+}
+
 
 $a = addgroupe();
 require_once '../Vues/vueCreationGroupe.php';

@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url(AvenirNextLTPro-Demi.otf);
+}
+
+*{
+  margin: 0em;
+  font-family: Avenir Next LT Pro;
+
+}
+
+
+
+.groupe{
+  background-color: #FF5852;
+  height: 10em;
+  width: auto;
+}
+
+.sport{
+  background-color: green;
+  height: 7em;
+  width: auto;
+}
+
+.name_groupe{
+  color: white;
+  font-size: 3em;
+  text-align: left;
+  padding: 1.07em;
+  margin: 0px;
+}
+
+.name_sport{
+  color: white;
+  font-size: 3em;
+  text-align: left;
+  padding: 2em;
+  margin: 0px;
+}
+
+h1 .modifier{
+  color: white;
+  font-size: 0.4em;
+  text-align: right;
+}
+
+#logomodif{
+  height: 0.9em;
+  width: 0.9em;
+}
