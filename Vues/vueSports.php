@@ -1,4 +1,4 @@
-<?php require "Vues/header.php"; ?>
+<?php require "../Vues/header.php"; ?>
 <link rel="stylesheet" href="../Contenu/sports.css" >
 
 
@@ -43,4 +43,4 @@
 			<a class="ajoutsport" href="controleurSport.php">Ajouter un Sport</a>
 	</div>
         </div>
-<?php require "../Vues/header.php"; ?>
+<?php require "../Vues/footer.php"; ?>
