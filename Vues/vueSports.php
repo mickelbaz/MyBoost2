@@ -1,4 +1,5 @@
-<?php require 'Vues/header.php'; ?>
+<?php require '../Vues/header.php'; ?>
+
 <link rel="stylesheet" href="../Contenu/sports.css" >
 
 
