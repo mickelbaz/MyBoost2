@@ -35,12 +35,12 @@
                 </ul>
             </li>-->
             <li class="nav-item"><a href="#">Forum</a></li>
-<<<<<<< HEAD
-            <li class="nav-item"><a href="#">À Propos</a></li>
+<!--  <<<<<<< HEAD  -->
+          
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
-=======
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos">À Propos</a></li>
->>>>>>> origin/master
+<!--  =======  -->
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos.php">À Propos</a></li>
+<!--  >>>>>>> origin/master  -->
         </ul>
     </nav>
     <div class="search">
