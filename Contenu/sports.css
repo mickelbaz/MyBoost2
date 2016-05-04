@@ -19,7 +19,7 @@
 	border: grey solid 1em;
 	font-size: 1em;
 	text-align: center;
-	margin-left:900em;
+	margin-left:300em;
 	margin-top: 2em;
 	text-decoration: none;
 }
@@ -130,7 +130,7 @@ nav ul{
 
 
 nav .nav-item{
-    margin-right: 5em;
+    position:absolute;
     transition:transform .3s ease;
 }
 

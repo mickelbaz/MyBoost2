@@ -3,8 +3,6 @@
 <link rel="stylesheet" href="../Contenu/sports.css" >
 
 
-	<div id="bloc_page">
-
             <div class="top"><p>Activités</p>
                 </div>
 
@@ -40,8 +38,9 @@
 		<a href=""><img class="imgsport" src="../Images/clipart_Handball.png.jpg"></a>
 		<a href=""><img class="imgsport" src="../Images/clipart_Volleyball.png.jpg"></a>
 	</div>
+
 		<div class="ajoutsport">
 			<a href="controleurSport.php">Proposer un Sport !</a>
 		</div>
-        </div>
+    
 <?php require "../Vues/footer.php"; ?>
