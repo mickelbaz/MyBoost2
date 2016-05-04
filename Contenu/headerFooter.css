@@ -161,7 +161,7 @@ header .search input{
 
 
 .effet img:hover {
-    border-radius:50px;
+    
     transform: scale(1.4);
 }
 
