@@ -39,8 +39,8 @@
 		<a href=""><img class="imgsport" src="../Images/clipart_Handball.png.jpg"></a>
 		<a href=""><img class="imgsport" src="../Images/clipart_Volleyball.png.jpg"></a>
 	</div>
-		<div>
-			<a class="ajoutsport" href="controleurSport.php">Proposer un Sport !</a>
+		<div class="ajoutsport">
+			<a href="controleurSport.php">Proposer un Sport !</a>
 		</div>
         </div>
 <?php require "../Vues/footer.php"; ?>

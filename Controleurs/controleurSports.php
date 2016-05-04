@@ -1,4 +1,4 @@
 <?php
     require '../Vues/vueSports.php';
-    require_once '';
+    require_once '../Modeles/modeleSports.php';
 ?>
