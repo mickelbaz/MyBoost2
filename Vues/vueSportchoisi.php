@@ -1,4 +1,4 @@
-
+<?php require '../Vues/vueSportchoisi.php'; ?>
   <html>
     <head>
       <body>
