@@ -29,7 +29,7 @@
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurProfil.php">Mon Compte</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos">À Propos</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
         </ul>
     </nav>
     <div class="search">
@@ -68,7 +68,7 @@
 
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos">À Propos</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
         </ul>
     </nav>
     <div class="search">
