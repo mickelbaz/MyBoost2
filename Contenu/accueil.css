@@ -3,6 +3,10 @@
 	margin: 0em;
 }
 
+#bloc_page{
+	height: 15em;
+}
+
 .bouton a{
     padding:20px;
     margin-left: 550px;
