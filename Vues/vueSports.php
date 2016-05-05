@@ -1,6 +1,7 @@
 <?php require '../Vues/header.php'; ?>
 
 <link rel="stylesheet" href="../Contenu/sports.css" >
+<link rel="stylesheet" href="../Contenu/headerFooter.css" >
 
             <div class="top"><p>Activités</p>
                 </div>
