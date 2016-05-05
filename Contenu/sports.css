@@ -1,7 +1,13 @@
+* {
+	font-family: Avenir Next LT Pro;
+	margin:0px;
+}
+
+
 .top {
 	width : auto;
 	height : 2em;
-	background-color:#33CCFF;
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),white);
 	color :black;
 	text-align:center;
 	vertical-align:middle;
@@ -14,6 +20,7 @@
 	font-family:"Avenir Next LT Pro";
 	src : url(AvenirNextLTPro-Demi.otf);
 }
+
 .ajoutsport {
 	border-radius: 35em;
 	border: grey solid 1em;
@@ -23,10 +30,7 @@
 	margin-top: 2em;
 	text-decoration: none;
 }
-* {
-	font-family: Avenir Next LT Pro;
-	margin:auto;
-}
+
 
 .imgsport {
 	width: 15em;
@@ -44,19 +48,20 @@ a :hover {
 }
 
 .sports-aquatiques {
-	background-image:radial-gradient(#33CCFF,black);
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 }
 
 .sports-plein-air {
-	background-image:radial-gradient(#33CCFF,black);
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 }
 
 .sports-en-salle {
-	background-image:radial-gradient(#33CCFF,black);
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 }
 
 .sports-co {
-	background-image:radial-gradient(#33CCFF,black);
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
+	margin-bottom: auto;
 }
 
 
@@ -160,6 +165,8 @@ header .search input{
     text-align: center;
 }
 
+
+
 .effet img {
     border-radius:1em;
     width:3em;
@@ -167,13 +174,27 @@ header .search input{
     vertical-align:middle;
     transition:transform .3s ease;
 }
+.proposersport a{
 
+	  font-size: 1.2em;
+		bottom:10em;
+		text-decoration:none;
+		font-weight:bold;
+		height:2em;
+		width:20em;
+		border-radius:4em;
+		background-color:rgba(120, 0, 120, 0.2);
+		text-align: center;
+		padding-top:0.8em;
+		color:black;
+	}
 
 footer{
-    border-bottom-left-radius: em;
+    border-bottom-left-radius: 12em;
     border-bottom-right-radius: 12em;
     background-color:rgba(120,0,120,0.5);
     color:white;
+
 }
 
 .effet img:hover {

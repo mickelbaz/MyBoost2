@@ -148,7 +148,7 @@ header .search input{
 footer{
     postition:relative;
     clear:both;
-    margin-top:50px;
+    margin-top:auto;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color:rgba(120,0,120,0.5);
