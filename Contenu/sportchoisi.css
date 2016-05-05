@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "police";
+  src: url(AvenirNextLTPro-Demi.otf);
+}
+
+*{
+font-family:"police";
+}
+.imgsport {
+ width: 15em;
+ height:15em;
+    transition:transform .3s ease;
+    margin-left:10em;
+}
+
+
+.effet{
+display:block;
+margin-left:auto;
+margin-right:auto;
+text-align: center;
+}
+
+.effet img {
+  -webkit-transition:all 1s ease;
+       -o-transition:all 1s ease;
+	   border-radius:3px;
+	   width:30px;
+	   height:30px;
+	   vertical-align:middle;
+}
+
+
+
+
+hr{
+	border:0;
+	width:75%;
+	color:rgba(120,0,120,0.15);
+	background-color:rgba(120,0,120,0.15);
+	height:5px;
+}
+
+fieldset.sport{
+	width:60%;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	text-align: center;
+	border: 5px solid #1F497D;
+	background: #ddd;
+	border-radius: 5px;
+	padding: 15px;
+}
+fieldset.sport legend{
+    background: #1F497D;
+    color: #fff;
+    padding: 5px 10px ;
+    font-size: 32px;
+    border-radius: 5px;
+    box-shadow: 0 0 0 5px #ddd;
+    margin-left: 20px;
+}
+
+input{
+	font-size:25px;
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:center;
+	background: #1F497D;
+	border-radius: 5px;
+	padding: 15px;
+	color:white;
+}

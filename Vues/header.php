@@ -68,7 +68,16 @@
 
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
             <li class="nav-item"><a href="#">Forum</a></li>
+<<<<<<< HEAD
+<!--  <<<<<<< HEAD  -->
+          
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
+<!--  =======  -->
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos.php">À Propos</a></li>
+<!--  >>>>>>> origin/master  -->
+=======
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
+>>>>>>> origin/master
         </ul>
     </nav>
     <div class="search">
