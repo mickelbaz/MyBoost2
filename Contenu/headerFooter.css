@@ -103,7 +103,6 @@ header nav{
     margin-top: 30px;
 }
 
-
 nav a{
     font-size: 1.2em;
     color: white;
@@ -119,16 +118,6 @@ nav ul{
     margin-right:50px;
     padding: 7px;
 
-}
-
-
-nav .nav-item{
-    margin-right: 80px;
-    transition:transform .3s ease;
-}
-
-nav .nav-item:hover{
-    transform: scale(1.4);
 }
 
 
@@ -161,7 +150,7 @@ header .search input{
 
 
 .effet img:hover {
-    
+
     transform: scale(1.4);
 }
 
