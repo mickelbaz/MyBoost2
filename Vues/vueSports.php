@@ -1,9 +1,9 @@
 <?php require '../Vues/header.php'; ?>
 
 <link rel="stylesheet" href="../Contenu/sports.css" >
-<link rel="stylesheet" href="../Contenu/headerFooter.css" >
 
-            <div class="top"><p>Activités</p>
+
+            <div class="top"><p>SPORTS PROPOSÉS</p>
                 </div>
 
 	<div class="sports-aquatiques"><h2 class="categorie-sports">Sports aquatiques</h2>
@@ -43,6 +43,6 @@
 		</div>
 
 			<div class="proposersport">
-				<a href="/MyBoost2/Controleurs/controleurSports.php">Prososez un sport !</a>
+				<a href="/MyBoost2/Controleurs/controleurSports.php">Proposez un sport !</a>
 			</div>
 <?php require "../Vues/footer.php"; ?>

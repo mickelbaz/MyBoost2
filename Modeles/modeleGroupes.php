@@ -14,9 +14,8 @@ function add_groupe(){
 
 function afficher_groupe(){
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom, sport_groupe FROM groupe WHERE nom=:nom' ) ;
-
-  $req->execute(array(
-      'nom'=>$_POST['nom']));
+  $req=$bdd->prepare('SELECT nom, sport_groupe FROM groupe WHERE nom=?' ) ;
+  $req->execute(array('nom'=>$_POST['nom']));
 }
+
 ?>
