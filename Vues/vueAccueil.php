@@ -1,4 +1,5 @@
-<?php require 'Vues/header.php'; ?>
+
+<?php require '/Vues/header.php'; ?>
 
 <link rel="stylesheet" type="text/css" href="Contenu/accueil.css">
 
@@ -7,4 +8,4 @@
 
 </div>
 
-<?php require 'Vues/footer.php'; ?>
+<?php require '/Vues/footer.php'; ?>

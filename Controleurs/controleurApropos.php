@@ -1,1 +1,3 @@
-<?php require 'Vues/vueAPropos.php' ?>
+<?php
+require '../Vues/vueAPropos.php'
+?>

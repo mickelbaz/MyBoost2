@@ -44,7 +44,9 @@ function verif(){
           <script language="javascript">alert("Merci de votre inscription !");</script>
           <?php
             ajout();
-            // redirection vers une autre page
+            session_start();
+            $_SESSION['pseudo']=$_POST['pseudo'];
+            header("location: ../Controleurs/controleurProfil.php");
         }
       }
     }

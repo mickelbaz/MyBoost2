@@ -68,9 +68,10 @@ h1 .modifier{
 
 .info{
   color: #7d8287;
-  margin: 2em;
+  margin:2em;
   display: flex;
   justify-content: center;
+  text-align:center;
 }
 
 .detail{
@@ -106,4 +107,18 @@ h1 .modifier{
 
 #sportimg:hover{
   transform: scale(1.1);
+}
+
+
+td{
+	width: 13em;
+	height: 3em;
+}
+
+tr{
+	height: 0.5em;
+}
+
+.Valider{
+  text-align:center;
 }

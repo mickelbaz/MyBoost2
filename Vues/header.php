@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,6 +7,43 @@
         <title>MyBoost - Le Site Web</title>
         <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
     </head>
+
+  <?php if(isset($_SESSION['pseudo'])){?>
+    <body>
+<div id="bloc_page">
+<header>
+
+    <div id="titre_principal">
+        <div class="logo">
+                <img src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost"/>
+                <h1>Un sport, un clic, une communauté!</h1>
+            </ul>
+        </div>
+        <div class="deconnexion">
+          <a href="/MyBoost2/Controleurs/controleurDeconnexion.php">Se déconnecter</a>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurProfil.php">Mon Compte</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
+            <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
+        </ul>
+    </nav>
+    <div class="search">
+        <input type="text" name="name" placeholder="rechercher">
+    </div>
+</header>
+</div>
+</body>
+
+  <?php
+  }
+
+  else{ ?>
+
     <body>
 <div id="bloc_page">
 <header>
@@ -26,21 +65,19 @@
     <nav>
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-            <li class="nav-item"><a href="#">Mon Compte</a></li>
+
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
-               <!--<ul class="sub-nav">
-                    <li class="sub-nav-item"><a href="#">Sports</a></li>
-                    <li class="sub-nav-item"><a href="#">Annuaire</a></li>
-                    <li class="sub-nav-item"><a href="#">Groupes</a></li>
-                </ul>
-            </li>-->
             <li class="nav-item"><a href="#">Forum</a></li>
+<<<<<<< HEAD
 <!--  <<<<<<< HEAD  -->
           
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
 <!--  =======  -->
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos.php">À Propos</a></li>
 <!--  >>>>>>> origin/master  -->
+=======
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
+>>>>>>> origin/master
         </ul>
     </nav>
     <div class="search">
@@ -48,3 +85,7 @@
     </div>
 </header>
 </div>
+</body>
+<?php
+  }
+  ?>
