@@ -34,14 +34,16 @@ header .inscription a{
     top:1em;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: #127feb;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding: 0.8em;
+    color:#127feb;
 
 }
 
@@ -52,14 +54,15 @@ header .connexion a{
     top:4em;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: #127feb;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding:0.8em;
+    color:#127feb;
 }
 
 header .deconnexion a{
@@ -68,14 +71,16 @@ header .deconnexion a{
     top:50px;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: red;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding:0.8em;
+    color:red;
 }
 
 
