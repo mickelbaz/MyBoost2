@@ -3,7 +3,7 @@
 
     <link type="text/css" rel="stylesheet" href="../Contenu/profil.css"/>
 
-    <br></br>
+    
     <div class="content">
     <div class="avatar">
       <img id="avatar" src="../Images/Man_Silhouette.png"/>

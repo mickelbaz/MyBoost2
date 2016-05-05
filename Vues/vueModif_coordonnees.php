@@ -10,7 +10,7 @@
 
   <body>
     <?php require '../Vues/header.php'; ?>
-    <br></br>
+  
     <div class="content">
     <div class="avatar">
       <img id="avatar" src="../Images/Man_Silhouette.png"/>

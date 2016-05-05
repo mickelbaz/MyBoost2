@@ -23,6 +23,11 @@
           <a href="/MyBoost2/Controleurs/controleurDeconnexion.php">Se déconnecter</a>
         </div>
     </div>
+
+    <div class="search">
+        <input type="text" name="name" placeholder="rechercher">
+    </div>
+    
     <nav>
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
@@ -33,9 +38,7 @@
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
         </ul>
     </nav>
-    <div class="search">
-        <input type="text" name="name" placeholder="rechercher">
-    </div>
+
 </header>
 </div>
 </body>
