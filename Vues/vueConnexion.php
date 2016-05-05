@@ -32,6 +32,7 @@
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a></li>
             <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
             <li class="nav-item"><a href="#">À Propos</a></li>
         </ul>
     </nav>
