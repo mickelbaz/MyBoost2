@@ -1,5 +1,5 @@
 <?php
     require '../Vues/vueSports.php';
 
-    require '../Modeles/modeleSports.php';
+    //require '../Modeles/modeleSports.php';
 ?>
