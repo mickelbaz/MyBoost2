@@ -1,24 +1,22 @@
-* {
-	font-family: Avenir Next LT Pro;
-	margin:0px;
-}
-
-
-.top {
-	width : auto;
-	height : 2em;
-	background-image:radial-gradient(rgba(120, 0, 120, 0.6),white);
-	color :black;
-	text-align:center;
-	vertical-align:middle;
-	line-height:2em;
-	font-size:6em;
-}
-
 @font-face {
 
 	font-family:"Avenir Next LT Pro";
 	src : url(AvenirNextLTPro-Demi.otf);
+}
+
+* {
+	font-family: Avenir Next LT Pro;
+	margin:0em;
+}
+
+.top {
+	width : auto;
+	height : 2em;
+	background-color:#fda74a;
+	color :white;
+	text-align:center;
+	line-height:2em;
+	font-size:4em;
 }
 
 .ajoutsport {
@@ -35,8 +33,8 @@
 .imgsport {
 	width: 15em;
 	height:15em;
-    transition:transform .3s ease;
-    margin-left:10em;
+  transition:transform .3s ease;
+  margin-left:10em;
 }
 
 .imgsport :hover {

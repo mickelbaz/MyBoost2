@@ -10,17 +10,19 @@
 /*en tête*/
 header{
     background-attachment: fixed;
+    margin-bottom: 0em;
 
 }
+
 .logo, img{
-    width:300px;
+    width:250px;
     height:100px;
     margin: 10px 0px 0px 10px;
 }
 
 header h1{
 
-    font-weight:bold;
+
     color: rgba(120, 0, 120, 0.6);
     font-size: 1.8em;
     position:absolute;
@@ -34,14 +36,16 @@ header .inscription a{
     top:1em;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: #127feb;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding: 0.8em;
+    color:#127feb;
 
 }
 
@@ -52,14 +56,15 @@ header .connexion a{
     top:4em;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: #127feb;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding:0.8em;
+    color:#127feb;
 }
 
 header .deconnexion a{
@@ -68,14 +73,16 @@ header .deconnexion a{
     top:50px;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: red;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding:0.8em;
+    color:red;
 }
 
 
@@ -100,7 +107,7 @@ header nav{
     background-color: rgba(120, 0, 120, 0.5);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin-top: 30px;
+    margin-top: 2em;
 }
 
 nav a{
@@ -141,9 +148,9 @@ header .search input{
 }
 
 .effet img {
-    border-radius:3px;
-    width:50px;
-    height:50px;
+
+    width:2em;
+    height:2em;
     vertical-align:middle;
     transition:transform .3s ease;
 }
@@ -157,10 +164,18 @@ header .search input{
 footer{
     postition:relative;
     clear:both;
-    margin-top:auto;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color:rgba(120,0,120,0.5);
+    margin:auto;
+    padding-top:1em;
+    height: 8em;
+    width: auto;
     color:white;
 
+    background-color:#2b2d2e;
+
+
+}
+
+#credit{
+  font-size: 1em;
+  margin-top: 0.5em;
 }

@@ -5,7 +5,7 @@
 
 <FORM name="formulaire" method="post" action="">
 
-	<p>CRÉATION DU GROUPE</p>
+	<p id="title">CRÉATION D'UN GROUPE</p>
 	<table>
 
 	<tr>

@@ -2,7 +2,7 @@
 
     $_SESSION=array();
     session_destroy();
-    header ("location: ");
+    header ("location: ../Vues/vueAccueil.php");
 
 
 
