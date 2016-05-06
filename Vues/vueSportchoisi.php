@@ -1,4 +1,4 @@
-<?php require '../Vues/vueSportchoisi.php'; ?>
+<?php //require '../Vues/vueSportchoisi.php'; ?>
   <html>
     <head>
       <body>
@@ -22,5 +22,3 @@
 
     </body>
   </html>
-
-  <?php require '../Vues/footer.php'; ?>

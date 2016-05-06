@@ -8,7 +8,7 @@
 
 	<div class="sports-aquatiques"><h2 class="categorie-sports">Sports aquatiques</h2>
 
-		<a href="../Vues/vueSportchoisi.php?sport=<?php echo('Natation');?>"><img class="imgsport" src="../Images/clipart_Natation.png.jpg"></a>
+		<a href="controleurSportchoisi.php?sport=<?php echo('Natation');?>"><img class="imgsport" src="../Images/clipart_Natation.png.jpg"></a>
 		<a href="sportChoisi.php?sport=<?php echo('Wakeboard');?>"><img class="imgsport" src="../Images/clipart_Wakeboard.png.jpg"></a>
 
 	</div>
