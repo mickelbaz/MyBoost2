@@ -10,7 +10,7 @@
 
 	<tr>
 	<td>Nom du groupe</td>
-	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']);}?>"/></td>
+	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']) ;}?>"/></td>
 	</tr>
 
 	<tr>

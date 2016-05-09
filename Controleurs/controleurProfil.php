@@ -19,7 +19,7 @@ function recupgroupe(){
 $b=recupgroupe();
 
 function recupsport(){
-  $req=recup_sport($b[0][0])->fetchAll();
+  $req=recup_sport()->fetchAll();
   return $req;
 }
 
