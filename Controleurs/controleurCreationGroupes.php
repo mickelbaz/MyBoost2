@@ -10,7 +10,7 @@ function addgroupe(){
     if ($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['nb']<>""  && verif_nom_groupe()==true){
       add_groupe();
       add_rejoindre();
-      header("location: ../Vues/vueGroupe.php");
+      header("location: ../Controleurs/controleurPageGroupe.php");
     }
     if ($_POST['sport']=="title") {?>
       <script language="javascript">alert("Veuillez choisir un sport");</script>
@@ -27,11 +27,14 @@ function addgroupe(){
   }
 }
 
+<<<<<<< HEAD:Controleurs/controleurGroupes.php
 function infogroupe(){
   $req=afficher_groupe()->fetch();
   return $req;
 }
 
+=======
+>>>>>>> e9793357244eebc719ada22340347171e92c9120:Controleurs/controleurCreationGroupes.php
 $a = addgroupe();
 require_once '../Vues/vueCreationGroupe.php';
 
