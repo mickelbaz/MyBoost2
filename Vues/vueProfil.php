@@ -20,7 +20,7 @@
                     <th id="title" colspan="2">Informations</th>
                 </tr>
             </thead>
-            
+
             <tbody>
               <tr style="border-bottom:1px solid black;">
                   <td style="padding:1em;">Nom</td>
@@ -92,9 +92,11 @@
         <div class="title_category">
           <h4>Mes sports</h4>
         </div>
+      <div class="images">
 
-        <div class="images">
-          <img id="sportimg" src="../Images/clipart_boxe.png"/>
+        <?php var_dump($c) ?>
+
+          <!--<img id="sportimg" src="../Images/clipart_boxe.png"/>
           <img id="sportimg" src="../Images/clipart_football.png"/>
           <img id="sportimg" src="../Images/clipart_tennis.png"/>
           <img id="sportimg" src="../Images/clipart_jogging.png"/>
@@ -103,7 +105,7 @@
           <img id="sportimg" src="../Images/clipart_basket.png"/>
           <img id="sportimg" src="../Images/clipart_golf.png"/>
           <img id="sportimg" src="../Images/clipart_trampoline.png"/>
-          <img id="sportimg" src="../Images/clipart_muscu.png"/>
+          <img id="sportimg" src="../Images/clipart_muscu.png"/>-->
         </div>
 
       </div>
@@ -115,11 +117,17 @@
         </div>
 
         <div class="images">
-        <img id="sportimg" src="../Images/avatar1.png"/>
+            <?php
+            for ($i=0; $i<count($b); $i++){
+              echo $b[$i][0];
+            }
+            ?>
+
+      <!--  <img id="sportimg" src="../Images/avatar1.png"/>
         <img id="sportimg" src="../Images/avatar2.png"/>
         <img id="sportimg" src="../Images/avatar3.png"/>
         <img id="sportimg" src="../Images/avatar4.png"/>
-        </div>
+      </div>-->
 
       </div>
     </div>
