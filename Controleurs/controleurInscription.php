@@ -41,7 +41,7 @@ function verif(){
             <script language="javascript">alert("Vous devez accepter les conditions générales !");</script>
           <?php
         }else{?>
-          <script language="javascript">alert("Merci de votre inscription !");</script>
+
           <?php
             ajout();
             session_start();

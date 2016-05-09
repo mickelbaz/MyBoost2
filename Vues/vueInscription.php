@@ -13,7 +13,7 @@
 <link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
 
 <p id="title">INSCRIPTION</p>
-	<FORM name="formulaire" method="post" action="">
+	<FORM name="formulaire" method="post" action="#">
 	<table>
 	<tr>
 	<td>Nom :</td>
