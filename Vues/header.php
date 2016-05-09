@@ -32,7 +32,7 @@
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurProfil.php">Mon Compte</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurCreationGroupes.php">Communauté</a>
             <li class="nav-item"><a href="#">Forum</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
@@ -58,7 +58,7 @@
           <div class="image">
             <img src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost"/>
           </div>
-          
+
           <div class="slogan">
             <h1>Un sport, un clic, une communauté!</h1>
           </div>
