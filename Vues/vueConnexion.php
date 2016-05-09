@@ -30,15 +30,20 @@
     <nav>
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a></li>
+            <li class="nav-item"><a href="#">Communauté</a>
+                <ul class="niveau 2">
+                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
+
+
+                </ul>
+            </li>
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
             <li class="nav-item"><a href="#">À Propos</a></li>
         </ul>
     </nav>
-    <div class="search">
+    <!--<div class="search">
         <input type="text" name="name" placeholder="rechercher">
-    </div>
+    </div>-->
 </header>
 
 </div>

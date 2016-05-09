@@ -57,4 +57,10 @@ function recup_sport(){
   return $req;
 }
 
+function liste_groupe(){
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->query('SELECT nom FROM groupe');
+  return $req;
+}
+
 ?>
