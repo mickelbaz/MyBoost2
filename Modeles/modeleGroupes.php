@@ -1,7 +1,7 @@
 <?php
 
 function verif_nom_groupe(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('SELECT nom FROM groupe WHERE nom=?');
     $req->execute(array($_POST['nom']));
     $donnee=$req->fetch();
@@ -32,7 +32,7 @@ function afficher_groupe(){
 }
 
 function add_rejoindre(){
-  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO rejoindre (pseudo,nom_groupe)
   VALUES (:pseudo,:nom_groupe)');
 
@@ -42,16 +42,16 @@ function add_rejoindre(){
 }
 
 function recup_groupe(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nom_groupe FROM rejoindre WHERE pseudo=?');
   $req->execute(array($_SESSION['pseudo']));
   return $req;
 }
 
-function recup_sport($var){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+function recup_sport(){
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT sport_groupe FROM groupe WHERE nom=?');
-  $req->execute(array($var));
+  $req->execute(array($_POST['nom']));
   return $req;
 }
 
