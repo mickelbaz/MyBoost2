@@ -57,7 +57,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/vueForum.php">Forum</a></li>
+            <li class="nav-item"><a href="/MyBoost2/Vues/vueForum.php">Forum</a></li>
 
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
         </ul>
@@ -110,15 +110,13 @@
     <nav>
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-<<<<<<< HEAD
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurCreationGroupes.php">Communauté</a>
-=======
+
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
                   <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
                 </ul>
             </li>
->>>>>>> 0282a7c6ef9caeae878ce03a2df053a31e72c2f0
+
             <li class="nav-item"><a href="#">Forum</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos.php">À Propos</a></li>
         </ul>

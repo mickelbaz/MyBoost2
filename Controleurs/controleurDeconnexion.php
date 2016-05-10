@@ -1,8 +1,8 @@
 <?php
 
-    $_SESSION=array();
+    $_SESSION = array();
     session_destroy();
-    header ("location: ../Vues/vueAccueil.php");
+    header ("location: ../Controleurs/controleurAccueil.php");
 
 
 

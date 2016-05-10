@@ -10,6 +10,12 @@ function affiche_liste(){
   return $liste;
 }
 
+function rejoindregroupe(){
+    if (isset($_POST['rejoindre']) && $_POST['rejoindre']<>""){
+
+    }
+}
+
 $liste=affiche_liste();
 
 
