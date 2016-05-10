@@ -56,7 +56,8 @@
                   <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurCreationGroupes.php">Créer un groupe</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="#">Forum</a></li>
+
+            <li class="nav-item"><a href="/MyBoost2/Controleurs/vueForum.php">Forum</a></li>
 
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
         </ul>
