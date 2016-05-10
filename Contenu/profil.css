@@ -117,3 +117,8 @@ tr{
 .Valider{
   text-align:center;
 }
+
+.groupe{
+  display:block;
+  padding:0.5em;
+}
