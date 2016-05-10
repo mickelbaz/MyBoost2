@@ -42,7 +42,6 @@ header .inscription a{
     top:1em;
     right:180px;
     text-decoration: none;
-
     height:1em;
     width: 8em;
     border-style: solid;
@@ -76,10 +75,9 @@ header .connexion a{
 header .deconnexion a{
 	font-size: 1.2em;
     position:absolute;
-    top:50px;
+    top:40px;
     right:180px;
     text-decoration: none;
-
     height:1em;
     width: 8em;
     border-style: solid;
@@ -91,19 +89,16 @@ header .deconnexion a{
     color:red;
 }
 
-
-
-
-
 .champ1{
   position:absolute;
-  top:35px;
-  right:150px;
+  top:2.5em;
+  right:180px;
 }
+
 .champ2{
   position:absolute;
-  top:120px;
-  right:187px;
+  top:8em;
+  right:13.8em;
 }
 
 
@@ -131,8 +126,19 @@ nav ul{
     margin-right:50px;
     padding: 7px;
 
-}
 
+}
+ ul ul {
+   display:none;
+ }
+
+li:hover ul, li.sfhover ul  {
+  display:block;
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
 
 /*barre de recherche*/
 header .search input{

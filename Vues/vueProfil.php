@@ -6,7 +6,6 @@
 
     <div class="content">
 
-
     <div class="top">
       <div class="avatar">
         <img id="avatar" src="../Images/Man_Silhouette.png"/>
@@ -94,7 +93,7 @@
         </div>
       <div class="images">
 
-        <?php var_dump($c) ?>
+
 
           <!--<img id="sportimg" src="../Images/clipart_boxe.png"/>
           <img id="sportimg" src="../Images/clipart_football.png"/>
@@ -118,8 +117,9 @@
 
         <div class="images">
             <?php
-            for ($i=0; $i<count($b); $i++){
-              echo $b[$i][0];
+            for ($i=0; $i<count($b); $i++){?>
+              <div class=groupe><?php echo $b[$i][0]; ?></div>
+              <?php
             }
             ?>
 
@@ -133,5 +133,6 @@
     </div>
 
 </div>
+<br></br>
 
 <?php require "../Vues/footer.php"; ?>

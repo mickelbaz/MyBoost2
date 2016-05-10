@@ -12,6 +12,12 @@
 	font-size:40px;
 }
 
+#sous_titre{
+	text-align:right;
+	font-size:0.9em;
+	font-style:italic;
+}
+
 td{
 	width: 13em;
 	height: 3em;

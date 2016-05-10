@@ -4,6 +4,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 
 require_once '../Modeles/modeleGroupes.php';
+
 function addgroupe(){
   if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
     if ($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['nb']<>""  && verif_nom_groupe()==true){
@@ -26,6 +27,10 @@ function addgroupe(){
   }
 }
 
+
 $a = addgroupe();
 require_once '../Vues/vueCreationGroupe.php';
+
+
+
 ?>

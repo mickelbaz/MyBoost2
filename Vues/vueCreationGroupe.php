@@ -69,5 +69,6 @@
 	<!--<div class="B">Valider</div>-->
 	<div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 	</FORM>
+	<br></br>
 
 <?php require '../Vues/footer.php'; ?>

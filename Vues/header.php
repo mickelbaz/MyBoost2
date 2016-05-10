@@ -6,6 +6,22 @@
         <meta charset="utf-8" />
         <title>MyBoost - Le Site Web</title>
         <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
+
+        <script type="text/javascript">
+        sfHover = function() {
+          var sfEls = document.getElementById("menu").getElementsByTagName("LI");
+          for (var i=0; i<sfEls.length; i++) {
+                  sfEls[i].onmouseover=function() {
+                          this.className+=" sfhover";
+                  }
+                  sfEls[i].onmouseout=function() {
+                          this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
+                  }
+          }
+  }
+  if (window.attachEvent) window.attachEvent("onload", sfHover);
+</script>
+
     </head>
 
   <?php if(isset($_SESSION['pseudo'])){?>
@@ -29,12 +45,20 @@
     </div>
 
     <nav>
-        <ul>
+        <ul class="menu">
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurProfil.php">Mon Compte</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurCreationGroupes.php">Communauté</a>
-            <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
+
+            <li class="nav-item"><a href="#">Communauté</a>
+                <ul class="niveau 2">
+                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
+                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurListeGroupes.php">Liste des groupes</a></li>
+                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurCreationGroupes.php">Créer un groupe</a></li>
+                </ul>
+            </li>
+
+            <li class="nav-item"><a href="/MyBoost2/Vues/vueForum.php">Forum</a></li>
+
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
         </ul>
     </nav>
@@ -77,9 +101,9 @@
 
         </div>
 <br></br>
-        <div class="search">
+        <!--<div class="search">
             <input type="text" name="name" placeholder="rechercher">
-        </div>
+        </div>-->
     </div>
 
 
@@ -87,9 +111,13 @@
         <ul>
             <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
 
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurGroupes.php">Communauté</a>
+            <li class="nav-item"><a href="#">Communauté</a>
+                <ul class="niveau 2">
+                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
+                </ul>
+            </li>
+
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Sports</a>
             <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos.php">À Propos</a></li>
         </ul>
     </nav>
