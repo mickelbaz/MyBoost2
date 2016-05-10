@@ -1,16 +1,16 @@
-<?php require "../Vues/header.php"; ?>
+<?php require "Vues/header.php"; ?>
 
 
-    <link type="text/css" rel="stylesheet" href="../Contenu/profil.css"/>
+    <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
 
 
     <div class="content">
 
     <div class="top">
       <div class="avatar">
-        <img id="avatar" src="../Images/Man_Silhouette.png"/>
+        <img id="avatar" src="Images/Man_Silhouette.png"/>
       </div>
-      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="../Controleurs/controleurModif_profil.php"><img id="logomodif" class="modifier" src="../Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
+      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=modif"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
     </div>
     <div class="info">
       <table class="infoperso" style="border-collapse:collapse;">
@@ -140,4 +140,4 @@
 </div>
 <br></br>
 
-<?php require "../Vues/footer.php"; ?>
+<?php require "Vues/footer.php"; ?>

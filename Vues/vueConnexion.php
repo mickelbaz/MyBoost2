@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <title>MyBoost - Le Site Web</title>
-        <link rel="stylesheet" type="text/css" href="../Contenu/headerFooter.css">
+        <link rel="stylesheet" type="text/css" href="Contenu/headerFooter.css">
     </head>
 
     <body>
@@ -13,7 +13,7 @@
 
     <div id="titre_principal">
         <div class="logo">
-                <img src="../Images/Logo4.png" alt="Logo de site web MyBoost"/>
+                <img src="Images/Logo4.png" alt="Logo de site web MyBoost"/>
                 <h1>Un sport, un clic, une communauté!</h1>
             </ul>
         </div>
@@ -29,10 +29,10 @@
     </div>
     <nav>
         <ul>
-            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
+            <li class="nav-item"><a href="index.php">Accueil</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
-                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
+                  <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
 
 
                 </ul>
@@ -48,4 +48,4 @@
 
 </div>
 
-<?php require '../Vues/footer.php'; ?>
+<?php require 'Vues/footer.php'; ?>

@@ -12,7 +12,9 @@
 <div class="head_groupe">
 
 <div class="groupe">
+
   <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="vue/Profil/Modif_compte.php"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a></h1>
+
 
 </div>
 

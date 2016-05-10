@@ -4,7 +4,7 @@ error_reporting(E_ALL & ~E_NOTICE); ?>
 <?php
 
 require 'Modeles/modeleUtilisateurs.php';
-require 'Modeles/modeleGroupes.php';
+//require 'Modeles/modeleGroupes.php';
 
 function recup(){
   $req=recup_infos()->fetch();
@@ -29,6 +29,5 @@ function recup_all(){
   $b=recupgroupe();
   $c=recupsport();
   require 'Vues/vueProfil.php';
-
 }
  ?>

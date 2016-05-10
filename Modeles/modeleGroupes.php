@@ -14,9 +14,11 @@ function verif_nom_groupe(){
 }
 
 function add_groupe(){
+
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO groupe (nom,description,nb_max,sport_groupe,pseudo_createur)
   VALUES (:nom,:description,:nb_max,:sport_groupe, :pseudo)');
+
 
   $req->execute(array(
       'nom'=>$_POST['nom'],
@@ -25,6 +27,7 @@ function add_groupe(){
       'sport_groupe'=>$_POST['sport_groupe'],
     'pseudo'=>$_SESSION['pseudo']));
 }
+
 
 function afficher_groupe($nom_groupe){
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
@@ -51,6 +54,7 @@ function recup_groupe(){
 }
 
 function recup_sport(){
+
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT DISTINCT (sport_groupe) FROM groupe WHERE nom IN (SELECT nom_groupe FROM rejoindre WHERE pseudo=?)');
   $req->execute(array($_SESSION['pseudo']));

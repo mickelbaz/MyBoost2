@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Modeles/modeleUtilisateurs.php';
+require_once 'Modeles/modeleUtilisateurs.php';
 
 function verif(){
 
@@ -41,12 +41,12 @@ function verif(){
             <script language="javascript">alert("Vous devez accepter les conditions générales !");</script>
           <?php
         }else{?>
-          <script language="javascript">alert("Merci de votre inscription !");</script>
+
           <?php
             ajout();
             session_start();
             $_SESSION['pseudo']=$_POST['pseudo'];
-            header("location: ../Controleurs/controleurProfil.php");
+            header("location: index.php?page=profil");
         }
       }
     }
@@ -55,9 +55,10 @@ function verif(){
         <?php
       }
     }
+      require_once 'Vues/vueInscription.php';
   }
 
-  $testverif = verif();
-  require_once '../Vues/vueInscription.php';
+
+
 
 ?>
