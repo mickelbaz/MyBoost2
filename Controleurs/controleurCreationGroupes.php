@@ -27,14 +27,7 @@ function addgroupe(){
   }
 }
 
-<<<<<<< HEAD:Controleurs/controleurGroupes.php
-function infogroupe(){
-  $req=afficher_groupe()->fetch();
-  return $req;
-}
 
-=======
->>>>>>> e9793357244eebc719ada22340347171e92c9120:Controleurs/controleurCreationGroupes.php
 $a = addgroupe();
 require_once '../Vues/vueCreationGroupe.php';
 
