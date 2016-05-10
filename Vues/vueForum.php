@@ -1,6 +1,6 @@
 <?php require 'Vues/header.php' ?>
 
-<link rel="stylesheet" type="text/css" href="../Contenu/ForumCSS.css">
+<link rel="stylesheet" type="text/css" href="../Contenu/forum.css">
 
 <body>
     <div class="formulaire">
