@@ -46,8 +46,8 @@
 
     <nav>
         <ul class="menu">
-            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurProfil.php">Mon Compte</a></li>
+            <li class="nav-item"><a href="index.php">Accueil</a></li>
+            <li class="nav-item"><a href="index.php?page=profil">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
                   <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>

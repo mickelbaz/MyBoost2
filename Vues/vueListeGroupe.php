@@ -11,13 +11,21 @@
   </thead>
 
   <tbody>
-    <?php for($i=0;$i<count($liste);$i++){?>
-      <tr style="border-bottom:1px solid black;">
-          <td style="padding:1em;"><?php echo $liste[$i][0]; ?></td>
-          <td><INPUT type="button" name="voir" value="Voir la page"/></td>
-          <td><INPUT type="button" name="rejoindre" value="Rejoindre ce groupe"/></td>
-      </tr>
+
+
     <?php
+      for($i=0;$i<count($liste);$i++){?>
+        <tr style="border-bottom:1px solid black;">
+        <td style="padding:1em;"><?php echo $liste[$i][0]; ?></td>
+        <td><a href="index.php?page=groupe&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
+        <form name="rejoindre" method="post" action="">
+        <td><INPUT type="submit" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></td></form>
+        </tr>
+        <?php
+        if(count($liste)==0){?>
+          <tr><td colspan="3">Il n'y a pas de groupes disponibles</td></tr>
+          <?php
+        }
     } ?>
 
     </tbody>

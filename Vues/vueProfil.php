@@ -92,6 +92,11 @@
           <h4>Mes sports</h4>
         </div>
       <div class="images">
+        <?php
+        for ($i=0; $i<count($c); $i++){?>
+          <div class=groupe><?php echo $c[$i][0]; ?></div>
+          <?php
+        }?>
 
 
 
@@ -118,7 +123,7 @@
         <div class="images">
             <?php
             for ($i=0; $i<count($b); $i++){?>
-              <div class=groupe><?php echo $b[$i][0]; ?></div>
+              <a href="index.php?page=groupe&groupe=<?php echo $b[$i][0] ?>"><div class=groupe><?php echo $b[$i][0]; ?></div></a>
               <?php
             }
             ?>
