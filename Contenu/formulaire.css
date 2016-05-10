@@ -5,13 +5,17 @@
 }
 *{
 	font-family: Avenir Next LT Pro;
-}*/
+}
 
-p{
-	margin-bottom: 2em;
-  margin-top: 2em;
-	text-align: center;
-  font-size: 40px;
+#title{
+	text-align:center;
+	font-size:40px;
+}
+
+#sous_titre{
+	text-align:right;
+	font-size:0.9em;
+	font-style:italic;
 }
 
 td{

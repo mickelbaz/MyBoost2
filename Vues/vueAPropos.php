@@ -1,28 +1,22 @@
-<?php require 'Vues/header.php'; ?>
+<?php require '../Vues/header.php'; ?>
 <p>
 <h1> A quoi sert ce site ? </h1>
 Afin de faciliter la mise en place création de cours de sport, MyBoost te met en contact avec d'autres personnes qui partagent la même passion que toi.
 </p>
 
 <p> <h1> Qui sommes nous ? </h1>
-Nous sommes 7 étudiants en école d'ingénieur, passionez de sport nous avons voulu faciliter les rencontres permettant l'organisation d'évènements sportifs.
+Nous sommes 7 étudiants en école d'ingénieur. Passionés de sport, nous avons voulu faciliter les rencontres permettant l'organisation d'événements sportifs.
 </p>
 
 <p> <h1> Où sommes nous ? </h1>
-Nous sommes localisés au 26, rue Notre Dame des champs 75116 PARIS.
-<a href=""<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-<div style='overflow:hidden;height:400px;width:600px;'>
-  <div id='gmap_canvas' style='height:400px;width:600px;'></div>
-  <div><small><a href="http://embedgooglemaps.com">
-    google maps carte							</a></small></div><div><small><a href="http://youtubeembedcode.com">youtube generator</a>
-    </small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
-    <script type='text/javascript'>function init_map(){var myOptions = {zoom:10,center:new google.maps.LatLng(48.8453849,2.328134900000009),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.8453849,2.328134900000009)});infowindow = new google.maps.InfoWindow({content:'<strong>MyBoost</strong><br>28, rue notre dame des champs<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-
+Nous sommes localisés au 23, rue Notre Dame des champs 75116 PARIS.
+<br></br>
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.6676487334275!2d2.3260469153102514!3d48.84547780957049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671ce3e69774f%3A0xab5ab8e13f32f28a!2s23+Rue+Notre+Dame+des+Champs%2C+75006+Paris!5e0!3m2!1sfr!2sfr!4v1462483813413" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 </p>
 
 <p> <h1> Comment nous contacter ? </h1>
-Vous pouvez nous envoyer des messages à l'adresse suivante : contact@myboost.fr
+Vous pouvez nous envoyer des messages à l'adresse suivante : contact@myboost.fr. <br>
 Vous pouvez également nous retrouver sur les réseaux sociaux.
 </p>
 
-<?php require 'Vues/footer.php'; ?>
+<?php require '../Vues/footer.php'; ?>

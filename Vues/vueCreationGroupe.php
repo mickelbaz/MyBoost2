@@ -5,19 +5,19 @@
 
 <FORM name="formulaire" method="post" action="">
 
-	<p>CRÉATION DU GROUPE</p>
+	<p id="title">CRÉATION D'UN GROUPE</p>
 	<table>
 
 	<tr>
 	<td>Nom du groupe</td>
-	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']);}?>"/></td>
+	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']) ;}?>"/></td>
 	</tr>
 
 	<tr>
 	<td>Sport du groupe</td>
   <td>
-    <SELECT name="sport">
-      <OPTION value="title" selected>Sport
+    <SELECT name="sport_groupe">
+      <OPTION value="title" selected>--- Sport ---
       <OPTION>Tennis
       <OPTION>Football
       <OPTION>Ping-Pong
@@ -32,7 +32,7 @@
 
   <tr>
 	<tr></tr>
-	<td colspan="2">Choisissez votre avatar ou importez une image :</td>
+	<td colspan="2">Choisissez votre avatar :</td>
 	</tr>
 
 	<tr>
@@ -49,7 +49,7 @@
       Nombre de participants max
     </td>
     <td>
-      <INPUT type="text" name="nb" value="<?php if(isset($_POST['nb'])){ echo htmlentities($_POST['nb']);}?>"/>
+      <INPUT type="number" name="nb" value="<?php if(isset($_POST['nb'])){ echo htmlentities($_POST['nb']);}?>" min="1" max="110"/>
     </td>
   </tr>
 
@@ -59,7 +59,7 @@
     </td>
 
     <td>
-      <INPUT type="text" name="description" value="<?php if(isset($_POST['description'])){ echo htmlentities($_POST['description']);}?>"/>
+      <textarea name="description" rows="4" cols="45"></textarea>
     </td>
   </tr>
 
@@ -69,5 +69,6 @@
 	<!--<div class="B">Valider</div>-->
 	<div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 	</FORM>
+	<br></br>
 
 <?php require '../Vues/footer.php'; ?>

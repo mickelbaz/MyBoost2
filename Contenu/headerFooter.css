@@ -10,17 +10,25 @@
 /*en tête*/
 header{
     background-attachment: fixed;
+    margin-bottom: 0em;
 
 }
+
 .logo, img{
-    width:300px;
+    width:250px;
     height:100px;
+    margin: 10px 0px 0px 10px;
+}
+
+img#sport{
+    width:250px;
+    height:250px;
     margin: 10px 0px 0px 10px;
 }
 
 header h1{
 
-    font-weight:bold;
+
     color: rgba(120, 0, 120, 0.6);
     font-size: 1.8em;
     position:absolute;
@@ -31,17 +39,18 @@ header h1{
 header .inscription a{
 	font-size: 1.2em;
     position:absolute;
-    top:10px;
+    top:1em;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: #127feb;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding: 0.8em;
+    color:#127feb;
 
 }
 
@@ -49,28 +58,47 @@ header .inscription a{
 header .connexion a{
 	font-size: 1.2em;
     position:absolute;
-    top:75px;
+    top:4em;
     right:180px;
     text-decoration: none;
-    font-weight: bold;
-    height:2em;
+    height:1em;
     width: 8em;
-    border-radius:4em;
-    background-color:rgba(120, 0, 120, 0.2);
+    border-style: solid;
+    border-radius:1em;
+    border-color: #127feb;
+    border-width: thin;
     text-align: center;
-    padding-top:0.8em;
-    color:white;
+    padding:0.8em;
+    color:#127feb;
+}
+
+header .deconnexion a{
+	font-size: 1.2em;
+    position:absolute;
+    top:40px;
+    right:180px;
+    text-decoration: none;
+    height:1em;
+    width: 8em;
+    border-style: solid;
+    border-radius:1em;
+    border-color: red;
+    border-width: thin;
+    text-align: center;
+    padding:0.8em;
+    color:red;
 }
 
 .champ1{
   position:absolute;
-  top:35px;
-  right:150px;
+  top:2.5em;
+  right:180px;
 }
+
 .champ2{
   position:absolute;
-  top:120px;
-  right:187px;
+  top:8em;
+  right:13.8em;
 }
 
 
@@ -80,9 +108,8 @@ header nav{
     background-color: rgba(120, 0, 120, 0.5);
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    margin-top: 30px;
+    margin-top: 2em;
 }
-
 
 nav a{
     font-size: 1.2em;
@@ -99,18 +126,19 @@ nav ul{
     margin-right:50px;
     padding: 7px;
 
+
 }
+ ul ul {
+   display:none;
+ }
 
-
-nav .nav-item{
-    margin-right: 80px;
-    transition:transform .3s ease;
+li:hover ul, li.sfhover ul  {
+  display:block;
+  font-size: 0.8em;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
 }
-
-nav .nav-item:hover{
-    transform: scale(1.4);
-}
-
 
 /*barre de recherche*/
 header .search input{
@@ -132,26 +160,34 @@ header .search input{
 }
 
 .effet img {
-    border-radius:3px;
-    width:50px;
-    height:50px;
+
+    width:2em;
+    height:2em;
     vertical-align:middle;
     transition:transform .3s ease;
 }
 
 
 .effet img:hover {
-    border-radius:50px;
+
     transform: scale(1.4);
 }
 
 footer{
     postition:relative;
     clear:both;
-    margin-top:50px;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-    background-color:rgba(120,0,120,0.5);
+    margin:auto;
+    padding-top:1em;
+    height: 8em;
+    width: auto;
     color:white;
 
+    background-color:#2b2d2e;
+
+
+}
+
+#credit{
+  font-size: 1em;
+  margin-top: 0.5em;
 }

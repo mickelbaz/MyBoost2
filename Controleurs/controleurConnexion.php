@@ -12,6 +12,7 @@ function connect(){
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
         echo 'Vous êtes connecté';
+        header("location: /MyBoost2/index.php");
       }
     }
 }

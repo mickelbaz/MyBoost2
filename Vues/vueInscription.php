@@ -12,8 +12,10 @@
 
 <link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
 
-<FORM name="formulaire" method="post" action="">
-	<p>INSCRIPTION</p>
+<p id="title">INSCRIPTION</p>
+<p id="sous_titre">* Tous les champs sont obligatoires</p>
+<br></br>
+	<FORM name="formulaire" method="post" action="">
 	<table>
 	<tr>
 	<td>Nom :</td>
