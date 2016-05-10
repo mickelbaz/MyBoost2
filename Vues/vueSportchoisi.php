@@ -1,13 +1,8 @@
-<?php //require '../Vues/vueSportchoisi.php';
+    <meta http-equiv="content-type" content="text/html;charset=utf8_swedish_ci">
+<?php
 
-try{
-
-$bdd=new PDO('mysql:host=localhost; dbname=myboostbdd; charset=utf8', 'root', 'root');
-}
-
-catch(Exception $e){
-  die('Erreur:'.$e->getMessage());
-}
+  mysql_connect("localhost" ,"root","root");
+  mysql_select_db("myboostbdd");
 
 $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
 

@@ -3,7 +3,7 @@
 
     <div class="top"> <p>PROPOSER UN SPORT</p>
         </div>
-        <FORM name="formulaire" method="post" action="">
+        <FORM name="formulaire" method="post" action="../Vues/proposport.php">
       	<table>
       	<tr>
       	<td>Nom du sport :</td>
@@ -14,6 +14,8 @@
       	<td><INPUT type="text" name="descriptionSport"> </td>
       	</tr>
       </table>
+<br>
+    <INPUT type="submit" name='envoyer' value="Valider" />
 <?php
     require "../Vues/footer.php";
 ?>
