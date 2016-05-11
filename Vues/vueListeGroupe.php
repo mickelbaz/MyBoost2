@@ -11,8 +11,6 @@
   </thead>
 
   <tbody>
-
-
     <?php
       for($i=0;$i<count($liste);$i++){?>
         <tr style="border-bottom:1px solid black;">
@@ -23,11 +21,10 @@
         <?php
         }
         if(count($liste)==0){?>
-          <tr><td colspan="3">Il n'y a pas de groupes disponibles</td></tr>
+          <tr><td>Aucun groupe disponible</td></tr>
           <?php
         }
      ?>
-
     </tbody>
   </table>
   <br></br>

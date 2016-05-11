@@ -1,5 +1,5 @@
 <?php
-    require '../Vues/header.php';?>
+    require 'Vues/header.php';?>
 
     <div class="top"> <p>PROPOSER UN SPORT</p>
         </div>
@@ -17,5 +17,5 @@
 <br>
     <INPUT type="submit" name='envoyer' value="Valider" />
 <?php
-    require "../Vues/footer.php";
+    require "Vues/footer.php";
 ?>

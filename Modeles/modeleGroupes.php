@@ -46,10 +46,18 @@ function add_rejoindre(){
       'nom_groupe'=>$_POST['nom']));
 }
 
-function recup_groupe(){
+
+function recup_groupe_admin(){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('SELECT nom FROM groupe WHERE pseudo_createur=?');
+    $req->execute(array($_SESSION['pseudo']));
+    return $req;
+}
+
+function recup_autre_groupe(){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom_groupe FROM rejoindre WHERE pseudo=?');
-  $req->execute(array($_SESSION['pseudo']));
+  $req=$bdd->prepare('SELECT nom_groupe FROM rejoindre WHERE pseudo=? AND (nom_groupe NOT IN (SELECT nom FROM groupe WHERE pseudo_createur=?)) ' );
+  $req->execute(array($_SESSION['pseudo'],$_SESSION['pseudo']));
   return $req;
 }
 
@@ -76,6 +84,23 @@ function rejoint($groupe){
       'nom'=>$groupe
     ));
 }
+
+function quitter($groupe){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('DELETE FROM rejoindre WHERE nom_groupe=?');
+    $req->execute(array($groupe));
+}
+
+function supprimer($groupe){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('DELETE FROM groupe WHERE nom=?');
+    $req->execute(array($groupe));
+    $req2=$bdd->prepare('DELETE FROM rejoindre WHERE nom_groupe=?');
+    $req2->execute(array($groupe));
+
+}
+
+
 
 
 

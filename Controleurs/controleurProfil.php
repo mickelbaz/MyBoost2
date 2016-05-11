@@ -12,21 +12,36 @@ function recup(){
 }
 
 
-function recupgroupe(){
-  $req=recup_groupe()->fetchAll();
+function recupgroupeadmin(){
+  $req=recup_groupe_admin()->fetchAll();
   return $req;
 }
 
+function recupautregroupe(){
+  $req=recup_autre_groupe()->fetchAll();
+  return $req;
+}
 
 function recupsport(){
   $req=recup_sport()->fetchAll();
   return $req;
 }
 
+function quitter_groupe($groupe){
+  $req=quitter($groupe);
+  header('location: index.php?page=profil');
+}
+
+function supprimer_groupe($groupe){
+  $req=supprimer($groupe);
+  header('location: index.php?page=profil');
+}
+
 
 function recup_all(){
   $a=recup();
-  $b=recupgroupe();
+  $b=recupgroupeadmin();
+  $d=recupautregroupe();
   $c=recupsport();
   require 'Vues/vueProfil.php';
 }

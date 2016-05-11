@@ -78,6 +78,14 @@ function router(){
     $modif_mdp=modif_mdp();
     break;
 
+    case "quitter":
+    $quitter=quitter_groupe($_GET['quitter']);
+    break;
+
+    case "supprimer" :
+    $supprimer=supprimer_groupe($_GET['supprimer']);
+    break;
+
 
     default:
     $_SESSION=array();
