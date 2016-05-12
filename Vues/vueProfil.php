@@ -149,8 +149,38 @@
 
       </div>
     </div>
-
 </div>
+
+<div class="category">
+
+  <div class="title_category">
+    <h4>Mes évènements</h4>
+  </div>
+
+  <div class="images">
+
+        <div class=groupe>
+
+        <table>
+          <?php
+          for ($i=0; $i<count($event); $i++){?>
+          <tr>
+          <td><?php echo $event[$i][0]; ?></td>
+
+        <?php
+      }
+      if(count($event)==0){?>
+        <tr><td>Aucun évènement</td></tr>
+          <?php
+      }
+      ?>
+
+    </table>
+  </div>
+</div>
+</div>
+
+
 <br></br>
 
 <?php require "Vues/footer.php"; ?>

@@ -37,12 +37,22 @@ function supprimer_groupe($groupe){
   header('location: index.php?page=profil');
 }
 
+function recup_event(){
+  $req=recup_evenement()->fetchAll();
+  return $req;
+}
+
+function infos_event($nom){
+  $info=infos($nom)->fetchAll();
+  return $infos;
+}
 
 function recup_all(){
   $a=recup();
   $b=recupgroupeadmin();
   $d=recupautregroupe();
   $c=recupsport();
+  $event=recup_event();
   require 'Vues/vueProfil.php';
 }
  ?>

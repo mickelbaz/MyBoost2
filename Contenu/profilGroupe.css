@@ -50,10 +50,6 @@ h1 .modifier{
   width: 0.9em;
 }
 
-/*.tout{
-  display:flex;
-  justify-content:space-around;
-}*/
 
 .membre{
   display:block;
@@ -62,4 +58,10 @@ h1 .modifier{
 
 .evenement {
 
+}
+
+tr td{
+  width: 10em;
+  height:3em;
+  text-align:center;
 }

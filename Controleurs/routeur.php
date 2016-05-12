@@ -11,6 +11,8 @@ require_once 'Controleurs/controleurConnexion.php';
 require_once 'Controleurs/controleurInscription.php';
 require_once 'Controleurs/controleurApropos.php';
 require_once 'Controleurs/controleurModif_profil.php';
+require_once 'Controleurs/controleurModif_groupe.php';
+require_once 'Controleurs/controleurCreationEvenement.php';
 
 
 function router(){
@@ -86,7 +88,17 @@ function router(){
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
 
-  
+    case "modif_groupe":
+    $modif_groupe=affiche_modifgroupe();
+    break;
+
+    case "evenement" :
+    $evenement=creer($_GET['nom']);
+    break;
+
+    case "participer" :
+    $participe=participer($_GET['event'],$_GET['nom']);
+    break;
 
 
     default:

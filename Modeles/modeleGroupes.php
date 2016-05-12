@@ -50,6 +50,13 @@ function recup_membre($groupe){
     return $req;
 }
 
+function recup_nb_place($groupe){
+  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->prepare('SELECT nb_max FROM groupe WHERE nom=?');
+  $req->execute(array($groupe));
+  return $req;
+}
+
 function add_rejoindre(){
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO rejoindre (pseudo,nom_groupe)
