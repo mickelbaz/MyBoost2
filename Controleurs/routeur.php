@@ -11,6 +11,7 @@ require_once 'Controleurs/controleurConnexion.php';
 require_once 'Controleurs/controleurInscription.php';
 require_once 'Controleurs/controleurApropos.php';
 require_once 'Controleurs/controleurModif_profil.php';
+require_once 'Controleurs/controleurPropositionSport.php';
 
 
 function router(){
@@ -84,6 +85,10 @@ function router(){
 
     case "supprimer" :
     $supprimer=supprimer_groupe($_GET['supprimer']);
+    break;
+
+    case "proposition_sport" :
+    $proposition=afficherproposport();
     break;
 
 
