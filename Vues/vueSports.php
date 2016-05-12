@@ -2,9 +2,12 @@
 
 <link rel="stylesheet" href="Contenu/sports.css" >
 
-
-            <div class="top"><p>SPORTS PROPOSÉS</p>
-                </div>
+<div><p class="proposition_sport">
+<a href="index.php?page=proposition_sport">Proposez un sport !</a>
+</p></div>
+            <div class="top">
+              <p>SPORTS PROPOSÉS</p>
+        			    </div>
   <div id="bloc_page">
 	   <div class="sports-aquatiques"><h2 class="categorie-sports">Sports aquatiques</h2>
 
@@ -39,11 +42,7 @@
 		<a href="index.php?page=sport&sport=<?php echo('Volleyball');?>"><img class="imgsport" src="Images/clipart_Volleyball.png"></a>
 	   </div>
 
-      <div>
-			    <div class="proposition_sport">
-				<a href="/MyBoost2/Controleurs/controleurPropositionSport.php">Proposez un sport !</a>
-      </div>
-      </div>
+
   </div>
 
   <?php require "Vues/footer.php"; ?>

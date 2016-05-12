@@ -27,6 +27,27 @@
 	font-size:4em;
 }
 
+
+a{
+	text-decoration:none;
+	color:white;
+}
+
+.boutonvalider {
+			margin-left:50%;
+			color:white;
+			background-color:#2b2d2e;
+			border:white solid;
+			border-width:0.1em;
+			border-radius:1em;
+			font-size:1.3em;
+			text-align:center;
+			text-decoration-color:white;
+			padding:0.5em;
+			position:absolute;
+
+
+}
 .proposition_sport {
 	color:white;
 	background-color:#2b2d2e;
@@ -35,10 +56,12 @@
 	border-radius:1em;
 	font-size:1.3em;
 	text-align:center;
-	color:white;
-	text-decoration:none;
+	text-decoration-color:white;
 	padding:0.5em;
 	position:absolute;
+	margin-top:2em;
+	margin-left:2em;
+
 
 }
 

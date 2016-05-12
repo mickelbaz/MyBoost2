@@ -1,3 +1,7 @@
 <?php
-    include 'Vues/vuePropositionSport.php';
+
+    function afficherproposport(){
+
+      require 'Vues/vuePropositionSport.php';
+    }
 ?>
