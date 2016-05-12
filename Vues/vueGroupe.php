@@ -13,7 +13,10 @@
 
 <div class="groupe">
 
-  <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="vue/Profil/Modif_compte.php"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a></h1>
+  <h1 class="name_groupe"><?php echo $donnees[0] ?><br><?php
+  if ($_SESSION['pseudo']==admin_groupe($donnees[0]) ){?>
+    <a href="index.php?page=modif_groupe"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a></h1><?php
+  }?>
 
 
 </div>
