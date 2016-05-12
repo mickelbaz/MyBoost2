@@ -30,8 +30,21 @@
   <br>
   <?php echo $donnees[2] ?>
 </div>
+<br></br>
+<div>
+  <h2>Administrateur :</h2>
+  <br>
+  <?php echo $admin[0] ?>
+<br></br>
 
-
+<div class="liste"><h4>Liste des groupes</h4></div>
+<div class="membre">
+<?php
+for($i=0;$i<count($membre);$i++){?>
+      <div class="membre"> <?php echo $membre[$i][0] ?>  </div>
+  <?php
+  } ?>
+</div>
 
 
 <?php  require 'Vues/footer.php' ?>
