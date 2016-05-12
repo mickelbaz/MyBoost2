@@ -22,9 +22,16 @@
 <div class="sport">
 <h1 class="name_sport"><?php echo $donnees[1] ?></h1>
 </div>
-
 </div>
 
-  </body>
+<br>
+<div>
+  <h2>Descritption du groupe :</h2>
+  <br>
+  <?php echo $donnees[2] ?>
+</div>
+
+
+
 
 <?php  require 'Vues/footer.php' ?>

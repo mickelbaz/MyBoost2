@@ -31,9 +31,23 @@ function add_groupe(){
 
 function afficher_groupe($nom_groupe){
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom, sport_groupe FROM groupe WHERE nom=?' ) ;
+  $req=$bdd->prepare('SELECT nom, sport_groupe,description FROM groupe WHERE nom=?' ) ;
   $req->execute(array($nom_groupe));
   return $req;
+}
+
+function recup_admin($groupe){
+    $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('SELECT pseudo_createur FROM groupe WHERE nom=?');
+    $req->execute(array($groupe));
+    return $req;
+}
+
+function recup_membre($groupe){
+    $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('SELECT pseudo FROM rejoindre WHERE nom_groupe=?');
+    $req->execute(array($groupe));
+    return $req;
 }
 
 function add_rejoindre(){
