@@ -13,7 +13,10 @@
 
 <div class="groupe">
 
-  <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="vue/Profil/Modif_compte.php"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a></h1>
+  <h1 class="name_groupe"><?php echo $donnees[0] ?><br><?php
+  if ($_SESSION['pseudo']==admin_groupe($donnees[0]) ){?>
+    <a href="index.php?page=modif_groupe"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a></h1><?php
+  }?>
 
 
 </div>
@@ -30,8 +33,21 @@
   <br>
   <?php echo $donnees[2] ?>
 </div>
+<br></br>
+<div>
+  <h2>Administrateur :</h2>
+  <br>
+  <?php echo $admin[0] ?>
+<br></br>
 
-
+<div class="liste"><h4>Liste des groupes</h4></div>
+<div class="membre">
+<?php
+for($i=0;$i<count($membre);$i++){?>
+      <div class="membre"> <?php echo $membre[$i][0] ?>  </div>
+  <?php
+  } ?>
+</div>
 
 
 <?php  require 'Vues/footer.php' ?>

@@ -11,7 +11,11 @@ require_once 'Controleurs/controleurConnexion.php';
 require_once 'Controleurs/controleurInscription.php';
 require_once 'Controleurs/controleurApropos.php';
 require_once 'Controleurs/controleurModif_profil.php';
+<<<<<<< HEAD
 require_once 'Controleurs/controleurPropositionSport.php';
+=======
+require_once 'Controleurs/controleurModif_groupe.php';
+>>>>>>> e1181a8865caae70eece39f74f55ddc9fa6c0967
 
 
 function router(){
@@ -87,8 +91,13 @@ function router(){
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
 
+<<<<<<< HEAD
     case "proposition_sport" :
     $proposition=afficherproposport();
+=======
+    case "modif_groupe":
+    $modif_groupe=affiche_modifgroupe();
+>>>>>>> e1181a8865caae70eece39f74f55ddc9fa6c0967
     break;
 
 
