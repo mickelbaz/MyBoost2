@@ -25,26 +25,38 @@
 </div>
 
 <br>
+<!--<div class="tout">-->
 <div>
   <h2>Descritption du groupe :</h2>
   <br>
   <?php echo $donnees[2] ?>
 </div>
 <br></br>
+
+<div class="evenement">
+  <h2>Evènements :</h2>
+  <INPUT type=button name="evenement" value="Créer un évènement"/>
+</div>
+
+<!--</div>-->
+
 <div>
-  <h2>Administrateur :</h2>
-  <br>
-  <?php echo $admin[0] ?>
+<h2>Administrateur :</h2>
+<br>
+<?php echo $admin[0] ?>
+</div>
 <br></br>
 
-<div class="liste"><h4>Liste des groupes</h4></div>
-<div class="membre">
+<div><h2>Liste des membres :</h2></div><br>
 <?php
 for($i=0;$i<count($membre);$i++){?>
-      <div class="membre"> <?php echo $membre[$i][0] ?>  </div>
-  <?php
-  } ?>
-</div>
+  <div class="membre"> <?php echo $membre[$i][0] ?>  </div>
+<?php
+} ?>
+
+
+
+
 
 
 <?php  require 'Vues/footer.php' ?>

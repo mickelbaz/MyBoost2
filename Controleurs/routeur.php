@@ -86,6 +86,8 @@ function router(){
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
 
+  
+
 
     default:
     $_SESSION=array();

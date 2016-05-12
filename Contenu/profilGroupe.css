@@ -50,13 +50,16 @@ h1 .modifier{
   width: 0.9em;
 }
 
-.title_category{
-  border: 1px solid black;
-  border-radius: 50px;
-  text-align: center;
-  padding: 1em;
-  margin: 1em;
-  width : 10em;
-  display: flex;
-  justify-content: center;
+/*.tout{
+  display:flex;
+  justify-content:space-around;
+}*/
+
+.membre{
+  display:block;
+  color:black;
+}
+
+.evenement {
+
 }

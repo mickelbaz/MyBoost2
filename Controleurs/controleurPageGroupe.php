@@ -12,4 +12,5 @@ function afficher_details_groupe($nom_groupe){
 
 
 
+
 ?>
