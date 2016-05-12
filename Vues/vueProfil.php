@@ -1,16 +1,16 @@
-<?php require "../Vues/header.php"; ?>
+<?php require "Vues/header.php"; ?>
 
 
-    <link type="text/css" rel="stylesheet" href="../Contenu/profil.css"/>
+    <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
 
 
     <div class="content">
 
     <div class="top">
       <div class="avatar">
-        <img id="avatar" src="../Images/Man_Silhouette.png"/>
+        <img id="avatar" src="Images/Man_Silhouette.png"/>
       </div>
-      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="../Controleurs/controleurModif_profil.php"><img id="logomodif" class="modifier" src="../Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
+      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=modif"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
     </div>
     <div class="info">
       <table class="infoperso" style="border-collapse:collapse;">
@@ -92,19 +92,12 @@
           <h4>Mes sports</h4>
         </div>
       <div class="images">
+        <?php
+        for ($i=0; $i<count($c); $i++){?>
+          <div class=groupe><?php echo $c[$i][0]; ?></div>
+          <?php
+        }?>
 
-
-
-          <!--<img id="sportimg" src="../Images/clipart_boxe.png"/>
-          <img id="sportimg" src="../Images/clipart_football.png"/>
-          <img id="sportimg" src="../Images/clipart_tennis.png"/>
-          <img id="sportimg" src="../Images/clipart_jogging.png"/>
-          <img id="sportimg" src="../Images/clipart_petanque.png"/>
-          <img id="sportimg" src="../Images/clipart_curling.png"/>
-          <img id="sportimg" src="../Images/clipart_basket.png"/>
-          <img id="sportimg" src="../Images/clipart_golf.png"/>
-          <img id="sportimg" src="../Images/clipart_trampoline.png"/>
-          <img id="sportimg" src="../Images/clipart_muscu.png"/>-->
         </div>
 
       </div>
@@ -116,18 +109,43 @@
         </div>
 
         <div class="images">
-            <?php
-            for ($i=0; $i<count($b); $i++){?>
-              <div class=groupe><?php echo $b[$i][0]; ?></div>
+
+              <div class=groupe>
+
+              <table>
+                <tr>Gérés en tant qu'administrateur :</tr>
+                <?php
+                for ($i=0; $i<count($b); $i++){?>
+                <tr>
+                <td><a href="index.php?page=groupe&groupe=<?php echo $b[$i][0] ?>"><?php echo $b[$i][0]; ?></a></td>
+                <td><a href="index.php?page=supprimer&supprimer=<?php echo $b[$i][0] ?>"><INPUT type="button" name="supprimer" value="Supprimer le groupe"/></a></td>
               <?php
+            }
+            if(count($b)==0){?>
+              <tr><td>Vous ne gérez aucun groupe</td><td><a href="index.php?page=creationGroupe"><INPUT type="button" name="créer" value="Créer un groupe"/></a></td></tr>
+                <?php
             }
             ?>
 
-      <!--  <img id="sportimg" src="../Images/avatar1.png"/>
-        <img id="sportimg" src="../Images/avatar2.png"/>
-        <img id="sportimg" src="../Images/avatar3.png"/>
-        <img id="sportimg" src="../Images/avatar4.png"/>
-      </div>-->
+          </table>
+          <br></br>
+          <table>
+            <tr>Autres groupes :</tr>
+            <?php
+            for ($i=0; $i<count($d); $i++){?>
+            <tr>
+            <td><a href="index.php?page=groupe&groupe=<?php echo $d[$i][0] ?>"><?php echo $d[$i][0]; ?></a></td>
+            <td><a href="index.php?page=quitter&quitter=<?php echo $d[$i][0] ?>"><INPUT type="button" name="quitter" value="Quitter le groupe"/></a></td>
+          <?php
+         }
+         if(count($d)==0){?>
+           <tr><td><a href="index.php?page=ListeGroupes"><INPUT type="button" name="voir" value="Voir la liste des groupes"/></a></td></tr>
+             <?php
+         }
+         ?>
+          </table>
+          </div>
+
 
       </div>
     </div>
@@ -135,4 +153,4 @@
 </div>
 <br></br>
 
-<?php require "../Vues/footer.php"; ?>
+<?php require "Vues/footer.php"; ?>

@@ -1,7 +1,9 @@
 <?php
 
- require '../Vues/header.php';
-  require '../Vues/vueSportchoisi.php';
+ function afficher_description(){
+   require 'Vues/vueSportchoisi.php';
+ }
 
-   require '../Vues/footer.php';
+
+
 ?>

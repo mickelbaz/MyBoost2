@@ -1,6 +1,6 @@
 <?php
 
-require_once '../Modeles/modeleUtilisateurs.php';
+require_once 'Modeles/modeleUtilisateurs.php';
 
 function connect(){
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
@@ -11,12 +11,13 @@ function connect(){
        else{
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
-        echo 'Vous êtes connecté';
-        header("location: /MyBoost2/index.php");
+        echo 'Bonjour ' . $_SESSION['pseudo'] . ' !';
+        header("location: index.php?page=accueil");
       }
     }
+    require 'Vues/vueConnexion.php';
 }
 
-$connect=connect();
-require '../Vues/vueConnexion.php';
+
+
 ?>

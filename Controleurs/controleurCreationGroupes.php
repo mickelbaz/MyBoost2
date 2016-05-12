@@ -2,14 +2,14 @@
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 
+require_once 'Modeles/modeleGroupes.php';
 
-require_once '../Modeles/modeleGroupes.php';
 function addgroupe(){
   if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
     if ($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['nb']<>""  && verif_nom_groupe()==true){
       add_groupe();
       add_rejoindre();
-      header("location: ../Controleurs/controleurPageGroupe.php");
+      header("location: index.php?page=groupe&groupe=".$_POST['nom']);
     }
     if ($_POST['sport']=="title") {?>
       <script language="javascript">alert("Veuillez choisir un sport");</script>
@@ -24,8 +24,7 @@ function addgroupe(){
         <?php
     }
   }
+  require_once 'Vues/vueCreationGroupe.php';
 }
 
-$a = addgroupe();
-require_once '../Vues/vueCreationGroupe.php';
 ?>

@@ -1,18 +1,14 @@
 <?php
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);
+require_once 'Modeles/modeleGroupes.php';
 
-require_once '../Modeles/modeleGroupes.php';
-
-function recup(){
-  $req=afficher_groupe()->fetch();
-  return $req;
+function afficher_details_groupe($nom_groupe){
+  $donnees=afficher_groupe($nom_groupe)->fetch();
+  $admin=recup_admin($nom_groupe)->fetch();
+  $membre=recup_membre($nom_groupe)-fetchAll();
+  require 'Vues/vueGroupe.php';
 }
-
-$a=recup();
-
-
-require '../Vues/vueGroupe.php';
 
 
 

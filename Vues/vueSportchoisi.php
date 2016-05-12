@@ -1,26 +1,21 @@
-<?php //require '../Vues/vueSportchoisi.php';
+    <meta http-equiv="content-type" content="text/html;charset=utf8_swedish_ci">
+<?php
 
-try{
-
-$bdd=new PDO('mysql:host=localhost; dbname=myboostbdd; charset=utf8', 'root', 'root');
-}
-
-catch(Exception $e){
-  die('Erreur:'.$e->getMessage());
-}
+  mysql_connect("localhost" ,"root","root");
+  mysql_select_db("myboostbdd");
 
 $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
 
 ?>
-
+<?php require 'Vues/header.php'; ?>
 
   <html>
     <head>
       <body>
         <title>Sports</title>
 
-          <link rel="stylesheet" href="../Contenu/sports.css" >
-          <link rel="stylesheet" href="../Contenu/sportchoisi.css">
+          <link rel="stylesheet" href="Contenu/sports.css" >
+          <link rel="stylesheet" href="Contenu/sportchoisi.css">
     </head>
 <?php ?>
 <br>
@@ -31,7 +26,7 @@ $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['spor
       </legend>
       <table width=100% border=0>
         <td width="250px">
-          <img id="sport" src="../Images/clipart_<?php echo($_GET['sport']);?>.png">
+          <img id="sport" src="Images/clipart_<?php echo($_GET['sport']);?>.png">
         </td>
         <td>
           <?php
@@ -53,3 +48,5 @@ $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['spor
 <br>
     </body>
   </html>
+
+<?php require 'Vues/footer.php'; ?>

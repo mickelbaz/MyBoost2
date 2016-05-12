@@ -1,4 +1,4 @@
-<?php require '../Vues/header.php'; ?>
+<?php require 'Vues/header.php'; ?>
 <p>
 <h1> A quoi sert ce site ? </h1>
 Afin de faciliter la mise en place création de cours de sport, MyBoost te met en contact avec d'autres personnes qui partagent la même passion que toi.
@@ -19,4 +19,4 @@ Vous pouvez nous envoyer des messages à l'adresse suivante : contact@myboost.fr
 Vous pouvez également nous retrouver sur les réseaux sociaux.
 </p>
 
-<?php require '../Vues/footer.php'; ?>
+<?php require 'Vues/footer.php'; ?>

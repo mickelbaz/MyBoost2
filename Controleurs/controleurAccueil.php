@@ -1,5 +1,7 @@
 <?php
+function afficher_accueil(){
+  require 'Vues/vueAccueil.php';
+}
 
-require 'Vues/vueAccueil.php';
 
 ?>

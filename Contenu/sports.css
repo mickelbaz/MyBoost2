@@ -38,8 +38,8 @@
 	color:white;
 	text-decoration:none;
 	padding:0.5em;
-	position:middle;
-	
+	position:absolute;
+
 }
 
 
@@ -59,12 +59,14 @@ a :hover {
 }
 
 .sports-aquatiques {
+		background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 		border-color:white;
 		border-style:solid;
 		border-radius:2em;
 }
 
 .sports-plein-air {
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 	border-color:white;
 	border-style:solid;
 	border-radius:2em;
@@ -72,12 +74,14 @@ a :hover {
 }
 
 .sports-en-salle {
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 	border-color:white;
 	border-style:solid;
 	border-radius:2em;
 }
 
 .sports-co {
+	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
 	border-color:white;
 	border-style:solid;
 	border-radius:2em;

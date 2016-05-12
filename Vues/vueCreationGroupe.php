@@ -1,6 +1,6 @@
-<?php require '../Vues/header.php'; ?>
+<?php require 'Vues/header.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
+<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
 
 
 <FORM name="formulaire" method="post" action="">
@@ -36,10 +36,10 @@
 	</tr>
 
 	<tr>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar1.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar2.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar3.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar4.png"/></td>
+	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar1.png"/></td>
+	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar2.png"/></td>
+	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar3.png"/></td>
+	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar4.png"/></td>
 	</tr>
 	<tr></tr><tr></tr>
 
@@ -71,4 +71,4 @@
 	</FORM>
 	<br></br>
 
-<?php require '../Vues/footer.php'; ?>
+<?php require 'Vues/footer.php'; ?>

@@ -31,12 +31,12 @@
 
     <div id="titre_principal">
         <div class="logo">
-                <img src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost"/>
+                <img src="Images/Logo4.png" alt="Logo de site web MyBoost"/>
                 <h1>Un sport, un clic, une communauté!</h1>
 
         </div>
         <div class="deconnexion">
-          <a href="/MyBoost2/Controleurs/controleurDeconnexion.php">Se déconnecter</a>
+          <a href="index.php">Se déconnecter</a>
         </div>
     </div>
 
@@ -46,17 +46,17 @@
 
     <nav>
         <ul class="menu">
-            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurProfil.php">Mon Compte</a></li>
+            <li class="nav-item"><a href="index.php?page=accueil">Accueil</a></li>
+            <li class="nav-item"><a href="index.php?page=profil">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
-                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
-                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurListeGroupes.php">Liste des groupes</a></li>
-                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurCreationGroupes.php">Créer un groupe</a></li>
+                  <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
+                  <li class="nav-item"><a href="index.php?page=ListeGroupes">Liste des groupes</a></li>
+                  <li class="nav-item"><a href="index.php?page=creationGroupe">Créer un groupe</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/vueForum.php">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurApropos.php">À Propos</a></li>
+            <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="index.php?page=apropos">À Propos</a></li>
         </ul>
     </nav>
 
@@ -77,7 +77,7 @@
         <div class="logo">
 
           <div class="image">
-            <img src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost"/>
+            <img src="Images/Logo4.png" alt="Logo de site web MyBoost"/>
           </div>
 
           <div class="slogan">
@@ -89,31 +89,28 @@
         <div class="boutons">
 
         <div class="inscription">
-            <a href="/MyBoost2/Controleurs/controleurInscription.php">Inscription</a>
+            <a href="index.php?page=inscription">Inscription</a>
         </div>
 
         <div class="connexion">
-          <a href="/MyBoost2/Controleurs/controleurConnexion.php">Connexion</a>
+          <a href="index.php?page=connexion">Connexion</a>
         </div>
 
         </div>
 <br></br>
-        <!--<div class="search">
-            <input type="text" name="name" placeholder="rechercher">
-        </div>-->
     </div>
-
-
     <nav>
         <ul>
-            <li class="nav-item"><a href="/MyBoost2/index.php">Accueil</a></li>
+            <li class="nav-item"><a href="index.php">Accueil</a></li>
+
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
-                  <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurSports.php">Liste des sports</a></li>
+                  <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
                 </ul>
             </li>
+
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="/MyBoost2/Controleurs/controleurAPropos.php">À Propos</a></li>
+            <li class="nav-item"><a href="index.php?page=apropos">À Propos</a></li>
         </ul>
     </nav>
 
