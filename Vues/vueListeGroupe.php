@@ -12,11 +12,28 @@
 
   <tbody>
     <?php
-      for($i=0;$i<count($liste);$i++){?>
+      $nombre=array();
+      $nb_place=array();
+      $dispo=array();
+      for($i=0;$i<count($liste);$i++){
+        $nombre[$i]=count(recupmembre($liste[$i][0]));
+        $nb_place[$i]=recup_place($liste[$i][0]);
+        $dispo[$i]=$nb_place[$i][0] - $nombre[$i];
+         ?>
         <tr style="border-bottom:1px solid black;">
         <td style="padding:1em;"><?php echo $liste[$i][0]; ?></td>
-        <td><a href="index.php?page=groupe&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
-        <td><a href="index.php?page=grouperejoint&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></a></td></form>
+        <td><a href="index.php?page=groupevoir&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
+        <?php
+        if($dispo[$i]!=0){?>
+          <td><a href="index.php?page=grouperejoint&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></a></td>
+        <?php
+        }
+        else{?>
+          <td><em>Plus de places disponibles</em></td>
+          <?php
+        }
+        ?>
+        </form>
         </tr>
         <?php
         }

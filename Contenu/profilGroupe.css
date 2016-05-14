@@ -49,3 +49,30 @@ h1 .modifier{
   height: 0.9em;
   width: 0.9em;
 }
+
+
+
+.membre{
+  display:block;
+}
+
+
+
+tr td{
+  width: 10em;
+  height:3em;
+  text-align:center;
+}
+
+.infos{
+  margin-left:2em;
+}
+
+.infos a{
+  text-decoration: none;
+  color: black;
+}
+
+.name_groupe a{
+  text-decoration: none;
+}

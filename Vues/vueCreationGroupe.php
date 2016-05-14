@@ -46,7 +46,7 @@
 
   <tr>
     <td>
-      Nombre de participants max
+      Nombre de membres max
     </td>
     <td>
       <INPUT type="number" name="nb" value="<?php if(isset($_POST['nb'])){ echo htmlentities($_POST['nb']);}?>" min="1" max="110"/>

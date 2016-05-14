@@ -15,6 +15,16 @@ function affiche_liste(){
   return $liste;
 }
 
+function recupmembre($groupe){
+  $membre=recup_membre($groupe)->fetchAll();
+  return $membre;
+}
+
+function recup_place($groupe){
+  $place=recup_nb_place($groupe)->fetch();
+  return $place;
+}
+
 
 function rejoindre($nom){
   rejoint($nom);

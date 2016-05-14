@@ -11,6 +11,9 @@ require_once 'Controleurs/controleurConnexion.php';
 require_once 'Controleurs/controleurInscription.php';
 require_once 'Controleurs/controleurApropos.php';
 require_once 'Controleurs/controleurModif_profil.php';
+require_once 'Controleurs/controleurPropositionSport.php';
+require_once 'Controleurs/controleurModif_groupe.php';
+require_once 'Controleurs/controleurCreationEvenement.php';
 
 
 function router(){
@@ -26,16 +29,20 @@ function router(){
     break;
 
     case "groupe":
-    $afficher_groupe=afficher_details_groupe($_GET['groupe']);
+    $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
+    break;
+
+    case "groupevoir" :
+    $afficher=affiche_groupe_invite($_GET['groupe']);
     break;
 
     case "grouperejoint":
     $rejoint=rejoindre($_GET['groupe']);
-    $afficher_groupe=afficher_details_groupe($_GET['groupe']);
+    $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
 
     case "profil":
-    $afficher_profil=recup_all();
+    $afficher_profil=recup_all($_SESSION['pseudo']);
     break;
 
     case "sports":
@@ -85,6 +92,32 @@ function router(){
     case "supprimer" :
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
+
+
+    case "proposition_sport" :
+    $proposition=afficherproposport();
+    break;
+
+    case "modif_groupe":
+    $modif_groupe=affiche_modifgroupe($_GET['groupe']);
+    break;
+
+    case "evenement" :
+    $evenement=creer($_GET['nom']);
+    break;
+
+    case "participer" :
+    $participe=participer($_GET['event'],$_GET['nom']);
+    break;
+
+    case "nonparticiper" :
+    $nonparticipe=quitter_event($_GET['nom'],$_GET['event']);
+    break;
+
+    case "profilvoir" :
+    $afficherprofil=affiche_membre($_GET['pseudo']);
+    break;
+
 
 
     default:

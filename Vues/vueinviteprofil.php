@@ -3,14 +3,13 @@
 
     <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
 
-
     <div class="content">
 
     <div class="top">
       <div class="avatar">
         <img id="avatar" src="Images/Man_Silhouette.png"/>
       </div>
-      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=modif"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
+      <h1>  <?php echo $a[10] ?> <br></h1>
     </div>
     <div class="info">
       <table class="infoperso" style="border-collapse:collapse;">
@@ -21,14 +20,6 @@
             </thead>
 
             <tbody>
-              <tr style="border-bottom:1px solid black;">
-                  <td style="padding:1em;">Nom</td>
-                  <td><?php echo $a[0] ?></td>
-              </tr>
-              <tr style="border-bottom:1px solid black;">
-                  <td style="padding:1em;">Prénom</td>
-                  <td><?php echo $a[1] ?></td>
-              </tr>
                 <tr style="border-bottom:1px solid black;">
                     <td style="padding:1em;">Date de naissance</td>
                     <td><?php echo $a[4] ?></td>
@@ -38,49 +29,16 @@
                     <td style="padding:1em;">Sexe</td>
                     <td><?php echo $a[9] ?></td>
                 </tr>
-
+                <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Ville</td>
+                    <td><?php echo $a[6] ?></td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Pays</td>
+                    <td><?php echo $a[7] ?></td>
+                </tr>
             </tbody>
         </table>
-
-        <table class="coordonnees" style="border-collapse:collapse;">
-
-          <thead>
-              <tr style="border-bottom:1px solid black;">
-                  <th id="title" colspan="2">Coordonnées</th>
-              </tr>
-          </thead>
-
-          <tbody>
-            <tr style="border-bottom:1px solid black;">
-                <td style="padding:1em;">Adresse e-mail</td>
-                <td><?php echo $a[2] ?></td>
-            </tr>
-
-            <tr style="border-bottom:1px solid black;">
-                <td style="padding:1em;">Téléphone</td>
-                <td><?php echo $a[5] ?></td>
-            </tr>
-            <tr style="border-bottom:1px solid black;">
-                <td style="padding:1em;">Adresse</td>
-                <td><?php echo $a[3] ?></td>
-            </tr>
-            <tr style="border-bottom:1px solid black;">
-                <td style="padding:1em;">Code Postal</td>
-                <td><?php echo $a[8] ?></td>
-            </tr>
-            <tr style="border-bottom:1px solid black;">
-                <td style="padding:1em;">Ville</td>
-                <td><?php echo $a[6] ?></td>
-            </tr>
-            <tr style="border-bottom:1px solid black;">
-                <td style="padding:1em;">Pays</td>
-                <td><?php echo $a[7] ?></td>
-            </tr>
-
-          </tbody>
-
-        </table>
-
     </div>
 
 
@@ -117,16 +75,14 @@
                 <?php
                 for ($i=0; $i<count($b); $i++){?>
                 <tr>
-                <td><a href="index.php?page=groupe&groupe=<?php echo $b[$i][0] ?>"><?php echo $b[$i][0]; ?></a></td>
-                <td><a href="index.php?page=supprimer&supprimer=<?php echo $b[$i][0] ?>"><INPUT type="button" name="supprimer" value="Supprimer le groupe"/></a></td>
+                <td><?php echo $b[$i][0]; ?></td>
               <?php
             }
             if(count($b)==0){?>
-              <tr><td>Vous ne gérez aucun groupe</td><td><a href="index.php?page=creationGroupe"><INPUT type="button" name="créer" value="Créer un groupe"/></a></td></tr>
+              <tr><td>Aucun groupe géré</td></tr>
                 <?php
             }
             ?>
-
           </table>
           <br></br>
           <table>
@@ -134,18 +90,16 @@
             <?php
             for ($i=0; $i<count($d); $i++){?>
             <tr>
-            <td><a href="index.php?page=groupe&groupe=<?php echo $d[$i][0] ?>"><?php echo $d[$i][0]; ?></a></td>
-            <td><a href="index.php?page=quitter&quitter=<?php echo $d[$i][0] ?>"><INPUT type="button" name="quitter" value="Quitter le groupe"/></a></td>
+            <td><?php echo $d[$i][0]; ?></td>
           <?php
          }
          if(count($d)==0){?>
-           <tr><td><a href="index.php?page=ListeGroupes"><INPUT type="button" name="voir" value="Voir la liste des groupes"/></a></td></tr>
+           <tr><td>Aucun groupe </td></tr>
              <?php
          }
          ?>
           </table>
           </div>
-
 
       </div>
     </div>
