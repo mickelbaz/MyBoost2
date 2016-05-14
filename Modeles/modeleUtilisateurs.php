@@ -64,10 +64,10 @@ function verif_pseudo(){
       }
 
 
-      function recup_infos(){
+      function recup_infos($pseudo){
           $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-          $req=$bdd->prepare('SELECT nom,prenom,mail,adresse,date,tel,ville,pays,code_postal,sexe FROM sportif WHERE pseudo=?');
-          $req->execute(array($_SESSION['pseudo']));
+          $req=$bdd->prepare('SELECT nom,prenom,mail,adresse,date,tel,ville,pays,code_postal,sexe,pseudo FROM sportif WHERE pseudo=?');
+          $req->execute(array($pseudo));
           return $req;
       }
 
@@ -102,6 +102,7 @@ function verif_pseudo(){
         $req=$bdd->prepare('UPDATE sportif SET adresse=?, code_postal=?, ville=?,pays=?,tel=? WHERE pseudo=?');
         $req->execute (array($_POST['adresse'],$_POST['cp'],$_POST['ville'],$_POST['pays'],$_POST['tel'],$_SESSION['pseudo']));
       }
+
 
 
 

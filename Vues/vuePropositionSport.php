@@ -5,7 +5,7 @@
     <div class="top"> <p>PROPOSER UN SPORT</p>
         </div>
         <br><br><br><br>
-        <FORM name="formulaire" method="post" action="../Vues/proposport.php">
+        <FORM name="formulaire" method="post" action="">
       	<table>
       	<tr>
       	<td>Nom du sport :</td>

@@ -68,25 +68,25 @@ function add_rejoindre(){
 }
 
 
-function recup_groupe_admin(){
+function recup_groupe_admin($pseudo){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('SELECT nom FROM groupe WHERE pseudo_createur=?');
-    $req->execute(array($_SESSION['pseudo']));
+    $req->execute(array($pseudo));
     return $req;
 }
 
-function recup_autre_groupe(){
+function recup_autre_groupe($pseudo){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nom_groupe FROM rejoindre WHERE pseudo=? AND (nom_groupe NOT IN (SELECT nom FROM groupe WHERE pseudo_createur=?)) ' );
-  $req->execute(array($_SESSION['pseudo'],$_SESSION['pseudo']));
+  $req->execute(array($pseudo,$pseudo));
   return $req;
 }
 
-function recup_sport(){
+function recup_sport($pseudo){
 
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT DISTINCT (sport_groupe) FROM groupe WHERE nom IN (SELECT nom_groupe FROM rejoindre WHERE pseudo=?)');
-  $req->execute(array($_SESSION['pseudo']));
+  $req->execute(array($pseudo));
   return $req;
 }
 
@@ -110,6 +110,8 @@ function quitter($groupe){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('DELETE FROM rejoindre WHERE nom_groupe=?');
     $req->execute(array($groupe));
+    $req2=$bdd->prepare('DELETE FROM participe WHERE nom_evenement IN(SELECT nom FROM évènement WHERE nom_groupe=?)');
+    $req2->execute(array($groupe));
 }
 
 function supprimer($groupe){
@@ -118,6 +120,10 @@ function supprimer($groupe){
     $req->execute(array($groupe));
     $req2=$bdd->prepare('DELETE FROM rejoindre WHERE nom_groupe=?');
     $req2->execute(array($groupe));
+    $req3=$bdd->prepare('DELETE FROM participe WHERE nom_evenement IN(SELECT nom FROM évènement WHERE nom_groupe=?)');
+    $req3->execute(array($groupe));
+    $req4=$bdd->prepare('DELETE FROM évènement WHERE nom_groupe=?');
+    $req4->execute(array($groupe));
 
 }
 

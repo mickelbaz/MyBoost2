@@ -51,17 +51,28 @@ h1 .modifier{
 }
 
 
+
 .membre{
   display:block;
-  color:black;
 }
 
-.evenement {
 
-}
 
 tr td{
   width: 10em;
   height:3em;
   text-align:center;
+}
+
+.infos{
+  margin-left:2em;
+}
+
+.infos a{
+  text-decoration: none;
+  color: black;
+}
+
+.name_groupe a{
+  text-decoration: none;
 }

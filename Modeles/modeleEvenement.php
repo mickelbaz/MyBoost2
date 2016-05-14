@@ -17,21 +17,22 @@ function verif_nom_event(){
       $date="{$_POST["annee"]}-{$_POST["mois"]}-{$_POST["jour"]}";
       $heure="{$_POST["heure"]}:{$_POST["minute"]}:00";
       $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-      $req=$bdd->prepare('INSERT INTO évènement (nom,description,date,heure,nom_groupe,nb_place) VALUES(:nom,:description,:date,:heure, :nom_groupe,:nb_place)');
+      $req=$bdd->prepare('INSERT INTO évènement (nom,description,date,heure,nom_groupe,nb_place,createur) VALUES(:nom,:description,:date,:heure, :nom_groupe,:nb_place,:createur)');
       $req->execute(array(
         'nom'=>$_POST['nom'],
         'description'=>$_POST['description'],
         'date'=>$date,
         'heure'=>$heure,
         'nom_groupe'=>$nom_groupe,
-        'nb_place'=>$_POST['nb']
+        'nb_place'=>$_POST['nb'],
+        'createur'=>$_SESSION['pseudo']
       ));
   }
 
   function recup_infos_event($nom_groupe){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('SELECT nom,description,date,heure,nb_place FROM évènement WHERE nom_groupe=?');
-    $req->execute(array($nom_groupe));
+    $req=$bdd->prepare('SELECT nom,description,date,heure,nb_place FROM évènement WHERE nom_groupe=? AND nom NOT IN (SELECT nom_evenement FROM participe WHERE pseudo=? )');
+    $req->execute(array($nom_groupe,$_SESSION['pseudo']));
     return $req;
   }
 
@@ -44,17 +45,11 @@ function verif_nom_event(){
       ));
   }
 
-  function recup_participant($nom_event){
-      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-      $req=$bdd->prepare('SELECT pseudo FROM participe WHERE nom_evenement=?');
-      $req->execute(array($nom_event));
-      return $req;
-  }
 
-  function recup_evenement(){
+  function recup_evenement($pseudo){
       $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-      $req=$bdd->prepare('SELECT nom_evenement FROM participe WHERE pseudo=?');
-      $req->execute(array($_SESSION['pseudo']));
+      $req=$bdd->prepare('SELECT nom,description, date,heure,nb_place,nom_groupe FROM évènement WHERE nom IN (SELECT nom_evenement FROM participe WHERE pseudo=?)');
+      $req->execute(array($pseudo));
       return $req;
   }
 
@@ -71,6 +66,18 @@ function verif_nom_event(){
     $req->execute(array($nom_event));
     return $req;
   }
+
+  function quitter_evenement($nom){
+      $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+      $req=$bdd->prepare('DELETE FROM participe WHERE nom_evenement=?');
+      $req->execute(array($nom));
+  }
+
+
+
+
+
+
 
 
 

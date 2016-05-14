@@ -22,7 +22,7 @@
          ?>
         <tr style="border-bottom:1px solid black;">
         <td style="padding:1em;"><?php echo $liste[$i][0]; ?></td>
-        <td><a href="index.php?page=groupe&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
+        <td><a href="index.php?page=groupevoir&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
         <?php
         if($dispo[$i]!=0){?>
           <td><a href="index.php?page=grouperejoint&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></a></td>
