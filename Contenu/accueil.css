@@ -49,6 +49,14 @@
     width: : 20%;
     height: 105vh;
     margin: 0;
-            }
 
 }
+
+#bloc_page td{
+	width: 8em;
+	height: 2em;
+}
+
+#bloc_page{
+	margin-left:2em;
+	}

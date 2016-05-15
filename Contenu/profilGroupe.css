@@ -63,6 +63,12 @@ tr td{
   height:3em;
   text-align:center;
 }
+td{
+  width: 10em;
+  height:3em;
+  text-align:center;
+
+}
 
 .infos{
   margin-left:2em;

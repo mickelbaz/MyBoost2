@@ -118,7 +118,13 @@ function router(){
     $afficherprofil=affiche_membre($_GET['pseudo']);
     break;
 
+    case "annuler" :
+    $annuler=annuler_event($_GET['event'],$_GET['nom']);
+    break;
 
+    case "bannir" :
+    $bannir=supp_membre($_GET['groupe'],$_GET['membre']);
+    break;
 
     default:
     $_SESSION=array();

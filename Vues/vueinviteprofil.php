@@ -34,6 +34,10 @@
                     <td><?php echo $a[6] ?></td>
                 </tr>
                 <tr style="border-bottom:1px solid black;">
+                    <td style="padding:1em;">Région</td>
+                    <td><?php echo $a[11] ?></td>
+                </tr>
+                <tr style="border-bottom:1px solid black;">
                     <td style="padding:1em;">Pays</td>
                     <td><?php echo $a[7] ?></td>
                 </tr>

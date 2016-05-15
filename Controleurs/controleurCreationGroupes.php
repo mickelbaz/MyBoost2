@@ -6,7 +6,7 @@ require_once 'Modeles/modeleGroupes.php';
 
 function addgroupe(){
   if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
-    if ($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['nb']<>""  && verif_nom_groupe()==true){
+    if ($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['nb']<>"" && $_POST['region']!="title" && verif_nom_groupe()==true){
       add_groupe();
       add_rejoindre();
       header("location: index.php?page=groupe&groupe=".$_POST['nom']);
