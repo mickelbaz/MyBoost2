@@ -8,7 +8,7 @@ function afficher_details_groupe($nom_groupe,$pseudo){
   $admin=recup_admin($nom_groupe)->fetch();
   $membre=recup_membre($nom_groupe)->fetchAll();
   $event=recup_infos_event($nom_groupe)->fetchAll();
-  $mes_event=recup_evenement($pseudo)->fetchAll();
+  $mes_event=recup_mes_evenement($pseudo,$nom_groupe)->fetchAll();
   require 'Vues/vueGroupe.php';
 }
 
@@ -27,11 +27,25 @@ function nombre_place($nom){
   return $place;
 }
 
+function admin($nom){
+  $admin_event=admin_event($nom)->fetch();
+  return $admin_event;
+}
+
 function quitter_event($nom_groupe,$nom_event){
   $quitter=quitter_evenement($nom_event);
   header ('location: index.php?page=groupe&groupe='.$nom_groupe);
 }
 
+function annuler_event($nom_event,$nom_groupe){
+  $annuler=annuler($nom_event);
+  header ('location: index.php?page=groupe&groupe='.$nom_groupe);
+}
+
+function supp_membre($nom_groupe,$pseudo){
+  $supp=supprimer_membre($nom_groupe,$pseudo);
+  header ('location: index.php?page=groupe&groupe='.$nom_groupe);  
+}
 
 function affiche_groupe_invite($nom_groupe){
   $donnees=afficher_groupe($nom_groupe)->fetch();

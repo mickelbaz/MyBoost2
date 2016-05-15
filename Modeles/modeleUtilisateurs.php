@@ -6,8 +6,8 @@ function ajout(){
   $date="{$_POST["annee"]}-{$_POST["mois"]}-{$_POST["jour"]}";
 
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,pays,tel,mail,mot_de_passe)
-VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:pays,:tel,:mail,:mot_de_passe)');
+  $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,region,pays,tel,mail,mot_de_passe)
+VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:pays,:tel,:mail,:mot_de_passe)');
 
 $req->execute(array(
     'nom'=>$_POST['nom'],
@@ -18,6 +18,7 @@ $req->execute(array(
     'adresse'=>$_POST['adresse'],
     'code_postal'=>$_POST['code_postal'],
     'ville'=>$_POST['ville'],
+    'region'=>$_POST['region'],
     'pays'=>$_POST['pays'],
     'tel'=>$_POST['tel'],
     'mail'=>$_POST['mail'],
@@ -66,7 +67,7 @@ function verif_pseudo(){
 
       function recup_infos($pseudo){
           $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-          $req=$bdd->prepare('SELECT nom,prenom,mail,adresse,date,tel,ville,pays,code_postal,sexe,pseudo FROM sportif WHERE pseudo=?');
+          $req=$bdd->prepare('SELECT nom,prenom,mail,adresse,date,tel,ville,pays,code_postal,sexe,pseudo,region FROM sportif WHERE pseudo=?');
           $req->execute(array($pseudo));
           return $req;
       }
@@ -99,11 +100,16 @@ function verif_pseudo(){
 
       function replace_coordonnees(){
         $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-        $req=$bdd->prepare('UPDATE sportif SET adresse=?, code_postal=?, ville=?,pays=?,tel=? WHERE pseudo=?');
-        $req->execute (array($_POST['adresse'],$_POST['cp'],$_POST['ville'],$_POST['pays'],$_POST['tel'],$_SESSION['pseudo']));
+        $req=$bdd->prepare('UPDATE sportif SET adresse=?, code_postal=?, ville=?,pays=?, region=?,tel=? WHERE pseudo=?');
+        $req->execute (array($_POST['adresse'],$_POST['cp'],$_POST['ville'],$_POST['pays'],$_POST['region'],$_POST['tel'],$_SESSION['pseudo']));
       }
 
-
+      function annuaire(){
+          $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+          $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo !=?');
+          $req->execute(array($_SESSION['pseudo']));
+          return $req;
+      }
 
 
 

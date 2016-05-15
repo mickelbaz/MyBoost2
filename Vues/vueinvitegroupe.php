@@ -33,6 +33,12 @@
   <?php echo $donnees[2] ?>
 </div>
 <br></br>
+<div>
+  <h2>Région :</h2>
+  <br>
+  <?php echo $donnees[3] ?>
+</div>
+<br></br>
 
 <div class="evenement">
   <h2>Evènements :</h2>

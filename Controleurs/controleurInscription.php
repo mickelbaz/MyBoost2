@@ -7,7 +7,7 @@ function verif(){
   if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
 
     if ($_POST['nom']<>"" && $_POST['prenom'] <> "" &&$_POST['pseudo']<>"" && ((isset($_POST['sexe']) && $_POST["sexe"]=="F")||(isset($_POST['sexe']) && $_POST["sexe"]=="H"))
-    && $_POST['adresse']<>"" && $_POST['code_postal']<>""
+    && $_POST['adresse']<>"" && $_POST['code_postal']<>"" && $_POST['region'] !="title"
     && $_POST['ville']<>"" && $_POST['pays']<>"" && $_POST['tel']<>"" && $_POST['mail']<>"" && $_POST['mail2']<>""
     && $_POST['mot_de_passe']<>"" && $_POST['mot_de_passe2']<>""){
 

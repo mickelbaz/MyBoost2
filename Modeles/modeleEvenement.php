@@ -31,7 +31,7 @@ function verif_nom_event(){
 
   function recup_infos_event($nom_groupe){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('SELECT nom,description,date,heure,nb_place FROM évènement WHERE nom_groupe=? AND nom NOT IN (SELECT nom_evenement FROM participe WHERE pseudo=? )');
+    $req=$bdd->prepare('SELECT nom,description,date,heure,nb_place FROM évènement WHERE nom_groupe=? AND nom NOT IN (SELECT nom_evenement FROM participe WHERE pseudo=? ) ORDER BY date,heure');
     $req->execute(array($nom_groupe,$_SESSION['pseudo']));
     return $req;
   }
@@ -48,7 +48,7 @@ function verif_nom_event(){
 
   function recup_evenement($pseudo){
       $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-      $req=$bdd->prepare('SELECT nom,description, date,heure,nb_place,nom_groupe FROM évènement WHERE nom IN (SELECT nom_evenement FROM participe WHERE pseudo=?)');
+      $req=$bdd->prepare('SELECT nom,description, date,heure,nb_place,nom_groupe FROM évènement WHERE nom IN (SELECT nom_evenement FROM participe WHERE pseudo=?) ORDER BY date,heure');
       $req->execute(array($pseudo));
       return $req;
   }
@@ -73,6 +73,27 @@ function verif_nom_event(){
       $req->execute(array($nom));
   }
 
+  function recup_mes_evenement($pseudo,$groupe){
+      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+      $req=$bdd->prepare('SELECT nom,description, date,heure FROM évènement WHERE nom_groupe=? AND nom IN (SELECT nom_evenement FROM participe WHERE pseudo=?) ORDER BY date,heure');
+      $req->execute(array($groupe,$pseudo));
+      return $req;
+  }
+
+  function admin_event($nom_event){
+      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+      $req=$bdd->prepare('SELECT createur FROM évènement WHERE nom=?');
+      $req->execute(array($nom_event));
+      return $req;
+  }
+
+  function annuler($nom_event){
+      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+      $req=$bdd->prepare('DELETE FROM évènement WHERE nom=?');
+      $req->execute(array($nom_event));
+      $req2=$bdd->prepare('DELETE FROM participe WHERE nom_evenement=?');
+      $req2->execute(array($nom_event));
+  }
 
 
 
