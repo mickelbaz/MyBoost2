@@ -104,7 +104,12 @@ function verif_pseudo(){
         $req->execute (array($_POST['adresse'],$_POST['cp'],$_POST['ville'],$_POST['pays'],$_POST['region'],$_POST['tel'],$_SESSION['pseudo']));
       }
 
-
+      function annuaire(){
+          $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+          $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo !=?');
+          $req->execute(array($_SESSION['pseudo']));
+          return $req;
+      }
 
 
 

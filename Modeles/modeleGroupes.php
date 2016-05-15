@@ -143,6 +143,16 @@ function supprimer_membre($nom_groupe,$pseudo){
   $req2->execute(array($nom_groupe,$pseudo));
 }
 
+function ajout_membre_groupe($groupe,$pseudo){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('INSERT INTO rejoindre (pseudo,nom_groupe) VALUES (:pseudo,:nom_groupe)');
+    $req->execute(array(
+      'pseudo'=>$pseudo,
+      'nom_groupe'=> $groupe ));
+}
+
+
+
 
 
 

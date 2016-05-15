@@ -14,6 +14,7 @@ require_once 'Controleurs/controleurModif_profil.php';
 require_once 'Controleurs/controleurPropositionSport.php';
 require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
+require_once 'Controleurs/controleurAnnuaire.php';
 
 
 function router(){
@@ -124,6 +125,14 @@ function router(){
 
     case "bannir" :
     $bannir=supp_membre($_GET['groupe'],$_GET['membre']);
+    break;
+
+    case "annuaire" :
+    $annuaire=afficher_annuaire();
+    break;
+
+    case "ajouter" :
+    $ajouter_membre=ajout_membre($_GET['groupe'],$_GET['pseudo']);
     break;
 
     default:
