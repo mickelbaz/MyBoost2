@@ -48,5 +48,6 @@
 		<span id="timeline"></span>
 
 </section>
+</div>
 
 <?php require 'Vues/footer.php'; ?>
