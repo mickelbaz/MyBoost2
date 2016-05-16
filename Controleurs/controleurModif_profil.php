@@ -2,13 +2,13 @@
 error_reporting(E_ALL & ~E_NOTICE);?>
 <?php
 
-function recup_donnees(){
-  $req=recup_infos()->fetch();
+function recup_donnees($pseudo){
+  $req=recup_infos($pseudo)->fetch();
   return $req;
 }
 
 function affiche_page(){
-  $a=recup_donnees();
+  $a=recup_donnees($_SESSION['pseudo']);
   require 'Vues/vueModif_profil.php';
 }
 
@@ -23,7 +23,7 @@ function verif_coordonnees(){
       <?php
   }
 }
-$a=recup_donnees();
+$a=recup_donnees($_SESSION['pseudo']);
 require_once 'Vues/vueModif_coordonnees.php';
 }
 

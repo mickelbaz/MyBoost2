@@ -53,6 +53,8 @@
                   <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
                   <li class="nav-item"><a href="index.php?page=ListeGroupes">Liste des groupes</a></li>
                   <li class="nav-item"><a href="index.php?page=creationGroupe">Créer un groupe</a></li>
+                  <li class="nav-item"><a href="index.php?page=salle">Liste des clubs</a></li>
+                  <li class="nav-item"><a href ="index.php?page=annuaire">Annuaire</a></li>
                 </ul>
             </li>
             <li class="nav-item"><a href="#">Forum</a></li>

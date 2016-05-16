@@ -73,6 +73,10 @@
                 <td><?php echo $a[6] ?></td>
             </tr>
             <tr style="border-bottom:1px solid black;">
+                <td style="padding:1em;">Région</td>
+                <td><?php echo $a[11] ?></td>
+            </tr>
+            <tr style="border-bottom:1px solid black;">
                 <td style="padding:1em;">Pays</td>
                 <td><?php echo $a[7] ?></td>
             </tr>
@@ -149,8 +153,35 @@
 
       </div>
     </div>
-
 </div>
+<br>
+<div class="evenement">
+<div class="category">
+
+  <div class="title_category">
+    <h4>Mes évènements</h4>
+  </div>
+
+  <div class="images">
+
+        <div class=groupe>
+
+
+          <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe,$lieu)){ ?>
+            <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> &nbsp à &nbsp <?php echo $lieu ?></div>
+            <?php
+      }
+      if(count($event)==0){?>
+        <tr><td>Aucun évènement</td></tr>
+          <?php
+      }
+      ?>
+  </div>
+</div>
+</div>
+</div>
+
+
 <br></br>
 
 <?php require "Vues/footer.php"; ?>

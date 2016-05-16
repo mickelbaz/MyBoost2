@@ -33,6 +33,7 @@
       <tr><td>Adresse : </td><td><INPUT type="text" name="adresse" size="30" value="<?php echo $a[3] ?>"/></td></tr>
       <tr><td>Code Postal : </td><td><INPUT type="text" name="cp" value="<?php echo $a[8] ?>"/></td></tr>
       <tr><td>Ville : </td><td><INPUT type="text" name="ville" value="<?php echo $a[6] ?>"/></td></tr>
+      <tr><td>Région : </td><td><INPUT type="text" name="region" value="<?php echo $a[11] ?>"/></td></tr>
       <tr><td>Pays : </td><td><INPUT type="text" name="pays" value="<?php echo $a[7] ?>"/></td></tr>
       <tr><td>Téléphone : </td><td><INPUT type="text" name="tel" value ="<?php echo $a[5] ?>"/></td></tr>
     </table>

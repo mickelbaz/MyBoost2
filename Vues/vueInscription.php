@@ -71,6 +71,39 @@
 	value ="<?php if(isset($_POST['code_postal'])){ echo htmlentities($_POST['code_postal']);}?>"/></td>
 	<td>Ville :&nbsp&nbsp<INPUT type="text" name="ville" value="<?php if(isset($_POST['ville'])){ echo htmlentities($_POST['ville']);}?>"/></td>
 	</tr>
+	<tr><td>Région :</td>
+		<td><SELECT name="region">
+  <OPTION value="title" selected>Sélectionnez votre région
+	<OPTION>Alsace
+	<OPTION>Aquitaine
+	<OPTION>Auvergne
+	<OPTION>Basse-Normandie
+	<OPTION>Bourgogne
+	<OPTION>Bretagne
+	<OPTION>Centre
+	<OPTION>Champagne-Ardenne
+	<OPTION>Corse
+	<OPTION>Franche-Comté
+	<OPTION>Haute-Normandie
+	<OPTION>Île-de-France
+	<OPTION>Languedoc-Roussillon
+	<OPTION>Limousin
+	<OPTION>Lorraine
+	<OPTION>Midi-Pyrénées
+	<OPTION>Nord-Pas-de-Calais
+	<OPTION>Pays de la Loire
+	<OPTION>Picardie
+	<OPTION>Poitou-Charentes
+	<OPTION>Provence-Alpes-Côte d'Azur
+	<OPTION>Rhône-Alpes
+  <OPTION>Guadeloupe
+  <OPTION>Guyane
+  <OPTION>La Réunion
+  <OPTION>Martinique
+  <OPTION>Mayotte
+  </SELECT>
+</td>
+	</tr>
 	<tr>
 	<td>Pays :</td>
 	<td><INPUT type="text" name="pays" size="28" value="<?php if(isset($_POST['pays'])){ echo htmlentities($_POST['pays']);}?>"/></td>

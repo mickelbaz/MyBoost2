@@ -50,13 +50,52 @@ h1 .modifier{
   width: 0.9em;
 }
 
-.title_category{
-  border: 1px solid black;
-  border-radius: 50px;
+
+
+.membre{
+  display:block;
+}
+
+
+
+tr td{
+  width: 10em;
+  height:3em;
+  text-align:center;
+}
+td{
+  width: 10em;
+  height:3em;
+  text-align:center;
+
+}
+
+.infos{
+  margin-left:2em;
+}
+
+.infos a{
+  text-decoration: none;
+  color: black;
+}
+
+.name_groupe a{
+  text-decoration: none;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site{
   text-align: center;
-  padding: 1em;
-  margin: 1em;
-  width : 10em;
-  display: flex;
-  justify-content: center;
+}
+
+.commentaire{
+  margin-left: 2em;
+}
+
+.Ok{
+  margin-left: 6em;
 }
