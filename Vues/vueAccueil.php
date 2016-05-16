@@ -4,9 +4,9 @@
 <link rel="stylesheet" type="text/css" href="Contenu/accueil.css">
 
 <div id="bloc_page">
-  <p>
+  <!--<p>
     Bienvenue sur le site MyBoost !
-  </p>
+  </p>-->
   <br></br>
   <?php if(isset($_SESSION['pseudo'])){?>
   <table>
