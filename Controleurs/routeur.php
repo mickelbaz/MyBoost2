@@ -145,6 +145,10 @@ function router(){
     $club=page_salle($_GET['club']);
     break;
 
+    case "FAQ" :
+    $faq=affiche_faq();
+    break;
+
 
 
     default:
