@@ -159,7 +159,7 @@ header .search input{
 
 }
 
-.effet img {
+/*.effet img {
 
     width:2em;
     height:2em;
@@ -190,8 +190,91 @@ footer{
 #credit{
   font-size: 1em;
   margin-top: 0.5em;
+}*/
+
+li a:hover{
+  color:black;
+}
+
+footer{
+   display: block;
+    position: absolute;
+    width: 100%;
+    color:white;
+    background-color:#593f7a;
+}
+
+#credit{
+  font-size: 1em;
+  margin: 0.5em 3em;
 }
 
 li a:hover{
   color:black;
+}
+
+
+footer img{
+  height:35px;
+  width:35px;
+  margin:20px 30px;
+}
+
+.effet{
+    width: 30%;
+    float: left;
+
+}
+
+.effet img {
+    width:3em;
+    height:3em;
+    vertical-align:middle;
+    transition:transform .3s ease;
+}
+
+
+.effet img:hover {
+
+    transform: scale(1.4);
+}
+
+.lien_footer{
+    margin-top: 45px;
+    float:right;
+}
+
+
+
+.lien_footer h3{
+  margin:5em;
+}
+
+footer a h3{
+  text-align:center;
+  color:white;
+  display:inline;
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.phrase{
+    text-align: center;
+    color:white;
+    font-size: 2em;
+}
+
+html{
+    height:100%;
+}
+body{
+    min-height:100%;
+    position:relative;
+}
+
+#bloc_page{
+   padding-bottom: 171px;
+}
+*{
+    box-sizing:border-box;
 }
