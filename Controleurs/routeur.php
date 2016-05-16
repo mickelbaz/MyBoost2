@@ -128,12 +128,10 @@ function router(){
     break;
 
     case "annuaire" :
-    $annuaire=afficher_annuaire();
+    $annuaire=affiche_annuaire();
     break;
 
-    case "ajouter" :
-    $ajouter_membre=ajout_membre($_GET['groupe'],$_GET['pseudo']);
-    break;
+
 
     default:
     $_SESSION=array();
