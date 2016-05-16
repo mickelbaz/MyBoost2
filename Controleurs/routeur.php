@@ -16,6 +16,7 @@ require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
+require_once 'Controleurs/controleurFAQ.php';
 
 
 function router(){
