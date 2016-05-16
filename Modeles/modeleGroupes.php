@@ -32,7 +32,7 @@ function add_groupe(){
 
 function afficher_groupe($nom_groupe){
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom, sport_groupe,description,region FROM groupe WHERE nom=?' ) ;
+  $req=$bdd->prepare('SELECT nom, sport_groupe,description,region FROM groupe WHERE nom=? ORDER BY nom ASC' ) ;
   $req->execute(array($nom_groupe));
   return $req;
 }
@@ -46,7 +46,7 @@ function recup_admin($groupe){
 
 function recup_membre($groupe){
     $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('SELECT pseudo FROM rejoindre WHERE nom_groupe=?');
+    $req=$bdd->prepare('SELECT pseudo FROM rejoindre WHERE nom_groupe=? ORDER BY pseudo ASC');
     $req->execute(array($groupe));
     return $req;
 }
@@ -71,14 +71,14 @@ function add_rejoindre(){
 
 function recup_groupe_admin($pseudo){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('SELECT nom FROM groupe WHERE pseudo_createur=?');
+    $req=$bdd->prepare('SELECT nom FROM groupe WHERE pseudo_createur=? ORDER BY nom ASC');
     $req->execute(array($pseudo));
     return $req;
 }
 
 function recup_autre_groupe($pseudo){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom_groupe FROM rejoindre WHERE pseudo=? AND (nom_groupe NOT IN (SELECT nom FROM groupe WHERE pseudo_createur=?)) ' );
+  $req=$bdd->prepare('SELECT nom_groupe FROM rejoindre WHERE pseudo=? AND (nom_groupe NOT IN (SELECT nom FROM groupe WHERE pseudo_createur=?)) ORDER BY nom_groupe ASC ' );
   $req->execute(array($pseudo,$pseudo));
   return $req;
 }
@@ -86,14 +86,14 @@ function recup_autre_groupe($pseudo){
 function recup_sport($pseudo){
 
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT DISTINCT (sport_groupe) FROM groupe WHERE nom IN (SELECT nom_groupe FROM rejoindre WHERE pseudo=?)');
+  $req=$bdd->prepare('SELECT DISTINCT (sport_groupe) FROM groupe WHERE nom IN (SELECT nom_groupe FROM rejoindre WHERE pseudo=?) ORDER BY sport_groupe ASC');
   $req->execute(array($pseudo));
   return $req;
 }
 
 function liste_groupe(){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom FROM groupe WHERE nom NOT IN (SELECT nom_groupe FROM rejoindre WHERE pseudo=? )');
+  $req=$bdd->prepare('SELECT nom FROM groupe WHERE nom NOT IN (SELECT nom_groupe FROM rejoindre WHERE pseudo=? ) ORDER BY nom ASC');
   $req->execute(array($_SESSION['pseudo']));
   return $req;
 }

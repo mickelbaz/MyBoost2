@@ -15,6 +15,7 @@ require_once 'Controleurs/controleurPropositionSport.php';
 require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
+require_once 'Controleurs/controleurSalle.php';
 
 
 function router(){
@@ -129,6 +130,18 @@ function router(){
 
     case "annuaire" :
     $annuaire=affiche_annuaire();
+    break;
+
+    case "salle" :
+    $salle=affiche_salle();
+    break;
+
+    case "ajouter_club" :
+    $ajouter_club=ajouter_club();
+    break;
+
+    case "club" :
+    $club=page_salle($_GET['club']);
     break;
 
 

@@ -17,7 +17,15 @@
   <td>Description : </td>
   <td><textarea name="description" rows="4" cols="45"></textarea></td>
   </tr>
-
+	<tr><td>Lieu : </td>
+	<td>
+	<SELECT name="lieu">
+		<OPTION value="title" selected>Choisir le club
+		<?php for($i=0;$i<count($salle);$i++){?>
+			<OPTION> <?php echo $salle[$i][0];
+		}?>
+	</SELECT>
+	</td>
 	<tr>
 	<td>Date : </td>
 	<td>

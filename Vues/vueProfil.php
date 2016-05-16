@@ -167,8 +167,8 @@
         <div class=groupe>
 
 
-          <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe)){ ?>
-            <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> </div>
+          <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe,$lieu)){ ?>
+            <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> &nbsp à &nbsp <?php echo $lieu ?></div>
             <?php
       }
       if(count($event)==0){?>

@@ -106,7 +106,7 @@ function verif_pseudo(){
 
       function annuaire(){
           $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-          $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo !=?');
+          $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo !=? ORDER BY pseudo ASC');
           $req->execute(array($_SESSION['pseudo']));
           return $req;
       }
