@@ -14,7 +14,7 @@
 <div class="groupe">
 
   <h1 class="name_groupe"><?php echo $donnees[0] ?><br><?php
-  if ($_SESSION['pseudo']==admin_groupe($donnees[0]) ){?>
+  if ($_SESSION['pseudo']==$admin[0] ){?>
     <a href="index.php?page=modif_groupe"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a></h1><?php
   }?>
 
@@ -25,7 +25,7 @@
 <div class="sport">
 <h1 class="name_sport"><?php echo $donnees[1] ?></h1>
 </div>
-</div>
+
 
 <br>
 <div>

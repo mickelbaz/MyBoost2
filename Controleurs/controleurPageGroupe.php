@@ -10,10 +10,7 @@ function afficher_details_groupe($nom_groupe){
   require 'Vues/vueGroupe.php';
 }
 
-function admin_groupe($nom_groupe){
-  $admin=recup_admin($nom_groupe)->fetch();
-  return $admin;
-}
+
 
 
 ?>
