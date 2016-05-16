@@ -12,7 +12,7 @@
         </p>
     </div>
     <div class="lien_footer">
-        <a href="vueFAQ.php"><h3>Besoin d'aide?</h3></a>
+        <a href="index.php?page=faq"><h3>Besoin d'aide?</h3></a>
     </div>
     <h3 class="phrase">Rejoignez nous !</h3>
 </footer>
