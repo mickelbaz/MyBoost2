@@ -31,7 +31,7 @@ Ajouter &nbsp
 </SELECT>
 &nbsp au groupe &nbsp
 <SELECT name="groupe">
-  <OPTION value="title" selected>groupe
+  <OPTION value="title" selected>Choisir le groupe
   <?php for($i=0;$i<count($gpe);$i++){?>
     <OPTION><?php echo $gpe[$i][0];
   }?>
