@@ -7,7 +7,8 @@
 
           	<h1>FAQ</h1>
           	<h4>
-                Si vous ne trouvez pas de réponses adaptées, pensez à aller voir le forum. sinon nous somme a votre disposition sur serviceclientmyboost@gmail.com
+                Si vous ne trouvez pas de réponses adaptées, vous pouvez jetter un coup d'oeil au Forum.<br />
+                Pour toutes autres questions n'hésitez pas à nous envoyer un mail à l'adresse suivant "serviceclientmyboost@gmail.com" !
             </h4>
 
           	<div class='questions'>
