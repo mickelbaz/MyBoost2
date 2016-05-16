@@ -145,7 +145,7 @@ function router(){
     $club=page_salle($_GET['club']);
     break;
 
-    case "FAQ" :
+    case "faq" :
     $faq=affiche_faq();
     break;
 
