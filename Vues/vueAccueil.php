@@ -35,10 +35,10 @@
 		<div class="container">
 				<div class="slider">
 					<figure>
-						<img src="Images/danse.jpg"alt>
-						<img src="Images/yoga.jpg"alt>
-						<img src="Images/running.jpg"alt>
-						<img src="Images/tennis.jpg"alt>
+						<img src="Images/danse.jpg"alt="" width="1200" height="500" />
+						<img src="Images/yoga.jpg"alt="" width="1200" height="500" />
+						<img src="Images/running.jpg"alt="" width="1200" height="500" />
+						<img src="Images/tennis.jpg"alt="" width="1200" height="500" />
 					</figure>
 				</div>
 		</div>
