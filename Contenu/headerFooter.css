@@ -244,7 +244,9 @@ footer img{
     float:right;
 }
 
-
+.lien_footer a{
+  text-decoration: none
+}
 
 .lien_footer h3{
   margin:5em;
@@ -254,7 +256,6 @@ footer a h3{
   text-align:center;
   color:white;
   display:inline;
-  text-decoration: none;
   font-size: 1.5em;
 }
 
