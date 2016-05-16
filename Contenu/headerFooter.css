@@ -255,6 +255,10 @@ display:inline;
 font-size: 1.5em;
 }
 
+footer a h3:hover{
+color:black;
+}
+
 .phrase{
   text-align: center;
   color:white;
