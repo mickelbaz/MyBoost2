@@ -82,3 +82,20 @@ td{
 .name_groupe a{
   text-decoration: none;
 }
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.site{
+  text-align: center;
+}
+
+.commentaire{
+  margin-left: 2em;
+}
+
+.Ok{
+  margin-left: 6em;
+}

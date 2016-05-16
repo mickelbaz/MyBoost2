@@ -60,7 +60,7 @@
 else{?>
     <table style="border-collapse:collapse;">
       <tr style="border-bottom:1px solid black;">
-        <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td></tr>
+        <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Lieu</td></tr>
         <tr></tr>
       <tr>
         <?php
@@ -68,7 +68,7 @@ else{?>
         $participants=array();
         for($i=0;$i<count($mes_event);$i++){
         $participants[$i]=nb($mes_event[$i][0]);
-            for($j=0;$j<=3;$j++){?>
+            for($j=0;$j<=4;$j++){?>
           <td><?php echo $mes_event[$i][$j]?></td>
         <?php
       }
@@ -100,7 +100,7 @@ else{?>
   else{?>
     <table style="border-collapse:collapse;">
       <tr style="border-bottom:1px solid black;">
-        <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Nombre de places disponibles</td></tr>
+        <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Lieu</td><td>Nombre de places disponibles</td></tr>
         <tr></tr>
       <?php
       $admin_event=array();
@@ -114,7 +114,7 @@ else{?>
         $admin_event[$i]=admin($event[$i][0]);?>
         <tr>
         <?php
-        for($j=0;$j<4;$j++){?>
+        for($j=0;$j<=4;$j++){?>
           <td><?php echo $event[$i][$j]?></td>
         <?php
       }
@@ -160,14 +160,14 @@ else{?>
 <?php
 for($i=0;$i<count($membre);$i++){
   if($_SESSION['pseudo']==$membre[$i][0]){?>
-      <div class="membre"> <a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></div>
+      <div class="membre"><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></div>
     <?php
   }
   else{?>
     <div class="membre"> <a href="index.php?page=profilvoir&pseudo=<?php echo $membre[$i][0] ?>"> <?php echo $membre[$i][0] ?></a>
     <?php
       if($_SESSION['pseudo']==$admin[0]){?>
-        &nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.php?page=bannir&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>"><INPUT type="button" name="bannir" value="Supprimer ce membre"/></a>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.php?page=bannir&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>"><INPUT type="button" name="bannir" value="Supprimer ce membre"/></a>
       <?php
     }?>
     </div>
