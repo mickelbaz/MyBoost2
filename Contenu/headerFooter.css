@@ -76,7 +76,6 @@ font-size: 1.2em;
   top:40px;
   right:180px;
   text-decoration: none;
-  width: 8em;
   border-style: solid;
   border-radius:1em;
   border-color: red;
@@ -144,7 +143,7 @@ header .search input{
   font-size: 1em;
   outline:none;
   text-align: center;
-  margin-left:1040px;
+  margin-left:990px;
   margin-top: 5px;
 }
 
