@@ -10,8 +10,8 @@ function connect(){
       }
        else{
         session_start();
-        $_SESSION['pseudo']=$_POST['pseudo'];?>
-        <script language="javascript">alert("<?php echo 'Bonjour ' . $_SESSION['pseudo'] . ' ' ?>!");</script><?php
+        $_SESSION['pseudo']=$_POST['pseudo'];
+
         header("location: index.php?page=accueil");
       }
     }
