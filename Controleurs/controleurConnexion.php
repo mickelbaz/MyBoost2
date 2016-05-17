@@ -6,9 +6,9 @@ require_once 'Modeles/modeleUtilisateurs.php';
 function connect(){
 
 
-  if {
+  if($resultat && $resultat_admin){
     isset($_POST['connexion']) && $_POST['connexion']=="Valider"){
-    $resultat_admin=verif_id()->fetch();
+    $resultat_admin=verif_id2()->fetch();
     $resultat=verif_id()->fetch();
     if(!$resultat_admin || !$resultat){
     echo 'Pseudo ou mot de passe incorrect';
