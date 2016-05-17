@@ -145,6 +145,11 @@ function router(){
     $club=page_salle($_GET['club']);
     break;
 
+
+    case "newadmin" :
+    $admin=nouvel_admin($_GET['groupe'],$_GET['membre']);
+    break;
+
     case "faq" :
     $faq=affiche_faq();
     break;

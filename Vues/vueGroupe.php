@@ -78,7 +78,7 @@ else{?>
       ?>
       <td><a href="index.php?page=nonparticiper&event=<?php echo $mes_event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="nonparticipe" value="Ne plus participer"/></a></td>
       <?php
-      if($_SESSION['pseudo']==$admin_event[$i][0]){?>
+      if($_SESSION['pseudo']==$admin_event[$i][0] || $_SESSION['pseudo']==$admin[0]){?>
         <td><a href="index.php?page=annuler&event=<?php echo $mes_event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="annuler" value="Annuler l'évènement"/></a></td>
         <?php
       }?>
@@ -105,6 +105,7 @@ else{?>
         <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Lieu</td><td>Nombre de places disponibles</td></tr>
         <tr></tr>
       <?php
+    
       $admin_event=array();
       $nombre=array();
       $nb_place=array();
@@ -125,7 +126,7 @@ else{?>
           <td><a href="index.php?page=participer&event=<?php echo $event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="participe" value="Participer à l'évènement"/></a></td>
             <?php
         }
-        if($_SESSION['pseudo']==$admin_event[$i][0]){?>
+        if($_SESSION['pseudo']==$admin_event[$i][0] || $_SESSION['pseudo']==$admin[0]){?>
           <td><a href="index.php?page=annuler&event=<?php echo $event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="annuler" value="Annuler l'évènement"/></a></td>
           <?php
         }
@@ -170,6 +171,7 @@ for($i=0;$i<count($membre);$i++){
     <?php
       if($_SESSION['pseudo']==$admin[0]){?>
         &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.php?page=bannir&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>"><INPUT type="button" name="bannir" value="Supprimer ce membre"/></a>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.php?page=newadmin&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>"><INPUT type="button" name="bannir" value="Choisir comme nouvel administrateur"/></a>
       <?php
     }?>
     </div>

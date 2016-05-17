@@ -60,6 +60,7 @@ function commenter(){
 }
 
 function recup_commentaire($nom){
+
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT pseudo,date,commentaire,note FROM commentaire WHERE nom_club=?');
   $req->execute(array($nom));
