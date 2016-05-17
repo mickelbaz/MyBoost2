@@ -4,7 +4,7 @@ error_reporting(E_ALL & ~E_NOTICE);?>
 
 
 function affiche_modifgroupe($groupe){
-  $a=afficher_groupe($groupe);
+  $donnees=afficher_groupe($groupe)->fetch();
   require 'Vues/vueModif_groupe.php';
 }
 

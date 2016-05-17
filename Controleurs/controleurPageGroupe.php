@@ -56,6 +56,11 @@ function affiche_groupe_invite($nom_groupe){
   require 'Vues/vueinvitegroupe.php';
 }
 
+function nouvel_admin($groupe,$membre){
+  $admin=replace_admin($groupe,$membre);
+  header ('location: index.php?page=groupe&groupe='.$groupe);
+}
+
 
 
 

@@ -164,6 +164,13 @@ function verif_membre_groupe(){
     }
 }
 
+function replace_admin($nom_groupe,$pseudo){
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->prepare('UPDATE groupe SET pseudo_createur=? WHERE nom=?');
+  $req->execute(array($pseudo,$nom_groupe));
+}
+
+
 
 
 
