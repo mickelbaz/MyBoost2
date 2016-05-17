@@ -16,6 +16,7 @@ require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
+require_once 'Controleurs/controleurFAQ.php';
 
 
 function router(){
@@ -142,6 +143,10 @@ function router(){
 
     case "club" :
     $club=page_salle($_GET['club']);
+    break;
+
+    case "faq" :
+    $faq=affiche_faq();
     break;
 
 
