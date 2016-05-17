@@ -12,6 +12,7 @@ function afficher_details_groupe($nom_groupe,$pseudo){
   require 'Vues/vueGroupe.php';
 }
 
+
 function participer($nom_event,$nom_groupe){
   participe($nom_event);
   header('location: index.php?page=groupe&groupe='.$nom_groupe);
@@ -59,6 +60,7 @@ function nouvel_admin($groupe,$membre){
   $admin=replace_admin($groupe,$membre);
   header ('location: index.php?page=groupe&groupe='.$groupe);
 }
+
 
 
 

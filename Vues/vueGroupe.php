@@ -15,6 +15,7 @@
 
   <h1 class="name_groupe"><?php echo $donnees[0] ?><br><?php
   if ($_SESSION['pseudo']==$admin[0] ){?>
+
     <a href="index.php?page=modif_groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a>
     <a href="index.php?page=supprimer&supprimer=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Supprimer le groupe</span></a></h1>
     <?php
@@ -22,6 +23,7 @@
   else{?>
       <a href="index.php?page=quitter&quitter=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Quitter le groupe</span></a></h1>
     <?php
+
   }?>
 
 </div>
@@ -30,7 +32,7 @@
 <div class="sport">
 <h1 class="name_sport"><?php echo $donnees[1] ?></h1>
 </div>
-</div>
+
 
 <br></br>
 
@@ -103,9 +105,7 @@ else{?>
         <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Lieu</td><td>Nombre de places disponibles</td></tr>
         <tr></tr>
       <?php
-      //var_dump($event);
-      $date=DATEDIFF(date(Y-m-d) heure(H:i) , $event[0][2] $event[0][3]);
-      var_dump($date);
+    
       $admin_event=array();
       $nombre=array();
       $nb_place=array();

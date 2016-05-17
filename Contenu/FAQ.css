@@ -1,0 +1,33 @@
+h4 {
+    color: #97919a;
+    font-size: 1.5em;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align:center;
+}
+
+h1 {
+    text-align: center;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+dt{
+	font-style: bold;
+	font-size:1.5em;
+}
+
+.questions{
+	margin-top:3em;
+	margin-left: 3em;
+}
+
+.questions dt{
+	color: #873fa7;
+	font-weight: bold;
+
+}
+.questions dd {
+	text-align: justify;
+}

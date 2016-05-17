@@ -1,197 +1,283 @@
 /*page*/
 @font-face{
-    font-family: "Avenir Next LT Pro";
-    src:url(AvenirNextLTPro-Demi.otf);
+  font-family: "Avenir Next LT Pro";
+  src:url(AvenirNextLTPro-Demi.otf);
 }
 
 *{
-    font-family: Avenir Next LT Pro;
+  font-family: Avenir Next LT Pro;
 }
 /*en tête*/
 header{
-    background-attachment: fixed;
-    margin-bottom: 0em;
+  background-attachment: fixed;
+  margin-bottom: 0em;
 
 }
 
 .logo, img{
-    width:250px;
-    height:100px;
-    margin: 10px 0px 0px 10px;
+  width:250px;
+  height:100px;
+  margin: 10px 0px 0px 10px;
 }
 
 img#sport{
-    width:250px;
-    height:250px;
-    margin: 10px 0px 0px 10px;
+  width:250px;
+  height:250px;
+  margin: 10px 0px 0px 10px;
 }
 
 header h1{
 
 
-    color: rgba(120, 0, 120, 0.6);
-    font-size: 1.8em;
-    position:absolute;
-    top:40px;
-    right:445px;
+  color: #593f7a;
+  font-size: 1.8em;
+  position:absolute;
+  top:40px;
+  right:445px;
 }
 
 header .inscription a{
-	font-size: 1.2em;
-    position:absolute;
-    top:1em;
-    right:180px;
-    text-decoration: none;
-    height:1em;
-    width: 8em;
-    border-style: solid;
-    border-radius:1em;
-    border-color: #127feb;
-    border-width: thin;
-    text-align: center;
-    padding: 0.8em;
-    color:#127feb;
+font-size: 1.2em;
+  position:absolute;
+  top:1em;
+  right:180px;
+  text-decoration: none;
+  width: 8em;
+  border-style: solid;
+  border-radius:1em;
+  border-color: #127feb;
+  border-width: thin;
+  text-align: center;
+  padding: 0.8em;
+  color:#127feb;
 
 }
 
 
 header .connexion a{
-	font-size: 1.2em;
-    position:absolute;
-    top:4em;
-    right:180px;
-    text-decoration: none;
-    height:1em;
-    width: 8em;
-    border-style: solid;
-    border-radius:1em;
-    border-color: #127feb;
-    border-width: thin;
-    text-align: center;
-    padding:0.8em;
-    color:#127feb;
+font-size: 1.2em;
+  position:absolute;
+  top:5em;
+  right:180px;
+  text-decoration: none;
+  width: 8em;
+  border-style: solid;
+  border-radius:1em;
+  border-color: #127feb;
+  border-width: thin;
+  text-align: center;
+  padding:0.8em;
+  color:#127feb;
 }
 
 header .deconnexion a{
-	font-size: 1.2em;
-    position:absolute;
-    top:40px;
-    right:180px;
-    text-decoration: none;
-    height:1em;
-    width: 8em;
-    border-style: solid;
-    border-radius:1em;
-    border-color: red;
-    border-width: thin;
-    text-align: center;
-    padding:0.8em;
-    color:red;
+font-size: 1.2em;
+  position:absolute;
+  top:40px;
+  right:180px;
+  text-decoration: none;
+  border-style: solid;
+  border-radius:1em;
+  border-color: red;
+  border-width: thin;
+  text-align: center;
+  padding:0.8em;
+  color:red;
 }
 
 .champ1{
-  position:absolute;
-  top:2.5em;
-  right:180px;
+position:absolute;
+top:2.5em;
+right:180px;
 }
 
 .champ2{
-  position:absolute;
-  top:8em;
-  right:13.8em;
+position:absolute;
+top:8em;
+right:13.8em;
 }
 
 
 /*barre de navigation*/
 header nav{
-    position: relative;
-    background-color: rgba(120, 0, 120, 0.5);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-top: 2em;
+  position: relative;
+  background-color: rgba(120, 0, 120, 0.5);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 2em;
 }
 
 nav a{
-    font-size: 1.2em;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
-
-nav ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 50px;
-    margin-right:50px;
-    padding: 7px;
-
-
-}
- ul ul {
-   display:none;
- }
-
-li:hover ul, li.sfhover ul  {
-  display:block;
-  font-size: 0.8em;
+  font-size: 1.2em;
   color: white;
   font-weight: bold;
   text-decoration: none;
 }
 
-/*barre de recherche*/
-header .search input{
-    border-radius: 100px;
-    border: grey solid 1px;
-    font-size: 1em;
-    outline:none;
-    text-align: center;
-    margin-left:1040px;
-    margin-top: 5px;
+nav ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 50px;
+  margin-right:50px;
+  padding: 7px;
+
+
+}
+ul ul {
+ display:none;
 }
 
-.effet{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
+li:hover ul, li.sfhover ul  {
+display:block;
+font-size: 0.8em;
+color: white;
+font-weight: bold;
+text-decoration: none;
+}
+
+
+/*barre de recherche*/
+header .search input{
+  border-radius: 100px;
+  border: grey solid 1px;
+  font-size: 1em;
+  outline:none;
+  text-align: center;
+  margin-left:990px;
+  margin-top: 5px;
+}
+
+/*    display:block;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
 
 }
 
 .effet img {
 
-    width:2em;
-    height:2em;
-    vertical-align:middle;
-    transition:transform .3s ease;
+  width:2em;
+  height:2em;
+  vertical-align:middle;
+  transition:transform .3s ease;
 }
 
 
 .effet img:hover {
 
-    transform: scale(1.4);
+  transform: scale(1.4);
 }
 
 footer{
-    postition:relative;
-    clear:both;
-    margin:auto;
-    padding-top:1em;
-    height: 8em;
-    width: auto;
-    color:white;
+  postition:relative;
+  clear:both;
+  margin:auto;
+  padding-top:1em;
+  height: 8em;
+  width: auto;
+  color:white;
 
-    background-color:#2b2d2e;
+  background-color:#2b2d2e;
 
 
 }
 
 #credit{
-  font-size: 1em;
-  margin-top: 0.5em;
+font-size: 1em;
+margin-top: 0.5em;
+}*/
+
+li a:hover{
+color:black;
+}
+
+footer{
+ display: block;
+  position: absolute;
+  width: 100%;
+  color:white;
+  background-color:#593f7a;
+}
+
+#credit{
+font-size: 1em;
+margin: 0.5em 3em;
 }
 
 li a:hover{
-  color:black;
+color:black;
+}
+
+
+footer img{
+height:35px;
+width:35px;
+margin:20px 30px;
+}
+
+.effet{
+  width: 30%;
+  float: left;
+
+}
+
+.effet img {
+  width:3em;
+  height:3em;
+  vertical-align:middle;
+  transition:transform .3s ease;
+}
+
+
+.effet img:hover {
+
+  transform: scale(1.4);
+}
+
+.lien_footer{
+  margin-top: 50px;
+  float:right;
+}
+
+.lien_footer a{
+text-decoration: none
+}
+
+.lien_footer h3{
+margin:5em;
+}
+
+footer a h3{
+text-align:center;
+color:white;
+display:inline;
+font-size: 1.5em;
+}
+
+footer a h3:hover{
+color:black;
+}
+
+.phrase{
+  text-align: center;
+  color:white;
+  font-size: 2em;
+  margin-top: 40px;
+
+}
+
+html{
+  height:100%;
+}
+body{
+  min-height:100%;
+  position:relative;
+}
+
+#bloc_page{
+ padding-bottom: 171px;
+}
+*{
+  box-sizing:border-box;
 }

@@ -1,13 +1,13 @@
 <?php
 
 function recup_salle(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->query('SELECT nom FROM salle ORDER BY nom ASC');
   return $req;
 }
 
 function recup_salle_region($nom_groupe){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nom FROM salle WHERE region IN (SELECT region FROM groupe WHERE nom=?) ORDER BY nom ASC');
   $req->execute(array($nom_groupe));
   return $req;
@@ -15,7 +15,7 @@ function recup_salle_region($nom_groupe){
 }
 
 function ajouter_salle(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO salle (nom,adresse,cp,ville,region,site) VALUES (:nom,:adresse,:cp,:ville,:region,:site)');
   $req->execute(array(
     'nom'=>$_POST['nom'],
@@ -28,7 +28,7 @@ function ajouter_salle(){
 }
 
 function verif_salle(){
-      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
       $req=$bdd->prepare('SELECT nom FROM salle WHERE nom=? AND adresse=?');
       $req->execute(array($_POST['nom'],$_POST['adresse']));
       $donnee=$req->fetch();
@@ -41,14 +41,14 @@ function verif_salle(){
 }
 
 function recup_infos_salle($nom){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nom,adresse,cp,ville,region,site FROM salle WHERE nom=?');
   $req->execute(array($nom));
   return $req;
 }
 
 function commenter(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('INSERT INTO commentaire (pseudo,commentaire,note,nom_club,date) VALUES (:pseudo,:commentaire,:note,:nom_club,:date)');
     $req->execute(array(
       'pseudo'=>$_SESSION['pseudo'],
@@ -60,8 +60,9 @@ function commenter(){
 }
 
 function recup_commentaire($nom){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT pseudo,date,commentaire,note FROM commentaire WHERE nom_club=? ORDER BY date DESC');
+
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->prepare('SELECT pseudo,date,commentaire,note FROM commentaire WHERE nom_club=?');
   $req->execute(array($nom));
   return $req;
 }
