@@ -12,6 +12,7 @@ function afficher_details_groupe($nom_groupe,$pseudo){
   require 'Vues/vueGroupe.php';
 }
 
+
 function participer($nom_event,$nom_groupe){
   participe($nom_event);
   header('location: index.php?page=groupe&groupe='.$nom_groupe);
@@ -44,7 +45,7 @@ function annuler_event($nom_event,$nom_groupe){
 
 function supp_membre($nom_groupe,$pseudo){
   $supp=supprimer_membre($nom_groupe,$pseudo);
-  header ('location: index.php?page=groupe&groupe='.$nom_groupe);  
+  header ('location: index.php?page=groupe&groupe='.$nom_groupe);
 }
 
 function affiche_groupe_invite($nom_groupe){
@@ -54,6 +55,12 @@ function affiche_groupe_invite($nom_groupe){
   $event=recup_infos_event($nom_groupe)->fetchAll();
   require 'Vues/vueinvitegroupe.php';
 }
+
+function nouvel_admin($groupe,$membre){
+  $admin=replace_admin($groupe,$membre);
+  header ('location: index.php?page=groupe&groupe='.$groupe);
+}
+
 
 
 

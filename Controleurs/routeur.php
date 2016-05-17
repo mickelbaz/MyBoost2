@@ -144,6 +144,10 @@ function router(){
     $club=page_salle($_GET['club']);
     break;
 
+    case "admin" :
+    $admin=affiche_admin();
+    break;
+
 
 
     default:

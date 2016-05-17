@@ -15,12 +15,11 @@
 
     <div class="groupe">
 
-      <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="index.php?page=groupe"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Retour à la page du groupe</span></a></h1>
+      <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="index.php?page=groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Retour à la page du groupe</span></a></h1>
 
     </div>
 
   </div>
-
   </body>
     <?php require 'Vues/footer.php'; ?>
 

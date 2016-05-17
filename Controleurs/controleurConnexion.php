@@ -17,8 +17,8 @@ function connect(){
 
       if ($resultat){
         session_start();
-        $_SESSION['pseudo']=$_POST['pseudo'];
-        echo 'Bonjour ' . $_SESSION['pseudo'] . ' !';
+        $_SESSION['pseudo']=$_POST['pseudo'];?>
+        <script language="javascript">alert("<?php echo 'Bonjour ' . $_SESSION['pseudo'] . ' ' ?>!");</script><?php
         header("location: index.php?page=accueil");
       }
       if($resultat_admin){

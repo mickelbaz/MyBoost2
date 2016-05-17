@@ -144,7 +144,7 @@ function supprimer_membre($nom_groupe,$pseudo){
 }
 
 function ajout_membre_groupe(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('INSERT INTO rejoindre (pseudo,nom_groupe) VALUES (:pseudo,:nom_groupe)');
     $req->execute(array(
       'pseudo'=>$_POST['pseudo'],
@@ -152,7 +152,7 @@ function ajout_membre_groupe(){
 }
 
 function verif_membre_groupe(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', '', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('SELECT pseudo FROM rejoindre WHERE nom_groupe=? AND pseudo=?');
     $req->execute(array($_POST['groupe'],$_POST['pseudo']));
     $donnee=$req->fetch();
@@ -163,6 +163,13 @@ function verif_membre_groupe(){
       return true;
     }
 }
+
+function replace_admin($nom_groupe,$pseudo){
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->prepare('UPDATE groupe SET pseudo_createur=? WHERE nom=?');
+  $req->execute(array($pseudo,$nom_groupe));
+}
+
 
 
 
