@@ -9,7 +9,7 @@ function ajout(){
   $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,region,pays,tel,mail,mot_de_passe)
 VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:pays,:tel,:mail,:mot_de_passe)');
 
-$req->execute(array(
+   $req->execute(array(
     'nom'=>$_POST['nom'],
     'prenom'=>$_POST['prenom'],
     'pseudo'=>$_POST['pseudo'],
@@ -124,9 +124,5 @@ function verif_pseudo(){
           $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo !=? ORDER BY pseudo ASC');
           $req->execute(array($_SESSION['pseudo']));
           return $req;
-      }
-
-
-
-
- ?>
+        }
+          ?>
