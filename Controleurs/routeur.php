@@ -16,6 +16,7 @@ require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
+require_once 'controleurs/controleurAdmin.php';
 
 
 function router(){
@@ -95,7 +96,6 @@ function router(){
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
 
-
     case "proposition_sport" :
     $proposition=afficherproposport();
     break;
@@ -145,10 +145,8 @@ function router(){
     break;
 
     case "admin" :
-    $admin=affiche_admin();
+    $admin=afficher_admin();
     break;
-
-
 
     default:
     $_SESSION=array();
@@ -157,7 +155,5 @@ function router(){
     break;
 
   }
-
-
 }
 ?>
