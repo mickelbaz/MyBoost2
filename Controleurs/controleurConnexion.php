@@ -7,8 +7,8 @@ function connect(){
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
     $resultat_admin=verif_id2()->fetch();
     $resultat=verif_id()->fetch();
-    var_dump($resultat);
-    var_dump($resultat_admin);
+    //var_dump($resultat);
+    //var_dump($resultat_admin);
     if(!$resultat_admin || !$resultat){
     echo 'Pseudo ou mot de passe incorrect';
     }

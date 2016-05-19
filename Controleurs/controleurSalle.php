@@ -1,5 +1,5 @@
 <?php
-require 'Modeles/modeleSalle.php';
+require_once 'Modeles/modeleSalle.php';
 
 function affiche_salle(){
   $salle=recup_salle()->fetchAll();
