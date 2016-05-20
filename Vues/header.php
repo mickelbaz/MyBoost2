@@ -25,6 +25,8 @@
     </head>
 
   <?php if(isset($_SESSION['pseudo'])){?>
+
+
     <body>
 
 <header>
@@ -59,6 +61,8 @@
             </li>
             <li class="nav-item"><a href="#">Forum</a></li>
             <li class="nav-item"><a href="index.php?page=apropos">À Propos</a></li>
+          <?php if($_SESSION['pseudo']=='admin'){?>
+            <li class="nav-item"><a href="index.php?page=admin">Administrer</a></li>
         </ul>
     </nav>
 
@@ -66,6 +70,10 @@
 
 </body>
 
+
+<?php
+}
+?>
   <?php
   }
   else{ ?>

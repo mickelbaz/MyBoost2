@@ -4,32 +4,21 @@ require_once 'Modeles/modeleUtilisateurs.php';
 
 
 function connect(){
-  if($resultat  || $resultat_admin){
+
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
-    $resultat_admin=recup_pseudo()->fetch();
     $resultat=verif_id()->fetch();
-    if(!$resultat_admin || !$resultat){
+    if(!$resultat){
     echo 'Pseudo ou mot de passe incorrect';
     }
 
-    if ($resultat){
-      session_start();
-      $_SESSION['pseudo']=$_POST['pseudo'];?>
-      <script language="javascript">alert("<?php echo 'Bonjour ' . $_SESSION['pseudo'] . ' ' ?>!");</script><?php
-      header("location: index.php?page=accueil");
-    }
-    if($resultat_admin){
+    else {
       session_start();
       $_SESSION['pseudo']=$_POST['pseudo'];
-      echo 'Bonjour ' . $_SESSION['pseudo'] . ' !';
-      header("location: index.php?page=admin");
+     
+      header("location:index.php?page=accueil");
     }
-  }
-
   }
     require 'Vues/vueConnexion.php';
 }
-
-
 
 ?>

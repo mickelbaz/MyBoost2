@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 require_once 'Controleurs/controleurAccueil.php';
 require_once 'Controleurs/controleurPageGroupe.php';
@@ -147,6 +148,12 @@ function router(){
     case "admin" :
     $admin=afficher_admin();
     break;
+
+   
+
+   case "afficher_membres" :
+   $afficher_liste_membres=afficher_liste_membres();
+   break;
 
     default:
     $_SESSION=array();

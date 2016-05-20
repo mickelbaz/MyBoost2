@@ -77,6 +77,12 @@ function verif_pseudo(){
 
         }
 
+        //function recup_pseudo(){
+        //    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+        //    $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo='.$_SESSION['Admin']);
+        //    $req->execute(array($_SESSION['pseudo']));
+        //    return $req;
+        //}
       function recup_infos($pseudo){
           $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
           $req=$bdd->prepare('SELECT nom,prenom,mail,adresse,date,tel,ville,pays,code_postal,sexe,pseudo,region FROM sportif WHERE pseudo=?');
@@ -123,10 +129,5 @@ function verif_pseudo(){
           return $req;
         }
 
-      function recup_pseudo(){
-          $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-          $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo='.$_SESSION['Admin']);
-          $req->execute(array($_SESSION['pseudo']));
-          return $req;
-      }
+
           ?>
