@@ -1,14 +1,13 @@
 <?php
+
 require_once 'Modeles/modeleUtilisateurs.php';
 
 
 function connect(){
   if($resultat  || $resultat_admin){
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
-    $resultat_admin=verif_id2()->fetch();
+    $resultat_admin=recup_pseudo()->fetch();
     $resultat=verif_id()->fetch();
-    //var_dump($resultat);
-    //var_dump($resultat_admin);
     if(!$resultat_admin || !$resultat){
     echo 'Pseudo ou mot de passe incorrect';
     }
@@ -26,10 +25,10 @@ function connect(){
       header("location: index.php?page=admin");
     }
   }
+
   }
     require 'Vues/vueConnexion.php';
 }
-
 
 
 

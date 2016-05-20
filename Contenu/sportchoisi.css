@@ -65,7 +65,8 @@ fieldset.sport legend{
 
 input.sport{
 	font-size:25px;
-	display:block;
+  position:relative;
+  display:block;
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
