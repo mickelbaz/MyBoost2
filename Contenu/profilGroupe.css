@@ -54,8 +54,13 @@ h1 .modifier{
 
 .membre{
   display:block;
+  margin-left: 5em;
 }
 
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 tr td{
@@ -83,10 +88,7 @@ td{
   text-decoration: none;
 }
 
-table{
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 .site{
   text-align: center;
@@ -98,4 +100,8 @@ table{
 
 .Ok{
   margin-left: 6em;
+}
+
+.liste_membre table{
+  margin-left: 1em;
 }

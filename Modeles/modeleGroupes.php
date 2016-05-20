@@ -151,10 +151,10 @@ function ajout_membre_groupe(){
       'nom_groupe'=> $_POST['groupe'] ));
 }
 
-function verif_membre_groupe(){
+function verif_membre_groupe($groupe,$pseudo){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('SELECT pseudo FROM rejoindre WHERE nom_groupe=? AND pseudo=?');
-    $req->execute(array($_POST['groupe'],$_POST['pseudo']));
+    $req->execute(array($groupe,$pseudo));
     $donnee=$req->fetch();
     if($donnee){
       return false;

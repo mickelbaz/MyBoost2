@@ -96,7 +96,11 @@ function verif_nom_event(){
       $req2->execute(array($nom_event));
   }
 
-
+function tous_evenements(){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->query('SELECT nom,date,heure FROM évènement');
+    return $req;
+}
 
 
 

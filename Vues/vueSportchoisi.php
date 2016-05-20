@@ -1,8 +1,9 @@
     <meta http-equiv="content-type" content="text/html;charset=utf8_swedish_ci">
 <?php
 
+
   mysql_connect("localhost" ,"root","root");
-  mysql_select_db("myboostbdd");
+  mysql_select_db("myboost");
 
 $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
 

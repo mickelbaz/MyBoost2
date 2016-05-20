@@ -17,11 +17,11 @@
   if ($_SESSION['pseudo']==$admin[0] ){?>
 
     <a href="index.php?page=modif_groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a>
-    <a href="index.php?page=supprimer&supprimer=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Supprimer le groupe</span></a></h1>
+    <a href="#" onclick="if (confirm('Voulez-vous supprimer ce groupe ?')) window.location='index.php?page=supprimer&supprimer=<?php echo $donnees[0]?>'; return false"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Supprimer le groupe</span></a></h1>
     <?php
   }
   else{?>
-      <a href="index.php?page=quitter&quitter=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Quitter le groupe</span></a></h1>
+      <a href="#" onclick="if (confirm('Voulez-vous quitter ce groupe ?')) window.location='index.php?page=quitter&quitter=<?php echo $donnees[0]?>'; return false"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Quitter le groupe</span></a></h1>
     <?php
 
   }?>
@@ -40,13 +40,13 @@
 <div>
   <h2>Descritption du groupe :</h2>
   <br>
-  <?php echo $donnees[2] ?>
+  <div class="membre"><?php echo $donnees[2] ?></div>
 </div>
 <br></br>
 <div>
   <h2>Région :</h2>
   <br>
-  <?php echo $donnees[3] ?>
+    <div class="membre"><?php echo $donnees[3] ?></div>
 </div>
 <br></br>
 <div class="evenement">
@@ -76,10 +76,10 @@ else{?>
       }
       $admin_event[$i]=admin($mes_event[$i][0]);
       ?>
-      <td><a href="index.php?page=nonparticiper&event=<?php echo $mes_event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="nonparticipe" value="Ne plus participer"/></a></td>
+      <td><a href="#" onclick="if (confirm('Ne plus participer ?')) window.location='index.php?page=nonparticiper&event=<?php echo $mes_event[$i][0]?>&nom=<?php echo $donnees[0]?>'; return false"><INPUT type="button" name="nonparticipe" value="Ne plus participer"/></a></td>
       <?php
       if($_SESSION['pseudo']==$admin_event[$i][0] || $_SESSION['pseudo']==$admin[0]){?>
-        <td><a href="index.php?page=annuler&event=<?php echo $mes_event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="annuler" value="Annuler l'évènement"/></a></td>
+        <td><a href="#" onclick="if (confirm('Annuler l\'évènement ?')) window.location='index.php?page=annuler&event=<?php echo $mes_event[$i][0]?>&nom=<?php echo $donnees[0]?>'; return false"><INPUT type="button" name="annuler" value="Annuler l'évènement"/></a></td>
         <?php
       }?>
         </tr>
@@ -105,7 +105,6 @@ else{?>
         <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Lieu</td><td>Nombre de places disponibles</td></tr>
         <tr></tr>
       <?php
-    
       $admin_event=array();
       $nombre=array();
       $nb_place=array();
@@ -123,11 +122,11 @@ else{?>
       }
         if(0<$dispo[$i]){?>
           <td><?php echo $dispo[$i]?></td>
-          <td><a href="index.php?page=participer&event=<?php echo $event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="participe" value="Participer à l'évènement"/></a></td>
+          <td><a href="#" onclick="if (confirm('Participer à l\'évènement ?')) window.location='index.php?page=participer&event=<?php echo $event[$i][0]?>&nom=<?php echo $donnees[0]?>'; return false"><INPUT type="button" name="participe" value="Participer à l'évènement"/></a></td>
             <?php
         }
         if($_SESSION['pseudo']==$admin_event[$i][0] || $_SESSION['pseudo']==$admin[0]){?>
-          <td><a href="index.php?page=annuler&event=<?php echo $event[$i][0]?>&nom=<?php echo $donnees[0]?>"><INPUT type="button" name="annuler" value="Annuler l'évènement"/></a></td>
+          <td><a href="#" onclick="if (confirm('Annuler l\'évènement ?')) window.location='index.php?page=annuler&event=<?php echo $event[$i][0]?>&nom=<?php echo $donnees[0]?>'; return false" ><INPUT type="button" name="annuler" value="Annuler l'évènement"/></a></td>
           <?php
         }
       if($dispo[$i]==0){?>
@@ -160,27 +159,33 @@ else{?>
 <br></br>
 
 <div><h2>Liste des membres :</h2></div><br>
+<div class="liste_membre">
+<table>
 <?php
-for($i=0;$i<count($membre);$i++){
-  if($_SESSION['pseudo']==$membre[$i][0]){?>
-      <div class="membre"><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></div>
+for($i=0;$i<count($membre);$i++){?>
+  <tr>
+  <?php if($_SESSION['pseudo']==$membre[$i][0]){?>
+      <td><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></div></td>
     <?php
   }
   else{?>
-    <div class="membre"> <a href="index.php?page=profilvoir&pseudo=<?php echo $membre[$i][0] ?>"> <?php echo $membre[$i][0] ?></a>
+    <td><a href="index.php?page=profilvoir&pseudo=<?php echo $membre[$i][0] ?>"> <?php echo $membre[$i][0] ?></a></td>
     <?php
       if($_SESSION['pseudo']==$admin[0]){?>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.php?page=bannir&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>"><INPUT type="button" name="bannir" value="Supprimer ce membre"/></a>
-        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="index.php?page=newadmin&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>"><INPUT type="button" name="bannir" value="Choisir comme nouvel administrateur"/></a>
+        <td><a href="#" onclick="if (confirm('Supprimer ce membre ?')) window.location='index.php?page=bannir&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>'; return false"><INPUT type="button" name="bannir" value="Supprimer ce membre"/></a></td>
+        <td><a href="#" onclick="if (confirm('Choisir comme nouvel admin ?')) window.location='index.php?page=newadmin&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>'; return false"><INPUT type="button" name="bannir" value="Choisir comme nouvel administrateur"/></a></td>
       <?php
     }?>
     </div>
+  </tr>
     <?php
   }?>
 
 
 <?php
 } ?>
+</table>
+</div>
 </div>
 <br></br>
 

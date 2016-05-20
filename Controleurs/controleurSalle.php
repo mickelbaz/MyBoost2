@@ -15,6 +15,7 @@ function ajouter_club(){
         }
         else{
           ajouter_salle();
+          header('location: index.php?page=club&club='.$_POST['nom']);
         }
     }
     else{?>
@@ -30,7 +31,7 @@ function page_salle($nom){
   $comment=recup_commentaire($nom)->fetchAll();
   if(isset($_POST['envoyer']) && $_POST['envoyer'] <>""){
     if($_POST['commentaire']<>"" && $_POST['note']<>""){
-        commenter();
+        commenter($nom);
         header('location: index.php?page=club&club='.$nom);
     }
     else{?>

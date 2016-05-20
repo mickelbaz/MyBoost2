@@ -17,6 +17,7 @@ require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
+require_once 'Controleurs/controleurRecherche.php';
 
 
 function router(){
@@ -32,19 +33,23 @@ function router(){
     break;
 
     case "groupe":
+    $supprimer=suppression_event();
     $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
 
     case "groupevoir" :
+    $supprimer=suppression_event();
     $afficher=affiche_groupe_invite($_GET['groupe']);
     break;
 
     case "grouperejoint":
+    $supprimer=suppression_event();
     $rejoint=rejoindre($_GET['groupe']);
     $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
 
     case "profil":
+    $supprimer=suppression_event();
     $afficher_profil=recup_all($_SESSION['pseudo']);
     break;
 
@@ -130,7 +135,7 @@ function router(){
     break;
 
     case "annuaire" :
-    $annuaire=affiche_annuaire();
+    $annuaire=affiche_page_annuaire();
     break;
 
     case "salle" :
@@ -154,6 +159,13 @@ function router(){
     $faq=affiche_faq();
     break;
 
+    case "resultatRecherche" :
+    $page=affiche_page_resultat();
+    break;
+
+    case "rechercheavancee" :
+    $affiche_vue=recherche_avancee();
+    break;
 
 
     default:

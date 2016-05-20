@@ -1,12 +1,12 @@
 <?php
 
 
-function affiche_annuaire(){
+function affiche_page_annuaire(){
   $membre=annuaire()->fetchAll();
   $gpe=recup_groupe_admin($_SESSION['pseudo'])->fetchAll();
-  if(isset($_POST['valider']) && $_POST['valider'] <>""){
+  if(isset($_POST['envoyer']) && $_POST['envoyer'] <>""){
       if($_POST['pseudo'] !="title" && $_POST['groupe'] != "title"){
-           if (verif_membre_groupe()==false){?>
+           if (verif_membre_groupe($_POST['groupe'],$_POST['pseudo'])==false){?>
               <script language="javascript">alert("Le membre fait déjà parti du groupe !");</script>
               <?php
            }
