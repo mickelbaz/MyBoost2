@@ -17,7 +17,10 @@ require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
+require_once 'Controleurs/controleurFAQ.php';
+require_once 'Controleurs/controleurRecherche.php';
 require_once 'controleurs/controleurAdmin.php';
+
 
 
 function router(){
@@ -33,19 +36,24 @@ function router(){
     break;
 
     case "groupe":
+    $supprimer=suppression_event();
     $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
 
     case "groupevoir" :
+    $supprimer=suppression_event();
     $afficher=affiche_groupe_invite($_GET['groupe']);
     break;
 
     case "grouperejoint":
+    $supprimer=suppression_event();
+    $supp=supp_invitation($_GET['groupe']);
     $rejoint=rejoindre($_GET['groupe']);
     $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
 
     case "profil":
+    $supprimer=suppression_event();
     $afficher_profil=recup_all($_SESSION['pseudo']);
     break;
 
@@ -130,7 +138,7 @@ function router(){
     break;
 
     case "annuaire" :
-    $annuaire=affiche_annuaire();
+    $annuaire=affiche_page_annuaire();
     break;
 
     case "salle" :
@@ -151,12 +159,48 @@ function router(){
 
 
 
+
    case "afficher_membres" :
    $afficher_liste_membres=afficher_membres();
    break;
 
    case "gérer_groupe" :
    $afficher_liste_groupes=afficher_groupes();
+
+    case "resultatRecherche" :
+    $page=affiche_page_resultat();
+    break;
+
+    case "rechercheavancee" :
+    $affiche_vue=recherche_avancee();
+    break;
+
+    case "recherche_groupe":
+    $resultat=resultatgroupe($_GET['region'],$_GET['sport']);
+    break;
+
+    case "recherche_club":
+    $resultat=resultatclub($_GET['region'],$_GET['sport']);
+    break;
+
+    case "recherche_membre" :
+    $resultat=resultatmembre($_GET['region'],$_GET['sport']);
+    break;
+
+    case "ignorer" :
+    $ignorer=ignorer_invitation($_GET['groupe']);
+    break;
+
+    case "recevoir_notif" :
+    $notif=notif($_GET['groupe']);
+    break;
+
+   case "afficher_membres_admin" :
+   $afficher=afficher_membres();
+   break;
+
+   case "afficher_groupes_admin" :
+   $afficher=afficher_groupes_admin();
    break;
 
     default:

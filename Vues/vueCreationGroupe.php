@@ -48,33 +48,16 @@
 
 	<tr>
 	<td>Sport du groupe</td>
-  <td>
-    <SELECT name="sport_groupe">
-      <OPTION value="title" selected>--- Sport ---
-      <OPTION>Tennis
-      <OPTION>Football
-      <OPTION>Ping-Pong
-      <OPTION>Basketball
-      <OPTION>Jogging
-      <OPTION>Golf
-      <OPTION>Boxe
-      <OPTION>Curling
-    </SELECT>
-  </td>
+			<td><SELECT name="sport">
+		    <OPTION value="title" selected>Sport
+		  <?php foreach($sport as list($nom)){?>
+		    <OPTION><?php echo $nom ?> </OPTION>
+		    <?php
+		  }?>
+		</SELECT>
+		</td>
   </tr>
 
-  <tr>
-	<tr></tr>
-	<td colspan="2">Choisissez votre avatar :</td>
-	</tr>
-
-	<tr>
-	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar1.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar2.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar3.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="Images/avatar4.png"/></td>
-	</tr>
-	<tr></tr><tr></tr>
 
 
   <tr>

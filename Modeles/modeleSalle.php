@@ -47,14 +47,14 @@ function recup_infos_salle($nom){
   return $req;
 }
 
-function commenter(){
+function commenter($salle){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('INSERT INTO commentaire (pseudo,commentaire,note,nom_club,date) VALUES (:pseudo,:commentaire,:note,:nom_club,:date)');
     $req->execute(array(
       'pseudo'=>$_SESSION['pseudo'],
       'commentaire'=>$_POST['commentaire'],
       'note'=>$_POST['note'],
-      'nom_club'=>$_POST['club'],
+      'nom_club'=>$salle,
       'date'=>date("Y-m-d")
     ));
 }

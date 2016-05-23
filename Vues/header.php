@@ -1,6 +1,4 @@
-<?php session_start(); ?>
 
-<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -43,7 +41,16 @@
     </div>
 
     <div class="search">
-        <input type="text" name="name" placeholder="rechercher">
+      <?php require_once 'Controleurs/controleurRecherche.php';
+      $recherche=redirection();
+      ?>
+        <form name="recherche" method="post" action="">
+        <input type="text" name="name" placeholder="rechercher"/>
+        <input type="submit" name="valider" value="OK"/>
+      </form>
+    </div>
+    <div class="search">
+        <a href="index.php?page=rechercheavancee"><input type="button" name="rechercheavancée" value="Recherche avancée"/></a>
     </div>
 
     <nav>

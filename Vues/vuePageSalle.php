@@ -34,11 +34,10 @@
 <div class="commentaire">Votre avis nous intéresse !
   <br></br>
 <FORM name="commenter" method="post" action="#">
-<INPUT type="text" name="club" size="5" value="<?php echo $infos[0][0]?>"/>
 <br><br>
 <textarea name="commentaire" placeholder="Laissez votre commentaire ici" rows="4" cols="45"></textarea>
 <br></br>
-Note /10 : &nbsp&nbsp&nbsp&nbsp <INPUT type="text" size="4" name="note"/>
+Note /10 : &nbsp&nbsp&nbsp&nbsp <INPUT type="number" size="4" name="note" min="0" max="10"/>
 <br></br>
 <div class=Ok><INPUT type="submit" name='envoyer' value="OK"/></div>
 </FORM>

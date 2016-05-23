@@ -4,7 +4,9 @@ error_reporting(E_ALL & ~E_NOTICE);
 
 require_once 'Modeles/modeleGroupes.php';
 
+
 function addgroupe(){
+  $sport=recup_all_sport()->fetchAll();
   if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
     if ($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['nb']<>"" && $_POST['region']!="title" && verif_nom_groupe()==true){
       add_groupe();

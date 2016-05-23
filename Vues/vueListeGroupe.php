@@ -25,11 +25,14 @@
         <td><a href="index.php?page=groupevoir&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
         <?php
         if($dispo[$i]!=0){?>
-          <td><a href="index.php?page=grouperejoint&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></a></td>
+          <td><a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $liste[$i][0] ?>'; return false"><INPUT type="button" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></a></td>
+
         <?php
+
         }
         else{?>
           <td><em>Plus de places disponibles</em></td>
+          <td><a href="#" onclick="if (confirm('Recevoir une notification si une place se libère ?')) window.location='index.php?page=recevoir_notif&groupe=<?php echo $liste[$i][0] ?>'; return false"><INPUT type="button" name="notif" value="Recevoir une notification"/></td></a>
           <?php
         }
         ?>

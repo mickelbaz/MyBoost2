@@ -9,7 +9,7 @@
           		<table>
             		<tr>
                 		<h4>
-                        <a href="index.php?page=afficher_membres" >Gérer les membres inscrits</a>
+                        <a href="index.php?page=afficher_membres_admin">Gérer les membres inscrits</a>
                     </h4>
 
             		</tr>
@@ -20,7 +20,7 @@
           	<table>
             		<tr>
                     <h4>
-                        <a href=".php" >Gérer les groupes	</a>
+                        <a href="index.php?page=afficher_groupes_admin" >Gérer les groupes	</a>
                     </h4>
             		</tr>
         		</table>
