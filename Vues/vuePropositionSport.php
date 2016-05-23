@@ -1,5 +1,8 @@
 <?php
     require 'Vues/header.php';?>
+    <meta charset="utf-8" />
+    <title>MyBoost - Le Site Web</title>
+    <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
     <link rel="stylesheet" href="Contenu/sports.css" >
 
     <div class="top"> <p>PROPOSER UN SPORT</p>

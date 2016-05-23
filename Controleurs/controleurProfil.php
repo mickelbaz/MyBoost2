@@ -3,7 +3,7 @@
 error_reporting(E_ALL & ~E_NOTICE); ?>
 <?php
 
-require 'Modeles/modeleUtilisateurs.php';
+require_once 'Modeles/modeleUtilisateurs.php';
 
 function recup($pseudo){
   $req=recup_infos($pseudo)->fetch();

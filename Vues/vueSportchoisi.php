@@ -1,21 +1,25 @@
-    <meta http-equiv="content-type" content="text/html;charset=utf8_swedish_ci">
+    <meta http-equiv="content-type" content="text/html">
+    <link rel="stylesheet" href="Contenu/sportchoisi.css">
+    <link rel="stylesheet" href="Contenu/sports.css" >
+    <meta charset="utf-8"/>
 <?php
 
   mysql_connect("localhost" ,"root","root");
-  mysql_select_db("myboostbdd");
+  mysql_select_db("myboost");
+  mysql_query("SET NAMES UTF8");
 
 $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
-
+$nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_participants="'.$_GET['nb_participants'].'"')
 ?>
 <?php require 'Vues/header.php'; ?>
 
   <html>
+
     <head>
       <body>
-        <title>Sports</title>
+        <title><?php echo($_GET['sport']) ?></title>
 
-          <link rel="stylesheet" href="Contenu/sports.css" >
-          <link rel="stylesheet" href="Contenu/sportchoisi.css">
+
     </head>
 <?php ?>
 <br>
@@ -31,10 +35,19 @@ $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['spor
         <td>
           <?php
           while($donnees = mysql_fetch_array($description))
+
           {
             echo $donnees['description'];
+
           }
+          while($nbsport = mysql_fetch_array($nb_participants)){
+
+            echo $nbsport['nb_participants'];
+          }
+
           ?>
+
+          <br>
       </td>
     </table>
 
@@ -45,7 +58,15 @@ $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['spor
         <form action="">
           <input class="sport" type=submit value=Participer>
         </form>
-<br>
+
+        <form action="">
+          <input class="sport" type=submit value='Chercher une salle / un terrain'>
+        </form>
+
+        <form action="">
+          <input class="sport" type=submit value='Chercher un partenaire / un groupe'>
+        </form>
+
     </body>
   </html>
 

@@ -4,6 +4,7 @@
         <meta charset="utf-8" />
 
         <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
+
         <script type="text/javascript">
         sfHover = function() {
           var sfEls = document.getElementById("menu").getElementsByTagName("LI");
@@ -18,8 +19,11 @@
         }
           if (window.attachEvent) window.attachEvent("onload", sfHover);
         </script>
+
     </head>
+
   <?php if(isset($_SESSION['pseudo'])){?>
+
     <body>
     <header>
       <div class="top_header">
@@ -57,6 +61,7 @@
     <nav>
         <ul id="menu_connecte">
             <li class="nav-item"><a class="left" href="index.php?page=accueil">Accueil</a></li>
+
             <li class="nav-item"><a href="index.php?page=profil">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
@@ -68,13 +73,24 @@
                 </ul>
             </li>
             <li class="nav-item"><a href="#">Forum</a></li>
+
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
+
+          <?php if($_SESSION['pseudo']=='admin'){?>
+            <li class="nav-item"><a href="index.php?page=admin">Administrer</a></li>
         </ul>
-      </nav>
-      <br><br>
+    </nav>
+
 </header>
+
 </body>
-  <?php
+
+
+<?php
+}
+
+
+  
   }
   else{ ?>
     <body>

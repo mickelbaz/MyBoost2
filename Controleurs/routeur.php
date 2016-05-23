@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 require_once 'Controleurs/controleurAccueil.php';
 require_once 'Controleurs/controleurPageGroupe.php';
@@ -16,7 +17,7 @@ require_once 'Controleurs/controleurModif_groupe.php';
 require_once 'Controleurs/controleurCreationEvenement.php';
 require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
-require_once 'Controleurs/controleurFAQ.php';
+require_once 'controleurs/controleurAdmin.php';
 
 
 function router(){
@@ -96,7 +97,6 @@ function router(){
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
 
-
     case "proposition_sport" :
     $proposition=afficherproposport();
     break;
@@ -146,16 +146,15 @@ function router(){
     $club=page_salle($_GET['club']);
     break;
 
-
-    case "newadmin" :
-    $admin=nouvel_admin($_GET['groupe'],$_GET['membre']);
+    case "admin" :
+    $admin=afficher_admin();
     break;
 
-    case "faq" :
-    $faq=affiche_faq();
-    break;
+   
 
-
+   case "afficher_membres" :
+   $afficher_liste_membres=afficher_liste_membres();
+   break;
 
     default:
     $_SESSION=array();
@@ -164,7 +163,5 @@ function router(){
     break;
 
   }
-
-
 }
 ?>

@@ -52,5 +52,5 @@
 </header>
 
 </div>
-
+</body>
 <?php require 'Vues/footer.php'; ?>
