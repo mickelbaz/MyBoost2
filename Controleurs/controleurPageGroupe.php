@@ -52,6 +52,7 @@ function affiche_groupe_invite($nom_groupe){
   $donnees=afficher_groupe($nom_groupe)->fetch();
   $admin=recup_admin($nom_groupe)->fetch();
   $membre=recup_membre($nom_groupe)->fetchAll();
+  $place=recup_nb_place($nom_groupe)->fetch();
   $event=recup_infos_event($nom_groupe)->fetchAll();
   require 'Vues/vueinvitegroupe.php';
 }
@@ -59,6 +60,22 @@ function affiche_groupe_invite($nom_groupe){
 function nouvel_admin($groupe,$membre){
   $admin=replace_admin($groupe,$membre);
   header ('location: index.php?page=groupe&groupe='.$groupe);
+}
+
+function suppression_event(){
+  $evenements=tous_evenements()->fetchAll();
+  $date_jour=date('Y-m-d');
+  $heure_jour=date('H:i:s');
+  foreach($evenements as list($nom,$date,$heure)){
+    if($date_jour>$date){
+      $supp=annuler($nom);
+    }
+    if($date_jour==$date){
+      if($heure_jour>$heure){
+        $supp=annuler($nom);
+      }
+    }
+  }
 }
 
 

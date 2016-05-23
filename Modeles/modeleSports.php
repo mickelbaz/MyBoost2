@@ -11,4 +11,11 @@ function ajout_sport(){
   VALUES (:nom,:description,:nb_max)');
 
 }
+
+function recup_all_sport(){
+  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->query('SELECT nom FROM sport');
+  return $req;
+
+}
 ?>

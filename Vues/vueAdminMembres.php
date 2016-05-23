@@ -1,7 +1,10 @@
 <?php require 'Vues/header.php' ?>
 <p> Afficher les membres </p>
 
-<?php  echo $membres; ?>
+<?php
+foreach($membres as list ($nom)){
+  echo $nom;
+} ?>
 
 
 <?php require 'Vues/footer.php' ?>

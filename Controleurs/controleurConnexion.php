@@ -17,10 +17,10 @@ function connect(){
 
         header("location: index.php?page=accueil");
       }
-
-    }
+  }
     require 'Vues/vueConnexion.php';
   }
+
 
 
 

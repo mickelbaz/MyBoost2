@@ -15,9 +15,13 @@
 <div class="groupe">
 
   <h1 class="name_groupe"><?php echo $donnees[0] ?><br>
-      <a href="index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Rejoindre le groupe</span></a></h1>
-</div>
+<?php $dispo=$place[0]-count($membre);
+if($dispo!=0){?>
+    <a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Rejoindre le groupe</span></a></h1>
+  <?php
+} ?>
 
+</div>
 
 <div class="sport">
 <h1 class="name_sport"><?php echo $donnees[1] ?></h1>

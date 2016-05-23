@@ -1,4 +1,6 @@
+
 <!DOCTYPE html>
+
 <html>
     <head>
         <meta charset="utf-8" />
@@ -23,6 +25,7 @@
     </head>
 
   <?php if(isset($_SESSION['pseudo'])){?>
+
 
     <body>
     <header>
@@ -54,14 +57,21 @@
 
 
         <div class="search">
-            <input type="text" name="name" placeholder="rechercher">
+          <?php require_once 'Controleurs/controleurRecherche.php';
+          $recherche=redirection();
+          ?>
+            <form name="recherche" method="post" action="">
+            <input type="text" name="name" placeholder="rechercher"/>
+            <input type="submit" name="valider" value="OK"/>
+          </form>
         </div>
-      </div>
+        <div class="search">
+            <a href="index.php?page=rechercheavancee"><input type="button" name="rechercheavancée" value="Recherche avancée"/></a>
+        </div>
 <br>
     <nav>
         <ul id="menu_connecte">
             <li class="nav-item"><a class="left" href="index.php?page=accueil">Accueil</a></li>
-
             <li class="nav-item"><a href="index.php?page=profil">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
@@ -90,7 +100,7 @@
 }
 
 
-  
+
   }
   else{ ?>
     <body>

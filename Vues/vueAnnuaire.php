@@ -22,7 +22,7 @@
 <br></br><br></br>
 <FORM name="ajout" method="post" action="">
 <div class="ajout">
-Ajouter &nbsp
+Inviter &nbsp
 <SELECT name="pseudo">
 <OPTION value="title" selected>membre
 <?php for($i=0;$i<count($membre);$i++){?>
@@ -36,7 +36,7 @@ Ajouter &nbsp
     <OPTION><?php echo $gpe[$i][0];
   }?>
   </SELECT>
-  &nbsp&nbsp&nbsp&nbsp<INPUT type="submit" name="valider" value="OK"/>
+  &nbsp&nbsp&nbsp&nbsp<INPUT type="submit" name="envoyer" value="OK"/>
 </div>
 </FORM>
 

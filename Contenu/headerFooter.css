@@ -128,7 +128,7 @@ right:13.8em;
 /*barre de navigation*/
 
 header nav{
-  
+
 
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
@@ -404,46 +404,20 @@ header .search input{
   margin-left:990px;
   margin-top: 5px;
 }
-
-/*    display:block;
-  margin-left:auto;
-  margin-right:auto;
-  text-align: center;
+.search{
 
 }
 
-.effet img {
-
-  width:2em;
-  height:2em;
-  vertical-align:middle;
-  transition:transform .3s ease;
-}
-
-
-.effet img:hover {
-
-  transform: scale(1.4);
-}
-
-footer{
-  postition:relative;
-  clear:both;
-  margin:auto;
-  padding-top:1em;
-  height: 8em;
-  width: auto;
-  color:white;
-
-  background-color:#2b2d2e;
-
-
-}
 
 #credit{
 font-size: 1em;
 margin-top: 0.5em;
-}*/
+}
+
+
+li a:hover{
+color:black;
+}
 
 
 footer{

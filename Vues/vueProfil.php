@@ -130,7 +130,7 @@
                 for ($i=0; $i<count($b); $i++){?>
                 <tr>
                 <td><a href="index.php?page=groupe&groupe=<?php echo $b[$i][0] ?>"><?php echo $b[$i][0]; ?></a></td>
-                <td><a href="index.php?page=supprimer&supprimer=<?php echo $b[$i][0] ?>"><INPUT type="button" name="supprimer" value="Supprimer le groupe"/></a></td>
+                <td><a href="#" onclick="if (confirm('Supprimer le groupe ?')) window.location='index.php?page=supprimer&supprimer=<?php echo $b[$i][0] ?>'; return false"><INPUT type="button" name="supprimer" value="Supprimer le groupe"/></a></td>
               <?php
             }
             if(count($b)==0){?>
@@ -147,7 +147,7 @@
             for ($i=0; $i<count($d); $i++){?>
             <tr>
             <td><a href="index.php?page=groupe&groupe=<?php echo $d[$i][0] ?>"><?php echo $d[$i][0]; ?></a></td>
-            <td><a href="index.php?page=quitter&quitter=<?php echo $d[$i][0] ?>"><INPUT type="button" name="quitter" value="Quitter le groupe"/></a></td>
+            <td><a href="#" onclick="if (confirm('Quitter le groupe ?')) window.location='index.php?page=quitter&quitter=<?php echo $d[$i][0] ?>'; return false"><INPUT type="button" name="quitter" value="Quitter le groupe"/></a></td>
           <?php
          }
          if(count($d)==0){?>

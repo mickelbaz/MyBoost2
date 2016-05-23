@@ -57,7 +57,7 @@ h1 span {
 
 a{
   text-decoration: none;
-  
+
 }
 
 h1 .modifier{
@@ -179,6 +179,7 @@ tr{
 .liste{
   display:block;
 
+
 }
 
 .calendrier{
@@ -189,4 +190,5 @@ tr{
   padding-top :2em;
   padding-bottom: 2em;
   padding-left: 1em;
+
 }
