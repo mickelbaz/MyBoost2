@@ -1,5 +1,13 @@
 
 <?php require 'Vues/header.php'; ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MyBoost - Le Site Web</title>
+  </head>
+  <body>
+
 
 <link rel="stylesheet" type="text/css" href="Contenu/accueil.css">
 
@@ -27,7 +35,7 @@
   </table>
   <?php
   }?>
-  <br></br>
+
 </div>
 
 <div class="carrousel">
@@ -42,9 +50,11 @@
 					</figure>
 				</div>
 		</div>
-		<span id="timeline"></span>
+
 
 </section>
 </div>
 
+</body>
+</html>
 <?php require 'Vues/footer.php'; ?>

@@ -9,7 +9,7 @@
 
   <body>
 <div class="head_groupe">
-<div class="groupe">
+<div class="salle">
   <h1 class="name_groupe"><?php echo $infos[0][0] ?><br></h1>
 </div>
 </div>

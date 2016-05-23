@@ -1,12 +1,9 @@
-<?php session_start(); ?>
-
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>MyBoost - Le Site Web</title>
-        <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
 
+        <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
         <script type="text/javascript">
         sfHover = function() {
           var sfEls = document.getElementById("menu").getElementsByTagName("LI");
@@ -18,35 +15,48 @@
                           this.className=this.className.replace(new RegExp(" sfhover\\b"), "");
                   }
           }
-  }
-  if (window.attachEvent) window.attachEvent("onload", sfHover);
-</script>
-
+        }
+          if (window.attachEvent) window.attachEvent("onload", sfHover);
+        </script>
     </head>
-
   <?php if(isset($_SESSION['pseudo'])){?>
     <body>
+    <header>
+      <div class="top_header">
 
-<header>
+        <div class="titre_principal">
 
-    <div id="titre_principal">
-        <div class="logo">
-                <img src="Images/Logo4.png" alt="Logo de site web MyBoost"/>
-                <h1>Un sport, un clic, une communauté!</h1>
+            <div class="logo">
+              <a href="index.php?page=accueil"><img src="Images/Logo4.png" alt="Logo de site web MyBoost"/></a>
+            </div>
+
+            <div class="slogan">
+              <h1>Un sport, un clic, une communauté!</h1>
+            </div>
 
         </div>
-        <div class="deconnexion">
-          <a href="index.php">Se déconnecter</a>
+
+        <div class="bouton">
+
+            <p>
+              Bonjour, <?php echo $_SESSION['pseudo'] ?> !
+            </p>
+
+          <div class="deconnexion">
+            <a href="index.php">Se déconnecter</a>
+          </div>
+
         </div>
-    </div>
 
-    <div class="search">
-        <input type="text" name="name" placeholder="rechercher">
-    </div>
 
+        <div class="search">
+            <input type="text" name="name" placeholder="rechercher">
+        </div>
+      </div>
+<br>
     <nav>
-        <ul class="menu">
-            <li class="nav-item"><a href="index.php?page=accueil">Accueil</a></li>
+        <ul id="menu_connecte">
+            <li class="nav-item"><a class="left" href="index.php?page=accueil">Accueil</a></li>
             <li class="nav-item"><a href="index.php?page=profil">Mon Compte</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
@@ -58,66 +68,65 @@
                 </ul>
             </li>
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="index.php?page=apropos">À Propos</a></li>
+            <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
         </ul>
-    </nav>
-
+      </nav>
+      <br><br>
 </header>
-
 </body>
-
   <?php
   }
   else{ ?>
-
     <body>
-
-<header>
-
+    <header>
     <div class="top_header">
 
-        <div class="logo">
+      <div class="titre_principal">
 
-          <div class="image">
-            <img src="Images/Logo4.png" alt="Logo de site web MyBoost"/>
-          </div>
+        <div class="logo">
+          <a href="index.php?page=accueil"><img src="Images/Logo4.png" alt="Logo de site web MyBoost"/></a>
+        </div>
 
           <div class="slogan">
             <h1>Un sport, un clic, une communauté!</h1>
           </div>
 
-        </div>
+      </div>
 
-        <div class="boutons">
+        <div class="bouton_deconnecte">
 
-        <div class="inscription">
+          <div class="inscription">
             <a href="index.php?page=inscription">Inscription</a>
+          </div>
+
+          <div class="connexion">
+            <a href="index.php?page=connexion">Connexion</a>
+          </div>
+
         </div>
 
-        <div class="connexion">
-          <a href="index.php?page=connexion">Connexion</a>
-        </div>
 
-        </div>
-<br></br>
     </div>
-    <nav>
-        <ul>
-            <li class="nav-item"><a href="index.php">Accueil</a></li>
 
+    <div class="search">
+        <input type="text" name="name" placeholder="rechercher">
+    </div>
+    <br>
+    <nav>
+        <ul id="menu_deconnecte">
+            <li class="nav-item"><a class="left" href="index.php">Accueil</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
                   <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
                 </ul>
             </li>
-
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="index.php?page=apropos">À Propos</a></li>
+            <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
         </ul>
+        <br><br>
     </nav>
-
+    <br>
 </header>
-
 </body>
 <?php
   }

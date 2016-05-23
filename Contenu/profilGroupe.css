@@ -4,7 +4,7 @@
 }
 
 *{
-  margin: 0em;
+
   font-family: Avenir Next LT Pro;
 
 }
@@ -12,7 +12,13 @@
 
 
 .groupe{
-  background-color: #FF5852;
+  background-color: #5c71cb;
+  height: 10em;
+  width: auto;
+}
+
+.salle{
+  background-color: #6779bc;
   height: 10em;
   width: auto;
 }

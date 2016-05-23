@@ -14,13 +14,13 @@ header{
 
 }
 
-.logo, img{
+.logo img{
   width:250px;
   height:100px;
   margin: 10px 0px 0px 10px;
 }
 
-img#sport{
+img #sport{
   width:250px;
   height:250px;
   margin: 10px 0px 0px 10px;
@@ -31,16 +31,48 @@ header h1{
 
   color: #593f7a;
   font-size: 1.8em;
-  position:absolute;
-  top:40px;
-  right:445px;
+
+}
+
+.titre_principal{
+  max-width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slogan{
+  padding-top: 1.7em;
+}
+
+.bouton{
+  position: absolute;
+  top: 1em;
+  right:10em;
+  text-align: center;
+
+}
+
+.inscription{
+  position: absolute;
+  top: 3.5em;
+  right:15em;
+}
+
+.connexion{
+  position: absolute;
+  top: 3.5em;
+  right:7em;
+}
+
+.search{
+  position: absolute;
+  top: 7em;
+  right:8em;
 }
 
 header .inscription a{
-font-size: 1.2em;
-  position:absolute;
-  top:1em;
-  right:180px;
+  font-size: 1em;
+
   text-decoration: none;
   width: 8em;
   border-style: solid;
@@ -55,10 +87,8 @@ font-size: 1.2em;
 
 
 header .connexion a{
-font-size: 1.2em;
-  position:absolute;
-  top:5em;
-  right:180px;
+font-size: 1em;
+
   text-decoration: none;
   width: 8em;
   border-style: solid;
@@ -71,10 +101,7 @@ font-size: 1.2em;
 }
 
 header .deconnexion a{
-font-size: 1.2em;
-  position:absolute;
-  top:40px;
-  right:180px;
+  font-size: 1em;
   text-decoration: none;
   border-style: solid;
   border-radius:1em;
@@ -99,14 +126,243 @@ right:13.8em;
 
 
 /*barre de navigation*/
+
 header nav{
   position: relative;
-  background-color: rgba(120, 0, 120, 0.5);
+
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   margin-top: 2em;
+  margin-bottom: 2.2em;
+  margin-left: 0.5em;
+
 }
 
+#menu_connecte, #menu_connecte ul /* Liste */
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 2.5em; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+
+
+}
+
+#menu_connecte /* Ensemble du menu */
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 1em; /* hauteur du texte : 12 pixels */
+
+
+}
+
+
+
+#menu_connecte a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+        background : #826af5;  /*couleur de fond */
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 15.5em; /* largeur */
+
+
+}
+
+
+
+#menu_connecte .left{
+  display : block;
+  border-top-left-radius: 15px;
+
+}
+
+#menu_connecte .right{
+  display : block;
+  border-top-right-radius: 15px;
+}
+
+#menu_connecte li /* Elements des listes */
+{
+        float : left;
+
+        /* pour IE qui ne reconnaît pas "transparent" */
+        /*border-right : 1px solid #fff;  on met une bordure blanche à droite de chaque élément */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_connecte li
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu_connecte li ul /* Sous-listes */
+{
+        position: absolute; /* Position absolue */
+        width: 20.5em; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu_connecte li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-top : 1px solid #fff;  on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_connecte li ul li
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu_connecte li ul ul
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-left     : 1px solid #fff ;  Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu_connecte li ul ul
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu_connecte a:hover /* Lorsque la souris passe sur un des liens */
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #c1d4d9; /* ... et au contraire, le fond en blanc */
+}
+
+#menu_connecte li:hover ul ul, #menu_connecte li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu_connecte li:hover ul, #menu_connecte li li:hover ul, #menu_connecte li.sfhover ul, #menu_connecte li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+#menu_deconnecte, #menu_deconnecte ul /* Liste */
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 2.5em; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+
+
+}
+
+#menu_deconnecte /* Ensemble du menu */
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 1em; /* hauteur du texte : 12 pixels */
+
+
+}
+
+
+
+#menu_deconnecte a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+        background : #826af5;  /*couleur de fond */
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 19.5em; /* largeur */
+
+
+}
+
+
+
+#menu_deconnecte .left{
+  display : block;
+  border-top-left-radius: 15px;
+
+}
+
+#menu_deconnecte .right{
+  display : block;
+  border-top-right-radius: 15px;
+}
+
+#menu_deconnecte li /* Elements des listes */
+{
+        float : left;
+
+        /* pour IE qui ne reconnaît pas "transparent" */
+        /*border-right : 1px solid #fff;  on met une bordure blanche à droite de chaque élément */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_deconnecte li
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu_deconnecte li ul /* Sous-listes */
+{
+        position: absolute; /* Position absolue */
+        width: 20.5em; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu_deconnecte li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-top : 1px solid #fff;  on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_deconnecte li ul li
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu_deconnecte li ul ul
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-left     : 1px solid #fff ;  Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu_deconnecte li ul ul
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu_deconnecte a:hover /* Lorsque la souris passe sur un des liens */
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #c1d4d9; /* ... et au contraire, le fond en blanc */
+}
+
+#menu_deconnecte li:hover ul ul, #menu_deconnecte li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu_deconnecte li:hover ul, #menu_deconnecte li li:hover ul, #menu_deconnecte li.sfhover ul, #menu_deconnecte li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+/*
 nav a{
   font-size: 1.2em;
   color: white;
@@ -136,6 +392,7 @@ font-weight: bold;
 text-decoration: none;
 }
 
+*/
 
 /*barre de recherche*/
 header .search input{
@@ -188,96 +445,64 @@ font-size: 1em;
 margin-top: 0.5em;
 }*/
 
-li a:hover{
-color:black;
-}
 
 footer{
- display: block;
-  position: absolute;
-  width: 100%;
-  color:white;
-  background-color:#593f7a;
-}
-
-#credit{
-font-size: 1em;
-margin: 0.5em 3em;
-}
-
-li a:hover{
-color:black;
+  display: flex;
+  justify-content: space-around;
+  background-color:#2b2d2e;
 }
 
 
 footer img{
-height:35px;
-width:35px;
+height:2.5em;
+width:2.5em;
 margin:20px 30px;
 }
 
-.effet{
-  width: 30%;
-  float: left;
+.credit{
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+}
+
+.rejoindre{
+  font-size: 1.2em;
+  text-decoration: none;
+  border-style: solid;
+  border-width:thin;
+  border-color: white;
+  background-color: #ffd14e;
+
+
+  text-align: center;
+  padding:0.8em;
+  height: 60%;
+  margin-top: 2.3em;
+}
+
+.rejoindre a{
+  color: black;
+  text-decoration: none;
+}
+
+.faq a{
+  color:white;
+  font-size: 1.2em;
+  text-decoration: none;
 
 }
 
-.effet img {
+.faq{
+  margin-top: 2.3em;
+}
+
+footer img {
   width:3em;
   height:3em;
   vertical-align:middle;
   transition:transform .3s ease;
 }
 
-
-.effet img:hover {
-
+footer img:hover {
   transform: scale(1.4);
-}
-
-.lien_footer{
-  margin-top: 50px;
-  float:right;
-}
-
-.lien_footer a{
-text-decoration: none
-}
-
-.lien_footer h3{
-margin:5em;
-}
-
-footer a h3{
-text-align:center;
-color:white;
-display:inline;
-font-size: 1.5em;
-}
-
-footer a h3:hover{
-color:black;
-}
-
-.phrase{
-  text-align: center;
-  color:white;
-  font-size: 2em;
-  margin-top: 40px;
-
-}
-
-html{
-  height:100%;
-}
-body{
-  min-height:100%;
-  position:relative;
-}
-
-#bloc_page{
- padding-bottom: 171px;
-}
-*{
-  box-sizing:border-box;
 }

@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>Mon groupe</title>
+    <title>Groupe</title>
   </head>
 
   <body>
@@ -14,6 +14,7 @@
 <div class="groupe">
 
   <h1 class="name_groupe"><?php echo $donnees[0] ?><br><?php
+
   if ($_SESSION['pseudo']==$admin[0] ){?>
 
     <a href="index.php?page=modif_groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a>
@@ -40,7 +41,7 @@
 <div>
   <h2>Descritption du groupe :</h2>
   <br>
-  <?php echo $donnees[2] ?>
+  "<?php echo $donnees[2] ?>"
 </div>
 <br></br>
 <div>
@@ -105,7 +106,7 @@ else{?>
         <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Lieu</td><td>Nombre de places disponibles</td></tr>
         <tr></tr>
       <?php
-    
+
       $admin_event=array();
       $nombre=array();
       $nb_place=array();

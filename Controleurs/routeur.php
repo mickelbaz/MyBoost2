@@ -20,7 +20,7 @@ require_once 'Controleurs/controleurFAQ.php';
 
 
 function router(){
-
+  session_start();
   switch($_GET['page']){
 
     case "accueil":
@@ -102,7 +102,8 @@ function router(){
     break;
 
     case "modif_groupe":
-    $modif_groupe=affiche_modifgroupe($_GET['groupe']);
+    $affiche_modif=affiche_modifgroupe($_GET['groupe']);
+    $modif_groupe=modif_groupe($_GET['groupe']);
     break;
 
     case "evenement" :
