@@ -7,13 +7,15 @@ require_once 'Modeles/modeleEvenement.php';
 
 
 
+
 function creer($nom){
+
   $salle=recup_salle_region($nom)->fetchAll();
   $date_jour=date('Y-m-d');
   $heure_jour=date('H:i:s');
   $date="{$_POST["annee"]}-{$_POST["mois"]}-{$_POST["jour"]}";
   $heure="{$_POST["heure"]}:{$_POST["minute"]}:00";
-  if (isset($_POST['valider']) && $_POST['valider']<>""){
+  if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
     if($_POST['nom']<>"" && $_POST['description']<>"" && $_POST['heure'] <>"" && $_POST['minute']<>"" && $_POST['nb']<>"" && $_POST['lieu'] !="title"){
       if (checkdate($_POST['mois'],$_POST['jour'], $_POST['annee'])==false){?>
         <script language="javascript">alert("La date n'est pas correcte !");</script>

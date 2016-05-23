@@ -1,4 +1,5 @@
 <?php
+session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 require_once 'Controleurs/controleurAccueil.php';
 require_once 'Controleurs/controleurPageGroupe.php';
@@ -44,6 +45,7 @@ function router(){
 
     case "grouperejoint":
     $supprimer=suppression_event();
+    $supp=supp_invitation($_GET['groupe']);
     $rejoint=rejoindre($_GET['groupe']);
     $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
@@ -165,6 +167,26 @@ function router(){
 
     case "rechercheavancee" :
     $affiche_vue=recherche_avancee();
+    break;
+
+    case "recherche_groupe":
+    $resultat=resultatgroupe($_GET['region'],$_GET['sport']);
+    break;
+
+    case "recherche_club":
+    $resultat=resultatclub($_GET['region'],$_GET['sport']);
+    break;
+
+    case "recherche_membre" :
+    $resultat=resultatmembre($_GET['region'],$_GET['sport']);
+    break;
+
+    case "ignorer" :
+    $ignorer=ignorer_invitation($_GET['groupe']);
+    break;
+
+    case "recevoir_notif" :
+    $notif=notif($_GET['groupe']);
     break;
 
 

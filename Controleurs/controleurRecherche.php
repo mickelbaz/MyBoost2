@@ -19,54 +19,38 @@ function affiche_page_resultat(){
   require 'Vues/vueResultatRecherche.php';
 }
 
+
+
 function recherche_avancee(){
   $sport=recup_all_sport()->fetchAll();
   if(isset($_POST['rechercher'])&& $_POST['rechercher']<>""){
     if($_POST['choix']=="groupe"){
-      if($_POST['region']!="title" && $_POST['sport']=="title"){
-        $groupe=recherche_groupe_region($_POST['region'])->fetchAll();
-      }
-      if($_POST['region']=="title" && $_POST['sport']!="title"){
-        $groupe=recherche_groupe_sport($_POST['sport'])->fetchAll();
-      }
-      if($_POST['region'] !="title" && $_POST['sport'] !="title"){
-        $groupe=recherche_groupe_sport_region($_POST['sport'],$_POST['region'])->fetchAll();
-      }
-      if($_POST['region'] =="title" && $_POST['sport'] =="title"){
-        $groupe=recherche_all_groupe()->fetchAll();
-      }
-      header('location: index.php?page=recherche_groupe');
+      header('location: index.php?page=recherche_groupe&region='.$_POST['region'].'&sport='.$_POST['sport']);
     }
     if($_POST['choix']=="membre"){
-      if($_POST['region']!="title" && $_POST['sport']=="title"){
-        $membre=recherche_membre_region($_POST['region'])->fetchAll();
-      }
-      if($_POST['region']=="title" && $_POST['sport']!="title"){
-        $membre=recherche_membre_sport($_POST['sport']);
-      }
-      if($_POST['region'] !="title" && $_POST['sport'] !="title"){
-        $membre=recherche_membre_sport_region($_POST['sport'],$_POST['region'])->fetchAll();
-      }
-      if($_POST['region'] =="title" && $_POST['sport'] =="title"){
-        $membre=recherche_all_membre()->fetchAll();
-      }
+        header('location: index.php?page=recherche_membre&region='.$_POST['region'].'&sport='.$_POST['sport']);
     }
     if($_POST['choix']=="club"){
-      if($_POST['region']!="title" && $_POST['sport']=="title"){
-        $club=recherche_club_region($region)->fetchAll();
-      }
-        if($_POST['region']=="title" && $_POST['sport']!="title"){
-          $club=recherche_all_club()->fetchAll();
-        }
-        if($_POST['region'] !="title" && $_POST['sport'] !="title"){
-            $club=recherche_club_region($region)->fetchAll();
-        }
-          if($_POST['region'] =="title" && $_POST['sport'] =="title"){
-              $club=recherche_all_club()->fetchAll();
-          }
+      header('location: index.php?page=recherche_club&region='.$_POST['region'].'&sport='.$_POST['sport']);
     }
   }
   require 'Vues/vueRechercheAvancee.php';
 }
+
+function resultatgroupe($region,$sport){
+  $groupe=recherche_avancee_groupe($region,$sport)->fetchAll();
+  require 'Vues/vueRechercheGroupe.php';
+}
+
+function resultatclub($region,$sport){
+  $club=recherche_avancee_club($region,$sport)->fetchAll();
+  require 'Vues/vueRechercheClub.php';
+}
+
+function resultatmembre($region,$sport){
+  $membre=recherche_avancee_membre($region,$sport)->fetchAll();
+  require 'Vues/vueRechercheMembre.php';
+}
+
 
  ?>

@@ -16,7 +16,7 @@
 </td>
 </tr>
 
-<tr><td>Sélectionnez la région :</td>
+<tr><td>dans la région :</td>
   <td><SELECT name="region">
 <OPTION value="title" selected>Tout
 <OPTION>Alsace
@@ -50,8 +50,8 @@
 </td>
 </tr>
 
-<tr><td>Sélectionnez le sport :</td>
-  <td><SELECT>
+<tr><td>pratiquant le sport :</td>
+  <td><SELECT name="sport">
     <OPTION value="title" selected>Tout
   <?php foreach($sport as list($nom)){?>
     <OPTION><?php echo $nom ?> </OPTION>

@@ -28,72 +28,65 @@ function recherche_club(){
   return $req;
 }
 
-function recherche_groupe_region($region){
-      $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-      $req=$bdd->prepare('SELECT nom FROM groupe WHERE region=?');
+function recherche_avancee_groupe($region,$sport){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    if($region=="title"){
+      $req=$bdd->prepare('SELECT nom FROM groupe WHERE sport_groupe=? ORDER BY nom ASC');
+      $req->execute(array($sport));
+    }
+    if($sport=="title"){
+      $req=$bdd->prepare('SELECT nom FROM groupe WHERE region=? ORDER BY nom ASC');
       $req->execute(array($region));
-      return $req;
-}
-
-function recherche_groupe_sport($sport){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom FROM groupe WHERE sport_groupe=?');
-  $req->execute(array($sport));
-  return $req;
-}
-
-function recherche_groupe_sport_region($sport,$region){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom FROM groupe WHERE sport_groupe=? AND region=?');
-  $req->execute(array($sport,$region));
-  return $req;
-}
-
-function recherche_all_groupe(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->query('SELECT nom FROM groupe');
+    }
+    if($sport=="title" && $region=="title"){
+      $req=$bdd->query('SELECT nom FROM groupe ORDER BY nom ASC');
+    }
+    if($sport!="title" && $region!="title"){
+      $req=$bdd->prepare('SELECT nom FROM groupe WHERE region=? AND sport_groupe=? ORDER BY nom ASC');
+      $req->execute(array($region,$sport));
+    }
     return $req;
 }
 
-function recherche_membre_region($region){
+function recherche_avancee_club($region,$sport){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE region=?');
-  $req->execute(array($region));
-  return $req;
-}
-
-function recherche_membre_sport($sport){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo IN ( SELECT pseudo FROM rejoindre WHERE nom_groupe IN (SELECT nom FROM groupe WHERE sport_groupe=?))');
-  $req->execute(array($sport));
-  return $req;
-}
-
-function recherche_membre_sport_region($sport,$region){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req->prepare('SELECT pseudo FROM sportif WHERE region=? AND pseudo IN ( SELECT pseudo FROM rejoindre WHERE nom_groupe IN (SELECT nom FROM groupe WHERE sport_groupe=?))');
-    $req->execute(array($sport,$region));
-    return $req;
-}
-
-function recherche_all_membre(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->query('SELECT nom FROM sportif');
-    return $req;
-}
-
-function recherche_club_region($region){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('SELECT nom FROM salle WHERE region=?');
+  if($region=="title"){
+    $req=$bdd->query('SELECT nom FROM salle ORDER BY nom ASC');
+  }
+  if($sport=="title"){
+    $req=$bdd->prepare('SELECT nom FROM salle WHERE region=? ORDER BY nom ASC');
     $req->execute(array($region));
-    return $req;
+  }
+  if($sport=="title" && $region=="title"){
+    $req=$bdd->query('SELECT nom FROM salle ORDER BY nom ASC');
+  }
+  if($sport!="title" && $region!="title"){
+    $req=$bdd->prepare('SELECT nom FROM salle WHERE region=? ORDER BY nom ASC');
+    $req->execute(array($region));
+  }
+  return $req;
 }
 
-function recherche_all_club(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->query('SELECT nom FROM salle');
-    return $req;
+function recherche_avancee_membre($region,$sport){
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  if($region=="title"){
+    $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo IN(SELECT pseudo FROM rejoindre WHERE nom_groupe IN (SELECT nom FROM groupe WHERE sport_groupe=?)) ORDER BY pseudo ASC');
+    $req->execute(array($sport));
+  }
+  if($sport=="title"){
+    $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo IN(SELECT pseudo FROM rejoindre WHERE nom_groupe IN(SELECT nom FROM groupe WHERE region=?)) ORDER BY pseudo ASC');
+    $req->execute(array($region));
+  }
+  if($sport=="title" && $region=="title"){
+    $req=$bdd->query('SELECT pseudo FROM sportif ORDER BY pseudo ASC');
+  }
+  if($sport!="title" && $region!="title"){
+    $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo IN (SELECT pseudo FROM rejoindre WHERE nom_groupe IN (SELECT nom FROM groupe WHERE region=? AND sport_groupe=?)) ORDER BY pseudo ASC');
+    $req->execute(array($region,$sport));
+  }
+  return $req;
 }
+
 
 
 

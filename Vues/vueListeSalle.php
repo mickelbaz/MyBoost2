@@ -13,11 +13,17 @@
   <tbody>
     <tr></tr>
     <?php
+    if(count($salle)==0){?>
+      <tr><td>Aucune salle</td></tr>
+    <?php
+    }
+    else{
     for($i=0;$i<count($salle);$i++){?>
       <tr><td style="padding:1em;"> <?php echo $salle[$i][0]; ?></td>
       <td><a href="index.php?page=club&club=<?php echo $salle[$i][0] ?>"><INPUT type="button" name="voir" value="Plus d'infos"/></a></td>
     </tr>
     <?php
+    }
   }?>
   </tbody>
   </table>

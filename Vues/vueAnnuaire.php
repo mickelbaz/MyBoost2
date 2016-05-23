@@ -22,7 +22,7 @@
 <br></br><br></br>
 <FORM name="ajout" method="post" action="">
 <div class="ajout">
-Ajouter &nbsp
+Inviter &nbsp
 <SELECT name="pseudo">
 <OPTION value="title" selected>membre
 <?php for($i=0;$i<count($membre);$i++){?>

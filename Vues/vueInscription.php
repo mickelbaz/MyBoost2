@@ -132,9 +132,7 @@
 	<tr>
 	<td colspan="2"><INPUT type="checkbox" name="condition" value="1" <?php if(isset($_POST['condition']) && $_POST['condition']=="1"){?> checked <?php } ?>/><em>&nbsp J'accepte les conditions générales du site</em></td>
 	</tr>
-	<tr>
-	<td colspan="2"><INPUT type="checkbox" name="news"/><em>&nbsp Je souhaite m'abonner à la newsletter</em></td>
-	</tr>
+
 	</table>
 
 	<br></br>

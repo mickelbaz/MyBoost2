@@ -11,8 +11,7 @@ function affiche_page_annuaire(){
               <?php
            }
            else{
-               ajout_membre_groupe($_POST['groupe'],$_POST['pseudo']);
-               header ('location: index.php?page=groupe&groupe='.$_POST['groupe']);
+               inviter_membre_groupe();
            }
         }
         else{?>
