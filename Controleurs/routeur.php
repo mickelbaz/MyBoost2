@@ -19,6 +19,8 @@ require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
 require_once 'Controleurs/controleurRecherche.php';
+require_once 'controleurs/controleurAdmin.php';
+
 
 
 function router(){
@@ -103,7 +105,6 @@ function router(){
     $supprimer=supprimer_groupe($_GET['supprimer']);
     break;
 
-
     case "proposition_sport" :
     $proposition=afficherproposport();
     break;
@@ -152,13 +153,8 @@ function router(){
     $club=page_salle($_GET['club']);
     break;
 
-
-    case "newadmin" :
-    $admin=nouvel_admin($_GET['groupe'],$_GET['membre']);
-    break;
-
-    case "faq" :
-    $faq=affiche_faq();
+    case "admin" :
+    $admin=afficher_admin();
     break;
 
     case "resultatRecherche" :
@@ -189,6 +185,9 @@ function router(){
     $notif=notif($_GET['groupe']);
     break;
 
+   case "afficher_membres" :
+   $afficher=afficher_membres();
+   break;
 
     default:
     $_SESSION=array();
@@ -197,7 +196,5 @@ function router(){
     break;
 
   }
-
-
 }
 ?>
