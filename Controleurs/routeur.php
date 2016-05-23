@@ -149,10 +149,14 @@ function router(){
     $admin=afficher_admin();
     break;
 
-   
+
 
    case "afficher_membres" :
-   $afficher_liste_membres=afficher_liste_membres();
+   $afficher_liste_membres=afficher_membres();
+   break;
+
+   case "gérer_groupe" :
+   $afficher_liste_groupes=afficher_groupes();
    break;
 
     default:

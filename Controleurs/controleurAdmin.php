@@ -8,7 +8,15 @@ function afficher_admin(){
 
 }
 function afficher_membres(){
-$membres=afficher_membres();
+$membres=afficher_liste_membres();
 require 'Vues/vueAdminMembres.php';
+}
+
+
+function afficher_groupes(){
+$groupes=afficher_groupes();
+require 'Vues/vueAdminGroupes.php'  
+
+
 }
 ?>
