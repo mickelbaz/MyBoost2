@@ -124,6 +124,8 @@ function supprimer($groupe){
     $req3->execute(array($groupe));
     $req4=$bdd->prepare('DELETE FROM évènement WHERE nom_groupe=?');
     $req4->execute(array($groupe));
+    $req5=$bdd->prepare('DELETE FROM invitation WHERE nom_groupe=?');
+    $req5->execute(array($groupe));
 
 }
 

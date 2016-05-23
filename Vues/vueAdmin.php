@@ -48,4 +48,6 @@
    	 		</div>
         <br>
           </body>
-<?php require 'Vues/footer.php'; ?>
+
+<br></br>
+<?php require 'Vues/footer.php' ?>

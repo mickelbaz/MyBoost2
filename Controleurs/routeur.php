@@ -189,6 +189,14 @@ function router(){
    $afficher=afficher_membres();
    break;
 
+   case "supprimer_personne" :
+   $supp=supprimer_personne($_GET['pseudo']);
+   break;
+
+   case "bannir_personne" :
+   $bannir=bannir_membre($_GET['pseudo']);
+   break;
+
     default:
     $_SESSION=array();
     session_destroy();
