@@ -196,7 +196,7 @@ function router(){
     break;
 
    case "afficher_membres_admin" :
-   $afficher=afficher_membres();
+   $afficher=afficher_les_membres();
    break;
 
    case "afficher_groupes_admin" :
