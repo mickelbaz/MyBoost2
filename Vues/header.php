@@ -69,8 +69,15 @@
         <div class="search">
             <a href="index.php?page=rechercheavancee">recherche avancée</a>
         </div>
+        <?php if($_SESSION['pseudo']=='admin'){?>
+          <div class="administrer">
+              <a href="index.php?page=admin">Administrer</a>
+          </div>
+          <?php } ?>
 <br><br>
+
     <nav>
+
         <ul id="menu_connecte">
             <li class="nav-item"><a class="left" href="index.php?page=accueil">Accueil</a></li>
             <li class="nav-item"><a href="index.php?page=profil">Mon Compte</a></li>
@@ -87,22 +94,18 @@
 
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
 
-          <?php if($_SESSION['pseudo']=='admin'){?>
-            <li class="nav-item"><a href="index.php?page=admin">Administrer</a></li>
-            <?php
-          }?>
-          </ul>
+            
+            </ul>
+
+
 
     </nav>
 
 </header>
 <br>
 </body>
+<?php }
 
-
-
-<?php
-  }
   else{ ?>
     <body>
     <header>
