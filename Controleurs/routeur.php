@@ -195,7 +195,7 @@ function router(){
    break;
 
    case "bannir_personne" :
-   $bannir=bannir_membre($_GET['pseudo']);
+   $bannir=bannir_membre($_GET['pseudo'],$_GET['mail']);
    break;
 
     default:

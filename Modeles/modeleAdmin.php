@@ -3,7 +3,7 @@
 
 function afficher_liste_membres(){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo!=?');
+  $req=$bdd->prepare('SELECT pseudo,mail FROM sportif WHERE pseudo!=?');
   $req->execute(array($_SESSION['pseudo']));
   return $req;
 }
@@ -24,10 +24,10 @@ function supprimer_personne_bdd($pseudo){
     $req6->execute(array($pseudo));
 }
 
-function membre_banni($pseudo){
+function membre_banni($pseudo,$mail){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('INSERT INTO bannir (pseudo) VALUES (:pseudo)');
-    $req->execute(array('pseudo'=>$pseudo));
+    $req=$bdd->prepare('INSERT INTO bannir (pseudo,mail) VALUES (:pseudo,:mail)');
+    $req->execute(array('pseudo'=>$pseudo,'mail'=>$mail));
 }
 
 

@@ -16,9 +16,9 @@ function supprimer_personne($pseudo){
   header ('location: index.php?page=afficher_membres');
 }
 
-function bannir_membre($pseudo){
+function bannir_membre($pseudo,$mail){
   $bannir=supprimer_personne_bdd($pseudo);
-  $ajout_bdd=membre_banni($pseudo);
+  $ajout_bdd=membre_banni($pseudo,$mail);
   header ('location: index.php?page=afficher_membres');
 }
 ?>

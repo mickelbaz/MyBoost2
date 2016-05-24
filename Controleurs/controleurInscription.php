@@ -34,6 +34,10 @@ function verif(){
           <script language="javascript">alert("Vous êtes déjà inscrit, connectez-vous !");</script>
       <?php
       }
+      if (verif_bannir()==true){?>
+          <script language="javascript">alert("Vous avez été banni du site, contactez notre service client !");</script>
+      <?php
+      }
 
       if ($_POST['mot_de_passe']==$_POST['mot_de_passe2'] && $_POST['mail']==$_POST['mail2']
       && checkdate($_POST['mois'],$_POST['jour'], $_POST['annee'])&& verif_pseudo()==true && verif_mail()==true){

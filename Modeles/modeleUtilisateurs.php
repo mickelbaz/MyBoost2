@@ -64,25 +64,8 @@ function verif_pseudo(){
 
       }
 
-      function verif_id2(){
-          $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-          if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
-            $mdp=sha1($_POST['mot_de_passe']);
-            $req=$bdd->prepare('SELECT pseudo FROM administrateur WHERE pseudo = :pseudo AND password = :mdp');
-            $req->execute(array(
-              'pseudo'=> $_POST['pseudo'],
-              'mdp'=>$mdp));
-            return $req;
-          }
 
-        }
 
-        //function recup_pseudo(){
-        //    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-        //    $req=$bdd->prepare('SELECT pseudo FROM sportif WHERE pseudo='.$_SESSION['Admin']);
-        //    $req->execute(array($_SESSION['pseudo']));
-        //    return $req;
-        //}
       function recup_infos($pseudo){
           $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
           $req=$bdd->prepare('SELECT nom,prenom,mail,adresse,date,tel,ville,pays,code_postal,sexe,pseudo,region FROM sportif WHERE pseudo=?');
@@ -128,6 +111,20 @@ function verif_pseudo(){
           $req->execute(array($_SESSION['pseudo']));
           return $req;
         }
+
+      function verif_bannir(){
+        $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+        $req=$bdd->prepare('SELECT mail FROM bannir WHERE mail=?');
+        $req->execute(array($_POST['mail']));
+        $donnee=$req->fetch();
+        if($donnee){
+          return true;
+        }
+        else{
+          return false;
+        }
+      }
+
 
 
           ?>
