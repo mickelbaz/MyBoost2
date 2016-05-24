@@ -92,9 +92,9 @@
             <?php
           }?>
           </ul>
-<br>
+
     </nav>
-<br><br>
+
 </header>
 <br>
 </body>
