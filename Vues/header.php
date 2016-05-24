@@ -96,9 +96,9 @@
 
             </ul>
     </nav>
-
-</header>
 <br>
+</header>
+
 </body>
 <?php }
 
