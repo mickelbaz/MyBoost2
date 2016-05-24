@@ -56,7 +56,7 @@
         </div>
 
 
-        <div class="search">
+        <div class="search_connecte">
           <?php require_once 'Controleurs/controleurRecherche.php';
           $recherche=redirection();
           ?>
@@ -65,10 +65,11 @@
             <input type="submit" name="valider" value="OK"/>
           </form>
         </div>
+
         <div class="search">
-            <a href="index.php?page=rechercheavancee"><input type="button" name="rechercheavancée" value="Recherche avancée"/></a>
+            <a href="index.php?page=rechercheavancee">recherche avancée</a>
         </div>
-<br>
+<br><br>
     <nav>
         <ul id="menu_connecte">
             <li class="nav-item"><a class="left" href="index.php?page=accueil">Accueil</a></li>
@@ -88,19 +89,19 @@
 
           <?php if($_SESSION['pseudo']=='admin'){?>
             <li class="nav-item"><a href="index.php?page=admin">Administrer</a></li>
-        </ul>
+            <?php
+          }?>
+          </ul>
+<br>
     </nav>
-
+<br><br>
 </header>
-
+<br>
 </body>
 
 
+
 <?php
-}
-
-
-
   }
   else{ ?>
     <body>
@@ -151,8 +152,9 @@
         </ul>
         <br><br>
     </nav>
-    <br>
+
 </header>
+
 </body>
 <?php
   }

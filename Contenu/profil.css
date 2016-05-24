@@ -36,6 +36,7 @@
   background-color: #FF5852;
   height: 10em;
   width: auto;
+
 }
 
 .top h1{
@@ -55,7 +56,7 @@ h1 span {
   font-size: 0.6em;
 }
 
-a{
+.content a{
   text-decoration: none;
 
 }
