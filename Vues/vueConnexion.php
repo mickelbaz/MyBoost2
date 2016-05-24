@@ -9,14 +9,20 @@
     <body>
 <div id="bloc_page">
 
-<header>
+  <header>
+  <div class="top_header">
 
-    <div id="titre_principal">
-        <div class="logo">
-                <img src="Images/Logo4.png" alt="Logo de site web MyBoost"/>
-                <h1>Un sport, un clic, une communauté!</h1>
-            </ul>
+    <div class="titre_principal">
+
+      <div class="logo">
+        <a href="index.php?page=accueil"><img src="Images/Logo4.png" alt="Logo de site web MyBoost"/></a>
+      </div>
+
+        <div class="slogan">
+          <h1>Un sport, un clic, une communauté!</h1>
         </div>
+
+    </div>
 
         <FORM name="formulaireConnection" method="post" action="">
          <div class="champ1"> <INPUT type="text" name="pseudo" placeholder="Pseudo"/>
@@ -28,18 +34,17 @@
 
     </div>
     <nav>
-        <ul>
-            <li class="nav-item"><a href="index.php">Accueil</a></li>
+        <ul id="menu_deconnecte">
+            <li class="nav-item"><a class="left" href="index.php">Accueil</a></li>
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
                   <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
-
-
                 </ul>
             </li>
             <li class="nav-item"><a href="#">Forum</a></li>
-            <li class="nav-item"><a href="#">À Propos</a></li>
+            <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
         </ul>
+        <br><br>
     </nav>
     <!--<div class="search">
         <input type="text" name="name" placeholder="rechercher">
@@ -47,5 +52,5 @@
 </header>
 
 </div>
-
+</body>
 <?php require 'Vues/footer.php'; ?>

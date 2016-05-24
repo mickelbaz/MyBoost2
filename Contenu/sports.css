@@ -6,8 +6,9 @@
 
 * {
 	font-family: Avenir Next LT Pro;
-	margin:auto;
+
 }
+
 #bloc_page {
 		background-color:black;
 
@@ -17,6 +18,7 @@
 		color:white;
 		margin-left:2em;
 }
+
 .top {
 	width : auto;
 	height : 2em;
