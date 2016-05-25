@@ -1,7 +1,11 @@
 <?php require 'Vues/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
 
-<h1>Recherche Avancée</h1>
+<div class="title">
+  <img class="logo_loupe" src="Images/loupe.png"/>
+  <h1>Recherche Avancée</h1>
+</div>
+
 
 <form name="recherche_avancee" method="post" action="">
 
