@@ -158,6 +158,16 @@ function router(){
     $admin=afficher_admin();
     break;
 
+
+
+
+   case "afficher_membres" :
+   $afficher_liste_membres=afficher_membres();
+   break;
+
+   case "gérer_groupe" :
+   $afficher_liste_groupes=afficher_groupes();
+
     case "resultatRecherche" :
     $page=affiche_page_resultat();
     break;
@@ -186,8 +196,12 @@ function router(){
     $notif=notif($_GET['groupe']);
     break;
 
-   case "afficher_membres" :
-   $afficher=afficher_membres();
+   case "afficher_membres_admin" :
+   $afficher=afficher_les_membres();
+   break;
+
+   case "afficher_groupes_admin" :
+   $afficher=afficher_groupes_admin();
    break;
 
    case "supprimer_personne" :

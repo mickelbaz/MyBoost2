@@ -7,6 +7,7 @@
 *{
   font-family: Avenir Next LT Pro;
 }
+
 /*en tête*/
 header{
   background-attachment: fixed;
@@ -54,20 +55,63 @@ header h1{
 
 .inscription{
   position: absolute;
-  top: 3.5em;
+  top: 3.7em;
   right:15em;
 }
 
 .connexion{
   position: absolute;
-  top: 3.5em;
+  top: 3.7em;
   right:7em;
 }
 
-.search{
+header .search input{
+  border-radius: 100px;
+  border: grey solid 1px;
+  font-size: 1em;
+  outline:none;
+  text-align: center;
+  margin-left:990px;
+  margin-top: 5px;
+}
+
+.search_connecte{
   position: absolute;
-  top: 7em;
-  right:8em;
+  top: 8em;
+  right:13em;
+
+}
+
+.search a{
+  position: absolute;
+  top: 11em;
+  right:4em;
+  font-size: 0.7em;
+  text-decoration: none;
+  width: 10em;
+  border-style: solid;
+  border-radius:1em;
+  border-color: #7d8287;
+  border-width: thin;
+  text-align: center;
+  padding: 0.8em;
+  color:#7d8287;
+}
+
+.administrer a{
+  position: absolute;
+  background-color: #00ed82;
+  top: 8em;
+  left: 2.9em;
+  font-size: 1em;
+  text-decoration: none;
+  width: 10em;
+  border-style: solid;
+  border-radius:1em;
+
+  text-align: center;
+  padding: 0.8em;
+  color:white;
 }
 
 header .inscription a{
@@ -82,7 +126,6 @@ header .inscription a{
   text-align: center;
   padding: 0.8em;
   color:#127feb;
-
 }
 
 
@@ -133,7 +176,7 @@ header nav{
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   margin-top: 2em;
-  margin-bottom: 3em;
+  margin-bottom: 3.4em;
   margin-left: 0.5em;
 
 }
@@ -149,14 +192,7 @@ header nav{
 
 }
 
-#menu_connecte /* Ensemble du menu */
-{
-        font-weight : bold; /* on met le texte en gras */
-        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
-        font-size : 1em; /* hauteur du texte : 12 pixels */
 
-
-}
 
 
 
@@ -362,51 +398,8 @@ html>body #menu_deconnecte li ul ul
 }
 
 
-/*
-nav a{
-  font-size: 1.2em;
-  color: white;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-nav ul{
-  list-style-type: none;
-  display: flex;
-  justify-content: space-around;
-  margin-left: 50px;
-  margin-right:50px;
-  padding: 7px;
 
 
-}
-ul ul {
- display:none;
-}
-
-li:hover ul, li.sfhover ul  {
-display:block;
-font-size: 0.8em;
-color: white;
-font-weight: bold;
-text-decoration: none;
-}
-
-*/
-
-/*barre de recherche*/
-header .search input{
-  border-radius: 100px;
-  border: grey solid 1px;
-  font-size: 1em;
-  outline:none;
-  text-align: center;
-  margin-left:990px;
-  margin-top: 5px;
-}
-.search{
-
-}
 
 
 #credit{
@@ -427,16 +420,12 @@ footer{
 }
 
 
-footer img{
-height:2.5em;
-width:2.5em;
-margin:20px 30px;
-}
 
 .credit{
   text-align: center;
   color: white;
   font-size: 1.2em;
+  margin-bottom: 2em;
 }
 
 .rejoindre{
@@ -451,7 +440,7 @@ margin:20px 30px;
   text-align: center;
   padding:0.8em;
   height: 60%;
-  margin-top: 2.3em;
+  margin-top: 3em;
 }
 
 .rejoindre a{
@@ -471,10 +460,10 @@ margin:20px 30px;
 }
 
 footer img {
-  width:3em;
-  height:3em;
-  vertical-align:middle;
+  width:2em;
+  height:2em;
   transition:transform .3s ease;
+  margin-top: 2em;
 }
 
 footer img:hover {
