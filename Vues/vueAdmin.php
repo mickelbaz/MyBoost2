@@ -26,11 +26,11 @@
         		</table>
    	 		</div>
 
-   	 		<div class=categorie>
-          		<table>
+        <div class=categorie>
+          	<table>
             		<tr>
                     <h4>
-                      <a href=".php" >Gérer les commentaires et messages du forum</a>
+                        <a href="index.php?page=afficher_clubs_admin" >Gérer les clubs	</a>
                     </h4>
             		</tr>
         		</table>
@@ -40,7 +40,17 @@
           		<table>
             		<tr>
                     <h4>
-                        <a href=".php" >Gérer la rubrique FAQ</a>
+                      <a href=".php" >Gérer les messages du forum</a>
+                    </h4>
+            		</tr>
+        		</table>
+   	 		</div>
+
+   	 		<div class=categorie>
+          		<table>
+            		<tr>
+                    <h4>
+                        <a href="index.php?page=faq" >Gérer la rubrique FAQ</a>
                     </h4>
             		</tr>
         		</table>

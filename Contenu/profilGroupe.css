@@ -95,7 +95,6 @@ td{
 }
 
 
-
 .site{
   text-align: center;
 }
@@ -110,4 +109,8 @@ td{
 
 .liste_membre table{
   margin-left: 1em;
+}
+
+.valider{
+  text-align: center;
 }

@@ -159,7 +159,9 @@ function router(){
     break;
 
 
-
+    case "faq" :
+    $afficher_page=affiche_faq();
+    break;
 
    case "afficher_membres" :
    $afficher_liste_membres=afficher_membres();
@@ -211,6 +213,26 @@ function router(){
    case "bannir_personne" :
    $bannir=bannir_membre($_GET['pseudo'],$_GET['mail']);
    break;
+
+  case "supprimer_groupe" :
+  $supprimer=supprimer_groupe_admin($_GET['groupe']);
+  break;
+
+  case "modif_groupe_admin" :
+  $modif=modif_groupe_admin($_GET['groupe']);
+  break;
+
+  case "afficher_clubs_admin" :
+  $club=afficher_club_admin();
+  break;
+
+  case "supprimer_club" :
+  $supp=supprimer_club($_GET['club']);
+  break;
+
+  case "supprimer_commentaire" :
+  $supp=supp_comment($_GET['commentaire']);
+  break;
 
     default:
     $_SESSION=array();

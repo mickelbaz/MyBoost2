@@ -1,5 +1,6 @@
 <?php session_start();
 error_reporting(E_ALL & ~E_NOTICE);?>
+
 <?php
 function affiche_modifgroupe($groupe){
   $donnees=afficher_groupe($groupe)->fetch();
@@ -8,7 +9,7 @@ function affiche_modifgroupe($groupe){
 }
 
 function modif_groupe($nom_groupe){
-  if (isset($_POST['valider']) && $_POST['valider']<>""){
+  if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
     if ($_POST['nom']<>""  && $_POST['nb']<>""){
       replace_info($nom_groupe);
       header('location: index.php?page=groupe&groupe='.$nom_groupe);

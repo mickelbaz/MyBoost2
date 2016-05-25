@@ -2,24 +2,36 @@
 
 <link rel="stylesheet" type="text/css" href="Contenu/admin.css">
 
-<?php $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION)); ?>
 
-<h2> Liste les groupes </h2>
 
-<?php
-$reponse=$bdd->query('SELECT * FROM groupe');
+<h2> Liste des groupes </h2>
 
-while ($donnees = $reponse->fetch()){
+<table class="infoperso" style="border-collapse:collapse;">
+<?php foreach ($groupes as list($nom,$description,$region)) {?>
+            <tr style="border-bottom:1px solid black;">
+            <td><?php echo $nom ?><br />
+             Description : <?php echo $description ?><br />
+             Région : <?php echo $region?><br></td>
+            <td>
+            <?php
+            if(verif_membre_groupe($nom,$_SESSION['pseudo'])==true){?>
+            <a href="index.php?page=groupevoir&groupe=<?php echo $nom?>"><INPUT type="button" name="voir" value="Voir la page"/></a>
+            <?php
+          }
+          else{?>
+              <a href="index.php?page=groupe&groupe=<?php echo $nom?>"><INPUT type="button" name="voir" value="Voir la page"/></a>
+            <?php
+          }?>
 
-  ?> <p>
-             Nom du groupe : <?php echo $donnees['nom']; ?><br />
-             Description : <?php echo $donnees['description']; ?><br />
-             Capacité maximale : <?php echo $donnees['nb_max']; ?><br />
-             Sport(s) affilié(s) au groupe :<?php echo $donnees['sport_groupe']; ?> <br />
-             Id : <?php echo $donnees['team_ID']; ?><br>
-             Zone géographique : <?php echo $donnees['region'];?><br>
+          </td>
+          <td><a href="index.php?page=modif_groupe_admin&groupe=<?php echo $nom?>"><INPUT type="button" name="modif" value="Modifer les informations"/></a>
+            <td><a href="#" onclick="if (confirm('Supprimer ce groupe ?')) window.location='index.php?page=supprimer_groupe&groupe=<?php echo $nom?>'; return false"><INPUT type="button" name="supprimer" value="Supprimer le groupe"/></a></td>
+           </tr>
+           <tr></tr><tr></tr>
 
-     </p>
+
 <?php
 } ?>
+</table>
+<br></br>
 <?php require 'Vues/footer.php' ?>
