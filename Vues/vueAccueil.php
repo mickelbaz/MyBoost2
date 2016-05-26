@@ -9,7 +9,6 @@
   </head>
   <body>
 
-<div class="bloc_page">
 
   <div class="title_accueil">
       <h1>LE SPORT N'ATTEND QUE VOUS !</h1>
@@ -76,12 +75,54 @@
   </div>
   </div>
   <?php
-  }?>
+  }
+
+  else {?>
+    <div class="presentation">
+
+      <div class="bougez">
+
+        <img src="Images/runer.png"/>
+        <h2>BOUGEZ</h2>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac risus quis sapien vehicula varius sit amet id tellus. Nulla facilisi. Phasellus nec suscipit felis. Donec neque leo, convallis vel.
+            </p>
+          </div>
+
+      </div>
+
+      <div class="rencontrez">
+
+        <img src="Images/group.png"/>
+        <h2>RENCONTREZ</h2>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac risus quis sapien vehicula varius sit amet id tellus. Nulla facilisi. Phasellus nec suscipit felis. Donec neque leo, convallis vel.
+            </p>
+          </div>
+
+      </div>
+
+      <div class="planifiez">
+
+        <img src="Images/calendar.png"/>
+        <h2>PLANIFIEZ</h2>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac risus quis sapien vehicula varius sit amet id tellus. Nulla facilisi. Phasellus nec suscipit felis. Donec neque leo, convallis vel.
+            </p>
+          </div>
+
+      </div>
+
+    </div>
+  <?php } ?>
 
 
 
 
-</div>
+
 
 <div class="presentation">
 

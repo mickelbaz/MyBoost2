@@ -1,7 +1,18 @@
 <?php require 'Vues/header.php'; ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Contenu/sports.css" >
+    <title>Liste des sports</title>
+  </head>
+  <body>
 
-<link rel="stylesheet" href="Contenu/sports.css" >
 
+
+
+
+<!--
 <div><p class="proposition_sport">
 <a href="index.php?page=proposition_sport">Proposez un sport !</a>
 </p></div>
@@ -44,5 +55,151 @@
 
 
   </div>
+
+-->
+
+  <div class="page">
+
+
+      <div class="top">
+        <h1>SPORTS</h1>
+      </div>
+
+      <div class="content">
+        <h3>Retrouvez tous nos sports classés par catégories !</h3>
+
+        <div class="sports">
+
+          <div class="sports-aquatiques_title">
+            <h2>SPORTS AQUATIQUES</h2>
+          </div>
+
+          <div class="sport">
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo('Natation');?>"><img src="Images/swimming.png" /></a>
+              </div>
+
+              <h4>Natation</h4>
+
+            </div>
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo('Waterpolo');?>"><img src="Images/waterpolo.png" /></a>
+              </div>
+
+              <h4>Waterpolo</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="sports">
+
+          <div class="sports-balons_title">
+            <h2>SPORTS DE BALONS</h2>
+          </div>
+
+          <div class="sport">
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo('Football');?>"><img src="Images/soccer.png" /></a>
+              </div>
+              <h4>Football</h4>
+            </div>
+
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo('Basketball');?>"><img src="Images/basket.png" /></a>
+              </div>
+              <h4>Basketball</h4>
+            </div>
+
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo('Volleyball');?>"><img src="Images/volley.png" /></a>
+              </div>
+              <h4>Volleyball</h4>
+            </div>
+
+          </div>
+        </div>
+
+          <div class="sports">
+            <div class="sports-raquette_title">
+              <h2>SPORTS DE RAQUETTE</h2>
+            </div>
+
+            <div class="sport">
+
+              <div class="detail">
+                <div class="image">
+                  <a href="index.php?page=sport&sport=<?php echo('Tennis');?>"><img src="Images/tennis.png" /></a>
+                </div>
+                <h4>Tennis</h4>
+              </div>
+
+              <div class="detail">
+                <div class="image">
+                  <a href="index.php?page=sport&sport=<?php echo('Ping-pong');?>"><img src="Images/ping-pong.png" /></a>
+                </div>
+                <h4>Ping-pong</h4>
+              </div>
+
+
+            </div>
+          </div>
+
+            <div class="sports">
+              <div class="sports-nature_title">
+                <h2>SPORTS DE NATURE</h2>
+              </div>
+
+              <div class="sport">
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Vélo');?>"><img src="Images/bicycle.png" /></a>
+                  </div>
+                  <h4>Vélo</h4>
+                </div>
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Golf');?>"><img src="Images/golf.png" /></a>
+                  </div>
+                  <h4>Golf</h4>
+                </div>
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Équitation');?>"><img src="Images/equestrian.png" /></a>
+                  </div>
+                  <h4>Équitation</h4>
+                </div>
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Course');?>"><img src="Images/shoe.png" /></a>
+                  </div>
+                  <h4>Course</h4>
+                </div>
+
+
+              </div>
+
+
+
+            </div>
+
+          </div>
+
+
+
+        </div>
+      </div>
+
+  </div>
+  </body>
+  </html>
 
   <?php require "Vues/footer.php"; ?>

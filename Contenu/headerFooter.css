@@ -463,11 +463,19 @@ footer{
   color:white;
   font-size: 1.2em;
   text-decoration: none;
+  margin-bottom: 0em;
 
+}
+
+.faq img{
+  margin: 0em;
 }
 
 .faq{
   margin-top: 2.3em;
+  text-align: center;
+  
+
 }
 
 footer img {

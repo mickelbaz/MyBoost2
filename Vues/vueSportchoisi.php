@@ -7,10 +7,9 @@
 
   mysql_connect("localhost" ,"root","root");
   mysql_select_db("myboost");
-<<<<<<< HEAD
-=======
+
   mysql_query("SET NAMES UTF8");
->>>>>>> 42872bfcd3244175bf041f1754905303e653cccd
+
 
 $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
 $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_participants="'.$_GET['nb_participants'].'"')

@@ -14,7 +14,7 @@ function connect(){
        else{
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
-        header("location:index.php?page=accueil");
+        header("location: index.php?page=accueil");
       }
   }
     require 'Vues/vueConnexion.php';
