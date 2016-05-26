@@ -218,6 +218,20 @@ a :hover {
 	justify-content: center;
 
 }
+
+.sports-combat_title{
+	background-image: url(../Images/combat.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	padding: 1.5em;
+	padding-top: 2em;
+	text-align: center;
+	font-size: 2em;
+	color: #2d3e4F;
+	justify-content: center;
+
+}
+
 .propose{
 	text-align: center;
 	transition: transform .3s ease;

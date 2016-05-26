@@ -79,17 +79,27 @@
               <div class="image">
                 <a href="index.php?page=sport&sport=<?php echo('Natation');?>"><img src="Images/natation.png" /></a>
               </div>
-
               <h4>Natation</h4>
 
             </div>
             <div class="detail">
+
               <div class="image">
                 <a href="index.php?page=sport&sport=<?php echo('Waterpolo');?>"><img src="Images/waterpolo.png" /></a>
               </div>
-
               <h4>Waterpolo</h4>
+
             </div>
+
+            <div class="detail">
+
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo('Canoë');?>"><img src="Images/canoë.png" /></a>
+              </div>
+              <h4>Canoë</h4>
+
+            </div>
+
           </div>
         </div>
 
@@ -145,6 +155,13 @@
                 <h4>Ping-pong</h4>
               </div>
 
+              <div class="detail">
+                <div class="image">
+                  <a href="index.php?page=sport&sport=<?php echo('Badminton');?>"><img src="Images/badminton.png" /></a>
+                </div>
+                <h4>Badminton</h4>
+              </div>
+
 
             </div>
           </div>
@@ -188,7 +205,37 @@
               </div>
 
 
+            </div>
 
+            <div class="sports">
+              <div class="sports-combat_title">
+                <h2>SPORTS DE COMBAT</h2>
+              </div>
+
+              <div class="sport">
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Boxe');?>"><img src="Images/boxe.png" /></a>
+                  </div>
+                  <h4>Boxe</h4>
+                </div>
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Judo');?>"><img src="Images/judo.png" /></a>
+                  </div>
+                  <h4>Judo</h4>
+                </div>
+
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo('Escrime');?>"><img src="Images/escrime.png" /></a>
+                  </div>
+                  <h4>Escrime</h4>
+                </div>
+
+              </div>
             </div>
             <br><br>
 

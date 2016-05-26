@@ -3,7 +3,9 @@
   src: url(AvenirNextLTPro-Demi.otf);
 }
 
-
+*{
+font-family:"police";
+}
 .imgsport {
  width: 15em;
  height:15em;
