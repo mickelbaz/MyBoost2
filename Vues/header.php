@@ -15,7 +15,7 @@
 
     <div id="titre_principal">
         <div class="logo">
-                <img src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost"/>
+                <img id="header" src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost" />
                 <h1>Un sport, un clic, une communauté!</h1>
 
         </div>
@@ -58,7 +58,7 @@
           <div class="image">
             <img src="/MyBoost2/Images/Logo4.png" alt="Logo de site web MyBoost"/>
           </div>
-          
+
           <div class="slogan">
             <h1>Un sport, un clic, une communauté!</h1>
           </div>
