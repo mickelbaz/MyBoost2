@@ -3,11 +3,13 @@
     <meta charset="utf-8" />
     <title>MyBoost - Le Site Web</title>
     <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
-    <link rel="stylesheet" href="Contenu/sports.css" >
+    <link rel="stylesheet" href="Contenu/formulaire.css" >
 
-    <div class="top"> <p>PROPOSER UN SPORT</p>
-        </div>
-        <br><br><br><br>
+<div class="formulaire">
+      <div id="title">
+        <p>PROPOSER UN SPORT</p>
+      </div>
+        
         <FORM name="formulaire" method="post" action="">
       	<table>
       	<tr>
@@ -37,6 +39,8 @@
       </table>
 <br>
     <a><INPUT class="boutonvalider" type="submit" name='envoyer' value="Valider" style="width:10em"/></a>
+
+    </div>
     <br><br><br><br><br><br>
 <?php
     require "Vues/footer.php";

@@ -218,3 +218,23 @@ a :hover {
 	justify-content: center;
 
 }
+.propose{
+	text-align: center;
+	transition: transform .3s ease;
+}
+.propose a{
+  background-color: #00ed82;
+  font-size: 1em;
+  text-decoration: none;
+  width: 10em;
+  border-radius:1em;
+
+  text-align: center;
+  padding: 0.8em;
+  color:white;
+
+}
+
+.propose:hover{
+  transform: scale(1.3);
+}

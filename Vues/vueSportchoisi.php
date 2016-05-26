@@ -33,7 +33,7 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
       </legend>
       <table width=100% border=0>
         <td width="250px">
-          <img id="sport" src="Images/clipart_<?php echo($_GET['sport']);?>.png">
+          <img id="sport" src="Images/<?php echo($_GET['sport']);?>.png">
         </td>
         <td>
           <?php

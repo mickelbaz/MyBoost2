@@ -77,7 +77,7 @@
           <div class="sport">
             <div class="detail">
               <div class="image">
-                <a href="index.php?page=sport&sport=<?php echo('Natation');?>"><img src="Images/swimming.png" /></a>
+                <a href="index.php?page=sport&sport=<?php echo('Natation');?>"><img src="Images/natation.png" /></a>
               </div>
 
               <h4>Natation</h4>
@@ -102,21 +102,21 @@
           <div class="sport">
             <div class="detail">
               <div class="image">
-                <a href="index.php?page=sport&sport=<?php echo('Football');?>"><img src="Images/soccer.png" /></a>
+                <a href="index.php?page=sport&sport=<?php echo('Football');?>"><img src="Images/football.png" /></a>
               </div>
               <h4>Football</h4>
             </div>
 
             <div class="detail">
               <div class="image">
-                <a href="index.php?page=sport&sport=<?php echo('Basketball');?>"><img src="Images/basket.png" /></a>
+                <a href="index.php?page=sport&sport=<?php echo('Basketball');?>"><img src="Images/basketball.png" /></a>
               </div>
               <h4>Basketball</h4>
             </div>
 
             <div class="detail">
               <div class="image">
-                <a href="index.php?page=sport&sport=<?php echo('Volleyball');?>"><img src="Images/volley.png" /></a>
+                <a href="index.php?page=sport&sport=<?php echo('Volleyball');?>"><img src="Images/volleyball.png" /></a>
               </div>
               <h4>Volleyball</h4>
             </div>
@@ -158,7 +158,7 @@
 
                 <div class="detail">
                   <div class="image">
-                    <a href="index.php?page=sport&sport=<?php echo('Vélo');?>"><img src="Images/bicycle.png" /></a>
+                    <a href="index.php?page=sport&sport=<?php echo('Vélo');?>"><img src="Images/vélo.png" /></a>
                   </div>
                   <h4>Vélo</h4>
                 </div>
@@ -172,14 +172,14 @@
 
                 <div class="detail">
                   <div class="image">
-                    <a href="index.php?page=sport&sport=<?php echo('Équitation');?>"><img src="Images/equestrian.png" /></a>
+                    <a href="index.php?page=sport&sport=<?php echo('Équitation');?>"><img src="Images/équitation.png" /></a>
                   </div>
                   <h4>Équitation</h4>
                 </div>
 
                 <div class="detail">
                   <div class="image">
-                    <a href="index.php?page=sport&sport=<?php echo('Course');?>"><img src="Images/shoe.png" /></a>
+                    <a href="index.php?page=sport&sport=<?php echo('Course');?>"><img src="Images/course.png" /></a>
                   </div>
                   <h4>Course</h4>
                 </div>
@@ -190,9 +190,14 @@
 
 
             </div>
+            <br><br>
+
+            <div class="propose">
+              <a href="index.php?page=proposition_sport">Proposez un sport !</a>
+            </div>
 
           </div>
-
+<br><br>
 
 
         </div>
