@@ -109,6 +109,10 @@ function router(){
     $proposition=afficherproposport();
     break;
 
+    case "ajouter_un_sport" :
+    $ajout=ajout_sport();
+    break;
+
     case "modif_groupe":
     $affiche_modif=affiche_modifgroupe($_GET['groupe']);
     $modif_groupe=modif_groupe($_GET['groupe']);
@@ -203,6 +207,7 @@ function router(){
    case "afficher_groupes_admin" :
    $afficher=afficher_groupes_admin();
    break;
+
 
     default:
     $_SESSION=array();

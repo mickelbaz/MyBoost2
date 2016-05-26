@@ -1,16 +1,16 @@
     <meta http-equiv="content-type" content="text/html">
     <link rel="stylesheet" href="Contenu/sportchoisi.css">
-    <link rel="stylesheet" href="Contenu/sports.css" >
+
     <meta charset="utf-8"/>
 <?php
+
+require 'Modeles/modeleSports.php';
 
 
   mysql_connect("localhost" ,"root","root");
   mysql_select_db("myboost");
-<<<<<<< HEAD
-=======
   mysql_query("SET NAMES UTF8");
->>>>>>> 42872bfcd3244175bf041f1754905303e653cccd
+
 
 $description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
 $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_participants="'.$_GET['nb_participants'].'"')
@@ -34,7 +34,7 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
       </legend>
       <table width=100% border=0>
         <td width="250px">
-          <img id="sport" src="Images/clipart_<?php echo($_GET['sport']);?>.png">
+          <img class="imgsport" src="Images/clipart_<?php echo($_GET['sport']);?>.png">
         </td>
         <td>
           <?php
@@ -59,7 +59,7 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
 
       <br>
 
-        <form action="">
+        <form action="index.php?page=ajouter_sport">
           <input class="sport" type=submit value=Participer>
         </form>
 

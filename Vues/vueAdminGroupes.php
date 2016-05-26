@@ -12,10 +12,10 @@ $reponse=$bdd->query('SELECT * FROM groupe');
 while ($donnees = $reponse->fetch()){
 
   ?> <p>
-             Nom du groupe : <?php echo $donnees['nom']; ?><br />
-             Description : <?php echo $donnees['description']; ?><br />
-             Capacité maximale : <?php echo $donnees['nb_max']; ?><br />
-             Sport(s) affilié(s) au groupe :<?php echo $donnees['sport_groupe']; ?> <br />
+             Nom du groupe : <?php echo $donnees['nom']; ?><br>
+             Description : <?php echo $donnees['description']; ?><br>
+             Capacité maximale : <?php echo $donnees['nb_max']; ?><br>
+             Sport(s) affilié(s) au groupe :<?php echo $donnees['sport_groupe']; ?> <br>
              Id : <?php echo $donnees['team_ID']; ?><br>
              Zone géographique : <?php echo $donnees['region'];?><br>
 
