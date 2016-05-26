@@ -183,7 +183,7 @@ a :hover {
 	text-align: center;
 }
 
-.sports-balons_title{
+.sports-ballons_title{
 	background-image: url(../Images/ballons.png);
 	background-repeat: no-repeat;
 	background-position:center;
@@ -194,7 +194,7 @@ a :hover {
 	justify-content: center;
 }
 
-.sports-raquette_title{
+.sports-raquettes_title{
 	background-image: url(../Images/raquette.png);
 	background-repeat: no-repeat;
 	background-position:center;
@@ -219,7 +219,7 @@ a :hover {
 
 }
 
-.sports-combat_title{
+.sports-combats_title{
 	background-image: url(../Images/combat.png);
 	background-repeat: no-repeat;
 	background-position:center;

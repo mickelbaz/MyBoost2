@@ -105,8 +105,8 @@
 
         <div class="sports">
 
-          <div class="sports-balons_title">
-            <h2>SPORTS DE BALONS</h2>
+          <div class="sports-ballons_title">
+            <h2>SPORTS DE BALLONS</h2>
           </div>
 
           <div class="sport">
@@ -135,8 +135,8 @@
         </div>
 
           <div class="sports">
-            <div class="sports-raquette_title">
-              <h2>SPORTS DE RAQUETTE</h2>
+            <div class="sports-raquettes_title">
+              <h2>SPORTS DE RAQUETTES</h2>
             </div>
 
             <div class="sport">
@@ -208,8 +208,8 @@
             </div>
 
             <div class="sports">
-              <div class="sports-combat_title">
-                <h2>SPORTS DE COMBAT</h2>
+              <div class="sports-combats_title">
+                <h2>SPORTS DE COMBATS</h2>
               </div>
 
               <div class="sport">
