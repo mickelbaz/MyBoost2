@@ -1,8 +1,11 @@
 <?php require 'Vues/header.php'; ?>
 <link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
 
-<div class="title">
+<div class="image" style="text-align:center; margin-top:1em;">
   <img class="logo_loupe" src="Images/loupe.png"/>
+</div>
+
+<div class="title">
   <h1>Recherche Avancée</h1>
 </div>
 
