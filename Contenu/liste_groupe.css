@@ -10,3 +10,9 @@ tr td {
 .ajout{
   text-align: center;
 }
+
+.image{
+  position: absolute;
+  left: 24em;
+  top:45.9em;
+}

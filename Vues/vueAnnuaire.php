@@ -19,25 +19,32 @@
     <?php
     } ?>
 </table>
-<br></br><br></br>
+<br></br>
+
 <FORM name="ajout" method="post" action="">
-<div class="ajout">
-Inviter &nbsp
-<SELECT name="pseudo">
-<OPTION value="title" selected>membre
-<?php for($i=0;$i<count($membre);$i++){?>
-  <OPTION><?php echo $membre[$i][0];
-}?>
-</SELECT>
-&nbsp au groupe &nbsp
-<SELECT name="groupe">
-  <OPTION value="title" selected>Choisir le groupe
-  <?php for($i=0;$i<count($gpe);$i++){?>
-    <OPTION><?php echo $gpe[$i][0];
+  <div class="image">
+    <img src="Images/message.png" />
+  </div>
+
+  <div class="ajout">
+
+  Inviter &nbsp
+  <SELECT name="pseudo">
+  <OPTION value="title" selected>membre
+  <?php for($i=0;$i<count($membre);$i++){?>
+    <OPTION><?php echo $membre[$i][0];
   }?>
   </SELECT>
-  &nbsp&nbsp&nbsp&nbsp<INPUT type="submit" name="envoyer" value="OK"/>
-</div>
+  &nbsp au groupe &nbsp
+  <SELECT name="groupe">
+    <OPTION value="title" selected>Choisir le groupe
+    <?php for($i=0;$i<count($gpe);$i++){?>
+      <OPTION><?php echo $gpe[$i][0];
+    }?>
+    </SELECT>
+    &nbsp&nbsp&nbsp&nbsp<INPUT type="submit" name="envoyer" value="OK"/>
+
+  </div>
 </FORM>
 
 

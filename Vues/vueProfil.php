@@ -24,6 +24,11 @@
     <div class="info">
       <table class="infoperso" style="border-collapse:collapse;">
             <thead>
+                <tr>
+                  <th>
+                    <img src="Images/notepad.png" style="margin-left:13em; margin-bottom:1em;" />
+                  </th>
+                </tr>
                 <tr style="border-bottom:1px solid black;">
                     <th id="title" colspan="2">INFORMATIONS</th>
                 </tr>
@@ -54,6 +59,11 @@
         <table class="coordonnees" style="border-collapse:collapse;">
 
           <thead>
+              <tr>
+                <th>
+                  <img src="Images/place.png" style="margin-left:13em; margin-bottom:1em;" />
+                </th>
+              </tr>
               <tr style="border-bottom:1px solid black;">
                   <th id="title" colspan="2">COORDONNÉES</th>
               </tr>
