@@ -18,7 +18,7 @@
       	</tr>
       	<tr>
       	<td>Description du sport :</td>
-      	<td><INPUT type="text" name="descriptionSport"> </td>
+      	<td><textarea name="description"rows="4" cols="45"></textarea></td>
       	</tr>
         <tr>
       	<td>Type de sport :</td>
@@ -26,11 +26,11 @@
           <form method="post" action="traitement.php">
              <p>
                  Cochez le type de sport :<br />
-                 <input type="radio" name="type_de_sport"  value="sport_aquatique" id="sport_aquatique" /> <label for="aquatique">Sport aquatique</label><br />
-                 <input type="radio" name="type_de_sport"  value="sport_de_ballon" id="sport_de_ballon" /> <label for="sport de ballon">Sport de ballon</label><br />
-                 <input type="radio" name="type_de_sport"  value="sport_de_raquette" id="sport_de_raquette" /> <label for="sport de raquette">Sport de raquette</label><br />
-                 <input type="radio" name="type_de_sport"  value="sport_de_raquettes" id="sport_de_raquettes" /> <label for="sport de raquettes">Sport de nature</label><br/>
-                 <input type="radio" name="type_de_sport"  value="sport_de_combat" id="sport_de_combat" /> <label for="sport de combat">Sport de combat</label>
+                 <input type="radio" name="type_de_sport"  value="aquatique" id="sport_aquatique" /> <label for="aquatique">Sport aquatique</label><br />
+                 <input type="radio" name="type_de_sport"  value="ballon" id="sport_de_ballon" /> <label for="sport de ballon">Sport de ballon</label><br />
+                 <input type="radio" name="type_de_sport"  value="raquette" id="sport_de_raquette" /> <label for="sport de raquette">Sport de raquette</label><br />
+                 <input type="radio" name="type_de_sport"  value="nature" id="sport_de_nature" /> <label for="sport de raquettes">Sport de nature</label><br/>
+                 <input type="radio" name="type_de_sport"  value="combat" id="sport_de_combat" /> <label for="sport de combat">Sport de combat</label>
              </p>
           </form>
 
