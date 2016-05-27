@@ -62,7 +62,7 @@ function router(){
     break;
 
     case "sport":
-    $afficher_description_sport=afficher_description();
+    $afficher_description_sport=afficher_description($_GET['sport']);
     break;
 
     case "ListeGroupes":

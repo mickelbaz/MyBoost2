@@ -3,6 +3,7 @@
 <link type="text/css" rel="stylesheet" href="Contenu/liste_groupe.css"/>
 
 <br></br>
+<?php if(isset($_SESSION['pseudo'])){?>
 <table style="border-collapse:collapse;">
   <thead>
       <tr style="border-bottom:1px solid black;">
@@ -28,7 +29,6 @@
           <td><a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $liste[$i][0] ?>'; return false"><INPUT type="button" name="<?php echo $i ?>" value="Rejoindre ce groupe" /></a></td>
 
         <?php
-
         }
         else{?>
           <td><em>Plus de places disponibles</em></td>
@@ -46,6 +46,26 @@
      ?>
     </tbody>
   </table>
+  <?php
+}
+else{?>
+  <table style="border-collapse:collapse;">
+    <thead>
+        <tr style="border-bottom:1px solid black;">
+            <th id="title" colspan="2">Liste des groupes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php for($i=0;$i<count($liste);$i++){?>
+          <tr style="border-bottom:1px solid black;">
+          <td style="padding:1em;"><?php echo $liste[$i][0]; ?></td>
+          <td><a href="index.php?page=groupevoir&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
+        </tr>
+          <?php
+    }?>
+    </table>
+    <?php
+}?>
   <br></br>
 
 <?php require 'Vues/footer.php'; ?>

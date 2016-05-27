@@ -2,18 +2,8 @@
     <link rel="stylesheet" href="Contenu/sportchoisi.css">
     <link rel="stylesheet" href="Contenu/sports.css" >
     <meta charset="utf-8"/>
-<?php
 
 
-  mysql_connect("localhost" ,"root","root");
-  mysql_select_db("myboost");
-
-  mysql_query("SET NAMES UTF8");
-
-
-$description=mysql_query('SELECT description FROM sport WHERE nom="'.$_GET['sport'].'"');
-$nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_participants="'.$_GET['nb_participants'].'"')
-?>
 <?php require 'Vues/header.php'; ?>
 
   <html>
@@ -36,20 +26,7 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
           <img id="sport" src="Images/<?php echo($_GET['sport']);?>.png">
         </td>
         <td>
-          <?php
-          while($donnees = mysql_fetch_array($description))
-
-          {
-            echo $donnees['description'];
-
-          }
-          while($nbsport = mysql_fetch_array($nb_participants)){
-
-            echo $nbsport['nb_participants'];
-          }
-
-          ?>
-
+          <?php echo $description[0] ?>
           <br>
       </td>
     </table>
@@ -57,6 +34,7 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
     </fieldset>
 
       <br>
+<?php if(isset($_SESSION['pseudo'])){?>
 
         <form action="">
           <input class="sport" type=submit value=Participer>
@@ -69,6 +47,8 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
         <form action="">
           <input class="sport" type=submit value='Chercher un partenaire / un groupe'>
         </form>
+      <?php
+    }?>
 
     </body>
   </html>
