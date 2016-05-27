@@ -24,7 +24,7 @@
 
   <div class="champs_connection">
 
-    <h2>CONNECTION</h2>
+    <h2>CONNEXION</h2>
 
     <FORM name="formulaireConnection" method="post" action="">
      <div class="champ1"> <INPUT type="text" name="pseudo" placeholder="Pseudo"/>

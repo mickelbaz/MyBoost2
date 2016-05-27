@@ -19,48 +19,50 @@
       <div class="content">
         <h3>Retrouvez tous nos sports classés par catégories !</h3>
 
-        <div class="sports">
 
+        <div class="sports">
           <div class="sports-aquatiques_title">
             <h2>SPORTS AQUATIQUES</h2>
           </div>
-
-          <div class="sport">
+          <!--<div class="sport">
             <div class="detail">
               <div class="image">
                 <a href="index.php?page=sport&sport=<?php echo('Natation');?>"><img src="Images/natation.png" /></a>
               </div>
               <h4>Natation</h4>
-
             </div>
             <div class="detail">
-
               <div class="image">
                 <a href="index.php?page=sport&sport=<?php echo('Waterpolo');?>"><img src="Images/waterpolo.png" /></a>
               </div>
               <h4>Waterpolo</h4>
-
             </div>
-
             <div class="detail">
-
               <div class="image">
                 <a href="index.php?page=sport&sport=<?php echo('Canoë');?>"><img src="Images/canoë.png" /></a>
               </div>
               <h4>Canoë</h4>
-
             </div>
-
+          </div>-->
+          <?php foreach($sport_aquatique as list($nom)){?>
+            <div class="sport">
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom?>.png" /></a>
+              </div>
+              <h4><?php echo $nom ?></h4>
+            </div>
           </div>
+          <?php
+      }?>
         </div>
 
         <div class="sports">
-
           <div class="sports-ballons_title">
             <h2>SPORTS DE BALLONS</h2>
           </div>
 
-          <div class="sport">
+        <!--  <div class="sport">
             <div class="detail">
               <div class="image">
                 <a href="index.php?page=sport&sport=<?php echo('Football');?>"><img src="Images/football.png" /></a>
@@ -82,7 +84,19 @@
               <h4>Volleyball</h4>
             </div>
 
+          </div>-->
+
+          <?php foreach($sport_ballon as list($nom)){?>
+            <div class="sport">
+            <div class="detail">
+              <div class="image">
+                <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom?>.png" /></a>
+              </div>
+              <h4><?php echo $nom ?></h4>
+            </div>
           </div>
+          <?php
+      }?>
         </div>
 
           <div class="sports">
@@ -90,7 +104,7 @@
               <h2>SPORTS DE RAQUETTES</h2>
             </div>
 
-            <div class="sport">
+          <!--  <div class="sport">
 
               <div class="detail">
                 <div class="image">
@@ -114,7 +128,18 @@
               </div>
 
 
+            </div>-->
+            <?php foreach($sport_raquette as list($nom)){?>
+              <div class="sport">
+              <div class="detail">
+                <div class="image">
+                  <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom?>.png" /></a>
+                </div>
+                <h4><?php echo $nom ?></h4>
+              </div>
             </div>
+            <?php
+        }?>
           </div>
 
             <div class="sports">
@@ -122,7 +147,7 @@
                 <h2>SPORTS DE NATURE</h2>
               </div>
 
-              <div class="sport">
+            <!--  <div class="sport">
 
                 <div class="detail">
                   <div class="image">
@@ -153,7 +178,18 @@
                 </div>
 
 
+              </div>-->
+              <?php foreach($sport_nature as list($nom)){?>
+                <div class="sport">
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom?>.png" /></a>
+                  </div>
+                  <h4><?php echo $nom ?></h4>
+                </div>
               </div>
+              <?php
+          }?>
 
 
             </div>
@@ -163,7 +199,7 @@
                 <h2>SPORTS DE COMBATS</h2>
               </div>
 
-              <div class="sport">
+            <!--  <div class="sport">
 
                 <div class="detail">
                   <div class="image">
@@ -186,7 +222,18 @@
                   <h4>Escrime</h4>
                 </div>
 
+              </div>-->
+              <?php foreach($sport_combat as list($nom)){?>
+                <div class="sport">
+                <div class="detail">
+                  <div class="image">
+                    <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom?>.png" /></a>
+                  </div>
+                  <h4><?php echo $nom ?></h4>
+                </div>
               </div>
+              <?php
+          }?>
             </div>
             <br><br>
 
