@@ -166,6 +166,7 @@
 	border-bottom: solid;
   border-bottom-color: #7d8287;
   border-width: thin;
+	text-transform: uppercase;
 }
 
 .title_accueil h1{

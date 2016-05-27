@@ -2,12 +2,12 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Connexion</title>
+        <title>Connection</title>
         <link rel="stylesheet" type="text/css" href="Contenu/headerFooter.css">
     </head>
 
     <body>
-<div id="bloc_page">
+
 
   <header>
   <div class="top_header_connection">
@@ -36,11 +36,8 @@
 
   </div>
 
-
-
-
 </header>
 
-</div>
+
 </body>
 <?php require 'Vues/footer.php'; ?>
