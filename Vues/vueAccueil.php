@@ -11,7 +11,7 @@
 
 
   <div class="title_accueil">
-      <h1>LE SPORT N'ATTEND QUE VOUS, <?php echo $_SESSION['pseudo'] ?> !</h1>
+      <h1>LE SPORT N'ATTEND QUE VOUS <?php echo $_SESSION['pseudo'] ?> !</h1>
   </div>
 
   <?php if(isset($_SESSION['pseudo'])){?>
@@ -147,7 +147,6 @@
 </section>
 </div>
 -->
-
 </body>
 </html>
 <?php require 'Vues/footer.php'; ?>
