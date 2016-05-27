@@ -20,6 +20,7 @@
         <img id="avatar" src="Images/Man_Silhouette.png"/>
       </div>
       <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=modif"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
+      <?php if($_SESSION['pseudo']=='admin'){?><img class="star" src="Images/star.png" /> <?php } ?>
     </div>
     <div class="info">
       <table class="infoperso" style="border-collapse:collapse;">
