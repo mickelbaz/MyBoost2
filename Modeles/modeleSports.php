@@ -17,4 +17,11 @@ function recup_all_sport(){
   return $req;
 
 }
+
+function description($sport){
+    $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('SELECT description FROM sport WHERE nom=?');
+    $req->execute(array($sport));
+    return $req;
+}
 ?>
