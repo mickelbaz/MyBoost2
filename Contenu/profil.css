@@ -52,6 +52,11 @@
   width: 0.9em;
 }
 
+.star{
+  position: absolute;
+  left: 22em;
+  top: 17.5em;
+}
 h1 span {
   font-size: 0.6em;
 }
