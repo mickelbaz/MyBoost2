@@ -18,7 +18,7 @@
     </div>
 
     <div class="top">
-      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=profil"><img id="logomodif" class="modifier" src="Images/left-arrow.png"/><span class="modifier"> Retour à mon profil</span></a></h1>
+      <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=profil"><img id="logomodif" class="modifier" src="Images/back.png"/><span class="modifier"> Retour à mon profil</span></a></h1>
 
     </div>
 

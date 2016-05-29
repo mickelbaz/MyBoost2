@@ -18,7 +18,7 @@
   if ($_SESSION['pseudo']==$admin[0] ){?>
 
     <a href="index.php?page=modif_groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier les infos du groupe</span></a>
-    <a href="#" onclick="if (confirm('Voulez-vous supprimer ce groupe ?')) window.location='index.php?page=supprimer&supprimer=<?php echo $donnees[0]?>'; return false"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Supprimer le groupe</span></a></h1>
+    <a href="#" onclick="if (confirm('Voulez-vous supprimer ce groupe ?')) window.location='index.php?page=supprimer&supprimer=<?php echo $donnees[0]?>'; return false"><img id="logomodif" class="modifier" src="Images/garbage.png"/><span class="modifier"> Supprimer le groupe</span></a></h1>
     <?php
   }
   else{?>
