@@ -6,6 +6,11 @@
 <?php if(isset($_SESSION['pseudo'])){?>
 <table style="border-collapse:collapse;">
   <thead>
+      <tr>
+        <th colspan="3">
+          <img src="Images/group2.png" style="margin-bottom:1em;" />
+        </th>
+      </tr>
       <tr style="border-bottom:1px solid black;">
           <th id="title" colspan="3">Liste des groupes</th>
       </tr>
