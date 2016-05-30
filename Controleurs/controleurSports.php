@@ -5,8 +5,8 @@ function afficher_sports(){
   }
 
 function ajout_sport(){
-  $ajouter_sport=ajouter_sport()->fetchAll();
-  require 'Vues/vueAjouterSport.php';
+  $var_ajouter_sport=ajouter_sport()->fetchAll();
+  require_once 'Vues/vueAjouterSport.php';
 }
 
 ?>

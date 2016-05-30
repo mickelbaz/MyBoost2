@@ -1,6 +1,10 @@
 <?php require 'Vues/header.php'; ?>
 
 <link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+<div class="content">
+
+
+<div class="formulaire">
 
 
 <FORM name="formulaire" method="post" action="">
@@ -85,6 +89,8 @@
 	<!--<div class="B">Valider</div>-->
 	<div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 	</FORM>
+	</div>
 	<br></br>
+	</div>
 
 <?php require 'Vues/footer.php'; ?>

@@ -94,15 +94,11 @@
 
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
 
-            
             </ul>
-
-
-
     </nav>
-
-</header>
 <br>
+</header>
+
 </body>
 <?php }
 
@@ -141,7 +137,7 @@
     <div class="search">
         <input type="text" name="name" placeholder="rechercher">
     </div>
-    <br>
+    <br><br>
     <nav>
         <ul id="menu_deconnecte">
             <li class="nav-item"><a class="left" href="index.php">Accueil</a></li>
@@ -153,11 +149,10 @@
             <li class="nav-item"><a href="#">Forum</a></li>
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
         </ul>
-        <br><br>
+
     </nav>
-
 </header>
-
+<br>
 </body>
 <?php
   }

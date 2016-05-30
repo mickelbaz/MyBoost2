@@ -4,11 +4,12 @@
     <meta charset="utf-8"/>
 <?php
 
-require 'Modeles/modeleSports.php';
+require_once 'Modeles/modeleSports.php';
 
 
   mysql_connect("localhost" ,"root","root");
   mysql_select_db("myboost");
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   mysql_query("SET NAMES UTF8");
 
 

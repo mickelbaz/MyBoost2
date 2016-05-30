@@ -15,7 +15,7 @@ function verif_nom_groupe(){
 
 function add_groupe(){
 
-  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO groupe (nom,description,nb_max,sport_groupe,pseudo_createur,region)
   VALUES (:nom,:description,:nb_max,:sport_groupe, :pseudo,:region)');
 
@@ -30,35 +30,35 @@ function add_groupe(){
 
 
 function afficher_groupe($nom_groupe){
-  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nom, sport_groupe, description, region, nb_max FROM groupe WHERE nom=? ORDER BY nom ASC' ) ;
   $req->execute(array($nom_groupe));
   return $req;
 }
 
 function recup_admin($groupe){
-    $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('SELECT pseudo_createur FROM groupe WHERE nom=?');
     $req->execute(array($groupe));
     return $req;
 }
 
 function recup_membre($groupe){
-    $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('SELECT pseudo FROM rejoindre WHERE nom_groupe=? ORDER BY pseudo ASC');
     $req->execute(array($groupe));
     return $req;
 }
 
 function recup_nb_place($groupe){
-  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nb_max FROM groupe WHERE nom=?');
   $req->execute(array($groupe));
   return $req;
 }
 
 function add_rejoindre(){
-  $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO rejoindre (pseudo,nom_groupe)
   VALUES (:pseudo,:nom_groupe)');
 
@@ -124,6 +124,8 @@ function supprimer($groupe){
     $req3->execute(array($groupe));
     $req4=$bdd->prepare('DELETE FROM évènement WHERE nom_groupe=?');
     $req4->execute(array($groupe));
+    $req5=$bdd->prepare('DELETE FROM invitation WHERE nom_groupe=?');
+    $req5->execute(array($groupe));
 
 }
 
@@ -211,13 +213,5 @@ function supprimer_notif($nom_groupe){
   $req=$bdd->prepare('DELETE FROM attente WHERE nom_groupe=? AND pseudo=? ');
   $req->execute(array($nom_groupe,$_SESSION['pseudo']));
 }
-
-
-
-
-
-
-
-
 
 ?>

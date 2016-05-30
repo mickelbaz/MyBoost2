@@ -10,7 +10,7 @@
 <?php require_once 'Vues/header.php'; ?>
   <div class="head_groupe">
     <div class="groupe">
-      <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="index.php?page=groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Retour à la page du groupe</span></a></h1>
+      <h1 class="name_groupe"><?php echo $donnees[0] ?><br></h1>
     </div>
   </div>
   <br>
@@ -24,7 +24,7 @@
       </thead>
       <tr></tr><tr></tr>
       <tr><td>Nom du groupe : </td><td><INPUT type="text" name="nom" size="30" value="<?php echo $donnees[0] ?>"/></td></tr>
-      <tr><td>Nombre de membres max : </td><td><INPUT type="number" name="nb" value="<?php echo $donnees[nb_max] ?>" min="<?php echo $donnees[nb_max] ?>" max="110"/></td></tr>
+      <tr><td>Nombre de membres max : </td><td><INPUT type="number" name="nb" value="<?php echo $donnees[4] ?>" min="<?php echo $donnees[4] ?>" max="110"/></td></tr>
     </table>
     <br></br>
     <div class="valider"><INPUT type="submit" name="envoyer" value="Valider"/></div>

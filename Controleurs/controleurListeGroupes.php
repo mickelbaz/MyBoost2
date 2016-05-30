@@ -11,20 +11,25 @@ function afficher_groupes(){
   return $liste;
 }
 
+function affiche_liste(){
+  $liste=liste_groupe()->fetchAll();
+  return $liste;
+}
+
+function recupmembre($groupe){
+  $membre=recup_membre($groupe)->fetchAll();
+  return $membre;
+}
+
+function recup_place($groupe){
+  $place=recup_nb_place($groupe)->fetch();
+  return $place;
+}
+
 
 function rejoindre($nom){
   rejoint($nom);
 }
-
-function notif($nom_groupe){
-  attente($nom_groupe);
-  header('location: index.php?page=ListeGroupes');
-}
-
-
-
-
-
 
 
  ?>

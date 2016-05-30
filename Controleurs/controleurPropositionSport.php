@@ -1,6 +1,6 @@
 <?php
 
     function afficherproposport(){
-      require 'Vues/vuePropositionSport.php';
+      require_once 'Vues/vuePropositionSport.php';
     }
 ?>
