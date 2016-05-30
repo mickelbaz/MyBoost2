@@ -6,8 +6,8 @@ function ajout(){
   $date="{$_POST["annee"]}-{$_POST["mois"]}-{$_POST["jour"]}";
 
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,region,pays,tel,mail,mot_de_passe)
-VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:pays,:tel,:mail,:mot_de_passe)');
+  $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,region,pays,tel,mail,mot_de_passe,avatar)
+VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:pays,:tel,:mail,:mot_de_passe,:avatar)');
 
    $req->execute(array(
     'nom'=>$_POST['nom'],
@@ -22,7 +22,9 @@ VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:p
     'pays'=>$_POST['pays'],
     'tel'=>$_POST['tel'],
     'mail'=>$_POST['mail'],
-    'mot_de_passe'=>$mdp));
+    'mot_de_passe'=>$mdp,
+    'avatar'=>$_SESSION['id'].'.'.$extensionUpload,
+    'id'=>$_SESSION['id']));
 }
 
 function verif_pseudo(){
@@ -124,6 +126,8 @@ function verif_pseudo(){
           return false;
         }
       }
+
+
 
 
 

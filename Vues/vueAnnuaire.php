@@ -5,6 +5,11 @@
 <br></br>
 <table style="border-collapse:collapse;">
   <thead>
+    <tr>
+      <th colspan="2">
+        <img src="Images/find.png" style="margin-bottom:1em;" />
+      </th>
+    </tr>
       <tr style="border-bottom:1px solid black;">
           <th id="title" colspan="2">Annuaire</th>
       </tr>
@@ -21,10 +26,12 @@
 </table>
 <br></br>
 
-<FORM name="ajout" method="post" action="">
+<div class="invite">
+
   <div class="image">
     <img src="Images/message.png" />
   </div>
+<FORM name="ajout" method="post" action="">
 
   <div class="ajout">
 
@@ -46,6 +53,8 @@
 
   </div>
 </FORM>
+
+</div>
 
 
 

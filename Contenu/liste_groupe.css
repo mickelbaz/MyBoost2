@@ -9,10 +9,12 @@ tr td {
 
 .ajout{
   text-align: center;
+  margin-left: 1em;
+  margin-top: 0.4em;
 }
 
-.image{
-  position: absolute;
-  left: 24em;
-  top:45.9em;
+.invite{
+  display: flex;
+  padding: 1em;
+  justify-content: center;
 }
