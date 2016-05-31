@@ -3,6 +3,10 @@
 <link rel="stylesheet" type="text/css" href="Contenu/admin.css">
 
 <body>
+
+  <div class="image">
+    <img src="Images/admin.png" alt="" />
+  </div>
           	<h1> Bienvenue dans l'espace administrateur </h1>
 
           	<div class=categorie>

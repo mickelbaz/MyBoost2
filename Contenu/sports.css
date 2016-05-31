@@ -6,9 +6,9 @@
 
 * {
 	font-family: Avenir Next LT Pro;
-
 }
 
+/*
 #bloc_page {
 		background-color:black;
 
@@ -111,4 +111,144 @@ a :hover {
 	border-style:solid;
 	border-radius:2em;
 
+}
+
+*/
+
+.page{
+	background-color: #edefed;
+}
+
+.top{
+	background-color: #3dc878;
+	padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
+}
+
+
+
+.top h1{
+  color: white;
+	text-align: center;
+	font-size: 3em;
+}
+
+
+.content h3{
+	text-align: center;
+	color: #2d3e4F;
+}
+
+.image{
+	background-color: #2e2981;
+	border-radius: 3em;
+	transition: transform .3s ease;
+
+}
+
+.image:hover{
+	transform: scale(1.2);
+}
+
+.content img{
+	height: 4em;
+	width: 4em;
+	padding: 1em;
+}
+
+
+
+.sports{
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
+}
+
+.sports-aquatiques_title{
+	background-image:url(../Images/wave.png);
+	background-position:center;
+	padding: 1.5em;
+  background-repeat: no-repeat;
+	text-align: center;
+	font-size: 2em;
+	color: white;
+
+}
+
+.sport{
+	display: flex;
+	justify-content: space-around;
+	text-align: center;
+}
+
+.sports-ballons_title{
+	background-image: url(../Images/ballons.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	padding: 1.5em;
+	text-align: center;
+	font-size: 2em;
+	color: #2d3e4F;
+	justify-content: center;
+}
+
+.sports-raquettes_title{
+	background-image: url(../Images/raquette.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	padding: 1.5em;
+	text-align: center;
+	font-size: 2em;
+	color: #2d3e4F;
+	justify-content: center;
+
+}
+
+.sports-nature_title{
+	background-image: url(../Images/nature.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	padding: 1.5em;
+	padding-top: 2.5em;
+	text-align: center;
+	font-size: 2em;
+	color: #2d3e4F;
+	justify-content: center;
+
+}
+
+.sports-combats_title{
+	background-image: url(../Images/combat.png);
+	background-repeat: no-repeat;
+	background-position:center;
+	padding: 1.5em;
+	padding-top: 2em;
+	text-align: center;
+	font-size: 2em;
+	color: #2d3e4F;
+	justify-content: center;
+
+}
+
+.propose{
+	text-align: center;
+	transition: transform .3s ease;
+}
+.propose a{
+  background-color: #00ed82;
+  font-size: 1em;
+  text-decoration: none;
+  width: 10em;
+  border-radius:1em;
+
+  text-align: center;
+  padding: 0.8em;
+  color:white;
+
+}
+
+.propose:hover{
+  transform: scale(1.3);
 }

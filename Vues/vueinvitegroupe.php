@@ -16,8 +16,8 @@
 
   <h1 class="name_groupe"><?php echo $donnees[0] ?><br>
 <?php $dispo=$place[0]-count($membre);
-if($dispo!=0){?>
-    <a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Rejoindre le groupe</span></a></h1>
+if($dispo!=0 && isset($_SESSION['pseudo'])){?>
+    <a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/plus.png"/><span class="modifier"> Rejoindre le groupe</span></a></h1>
   <?php
 } ?>
 

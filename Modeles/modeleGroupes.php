@@ -108,10 +108,10 @@ function rejoint($groupe){
 
 function quitter($groupe){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('DELETE FROM rejoindre WHERE nom_groupe=?');
-    $req->execute(array($groupe));
-    $req2=$bdd->prepare('DELETE FROM participe WHERE nom_evenement IN(SELECT nom FROM évènement WHERE nom_groupe=?)');
-    $req2->execute(array($groupe));
+    $req=$bdd->prepare('DELETE FROM rejoindre WHERE nom_groupe=? AND pseudo=?');
+    $req->execute(array($groupe,$_SESSION['pseudo']));
+    $req2=$bdd->prepare('DELETE FROM participe WHERE nom_evenement IN(SELECT nom FROM évènement WHERE nom_groupe=?) AND pseudo=?');
+    $req2->execute(array($groupe,$_SESSION['pseudo']));
 }
 
 function supprimer($groupe){
@@ -201,10 +201,11 @@ function attente($nom_groupe){
       'nom_groupe'=>$nom_groupe));
 }
 
-function recup_personne_attente($nom_groupe){
+
+function recup_groupes(){
     $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-    $req=$bdd->prepare('SELECT pseudo FROM attente WHERE nom_groupe=?');
-    $req->execute(array($nom_groupe));
+    $req=$bdd->prepare('SELECT DISTINCT nom_groupe FROM attente WHERE  pseudo=?');
+    $req->execute(array($_SESSION['pseudo']));
     return $req;
 }
 
@@ -213,6 +214,7 @@ function supprimer_notif($nom_groupe){
   $req=$bdd->prepare('DELETE FROM attente WHERE nom_groupe=? AND pseudo=? ');
   $req->execute(array($nom_groupe,$_SESSION['pseudo']));
 }
+
 
 
 
