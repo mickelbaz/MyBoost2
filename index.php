@@ -1,5 +1,6 @@
 <?php
 
-require 'Controleurs/controleurAccueil.php'
+require 'Controleurs/routeur.php';
+$routeur=router();
 
 ?>

@@ -1,9 +1,12 @@
 <?php
 
-require_once '../Modeles/modeleUtilisateurs.php';
+require_once 'Modeles/modeleUtilisateurs.php';
+
 
 function connect(){
+
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
+
       $resultat=verif_id()->fetch();
       if(!$resultat){
         echo 'Pseudo ou mot de passe incorrect';
@@ -11,12 +14,13 @@ function connect(){
        else{
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
-        echo 'Vous êtes connecté';
-        header("location: /MyBoost2/index.php");
+        header("location:index.php?page=accueil");
       }
-    }
-}
+  }
+    require 'Vues/vueConnexion.php';
+  }
 
-$connect=connect();
-require '../Vues/vueConnexion.php';
+
+
+
 ?>

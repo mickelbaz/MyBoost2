@@ -1,4 +1,4 @@
-*{
+/**{
 	font-family: Avenir Next LT Pro;
 	margin: 0em;
 }
@@ -49,6 +49,184 @@
     width: : 20%;
     height: 105vh;
     margin: 0;
-            }
 
+}
+
+#bloc_page td{
+	width: 8em;
+	height: 2em;
+}
+
+#bloc_page{
+	margin-left:2em;
+	}*/
+
+	#slideshow {
+	    position: relative;
+	    width: 1500px;
+	    height: 500px;
+	    padding: 15px;
+	    margin: 0 auto 1em;
+	    margin-bottom: 45px;
+	    top: 2em;
+	}
+
+
+	#slideshow:before,
+	#slideshow:after {
+	    position: absolute;
+	    bottom:16px;
+	    z-index: -10;
+	    width: 50%;
+	    height: 20px;
+	    content: " ";
+	    background: rgba(0,0,0,0);
+	    border-radius: 75%;
+
+	}
+	#slideshow:before {
+	    left:0;
+	    transform: rotate(-4deg);
+	}
+	#slideshow:after {
+	    right:0;
+	    transform: rotate(4deg);
+	}
+
+	/* gestion des dimensions et dÃ©bordement du conteneur */
+	#slideshow .container {
+	    position:relative;
+	    width: 1300px;
+	    height: 500px;
+	    overflow: hidden;
+	}
+
+	/* on prÃ©voit un petit espace gris pour la timeline */
+	#slideshow .container:after {
+	    position:absolute;
+	    bottom: 0; left:0;
+	    content: " ";
+	    width: 100%;
+	    height: 1px;
+	   /* background: #999; */
+	}
+	/*
+	   le conteneur des slides
+	   en largeur il fait 100% x le nombre de slides
+	*/
+	#slideshow .slider {
+	    position: absolute;
+	    left:0; top:0;
+	    width: 400%;
+	    height: 500px;
+	}
+
+	/* annulation des marges sur figure */
+	#slideshow figure {
+	    position:relative;
+	    display:inline-block;
+	    padding:0; margin:0;
+	}
+	/* petit effet de vignette sur les images */
+	#slideshow figure:after {
+	    position: absolute;
+	    display:block;
+	    content: " ";
+	    top:0; left:0;
+	    width: 100%; height: 100%;
+	    box-shadow: 0 0 65px rgba(0,0,0, 0.5) inset;
+	}
+
+	/* fonction d'animation, n'oubliez pas de prefixer ! */
+	@keyframes slider {
+	    0%, 20%, 100%   { left: 0 }
+	    25%, 45%        { left: -100% }
+	    50%, 70%        { left: -200% }
+	    75%, 95%        { left: -300% }
+	}
+
+	/* complÃ©tez le sÃ©lecteur : */
+	#slideshow .slider {
+	    /* ... avec la propriÃ©tÃ© animation */
+	    animation: slider 17s infinite;
+	}
+
+	.slider img{
+	background-size: cover;
+	background-position: 50% 50%;
+	}
+
+.presentation{
+	background-color: #edefed;
+}
+
+.title_accueil{
+	background-color: #edeff0;
+	padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
+}
+.title_accueil h1{
+	text-align: center;
+	color: #2d3e4F;
+	font-size: 3em;
+}
+
+.contenu{
+	padding-top: 1em;
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 1em;
+}
+
+.title_category_larger{
+
+
+    text-decoration: none;
+    width: 25em;
+    border-style: solid;
+    border-radius:2em;
+    border-color: #505a5c;
+    border-width: thin;
+    text-align: center;
+
+		margin: auto;
+    color:#505a5c;
+    margin-bottom: 2em;
+}
+
+.title_category{
+
+
+    text-decoration: none;
+    width: 12em;
+    border-style: solid;
+    border-radius:2em;
+    border-color: #505a5c;
+    border-width: thin;
+    text-align: center;
+
+		margin: auto;
+    color:#505a5c;
+    margin-bottom: 2em;
+}
+
+
+.category{
+	width: 40%;
+}
+
+.category_content{
+	display: flex;
+	justify-content: center;
+}
+
+td{
+	width: 7em;
+	height: 2em;
+}
+
+tr{
+	height: 0.5em;
 }

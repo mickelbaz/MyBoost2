@@ -1,181 +1,489 @@
 /*page*/
 @font-face{
-    font-family: "Avenir Next LT Pro";
-    src:url(AvenirNextLTPro-Demi.otf);
+  font-family: "Avenir Next LT Pro";
+  src:url(AvenirNextLTPro-Demi.otf);
 }
 
 *{
-    font-family: Avenir Next LT Pro;
+  font-family: Avenir Next LT Pro;
 }
+
 /*en tête*/
 header{
-    background-attachment: fixed;
-    margin-bottom: 0em;
+  background-attachment: fixed;
+  margin-bottom: 0em;
 
 }
 
+.logo img{
+  width:250px;
+  height:100px;
+  margin: 10px 0px 0px 10px;
+}
+
+<<<<<<< HEAD
 .logo{
     width:250px;
     height:100px;
     margin: 10px 0px 0px 10px;
+=======
+img #sport{
+  width:250px;
+  height:250px;
+  margin: 10px 0px 0px 10px;
+>>>>>>> 0ba72b780ce09b0f054b02faa44362fc3aa8518d
 }
 
 header h1{
 
 
-    color: rgba(120, 0, 120, 0.6);
-    font-size: 1.8em;
-    position:absolute;
-    top:40px;
-    right:445px;
+  color: #593f7a;
+  font-size: 1.8em;
+
 }
 
+.titre_principal{
+  max-width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slogan{
+  padding-top: 1.7em;
+}
+
+.bouton{
+  position: absolute;
+  top: 1em;
+  right:10em;
+  text-align: center;
+
+}
+
+.inscription{
+  position: absolute;
+  top: 3.7em;
+  right:15em;
+}
+
+.connexion{
+  position: absolute;
+  top: 3.7em;
+  right:7em;
+}
+
+header .search input{
+  border-radius: 100px;
+  border: grey solid 1px;
+  font-size: 1em;
+  outline:none;
+  text-align: center;
+  margin-left:990px;
+  margin-top: 5px;
+}
+
+.search_connecte{
+  position: absolute;
+  top: 8em;
+  right:13em;
+
+}
+
+.search a:hover{
+  transform: scale(1.1);
+}
+
+.search a{
+  position: absolute;
+  top: 11em;
+  right:4em;
+  font-size: 0.7em;
+  text-decoration: none;
+  width: 10em;
+  border-style: solid;
+  border-radius:1em;
+  border-color: #7d8287;
+  border-width: thin;
+  text-align: center;
+  padding: 0.8em;
+  color:#7d8287;
+  transition: transform .2s ease;
+}
+
+.administrer a{
+  position: absolute;
+  background-color: #00ed82;
+  top: 8em;
+  left: 2.9em;
+  font-size: 1em;
+  text-decoration: none;
+  width: 10em;
+  border-style: solid;
+  border-radius:1em;
+
+  text-align: center;
+  padding: 0.8em;
+  color:white;
+  transition: transform .3s ease;
+}
+
+.administrer a:hover{
+  transform: scale(1.1);
+}
+
+
 header .inscription a{
-	font-size: 1.2em;
-    position:absolute;
-    top:1em;
-    right:180px;
-    text-decoration: none;
+  font-size: 1em;
 
-    height:1em;
-    width: 8em;
-    border-style: solid;
-    border-radius:1em;
-    border-color: #127feb;
-    border-width: thin;
-    text-align: center;
-    padding: 0.8em;
-    color:#127feb;
-
+  text-decoration: none;
+  width: 8em;
+  border-style: solid;
+  border-radius:1em;
+  border-color: #127feb;
+  border-width: thin;
+  text-align: center;
+  padding: 0.8em;
+  color:#127feb;
 }
 
 
 header .connexion a{
-	font-size: 1.2em;
-    position:absolute;
-    top:4em;
-    right:180px;
-    text-decoration: none;
-    height:1em;
-    width: 8em;
-    border-style: solid;
-    border-radius:1em;
-    border-color: #127feb;
-    border-width: thin;
-    text-align: center;
-    padding:0.8em;
-    color:#127feb;
+font-size: 1em;
+
+  text-decoration: none;
+  width: 8em;
+  border-style: solid;
+  border-radius:1em;
+  border-color: #127feb;
+  border-width: thin;
+  text-align: center;
+  padding:0.8em;
+  color:#127feb;
 }
 
 header .deconnexion a{
-	font-size: 1.2em;
-    position:absolute;
-    top:50px;
-    right:180px;
-    text-decoration: none;
-
-    height:1em;
-    width: 8em;
-    border-style: solid;
-    border-radius:1em;
-    border-color: red;
-    border-width: thin;
-    text-align: center;
-    padding:0.8em;
-    color:red;
+  font-size: 1em;
+  text-decoration: none;
+  border-style: solid;
+  border-radius:1em;
+  border-color: red;
+  border-width: thin;
+  text-align: center;
+  padding:0.8em;
+  color:red;
 }
-
-
-
-
 
 .champ1{
-  position:absolute;
-  top:35px;
-  right:150px;
+position:absolute;
+top:2.5em;
+right:180px;
 }
+
 .champ2{
-  position:absolute;
-  top:120px;
-  right:187px;
+position:absolute;
+top:8em;
+right:13.8em;
 }
 
 
 /*barre de navigation*/
+
 header nav{
-    position: relative;
-    background-color: rgba(120, 0, 120, 0.5);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    margin-top: 2em;
+
+
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  margin-top: 2em;
+  margin-bottom: 3.4em;
+  margin-left: 0.5em;
+
 }
 
-nav a{
-    font-size: 1.2em;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-}
+#menu_connecte, #menu_connecte ul /* Liste */
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 2.5em; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
 
-nav ul{
-    list-style-type: none;
-    display: flex;
-    justify-content: space-around;
-    margin-left: 50px;
-    margin-right:50px;
-    padding: 7px;
 
 }
 
 
-/*barre de recherche*/
-header .search input{
-    border-radius: 100px;
-    border: grey solid 1px;
-    font-size: 1em;
-    outline:none;
-    text-align: center;
-    margin-left:1040px;
-    margin-top: 5px;
-}
-
-.effet{
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    text-align: center;
-
-}
-
-.effet img {
-
-    width:2em;
-    height:2em;
-    vertical-align:middle;
-    transition:transform .3s ease;
-}
 
 
-.effet img:hover {
 
-    transform: scale(1.4);
-}
-
-footer{
-    postition:relative;
-    clear:both;
-    margin:auto;
-    padding-top:1em;
-    height: 8em;
-    width: auto;
-    color:white;
-
-    background-color:#2b2d2e;
+#menu_connecte a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+        background : #826af5;  /*couleur de fond */
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 15.5em; /* largeur */
 
 
 }
+
+
+
+#menu_connecte .left{
+  display : block;
+  border-top-left-radius: 15px;
+
+}
+
+#menu_connecte .right{
+  display : block;
+  border-top-right-radius: 15px;
+}
+
+#menu_connecte li /* Elements des listes */
+{
+        float : left;
+
+        /* pour IE qui ne reconnaît pas "transparent" */
+        /*border-right : 1px solid #fff;  on met une bordure blanche à droite de chaque élément */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_connecte li
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu_connecte li ul /* Sous-listes */
+{
+        position: absolute; /* Position absolue */
+        width: 20.5em; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu_connecte li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-top : 1px solid #fff;  on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_connecte li ul li
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu_connecte li ul ul
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-left     : 1px solid #fff ;  Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu_connecte li ul ul
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu_connecte a:hover /* Lorsque la souris passe sur un des liens */
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #c1d4d9; /* ... et au contraire, le fond en blanc */
+}
+
+#menu_connecte li:hover ul ul, #menu_connecte li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu_connecte li:hover ul, #menu_connecte li li:hover ul, #menu_connecte li.sfhover ul, #menu_connecte li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+#menu_deconnecte, #menu_deconnecte ul /* Liste */
+{
+        padding : 0; /* pas de marge intérieure */
+        margin : 0; /* ni extérieure */
+        list-style : none; /* on supprime le style par défaut de la liste */
+        line-height : 2.5em; /* on définit une hauteur pour chaque élément */
+        text-align : center; /* on centre le texte qui se trouve dans la liste */
+
+
+}
+
+#menu_deconnecte /* Ensemble du menu */
+{
+        font-weight : bold; /* on met le texte en gras */
+        font-family : Arial; /* on utilise Arial, c'est plus beau ^^ */
+        font-size : 1em; /* hauteur du texte : 12 pixels */
+
+
+}
+
+
+
+#menu_deconnecte a /* Contenu des listes */
+{
+        display : block; /* on change le type d'élément, les liens deviennent des balises de type block */
+        padding : 0; /* aucune marge intérieure */
+        background : #826af5;  /*couleur de fond */
+        color : #fff; /* couleur du texte */
+        text-decoration : none; /* on supprime le style par défaut des liens (la plupart du temps = souligné) */
+        width : 19.5em; /* largeur */
+
+
+}
+
+
+
+#menu_deconnecte .left{
+  display : block;
+  border-top-left-radius: 15px;
+
+}
+
+#menu_deconnecte .right{
+  display : block;
+  border-top-right-radius: 15px;
+}
+
+#menu_deconnecte li /* Elements des listes */
+{
+        float : left;
+
+        /* pour IE qui ne reconnaît pas "transparent" */
+        /*border-right : 1px solid #fff;  on met une bordure blanche à droite de chaque élément */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_deconnecte li
+{
+        border-right: 1px solid transparent ; /* on met une bordure transparente à droite de chaque élément */
+}
+
+#menu_deconnecte li ul /* Sous-listes */
+{
+        position: absolute; /* Position absolue */
+        width: 20.5em; /* Largeur des sous-listes */
+        left: -999em; /* Hop, on envoie loin du champ de vision */
+}
+
+
+#menu_deconnecte li ul li /* Éléments de sous-listes */
+{
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-top : 1px solid #fff;  on met une bordure blanche en haut de chaque élément d'une sous liste */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" */
+html>body #menu_deconnecte li ul li
+{
+        border-top : 1px solid transparent; /* on met une bordure transparente en haut de chaque élément */
+}
+
+#menu_deconnecte li ul ul
+{
+        margin    : -22px 0 0 144px ; /* On décale les sous-sous-listes pour qu'elles ne soient pas au dessus des sous-listes */
+        /* pour IE qui ne reconnaît pas "transparent" (comme précédemment) */
+        /*border-left     : 1px solid #fff ;  Petite bordure à gauche pour ne pas coller ... */
+}
+
+/* IE ne reconnaissant pas le sélecteur ">" ... je me répète ;-) */
+html>body #menu_deconnecte li ul ul
+{
+        border-left     : 1px solid transparent ; /* on met une bordure transparente sur la gauche de chaque élément */
+}
+
+#menu_deconnecte a:hover /* Lorsque la souris passe sur un des liens */
+{
+        color: #000; /* On passe le texte en noir... */
+        background: #c1d4d9; /* ... et au contraire, le fond en blanc */
+}
+
+#menu_deconnecte li:hover ul ul, #menu_deconnecte li.sfhover ul ul /* Sous-sous-listes lorsque la souris passe sur un élément de liste */
+{
+        left: -999em; /* On expédie les sous-sous-listes hors du champ de vision */
+}
+
+#menu_deconnecte li:hover ul, #menu_deconnecte li li:hover ul, #menu_deconnecte li.sfhover ul, #menu_deconnecte li li.sfhover ul  /* Sous-listes lorsque la souris passe sur un élément de liste ET sous-sous-lites lorsque la souris passe sur un élément de sous-liste */
+{
+        left: auto; /* Repositionnement normal */
+        min-height: 0; /* Corrige un bug sous IE */
+}
+
+
+
+
+
 
 #credit{
-  font-size: 1em;
-  margin-top: 0.5em;
+font-size: 1em;
+margin-top: 0.5em;
+}
+
+
+li a:hover{
+color:black;
+}
+
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  background-color:#2b2d2e;
+}
+
+
+
+.credit{
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+.rejoindre{
+  font-size: 1.2em;
+  text-decoration: none;
+  border-style: solid;
+  border-width:thin;
+  border-color: white;
+  background-color: #ffd14e;
+
+
+  text-align: center;
+  padding:0.8em;
+  height: 60%;
+  margin-top: 3em;
+}
+
+.rejoindre a{
+  color: black;
+  text-decoration: none;
+}
+
+.faq a{
+  color:white;
+  font-size: 1.2em;
+  text-decoration: none;
+
+}
+
+.faq{
+  margin-top: 2.3em;
+}
+
+footer img {
+  width:2em;
+  height:2em;
+  transition:transform .3s ease;
+  margin-top: 2em;
+}
+
+footer img:hover {
+  transform: scale(1.4);
 }

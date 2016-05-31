@@ -1,6 +1,10 @@
-<?php require '../Vues/header.php'; ?>
+<?php require 'Vues/header.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
+<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+<div class="content">
+
+
+<div class="formulaire">
 
 
 <FORM name="formulaire" method="post" action="">
@@ -10,43 +14,59 @@
 
 	<tr>
 	<td>Nom du groupe</td>
-	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']);}?>"/></td>
+	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']) ;}?>"/></td>
+	</tr>
+	<tr><td>Région</td>
+	<td><SELECT name="region">
+	<OPTION value="title" selected>Sélectionnez votre région
+	<OPTION>Alsace
+	<OPTION>Aquitaine
+	<OPTION>Auvergne
+	<OPTION>Basse-Normandie
+	<OPTION>Bourgogne
+	<OPTION>Bretagne
+	<OPTION>Centre
+	<OPTION>Champagne-Ardenne
+	<OPTION>Corse
+	<OPTION>Franche-Comté
+	<OPTION>Haute-Normandie
+	<OPTION>Île-de-France
+	<OPTION>Languedoc-Roussillon
+	<OPTION>Limousin
+	<OPTION>Lorraine
+	<OPTION>Midi-Pyrénées
+	<OPTION>Nord-Pas-de-Calais
+	<OPTION>Pays de la Loire
+	<OPTION>Picardie
+	<OPTION>Poitou-Charentes
+	<OPTION>Provence-Alpes-Côte d'Azur
+	<OPTION>Rhône-Alpes
+	<OPTION>Guadeloupe
+	<OPTION>Guyane
+	<OPTION>La Réunion
+	<OPTION>Martinique
+	<OPTION>Mayotte
+	</SELECT>
+</td>
 	</tr>
 
 	<tr>
 	<td>Sport du groupe</td>
-  <td>
-    <SELECT name="sport_groupe">
-      <OPTION value="title" selected>--- Sport ---
-      <OPTION>Tennis
-      <OPTION>Football
-      <OPTION>Ping-Pong
-      <OPTION>Basketball
-      <OPTION>Jogging
-      <OPTION>Golf
-      <OPTION>Boxe
-      <OPTION>Curling
-    </SELECT>
-  </td>
+			<td><SELECT name="sport">
+		    <OPTION value="title" selected>Sport
+		  <?php foreach($sport as list($nom)){?>
+		    <OPTION><?php echo $nom ?> </OPTION>
+		    <?php
+		  }?>
+		</SELECT>
+		</td>
   </tr>
 
-  <tr>
-	<tr></tr>
-	<td colspan="2">Choisissez votre avatar :</td>
-	</tr>
-
-	<tr>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar1.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar2.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar3.png"/></td>
-	<td><INPUT type="radio" name="img1" value=""/><img src="../Images/avatar4.png"/></td>
-	</tr>
-	<tr></tr><tr></tr>
 
 
   <tr>
     <td>
-      Nombre de participants max
+      Nombre de membres max
     </td>
     <td>
       <INPUT type="number" name="nb" value="<?php if(isset($_POST['nb'])){ echo htmlentities($_POST['nb']);}?>" min="1" max="110"/>
@@ -69,5 +89,8 @@
 	<!--<div class="B">Valider</div>-->
 	<div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 	</FORM>
+	</div>
+	<br></br>
+	</div>
 
-<?php require '../Vues/footer.php'; ?>
+<?php require 'Vues/footer.php'; ?>

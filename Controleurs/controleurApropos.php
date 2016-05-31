@@ -1,3 +1,7 @@
 <?php
-require '../Vues/vueAPropos.php'
+
+function affiche_apropos(){
+  require 'Vues/vueAPropos.php';
+}
+
 ?>

@@ -6,33 +6,71 @@
 
 * {
 	font-family: Avenir Next LT Pro;
-	margin:0em;
+
+}
+
+#bloc_page {
+		background-color:black;
+
+}
+
+.categorie-sports {
+		color:white;
+		margin-left:2em;
 }
 
 .top {
 	width : auto;
 	height : 2em;
-	background-color:#fda74a;
+	background-color:#2b2d2e;
 	color :white;
 	text-align:center;
 	line-height:2em;
 	font-size:4em;
 }
 
-.ajoutsport {
-	border-radius: 35em;
-	border: grey solid 1em;
-	font-size: 1em;
-	text-align: center;
-	margin-left:300em;
-	margin-top: 2em;
-	text-decoration: none;
+
+a{
+	text-decoration:none;
+	color:white;
+}
+
+.boutonvalider {
+			margin-left:50%;
+			color:white;
+			background-color:#2b2d2e;
+			border:white solid;
+			border-width:0.1em;
+			border-radius:1em;
+			font-size:1.3em;
+			text-align:center;
+			text-decoration-color:white;
+			padding:0.5em;
+			position:absolute;
+
+
+}
+.proposition_sport {
+	color:white;
+	background-color:#2b2d2e;
+	border:white solid;
+	border-width:0.1em;
+	border-radius:1em;
+	font-size:1.3em;
+	text-align:center;
+	text-decoration-color:white;
+	padding:0.5em;
+	position:absolute;
+	margin-top:2em;
+	margin-left:2em;
+
+
 }
 
 
 .imgsport {
-	width: 15em;
-	height:15em;
+	width: 13em;
+	height:13em;
   transition:transform .3s ease;
   margin-left:10em;
 }
@@ -46,18 +84,31 @@ a :hover {
 }
 
 .sports-aquatiques {
-	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
+		background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
+		border-color:white;
+		border-style:solid;
+		border-radius:2em;
 }
 
 .sports-plein-air {
 	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
+	border-color:white;
+	border-style:solid;
+	border-radius:2em;
+
 }
 
 .sports-en-salle {
 	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
+	border-color:white;
+	border-style:solid;
+	border-radius:2em;
 }
 
 .sports-co {
 	background-image:radial-gradient(rgba(120, 0, 120, 0.6),black);
-	margin-bottom: auto;
+	border-color:white;
+	border-style:solid;
+	border-radius:2em;
+
 }

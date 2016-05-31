@@ -1,5 +1,9 @@
 <?php
-    require '../Vues/vueSports.php';
 
-    //require '../Modeles/modeleSports.php';
+function afficher_sports(){
+    require 'Vues/vueSports.php';
+  }
+
+
+
 ?>

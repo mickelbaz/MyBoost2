@@ -28,6 +28,7 @@ text-align: center;
 	   width:30px;
 	   height:30px;
 	   vertical-align:middle;
+
 }
 
 
@@ -47,13 +48,13 @@ fieldset.sport{
 	margin-left:auto;
 	margin-right:auto;
 	text-align: center;
-	border: 5px solid #1F497D;
+	border: 5px solid rgba(120, 0, 120, 0.6);
 	background: #ddd;
 	border-radius: 5px;
 	padding: 15px;
 }
 fieldset.sport legend{
-    background: #1F497D;
+    background: rgba(120, 0, 120, 0.6);
     color: #fff;
     padding: 5px 10px ;
     font-size: 32px;
@@ -62,13 +63,14 @@ fieldset.sport legend{
     margin-left: 20px;
 }
 
-input{
+input.sport{
 	font-size:25px;
-	display:block;
+  position:relative;
+  display:block;
 	margin-left:auto;
 	margin-right:auto;
 	text-align:center;
-	background: #1F497D;
+	background: rgba(120, 0, 120, 0.6);
 	border-radius: 5px;
 	padding: 15px;
 	color:white;

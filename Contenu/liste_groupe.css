@@ -1,0 +1,12 @@
+table{
+  margin-right:auto;
+  margin-left:auto;
+}
+
+tr td {
+  width: 11em;
+}
+
+.ajout{
+  text-align: center;
+}

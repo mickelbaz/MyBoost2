@@ -4,7 +4,7 @@
 }
 
 *{
-  margin: 0em;
+
   font-family: Avenir Next LT Pro;
 
 }
@@ -12,7 +12,13 @@
 
 
 .groupe{
-  background-color: #FF5852;
+  background-color: #5c71cb;
+  height: 10em;
+  width: auto;
+}
+
+.salle{
+  background-color: #6779bc;
   height: 10em;
   width: auto;
 }
@@ -48,4 +54,63 @@ h1 .modifier{
 #logomodif{
   height: 0.9em;
   width: 0.9em;
+}
+
+
+
+.membre{
+  display:block;
+  margin-left: 5em;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+tr td{
+  width: 10em;
+  height:3em;
+  text-align:center;
+}
+td{
+  width: 10em;
+  height:3em;
+  text-align:center;
+
+}
+
+.infos{
+  margin-left:2em;
+}
+
+.infos a{
+  text-decoration: none;
+  color: black;
+}
+
+.name_groupe a{
+  text-decoration: none;
+}
+
+
+.site{
+  text-align: center;
+}
+
+.commentaire{
+  margin-left: 2em;
+}
+
+.Ok{
+  margin-left: 6em;
+}
+
+.liste_membre table{
+  margin-left: 1em;
+}
+
+.valider{
+  text-align: center;
 }

@@ -1,19 +1,13 @@
-<!--<!DOCTYPE html>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<link rel="stylesheet" href="formulaire.css" />
-	<title>MyBoost - Le Site Web</title>
-	</head>
+<?php require 'Vues/header.php'; ?>
 
-	<body>-->
-
-<?php require '../Vues/header.php'; ?>
-
-<link rel="stylesheet" type="text/css" href="../Contenu/formulaire.css">
+<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
 
 <p id="title">INSCRIPTION</p>
+
+<p id="sous_titre">* Tous les champs sont obligatoires</p>
+<br></br>
 	<FORM name="formulaire" method="post" action="">
+
 	<table>
 	<tr>
 	<td>Nom :</td>
@@ -27,18 +21,6 @@
 	<td>Pseudo :</td>
 	<td><INPUT type="text" name="pseudo" value="<?php if(isset($_POST['pseudo'])){ echo htmlentities($_POST['pseudo']);}?>"/></td>
 	</tr>
-	<!--<tr>
-	<tr></tr>
-	<td colspan="2">Choisissez votre avatar ou importez une image :</td>
-	</tr>
-	<tr>
-	<td><INPUT type="checkbox" name="img1"/><img src="../Images/avatar1.png"/></td>
-	<td><INPUT type="checkbox" name="img2"/><img src="../Images/avatar2.png"/></td>
-	<td><INPUT type="checkbox" name="img3"/><img src="../Images/avatar3.png"/></td>
-	<td><INPUT type="checkbox" name="img4"/><img src="../Images/avatar4.png"/></td>
-	<td class="A"><INPUT type="file" name="img"/></td>
-	</tr>
-	<tr></tr><tr></tr>-->
 	<tr>
 	<td>Sexe :</td>
 	<td> <INPUT type="radio" name="sexe" value="F" <?php if(isset($_POST['sexe']) && $_POST["sexe"]=="F"){?> checked <?php }?>/><label for="F">Féminin</label>&nbsp&nbsp&nbsp
@@ -89,6 +71,39 @@
 	value ="<?php if(isset($_POST['code_postal'])){ echo htmlentities($_POST['code_postal']);}?>"/></td>
 	<td>Ville :&nbsp&nbsp<INPUT type="text" name="ville" value="<?php if(isset($_POST['ville'])){ echo htmlentities($_POST['ville']);}?>"/></td>
 	</tr>
+	<tr><td>Région :</td>
+		<td><SELECT name="region">
+  <OPTION value="title" selected>Sélectionnez votre région
+	<OPTION>Alsace
+	<OPTION>Aquitaine
+	<OPTION>Auvergne
+	<OPTION>Basse-Normandie
+	<OPTION>Bourgogne
+	<OPTION>Bretagne
+	<OPTION>Centre
+	<OPTION>Champagne-Ardenne
+	<OPTION>Corse
+	<OPTION>Franche-Comté
+	<OPTION>Haute-Normandie
+	<OPTION>Île-de-France
+	<OPTION>Languedoc-Roussillon
+	<OPTION>Limousin
+	<OPTION>Lorraine
+	<OPTION>Midi-Pyrénées
+	<OPTION>Nord-Pas-de-Calais
+	<OPTION>Pays de la Loire
+	<OPTION>Picardie
+	<OPTION>Poitou-Charentes
+	<OPTION>Provence-Alpes-Côte d'Azur
+	<OPTION>Rhône-Alpes
+  <OPTION>Guadeloupe
+  <OPTION>Guyane
+  <OPTION>La Réunion
+  <OPTION>Martinique
+  <OPTION>Mayotte
+  </SELECT>
+</td>
+	</tr>
 	<tr>
 	<td>Pays :</td>
 	<td><INPUT type="text" name="pays" size="28" value="<?php if(isset($_POST['pays'])){ echo htmlentities($_POST['pays']);}?>"/></td>
@@ -117,16 +132,15 @@
 	<tr>
 	<td colspan="2"><INPUT type="checkbox" name="condition" value="1" <?php if(isset($_POST['condition']) && $_POST['condition']=="1"){?> checked <?php } ?>/><em>&nbsp J'accepte les conditions générales du site</em></td>
 	</tr>
-	<tr>
-	<td colspan="2"><INPUT type="checkbox" name="news"/><em>&nbsp Je souhaite m'abonner à la newsletter</em></td>
-	</tr>
+
 	</table>
 
 	<br></br>
 	<!--<div class="B">Valider</div>-->
 	<div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 	</FORM>
+	<br></br>
 
-<?php require '../Vues/footer.php'; ?>
+<?php require 'Vues/footer.php'; ?>
 
 <!--</html>-->

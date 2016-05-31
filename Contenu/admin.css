@@ -1,0 +1,50 @@
+h1, h4, h2{
+    text-align:center;
+}
+
+h4{
+    color:white;
+    font-size:1.6em;
+    padding-top: 22px;
+}
+
+h1{
+    color: #000000;
+}
+
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+
+tr td{
+  height: 4em;
+  width: 5em;
+  text-align: center;
+}
+
+
+
+a{
+    text-decoration: none;
+    color: white;
+    padding-right: 50px;
+
+}
+
+.categorie:hover{
+    background-color:#eeaaf0;
+
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.categorie{
+    width:50%;
+    margin:auto;
+    background-color: rgba(120, 0, 120, 0.6);
+    margin-top:50px;
+    border-radius: 30px 30px 30px 30px;;
+}
