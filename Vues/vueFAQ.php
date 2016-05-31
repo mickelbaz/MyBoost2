@@ -13,6 +13,7 @@
 
           	<div class='questions'>
 				<dl>
+<<<<<<< HEAD
 					<dt>Je n'arrive pas à me connecter sur le site?</dt><br />
 						<dd>Pour réussir à se connecter il faut tout d'abord avoir rempli le formulaire d'insciption de notre site.<br />
 							Au terme de l'inscription un e-mail vous a été envoyé pour valider votre inscription sur l'adresse mail que vous nous aurez fourni.<br /><br>
@@ -49,7 +50,37 @@
               Sur la page des clubs, vous pourrez le commenter et le noter<br>
             </dd><br>
 
+=======
+          <?php foreach($texte as list($id,$question,$reponse)){?>
+					<dt><?php echo $question?></dt><br />
+						<dd><?php echo $reponse ?></dd>
+            <br>
+            <?php if($_SESSION['pseudo']=='admin'){?>
+                <div class="modif">
+                <a href="index.php?page=modifier_faq&id=<?php echo $id?>"><INPUT type="button" name="modif" value="Modifier"/></a>
+                <a href="#" onclick="if (confirm('Supprimer ?')) window.location='index.php?page=supprimer_faq&id=<?php echo $id ?>'; return false"><INPUT type="button" name="supp" value="Supprimer cette rubrique"/></a>
+                <br></br><br></br>
+            <?php
+            } ?>
+            <?php
+          }?>
+>>>>>>> cf992fc47b46273ec22bc1e94f60e36139c4f75e
 				</dl>
+        <?php if($_SESSION['pseudo']=='admin'){?>
+          <form name="ajout_faq" method="post" action="">
+          <p><b>Compléter l'aide en ligne :</b></p>
+          <table>
+          <tr><td>Question :</td>
+          <td><INPUT type="text" name="question" size="98"></td>
+          <tr><td>Réponse :</td><td><textarea name ="reponse" rows="7" cols="100"></textarea>
+          </table>
+          <div class="valider"><INPUT type="submit" name='ajouter' value="Valider"/></div>
+        </form>
+        <?php
+      }?>
+
 			</div>
+
+      <br></br>
 		</body>
   <?php require 'Vues/footer.php' ?>

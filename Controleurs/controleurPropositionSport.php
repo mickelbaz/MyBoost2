@@ -1,5 +1,7 @@
 <?php
 
+    //require '../Modeles/modelePropositionSport.php';
+
     function afficherproposport(){
 
       if(isset($_POST['envoyer']) && $_POST['envoyer']<>""){

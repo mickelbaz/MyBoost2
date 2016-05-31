@@ -195,5 +195,13 @@ tr{
   padding-top :2em;
   padding-bottom: 2em;
   padding-left: 1em;
+}
 
+.detail_category a{
+  text-decoration: none;
+  color : #505a5c;
+}
+
+.evenement{
+  color : #505a5c;
 }

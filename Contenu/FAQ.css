@@ -21,6 +21,7 @@ dt{
 .questions{
 	margin-top:3em;
 	margin-left: 3em;
+  margin-right: 3em;
 }
 
 .questions dt{
@@ -30,4 +31,13 @@ dt{
 }
 .questions dd {
 	text-align: justify;
+}
+
+.modifier{
+  margin-left: 3em;
+}
+
+p{
+	font-size:1.5em;
+  color: #873fa7;
 }

@@ -20,7 +20,11 @@ require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
 require_once 'Controleurs/controleurRecherche.php';
 require_once 'controleurs/controleurAdmin.php';
+<<<<<<< HEAD
 require_once 'controleurs/controleurForum.php';
+=======
+require_once 'controleurs/controleurSportParticipe.php';
+>>>>>>> cf992fc47b46273ec22bc1e94f60e36139c4f75e
 
 
 
@@ -195,7 +199,7 @@ function router(){
     $resultat=resultatmembre($_GET['region'],$_GET['sport']);
     break;
 
-    case "ignorer" :
+    case "ignorer_invit" :
     $ignorer=ignorer_invitation($_GET['groupe']);
     break;
 
@@ -244,6 +248,7 @@ function router(){
   $ignorer=ignorer_notif($_GET['groupe']);
   break;
 
+<<<<<<< HEAD
   case "forum":
   $accueil=afficher_sujet();
   break;
@@ -257,6 +262,20 @@ function router(){
   break;
 
 
+=======
+  case "sport_participe":
+  $participe=sportparticipe();
+  break;
+
+  case "modifier_faq" :
+  $modif_faq=affiche_modif_faq($_GET['id']);
+  break;
+
+  case "supprimer_faq" :
+  $supp=supprimer_faq($_GET['id']);
+  break;
+
+>>>>>>> cf992fc47b46273ec22bc1e94f60e36139c4f75e
     default:
     $_SESSION=array();
     session_destroy();

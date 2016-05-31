@@ -8,6 +8,20 @@
 	font-family: Avenir Next LT Pro;
 }
 
+
+a.sport_css{
+	background-color: #f44336;
+    color: white;
+    padding: 14px 25px;
+    text-align: center; 
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.sport_css:hover{
+	background-color: red;
+}
+
 /*
 #bloc_page {
 		background-color:black;

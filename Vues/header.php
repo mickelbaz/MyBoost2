@@ -90,6 +90,7 @@
                   <li class="nav-item"><a href ="index.php?page=annuaire">Annuaire</a></li>
                 </ul>
             </li>
+
             <li class="nav-item"><a href="#">Forum</a></li>
 
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>

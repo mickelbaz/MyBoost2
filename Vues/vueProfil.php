@@ -118,7 +118,7 @@
       <div class="detail_category">
         <?php
         for ($i=0; $i<count($c); $i++){?>
-          <div class=groupe><?php echo $c[$i][0]; ?></div>
+          <div class=groupe><a href="index.php?page=sport&sport=<?php echo $c[$i][0]?>"><?php echo $c[$i][0]; ?></a></div>
           <?php
         }?>
 
@@ -186,7 +186,7 @@
   <div class="detail_category">
 
     <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe,$lieu)){ ?>
-      <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> &nbsp à &nbsp <?php echo $lieu ?></div>
+      <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> &nbsp à &nbsp <?php echo $lieu ?> &nbsp</div>
     <?php
       }
       if(count($event)==0){?>

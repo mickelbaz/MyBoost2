@@ -54,6 +54,7 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
       <br>
 <?php if(isset($_SESSION['pseudo'])){?>
 
+<<<<<<< HEAD
         <form action="index.php?page=ajouter_sport">
           <input class="sport" type=submit value=Participer>
         </form>
@@ -61,14 +62,24 @@ $nb_participants=mysql_query('SELECT nb_participants FROM sport WHERE nb_partici
         <form action="">
           <input class="sport" type=submit value='Chercher une salle / un terrain'>
         </form>
+=======
+<center>
+<a class="sport_css" href="index.php?page=sport_participe&sport=<?php echo $_GET['sport'];?>">Participer</a>
+<br><br>
+<!--
+<a class="sport_css" href="">Chercher une salle / un terrain</a>
+<br><br>
+<a class="sport_css" href="">Chercher un partenaire / un groupe</a>
+</center>
+<br>
+-->
+>>>>>>> cf992fc47b46273ec22bc1e94f60e36139c4f75e
 
-        <form action="">
-          <input class="sport" type=submit value='Chercher un partenaire / un groupe'>
-        </form>
       <?php
     }?>
-
+	
     </body>
   </html>
 
+ 
 <?php require 'Vues/footer.php'; ?>
