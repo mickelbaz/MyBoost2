@@ -13,7 +13,18 @@
   background-color: #5c71cb;
   height: 10em;
   width: auto;
+  display: flex;
+  justify-content: space-between;
+  color : white;
 }
+
+.region{
+  margin-right: 8em;
+  margin-top: 1.5em;
+  display: flex;
+  padding: 1em;
+}
+
 
 .salle{
   background-color: #6779bc;
@@ -57,8 +68,26 @@ h1 .modifier{
 
 .description{
   text-align: center;
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:2em;
+  padding-top :2em;
+  padding-bottom: 2em;
 }
 
+.evenement{
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:2em;
+  padding-top :2em;
+  padding-bottom: 2em;
+}
 
 tr td{
   width: 10em;
@@ -86,18 +115,7 @@ td{
   text-decoration: none;
 }
 
-.categorie1{
-  background-color: white;
-  border: solid;
-  border-color: #7d8287;
-  border-width: thin;
-  color: #7d8287;
-  margin:2em;
-  padding-top :2em;
-  padding-bottom: 2em;
-  display: flex;
-  justify-content: space-around;
-}
+
 
 .site{
   text-align: center;
