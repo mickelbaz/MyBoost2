@@ -57,9 +57,9 @@
   <table>
   <?php foreach($invitation as list($nom_groupe,$qui_invite)){?>
       <tr>
-        <td> Invitation au groupe <?php echo $nom_groupe ?> par <?php echo $qui_invite ?> </td>
+        <td>Invitation au groupe <?php echo $nom_groupe ?> par <?php echo $qui_invite ?> </td>
         <td><a href="index.php?page=groupevoir&groupe=<?php echo $nom_groupe ?>"><INPUT type="button" name="voir" value="Voir la page du groupe"/></a></td>
-        <td><a href="#" onclick="if (confirm('Ignorer l'invitation ?')) window.location='index.php?page=ignorer&groupe=<?php echo $nom_groupe?>'; return false"><INPUT type="button" name="ignorer" value="Ignorer l'invitation"/></a></td>
+        <td><a href="#" onclick="if (confirm('Ignorer l\'invitation ?')) window.location='index.php?page=ignorer_invit&groupe=<?php echo $nom_groupe ?>'; return false"><INPUT type="button" name="ignorer_invitation" value="Ignorer l'invitation"/></a></td>
       </tr>
     <?php
   }
