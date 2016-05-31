@@ -20,6 +20,7 @@ require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
 require_once 'Controleurs/controleurRecherche.php';
 require_once 'controleurs/controleurAdmin.php';
+require_once 'controleurs/controleurSportParticipe.php';
 
 
 
@@ -237,6 +238,10 @@ function router(){
 
   case "ignorer_notif" :
   $ignorer=ignorer_notif($_GET['groupe']);
+  break;
+  
+  case "sport_participe":
+  $participe=sportparticipe();
   break;
 
   case "modifier_faq" :
