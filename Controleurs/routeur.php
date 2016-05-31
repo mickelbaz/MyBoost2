@@ -192,7 +192,7 @@ function router(){
     $resultat=resultatmembre($_GET['region'],$_GET['sport']);
     break;
 
-    case "ignorer" :
+    case "ignorer_invit" :
     $ignorer=ignorer_invitation($_GET['groupe']);
     break;
 
@@ -242,6 +242,10 @@ function router(){
   
   case "sport_participe":
   $participe=sportparticipe();
+  break;
+
+  case "modifier_faq" :
+  $modif_faq=affiche_modif_faq($_GET['id']);
   break;
 
     default:
