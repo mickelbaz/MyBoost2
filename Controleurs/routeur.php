@@ -239,13 +239,17 @@ function router(){
   case "ignorer_notif" :
   $ignorer=ignorer_notif($_GET['groupe']);
   break;
-  
+
   case "sport_participe":
   $participe=sportparticipe();
   break;
 
   case "modifier_faq" :
   $modif_faq=affiche_modif_faq($_GET['id']);
+  break;
+
+  case "supprimer_faq" :
+  $supp=supprimer_faq($_GET['id']);
   break;
 
     default:

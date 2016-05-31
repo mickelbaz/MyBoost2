@@ -18,7 +18,9 @@
 						<dd><?php echo $reponse ?></dd>
             <br>
             <?php if($_SESSION['pseudo']=='admin'){?>
-                <div class="modif"><a href="index.php?page=modifier_faq&id=<?php echo $id?>"><INPUT type="button" name="modif" value="Modifier"/></a>
+                <div class="modif">
+                <a href="index.php?page=modifier_faq&id=<?php echo $id?>"><INPUT type="button" name="modif" value="Modifier"/></a>
+                <a href="#" onclick="if (confirm('Supprimer ?')) window.location='index.php?page=supprimer_faq&id=<?php echo $id ?>'; return false"><INPUT type="button" name="supp" value="Supprimer cette rubrique"/></a>
                 <br></br><br></br>
             <?php
             } ?>
