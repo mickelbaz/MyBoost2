@@ -25,10 +25,13 @@ function recup_place($groupe){
   return $place;
 }
 
-
 function rejoindre($nom){
   rejoint($nom);
 }
 
+function notif($groupe){
+  attente($groupe);
+  header('location: index.php?page=ListeGroupes');
+}
 
  ?>

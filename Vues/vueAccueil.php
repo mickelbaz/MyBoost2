@@ -59,7 +59,7 @@
       <tr>
         <td> Invitation au groupe <?php echo $nom_groupe ?> par <?php echo $qui_invite ?> </td>
         <td><a href="index.php?page=groupevoir&groupe=<?php echo $nom_groupe ?>"><INPUT type="button" name="voir" value="Voir la page du groupe"/></a></td>
-        <td><a href="index.php?page=ignorer&groupe=<?php echo $nom_groupe?>"><INPUT type="button" name="ignorer" value="Ignorer l'invitation"/></a></td>
+        <td><a href="#" onclick="if (confirm('Ignorer l'invitation ?')) window.location='index.php?page=ignorer&groupe=<?php echo $nom_groupe?>'; return false"><INPUT type="button" name="ignorer" value="Ignorer l'invitation"/></a></td>
       </tr>
     <?php
   }
@@ -69,6 +69,51 @@
     <?php
   }?>
   </table>
+
+  </div>
+
+  </div>
+  </div>
+
+  <br></br>
+  <div class="category">
+
+
+  <div class="title_category">
+    <h3>Vos notifications</h3>
+  </div>
+
+  <div class="category_content">
+
+
+  <table>
+    <?php
+    $nombre=array();
+    $nb_place=array();
+    $dispo=array();
+    if(count($liste_groupe)==0){?>
+      <tr><em>Aucune notification</em></tr>
+      <?php
+    }
+    for($i=0;$i<count($liste_groupe);$i++){
+      $nombre[$i]=count(recupmembre($liste_groupe[$i][0]));
+      $nb_place[$i]=recup_place($liste_groupe[$i][0]);
+      $dispo[$i]=$nb_place[$i][0] - $nombre[$i];
+        if($dispo[$i]!=0){?>
+      <tr>
+        <td>Place disponible dans le groupe <?php echo $liste_groupe[$i][0] ?> </td>
+        <td><a href="index.php?page=groupevoir&groupe=<?php echo $liste_groupe[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page du groupe"/></a></td>
+        <td><a href="#" onclick="if (confirm('Ignorer ?')) window.location='index.php?page=ignorer_notif&groupe=<?php echo $liste_groupe[$i][0] ?>'; return false"><INPUT type="button" name="ignorer_notif" value="Ignorer"/></a></td>
+      </tr>
+    <?php
+    }
+    if($dispo[$i]==0){?>
+      <tr><em>Aucune notification</em></tr>
+      <?php
+    }
+  }?>
+  </table>
+  <br></br>
 
   </div>
 
