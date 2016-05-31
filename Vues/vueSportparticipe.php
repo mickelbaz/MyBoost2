@@ -34,7 +34,7 @@ $reponse = $bdd->query('SELECT * FROM groupe WHERE sport_groupe="'.$_GET["sport"
 <?php
 while ($donnees = $reponse->fetch()){
 ?>
-<big>- <?php echo $donnees['nom']; ?> -</big><?php
+<big><big>- <?php echo $donnees['nom']; ?> -</big></big><?php
 echo ("<br>");
 ?>
 <i>Description</i> : 
@@ -61,7 +61,8 @@ echo ("<br><br>");
 <center>
 <a class="sport_css" href="index.php?page=groupevoir&groupe=<?php echo $donnees["nom"]; ?>">Plus d'infos</a>
 &nbsp;&nbsp;
-<a class="sport_css" href="index.php?page=grouperejoint&groupe=<?php echo $donnees["nom"]; ?>">Rejoindre</a>
+<a class="sport_css" href="#" onclick="if (confirm('Voulez-vous rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees["nom"]; ?>'; return false">Rejoindre</a>
+
 </center>
 <?php
 echo ("<br>");
