@@ -134,9 +134,6 @@
 
     </div>
 
-    <div class="search">
-        <input type="text" name="name" placeholder="rechercher">
-    </div>
     <br><br>
     <nav>
         <ul id="menu_deconnecte">
@@ -144,9 +141,10 @@
             <li class="nav-item"><a href="#">Communauté</a>
                 <ul class="niveau 2">
                   <li class="nav-item"><a href="index.php?page=sports">Liste des sports</a></li>
+                  <li class="nav-item"><a href="index.php?page=ListeGroupes">Liste des groupes</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="index.php?page=forum">Forum</a></li>
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
         </ul>
 

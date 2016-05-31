@@ -14,6 +14,9 @@
 </div>
 </div>
 <br></br>
+<div class="image_coordonnees">
+  <img src="Images/place.png" />
+</div>
 
 <table style="border-collapse:collapse;">
   <thead>

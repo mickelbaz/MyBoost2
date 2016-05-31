@@ -20,6 +20,7 @@ require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
 require_once 'Controleurs/controleurRecherche.php';
 require_once 'controleurs/controleurAdmin.php';
+require_once 'controleurs/controleurForum.php';
 
 
 
@@ -49,6 +50,7 @@ function router(){
     $supprimer=suppression_event();
     $supp=supp_invitation($_GET['groupe']);
     $rejoint=rejoindre($_GET['groupe']);
+    $supp_attente=supprimer_notif($_GET['groupe']);
     $afficher_groupe=afficher_details_groupe($_GET['groupe'],$_SESSION['pseudo']);
     break;
 
@@ -62,7 +64,7 @@ function router(){
     break;
 
     case "sport":
-    $afficher_description_sport=afficher_description();
+    $afficher_description_sport=afficher_description($_GET['sport']);
     break;
 
     case "ListeGroupes":
@@ -237,6 +239,23 @@ function router(){
   case "supprimer_commentaire" :
   $supp=supp_comment($_GET['commentaire']);
   break;
+
+  case "ignorer_notif" :
+  $ignorer=ignorer_notif($_GET['groupe']);
+  break;
+
+  case "forum":
+  $accueil=afficher_sujet();
+  break;
+
+  case "sujet":
+  $sujet=afficher_sujet1();
+  break;
+
+  case "creer_sujet":
+  $sujet=creer_sujet();
+  break;
+
 
     default:
     $_SESSION=array();

@@ -5,6 +5,11 @@
 <br></br>
 <table style="border-collapse:collapse;">
   <thead>
+      <tr>
+        <th colspan="2">
+          <img src="Images/locker.png" style="margin-bottom:1em;" />
+        </th>
+      </tr>
       <tr style="border-bottom:1px solid black;">
           <th id="title" colspan="2">Liste des clubs</th>
       </tr>

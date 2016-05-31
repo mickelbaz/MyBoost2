@@ -18,7 +18,7 @@
 							Au terme de l'inscription un e-mail vous a été envoyé pour valider votre inscription sur l'adresse mail que vous nous aurez fourni.<br /><br>
 						</dd>
 
-					<dt>J'aimerai changer ma photo de profil?</dt><br />
+					<dt>J'aimerai changer ma photo de profil...</dt><br />
 						<dd>Rien de plus simple! <br />
 							Vous devez vous rendre sur votre profil après vous être connecté et cliquer sur "Mon compte" puis sur "ajouter une photo de profil".<br />
 							Vous pourrez alors importer une nouvelle photo</dd></br>

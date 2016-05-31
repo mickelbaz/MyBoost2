@@ -15,6 +15,10 @@ header{
 
 }
 
+.top_header_connection{
+  text-align: center;
+}
+
 .logo img{
   width:250px;
   height:100px;
@@ -166,16 +170,15 @@ header .deconnexion a{
   color:red;
 }
 
-.champ1{
-position:absolute;
-top:2.5em;
-right:180px;
-}
-
-.champ2{
-position:absolute;
-top:8em;
-right:13.8em;
+.champs_connection{
+  text-align: center;
+  margin-top: 3em;
+  padding: 1em;
+  background-color: #3dc878;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: white;
 }
 
 
@@ -440,7 +443,7 @@ footer{
 }
 
 .rejoindre{
-  font-size: 1.2em;
+
   text-decoration: none;
   border-style: solid;
   border-width:thin;
@@ -463,11 +466,19 @@ footer{
   color:white;
   font-size: 1.2em;
   text-decoration: none;
+  margin-bottom: 0em;
 
+}
+
+.faq img{
+  margin: 0em;
 }
 
 .faq{
   margin-top: 2.3em;
+  text-align: center;
+
+
 }
 
 footer img {
