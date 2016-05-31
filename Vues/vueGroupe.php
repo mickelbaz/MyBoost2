@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>Groupe</title>
+    <title><?php echo $donnees[0] ?></title>
   </head>
 
   <body>
@@ -31,26 +31,39 @@
 
 
 <div class="sport">
-<h1 class="name_sport"><?php echo $donnees[1] ?></h1>
+<h1 class="name_sport"><em>Sport : </em><?php echo $donnees[1] ?></h1>
 </div>
 
 
 <br></br>
 
 <div class=infos>
-<div>
-  <h2>Descritption du groupe :</h2>
-  <br>
 
-  <div class="membre"><?php echo $donnees[2] ?></div>
+  <div class="categorie1">
 
-</div>
-<br></br>
-<div>
-  <h2>Région :</h2>
-  <br>
-    <div class="membre"><?php echo $donnees[3] ?></div>
-</div>
+    <div class="description">
+
+      <h2>Description du groupe :</h2>
+      <br>
+      <p>
+        "<?php echo $donnees[2] ?>"
+      </p>
+
+    </div>
+
+    <div class="description">
+
+      <h2>Région :</h2>
+      <br>
+      <p>
+        <?php echo $donnees[3] ?>
+      </p>
+
+    </div>
+
+  </div>
+
+
 <br></br>
 <div class="evenement">
   <h2>Evènements :&nbsp&nbsp&nbsp<a href="index.php?page=evenement&nom=<?php echo $donnees[0]?>"><INPUT type=button name="evenement" value="Créer un évènement"/></a></h2>

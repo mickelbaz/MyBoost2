@@ -183,17 +183,4 @@ tr{
 
 .liste{
   display:block;
-
-
-}
-
-.calendrier{
-  background-color: white;
-  border: solid;
-  border-color: #7d8287;
-  border-width: thin;
-  padding-top :2em;
-  padding-bottom: 2em;
-  padding-left: 1em;
-
 }

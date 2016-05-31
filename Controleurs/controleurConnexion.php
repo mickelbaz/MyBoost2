@@ -20,6 +20,10 @@ function connect(){
     require 'Vues/vueConnexion.php';
   }
 
+function oubliMdp(){
+  
+}
+
 
 
 
