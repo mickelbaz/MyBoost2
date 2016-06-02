@@ -91,5 +91,4 @@ function supp_faq($id){
   $req=$bdd->prepare('DELETE FROM faq WHERE id=?');
   $req->execute(array($id));
 }
-
 ?>

@@ -1,5 +1,5 @@
 <?php
-require 'Modeles/modeleAdmin.php';
+require_once 'Modeles/modeleAdmin.php';
 
 function affiche_faq(){
   $texte=recup_faq()->fetchAll();

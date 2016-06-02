@@ -25,7 +25,6 @@ require_once 'controleurs/controleurSportParticipe.php';
 
 
 
-
 function router(){
   session_start();
   switch($_GET['page']){
@@ -255,19 +254,35 @@ function router(){
     $sujet=afficher_sujet1();
     break;
 
-    case "creer_sujet":
-    $sujet=creer_sujet();
-    break;
 
+
+  case "forum":
+  $accueil=afficher_sujet();
+  break;
+
+
+
+
+  case "creer_sujet":
+  $sujet=creer_sujet();
+  $nouveau_sujet_forum=nouveau_sujet();
+  break;
 
 
     case "sport_participe":
     $participe=sportparticipe();
     break;
 
+
     case "modifier_faq" :
     $modif_faq=affiche_modif_faq($_GET['id']);
     break;
+
+
+  case "sport_participe":
+  $participe=sportparticipe();
+  break;
+
 
     case "supprimer_faq" :
     $supp=supprimer_faq($_GET['id']);
