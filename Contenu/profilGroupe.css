@@ -65,6 +65,38 @@ h1 .modifier{
   width: 0.9em;
 }
 
+.infos{
+  background-color: #edefed;
+}
+
+.admin_groupe{
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
+
+}
+
+.admin_groupe a{
+  color: white;
+  text-decoration: none;
+}
+
+.name_admin table{
+    text-decoration: none;
+    margin-right:auto;
+    margin-left:auto;
+
+    border-radius:2em;
+    background-color: #343f40;
+
+    text-align: center;
+    justify-content: center;
+
+
+}
 
 .description{
   text-align: center;
@@ -73,9 +105,12 @@ h1 .modifier{
   border-color: #7d8287;
   border-width: thin;
   color: #7d8287;
-  margin:2em;
-  padding-top :2em;
-  padding-bottom: 2em;
+  margin:1em;
+
+}
+
+.description h2{
+  color: black;
 }
 
 .evenement{
@@ -87,6 +122,32 @@ h1 .modifier{
   margin:2em;
   padding-top :2em;
   padding-bottom: 2em;
+  text-align: center;
+}
+
+.evenement h2{
+  color: black;
+}
+
+.liste_membre{
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:2em;
+  padding-top :2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.liste_membre td{
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.liste_membre h2{
+  color: black;
 }
 
 tr td{
@@ -101,10 +162,10 @@ td{
 
 }
 
-
-.infos a{
+.liste_membre a{
   text-decoration: none;
   color: black;
+  text-align: center;
 }
 
 .sport{
@@ -129,9 +190,7 @@ td{
   margin-left: 6em;
 }
 
-.liste_membre table{
-  margin-left: 1em;
-}
+
 
 .valider{
   text-align: center;

@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title><?php echo $donnees[0] ?></title>
+    <title>Groupe "<?php echo $donnees[0] ?>"</title>
   </head>
 
   <body>
@@ -17,7 +17,7 @@
 
 
 
-      <h1 class="name_groupe"><?php echo $donnees[0] ?><br><?php
+      <h1 class="name_groupe">Groupe "<?php echo $donnees[0] ?>"<br><?php
 
       if ($_SESSION['pseudo']==$admin[0] ){?>
 
@@ -26,7 +26,7 @@
         <?php
       }
       else{?>
-          <a href="#" onclick="if (confirm('Voulez-vous quitter ce groupe ?')) window.location='index.php?page=quitter&quitter=<?php echo $donnees[0]?>'; return false"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Quitter le groupe</span></a></h1>
+          <a href="#" onclick="if (confirm('Voulez-vous quitter ce groupe ?')) window.location='index.php?page=quitter&quitter=<?php echo $donnees[0]?>'; return false"><img id="logomodif" class="modifier" src="Images/quit.png"/><span class="modifier">   Quitter le groupe</span></a></h1>
         <?php
 
       }?>
@@ -49,15 +49,51 @@
 </div>
 
 </div>
-<br></br>
+
 
 <div class=infos>
+  <div class="admin_groupe">
+
+    <p>
+      Administrateur du groupe
+    </p>
+
+    <div class="name_admin">
+      <table>
+        <tr>
+          <td style="width:3em;">
+            <img src="Images/star.png" alt="" />
+          </td>
+          <td style="text-align:left; color:white; width:6em;">
+            <p>
+              <?php
+            if($_SESSION['pseudo']==$admin[0]){?>
+                <div class="membre"><a href="index.php?page=profil"><?php echo $admin[0] ?></a> </div>
+              <?php
+            }
+            else{?>
+              <div class="membre"> <a href="index.php?page=profilvoir&pseudo=<?php echo $admin[0] ?>"> <?php echo $admin[0] ?></a> </div>
+              <?php
+            }?>
+            </p>
+          </td>
+
+        </tr>
+      </table>
+
+
+    </div>
+
+  </div>
+
+
+
 
 
     <div class="description">
 
-      <h2>Description du groupe :</h2>
-      <br>
+      <h2>Description du groupe</h2>
+
       <p>
         "<?php echo $donnees[2] ?>"
       </p>
@@ -66,12 +102,12 @@
 
 
 
-<br></br>
-
     <div class="evenement">
-      <h2>Événements :&nbsp&nbsp&nbsp<a href="index.php?page=evenement&nom=<?php echo $donnees[0]?>"><INPUT type=button name="evenement" value="Créer un événement"/></a></h2>
+      <img src="Images/calendar2.png" alt="" />
+      <h2>Événements</h2>
+      <a href="index.php?page=evenement&nom=<?php echo $donnees[0]?>"><INPUT type=button name="evenement" value="Créer un événement"/></a>
     <br></br>
-    <h3>Evènements auxquels je participe : </h3>
+    <h3>Événements auxquels je participe : </h3>
     <br></br>
         <?php
         if(count($mes_event)==0){?>
@@ -111,7 +147,7 @@
       <br></br>
       <br></br>
 
-    <h3>Autres évènements du groupe :</h3>
+    <h3>Autres événements du groupe :</h3>
     <br></br>
     <?php
       if(count($event)==0){?>
@@ -161,32 +197,17 @@
       }?>
     </div>
 
-<br></br>
-<br></br>
-
-<div>
-<h2>Administrateur :</h2>
-<br>
-<?php
-if($_SESSION['pseudo']==$admin[0]){?>
-    <div class="membre"><a href="index.php?page=profil"><?php echo $admin[0] ?></a> </div>
-  <?php
-}
-else{?>
-  <div class="membre"> <a href="index.php?page=profilvoir&pseudo=<?php echo $admin[0] ?>"> <?php echo $admin[0] ?></a> </div>
-  <?php
-}?>
-</div>
-<br></br>
-
-<div><h2>Liste des membres :</h2></div><br>
 <div class="liste_membre">
+  <img src="Images/users.png" alt="" />
+
+<div><h2>Liste des membres</h2></div><br>
+
 <table>
 <?php
 for($i=0;$i<count($membre);$i++){?>
   <tr>
   <?php if($_SESSION['pseudo']==$membre[$i][0]){?>
-      <td><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></div></td>
+      <td><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></td>
     <?php
   }
   else{?>
@@ -197,7 +218,7 @@ for($i=0;$i<count($membre);$i++){?>
         <td><a href="#" onclick="if (confirm('Choisir comme nouvel admin ?')) window.location='index.php?page=newadmin&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>'; return false"><INPUT type="button" name="bannir" value="Choisir comme nouvel administrateur"/></a></td>
       <?php
     }?>
-    </div>
+
   </tr>
     <?php
   }?>
@@ -206,8 +227,8 @@ for($i=0;$i<count($membre);$i++){?>
 <?php
 } ?>
 </table>
-
 </div>
+
 <br></br>
 
 

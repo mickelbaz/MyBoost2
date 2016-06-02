@@ -20,11 +20,8 @@
 #avatar{
   float: left;
   margin: 2em;
-  border: 0.1px solid black;
   height: 6em;
   width: 6em;
-
-  border-radius: 200px;
   transition: transform .3s ease;
 }
 
@@ -54,8 +51,8 @@
 
 .star{
   position: absolute;
-  left: 22em;
-  top: 17.5em;
+  left: 20.5em;
+  top: 18.5em;
 }
 h1 span {
   font-size: 0.6em;

@@ -4,7 +4,7 @@
 
   <head>
     <meta charset="utf-8" />
-    <title>Mon groupe</title>
+    <title>Groupe "<?php echo $donnees[0] ?>"</title>
   </head>
 
   <body>
@@ -14,12 +14,18 @@
 
 <div class="groupe">
 
-  <h1 class="name_groupe"><?php echo $donnees[0] ?><br>
+  <h1 class="name_groupe">Groupe "<?php echo $donnees[0] ?>"<br>
 <?php $dispo=$place[0]-count($membre);
 if($dispo!=0 && isset($_SESSION['pseudo'])){?>
     <a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/plus.png"/><span class="modifier"> Rejoindre le groupe</span></a></h1>
   <?php
 } ?>
+
+  <div class="region">
+
+      <h2>Région : <?php echo $donnees[3] ?></h2>
+
+  </div>
 
 </div>
 
@@ -28,28 +34,61 @@ if($dispo!=0 && isset($_SESSION['pseudo'])){?>
 </div>
 </div>
 
-<br></br>
+
 
 <div class=infos>
-<div>
-  <h2>Descritption du groupe :</h2>
-  <br>
-  <?php echo $donnees[2] ?>
-</div>
-<br></br>
-<div>
-  <h2>Région :</h2>
-  <br>
-  <?php echo $donnees[3] ?>
-</div>
-<br></br>
+
+  <div class="admin_groupe">
+
+    <p>
+      Administrateur du groupe
+    </p>
+
+    <div class="name_admin">
+      <table>
+        <tr>
+          <td style="width:3em;">
+            <img src="Images/star.png" alt="" />
+          </td>
+          <td style="text-align:left; color:white; width:6em;">
+            <p>
+              <?php
+            if($_SESSION['pseudo']==$admin[0]){?>
+                <div class="membre"><a href="index.php?page=profil"><?php echo $admin[0] ?></a> </div>
+              <?php
+            }
+            else{?>
+              <div class="membre"> <a href="index.php?page=profilvoir&pseudo=<?php echo $admin[0] ?>"> <?php echo $admin[0] ?></a> </div>
+              <?php
+            }?>
+            </p>
+          </td>
+
+        </tr>
+      </table>
+
+
+    </div>
+  </div>
+
+  <div class="description">
+
+    <h2>Description du groupe</h2>
+
+    <p>
+      "<?php echo $donnees[2] ?>"
+    </p>
+
+  </div>
+
 
 <div class="evenement">
-  <h2>Evènements :</h2>
-<br></br>
+  <img src="Images/calendar2.png" alt="" />
+  <h2>Événements</h2>
+
 <?php
   if(count($event)==0){?>
-    <tr>Aucun évènement</tr>
+    <tr>Aucun événement</tr>
     <?php
   }
   else{?>
@@ -87,24 +126,19 @@ if($dispo!=0 && isset($_SESSION['pseudo'])){?>
     <?php
   }?>
 </div>
-<br></br>
-<br></br>
 
-<div class="membres">
-<div>
-<h2>Administrateur :</h2></div>
-<br>
-<div class="membre"><?php echo $admin[0] ?></div>
+<div class="liste_membre">
+  <img src="Images/users.png" alt="" />
 
-<br></br>
 
-<div><h2>Liste des membres :</h2></div><br>
+<div><h2>Liste des membres</h2></div><br>
 <?php
 for($i=0;$i<count($membre);$i++){?>
 <div class="membre"><?php echo $membre[$i][0] ?></div>
 <?php
 } ?>
 </div>
+
 </div>
 <br></br>
 

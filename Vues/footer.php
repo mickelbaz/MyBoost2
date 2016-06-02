@@ -23,7 +23,7 @@
 
       <div class="faq">
           <a href="index.php?page=faq"><p>Besoin d'aide ?<p></a>
-          <a href="index.php?page=faq"><img src="Images/light-bulb.png" /></a>
+          <a href="index.php?page=faq"><img src="Images/info.png" /></a>
       </div>
     <?php
     }
@@ -46,7 +46,7 @@
 
       <div class="faq">
           <a href="index.php?page=faq"><p>Besoin d'aide ?<p></a>
-          <a href="index.php?page=faq"><img src="Images/light-bulb.png" /></a>
+          <a href="index.php?page=faq"><img src="Images/info.png" /></a>
       </div>
 
 
