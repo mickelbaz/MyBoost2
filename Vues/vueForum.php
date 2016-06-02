@@ -1,6 +1,5 @@
-<?php require 'Vues/header.php'
+<?php require_once 'Vues/header.php' ?>
 
-?>
 <?php
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
 ?>
@@ -29,4 +28,4 @@ foreach ($reponse as list($reponse)){
   <br></br>
 
 </body>
-<?php require 'Vues/footer.php' ?>
+<?php require_once 'Vues/footer.php' ?>

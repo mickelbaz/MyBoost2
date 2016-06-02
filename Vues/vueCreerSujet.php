@@ -14,7 +14,7 @@
 
   <p id="sous_titre">* Tous les champs sont obligatoires</p>
   <br></br>
-  	<FORM name="formulaire" method="post" action="../Controleurs/controleurForum.php" enctype="multipart/form-data">
+  	<FORM method="post" action="Controleurs/controleurForum.php" enctype="multipart/form-data">
 
   	<table>
   	<tr>

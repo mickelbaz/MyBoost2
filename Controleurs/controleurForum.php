@@ -19,11 +19,16 @@ function creer_sujet() {
   require_once 'Vues/vueCreerSujet.php';
 
 }
-if (isset($_POST['Valider']) && $_POST['Valider']<>""){
-if ($_POST['nom']<>"" && $_POST['sujet'] <> "" &&$_POST['message']<>"") {
-  ajouter_sujet();
-}}
+function nouveau_sujet(){
+    $nouveau_sujet=ajouter_sujet()->fetchAll();
+    if(isset($_POST['Valider']) && $_POST['Valider'] <>""){
 
+      
+    }
+
+    echo "La discussion a bien été ajoutée ! Merci ";
+    require_once '../Vues/vueForum.php';
+}
 
 
 ?>

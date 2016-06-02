@@ -14,7 +14,7 @@ function afficher_admin(){
 
 function afficher_les_membres(){
 $membres=membres_admin()->fetchAll();
-require 'Vues/vueAdminMembres.php';
+require_once 'Vues/vueAdminMembres.php';
 
 }
 
