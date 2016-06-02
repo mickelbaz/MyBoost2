@@ -51,6 +51,13 @@ function supp_commentaire($commentaire){
     $req->execute(array($commentaire));
 }
 
+
+function add_commentaire($commentaire){
+    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $req=$bdd->prepare('INSERT INTO commentaire WHERE commentaire=?');
+    $req->execute(array($commentaire));
+}
+
 function recup_faq(){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->query('SELECT id,question,reponse FROM faq');
@@ -79,5 +86,10 @@ function ajouter_faq(){
   ));
 }
 
+function supp_faq($id){
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req=$bdd->prepare('DELETE FROM faq WHERE id=?');
+  $req->execute(array($id));
+}
 
 ?>

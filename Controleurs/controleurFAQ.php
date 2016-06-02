@@ -18,4 +18,9 @@ function affiche_modif_faq($id){
   }
   require 'Vues/vueModif_faq.php';
 }
+
+function supprimer_faq($id){
+  $supp=supp_faq($id);
+  header('location: index.php?page=faq');
+}
 ?>

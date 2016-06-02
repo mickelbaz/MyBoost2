@@ -1,5 +1,8 @@
 <?php
+
+session_start();
 error_reporting(E_ALL & ~E_NOTICE);
+
 require_once 'Modeles/modeleUtilisateurs.php';
 require_once 'Modeles/modeleAdmin.php';
 require_once 'Modeles/modeleGroupes.php';
@@ -18,6 +21,7 @@ require 'Vues/vueAdminMembres.php';
 function afficher_groupes_admin(){
   $groupes=groupes_admin()->fetchAll();
   require 'Vues/vueAdminGroupes.php';
+
 }
 
 function supprimer_personne($pseudo){
@@ -65,6 +69,7 @@ function supp_comment($comment){
   $supp=supp_commentaire($comment);
   header('location: index.php?page=afficher_clubs_admin');
 }
+
 
 
 ?>

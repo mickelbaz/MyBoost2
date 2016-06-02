@@ -23,7 +23,22 @@
           </tr>
       </thead>
 
-      <tbody>
+
+  <tbody>
+    <?php
+      $nombre=array();
+      $nb_place=array();
+      $dispo=array();
+      for($i=0;$i<count($liste);$i++){
+        $nombre[$i]=count(recup_membre($liste[$i][0]));
+        $nb_place[$i]=recup_nb_place($liste[$i][0]);
+        $dispo[$i]=$nb_place[$i] - $nombre[$i];
+         ?>
+
+        <tr style="border-bottom:1px solid black;">
+        <td style="padding:1em;"><?php echo $liste[$i][0]; ?></td>
+        <td><a href="index.php?page=groupevoir&groupe=<?php echo $liste[$i][0] ?>"><INPUT type="button" name="voir" value="Voir la page"/></a></td>
+
         <?php
           $nombre=array();
           $nb_place=array();
@@ -60,7 +75,8 @@
       </table>
       <?php
     }
-    else{?>
+  }
+    else { ?>
       <table style="border-collapse:collapse;">
         <thead>
             <tr style="border-bottom:1px solid black;">

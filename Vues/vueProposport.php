@@ -18,9 +18,9 @@
     ?> <br> <?php
 
     echo('type de sport : ');
-    echo $_POST['TypeDeSport'];
+    echo $_POST['Type_de_sport'];
 
-$sql='INSERT INTO sport(nom, Type_de_sport, description) VALUES ("'.$_POST['nomSport'].'","'.$_POST['descriptionSport'].'","'.$_POST['TypeDeSport']'")';
+$sql='INSERT INTO sport(nom, Type_de_sport, description) VALUES ("'.$_POST['nomSport'].'","'.$_POST['descriptionSport'].'","'.$_POST['Type_de_sport'].'")';
 
 mysql_query($sql) or die('erreur sql'.$sql.'<br>'.mysql_error()); ?>
 

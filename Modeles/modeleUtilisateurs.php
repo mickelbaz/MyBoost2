@@ -127,6 +127,27 @@ function verif_pseudo(){
         }
       }
 
+      function recup_sujet(){
+          $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+          $req = $bdd->query("SELECT sujet FROM forum");
+          return $req;
+      }
+
+      function count_sujets(){
+        $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+        $req = $bdd->query("SELECT id FROM forum");
+        return $req;
+      }
+
+      function ajouter_sujet(){
+        $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+        $req=$bdd->prepare('INSERT INTO forum VALUES (:nom,:sujet,:message)');
+            $req->execute(array(
+             'nom'=>$_POST['nom'],
+             'sujet'=>$_POST['sujet'],
+             'message'=>$_POST['message'] ));
+        include '../Vues/vueForum.php';
+      }
 
 
 
