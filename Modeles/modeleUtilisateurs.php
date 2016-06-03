@@ -22,9 +22,7 @@ VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:p
     'pays'=>$_POST['pays'],
     'tel'=>$_POST['tel'],
     'mail'=>$_POST['mail'],
-    'mot_de_passe'=>$mdp,
-    'avatar'=>$_SESSION['id'].'.'.$extensionUpload,
-    'id'=>$_SESSION['id']));
+    'mot_de_passe'=>$mdp));
 }
 
 function verif_pseudo(){

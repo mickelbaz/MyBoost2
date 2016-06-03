@@ -119,14 +119,7 @@
 			<td>Téléphone :</td>
 			<td><INPUT type="text" name="tel" size="28" value="<?php if(isset($_POST['tel'])){ echo htmlentities($_POST['tel']);}?>"/></td>
 			</tr>
-			<tr>
-				<td>
-					<label>Avatar :</label>
-				</td>
-				<td>
-					<input type="file" name="avatar" />
-				</td>
-			</tr>
+			
 			<tr>
 			<td>Adresse mail :</td>
 			<td><INPUT type="email" name="mail" size="28" value="<?php if(isset($_POST['mail'])){ echo htmlentities($_POST['mail']);}?>"/></td>
