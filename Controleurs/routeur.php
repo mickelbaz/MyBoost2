@@ -20,6 +20,7 @@ require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
 require_once 'Controleurs/controleurRecherche.php';
 require_once 'controleurs/controleurAdmin.php';
+require_once 'controleurs/controleurForum.php';
 require_once 'controleurs/controleurSportParticipe.php';
 
 
@@ -111,6 +112,10 @@ function router(){
     $proposition=afficherproposport();
     break;
 
+    case "ajouter_un_sport" :
+    $ajout=ajout_sport();
+    break;
+
     case "modif_groupe":
     $affiche_modif=affiche_modifgroupe($_GET['groupe']);
     $modif_groupe=modif_groupe($_GET['groupe']);
@@ -160,7 +165,6 @@ function router(){
     $admin=afficher_admin();
     break;
 
-
     case "faq" :
     $afficher_page=affiche_faq();
     break;
@@ -208,6 +212,7 @@ function router(){
    $afficher=afficher_groupes_admin();
    break;
 
+
    case "supprimer_personne" :
    $supp=supprimer_personne($_GET['pseudo']);
    break;
@@ -216,41 +221,73 @@ function router(){
    $bannir=bannir_membre($_GET['pseudo'],$_GET['mail']);
    break;
 
-  case "supprimer_groupe" :
-  $supprimer=supprimer_groupe_admin($_GET['groupe']);
+    case "supprimer_groupe" :
+    $supprimer=supprimer_groupe_admin($_GET['groupe']);
+    break;
+
+    case "modif_groupe_admin" :
+    $modif=modif_groupe_admin($_GET['groupe']);
+    break;
+
+    case "afficher_clubs_admin" :
+    $club=afficher_club_admin();
+    break;
+
+    case "supprimer_club" :
+    $supp=supprimer_club($_GET['club']);
+    break;
+
+    case "supprimer_commentaire" :
+    $supp=supp_comment($_GET['commentaire']);
+    break;
+
+    case "ignorer_notif" :
+    $ignorer=ignorer_notif($_GET['groupe']);
+    break;
+
+
+    case "forum":
+    $accueil=afficher_sujet();
+    break;
+
+    case "sujet":
+    $sujet=afficher_sujet1();
+    break;
+
+
+
+  case "forum":
+  $accueil=afficher_sujet();
   break;
 
-  case "modif_groupe_admin" :
-  $modif=modif_groupe_admin($_GET['groupe']);
+
+
+
+  case "creer_sujet":
+  $sujet=creer_sujet();
+  $nouveau_sujet_forum=nouveau_sujet();
   break;
 
-  case "afficher_clubs_admin" :
-  $club=afficher_club_admin();
-  break;
 
-  case "supprimer_club" :
-  $supp=supprimer_club($_GET['club']);
-  break;
+    case "sport_participe":
+    $participe=sportparticipe();
+    break;
 
-  case "supprimer_commentaire" :
-  $supp=supp_comment($_GET['commentaire']);
-  break;
 
-  case "ignorer_notif" :
-  $ignorer=ignorer_notif($_GET['groupe']);
-  break;
+    case "modifier_faq" :
+    $modif_faq=affiche_modif_faq($_GET['id']);
+    break;
+
 
   case "sport_participe":
   $participe=sportparticipe();
   break;
 
-  case "modifier_faq" :
-  $modif_faq=affiche_modif_faq($_GET['id']);
-  break;
 
-  case "supprimer_faq" :
-  $supp=supprimer_faq($_GET['id']);
-  break;
+    case "supprimer_faq" :
+    $supp=supprimer_faq($_GET['id']);
+    break;
+
 
     default:
     $_SESSION=array();

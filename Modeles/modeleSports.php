@@ -1,9 +1,6 @@
 <?php
 
-    $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-
-
-function ajout_sport(){
+function ajouter_sport(){
   $bdd=new PDO('mysql:host=localhost; dbname=MyBoost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO sport (nom,description,type_de_sport)
   VALUES (:nom,:description,:type)');
@@ -33,4 +30,5 @@ function sport_par_type($type){
     $req->execute(array($type));
     return $req;
 }
+
 ?>

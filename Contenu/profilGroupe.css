@@ -9,13 +9,22 @@
 
 }
 
-
-
 .groupe{
   background-color: #5c71cb;
   height: 10em;
   width: auto;
+  display: flex;
+  justify-content: space-between;
+  color : white;
 }
+
+.region{
+  margin-right: 8em;
+  margin-top: 1.5em;
+  display: flex;
+  padding: 1em;
+}
+
 
 .salle{
   background-color: #6779bc;
@@ -56,18 +65,90 @@ h1 .modifier{
   width: 0.9em;
 }
 
-
-
-.membre{
-  display:block;
-  margin-left: 5em;
+.infos{
+  background-color: #edefed;
 }
 
-table{
-  margin-left: auto;
-  margin-right: auto;
+.admin_groupe{
+  text-align: center;
+  font-size: 1.5em;
+  padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
+
 }
 
+.admin_groupe a{
+  color: white;
+  text-decoration: none;
+}
+
+.name_admin table{
+    text-decoration: none;
+    margin-right:auto;
+    margin-left:auto;
+
+    border-radius:2em;
+    background-color: #343f40;
+
+    text-align: center;
+    justify-content: center;
+
+
+}
+
+.description{
+  text-align: center;
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:1em;
+
+}
+
+.description h2{
+  color: black;
+}
+
+.evenement{
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:2em;
+  padding-top :2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.evenement h2{
+  color: black;
+}
+
+.liste_membre{
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:2em;
+  padding-top :2em;
+  padding-bottom: 2em;
+  text-align: center;
+}
+
+.liste_membre td{
+  margin-right:auto;
+  margin-left:auto;
+}
+
+.liste_membre h2{
+  color: black;
+}
 
 tr td{
   width: 10em;
@@ -81,18 +162,20 @@ td{
 
 }
 
-.infos{
-  margin-left:2em;
-}
-
-.infos a{
+.liste_membre a{
   text-decoration: none;
   color: black;
+  text-align: center;
+}
+
+.sport{
+  text-transform: uppercase;
 }
 
 .name_groupe a{
   text-decoration: none;
 }
+
 
 
 .site{
@@ -107,9 +190,7 @@ td{
   margin-left: 6em;
 }
 
-.liste_membre table{
-  margin-left: 1em;
-}
+
 
 .valider{
   text-align: center;

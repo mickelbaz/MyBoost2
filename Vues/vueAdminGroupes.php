@@ -29,7 +29,6 @@
            </tr>
            <tr></tr><tr></tr>
 
-
 <?php
 } ?>
 </table>

@@ -145,7 +145,7 @@
                   <li class="nav-item"><a href="index.php?page=ListeGroupes">Liste des groupes</a></li>
                 </ul>
             </li>
-            <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="index.php?page=forum">Forum</a></li>
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
         </ul>
 

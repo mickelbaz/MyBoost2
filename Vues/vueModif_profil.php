@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
 
-    <title>Mon profil</title>
+    <title>Modifier mon profil</title>
   </head>
 
   <body>

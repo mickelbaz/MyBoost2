@@ -1,5 +1,6 @@
 <?php
 
+
 require_once 'Modeles/modeleUtilisateurs.php';
 
 
@@ -14,13 +15,15 @@ function connect(){
        else{
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
+
+        header("location: index.php?page=admin");
+
         header("location: index.php?page=accueil");
+
       }
   }
-    require 'Vues/vueConnexion.php';
+    require_once 'Vues/vueConnexion.php';
   }
-
-
 
 
 ?>

@@ -1,10 +1,12 @@
     <meta http-equiv="content-type" content="text/html">
     <link rel="stylesheet" href="Contenu/sportchoisi.css">
-    <link rel="stylesheet" href="Contenu/sports.css" >
+
     <meta charset="utf-8"/>
 
+<?php
+require_once 'Modeles/modeleSports.php';
 
-<?php require 'Vues/header.php'; ?>
+require 'Vues/header.php'; ?>
 
   <html>
 
@@ -23,7 +25,9 @@
       </legend>
       <table width=100% border=0>
         <td width="250px">
+
           <img id="sport" src="Images/<?php echo($_GET['sport']);?>.png">
+
         </td>
         <td>
           <?php echo $description[0] ?>
@@ -35,6 +39,7 @@
 
       <br>
 <?php if(isset($_SESSION['pseudo'])){?>
+
 
 <center>
 <a class="sport_css" href="index.php?page=sport_participe&sport=<?php echo $_GET['sport'];?>">Participer</a>
@@ -49,9 +54,9 @@
 
       <?php
     }?>
-	
+
     </body>
   </html>
 
- 
+
 <?php require 'Vues/footer.php'; ?>

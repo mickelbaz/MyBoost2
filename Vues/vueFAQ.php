@@ -1,7 +1,13 @@
 <?php require "Vues/header.php"; ?>
 
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="Contenu/FAQ.css"/>
+    <title>FAQ</title>
+  </head>
+
 
     <body>
 
@@ -13,6 +19,7 @@
 
           	<div class='questions'>
 				<dl>
+
           <?php foreach($texte as list($id,$question,$reponse)){?>
 					<dt><?php echo $question?></dt><br />
 						<dd><?php echo $reponse ?></dd>
@@ -26,6 +33,7 @@
             } ?>
             <?php
           }?>
+
 				</dl>
         <?php if($_SESSION['pseudo']=='admin'){?>
           <form name="ajout_faq" method="post" action="">
@@ -44,4 +52,5 @@
 
       <br></br>
 		</body>
+
   <?php require 'Vues/footer.php' ?>
