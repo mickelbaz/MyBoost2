@@ -20,9 +20,26 @@ tr td{
 .title{
   display: flex;
   justify-content: center;
-  
+
 }
 
 .Valider{
   text-align: center;
+}
+
+.titre{
+  text-align: center;
+}
+
+.groupe{
+  margin-left: 3em;
+}
+.membre{
+  margin-left: 3em;
+}
+.club{
+  margin-left: 3em;
+}
+.sport{
+  margin-left: 3em;
 }

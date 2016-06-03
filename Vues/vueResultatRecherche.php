@@ -4,6 +4,14 @@
 <link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
 
 <br></br>
+<?php if($_GET['recherche']!=""){?>
+  <div class="titre"><h1>Résultat de la recherche "<?php echo $_GET['recherche']?>" :</h1></div>
+  <?php
+}
+else{?>
+  <div class="titre"><h1>Résultat de la recherche : </h1></div>
+  <?php
+}?>
 
 <div class="groupe">
   <h2>Groupes :</h2>
