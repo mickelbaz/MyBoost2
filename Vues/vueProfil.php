@@ -200,7 +200,12 @@
 
 </div>
 <br>
-<div>
+<br>
+<div class="calendrier">
+  <div class="title_category_calendrier">
+    <h3>Mon calendrier</h3>
+  </div>
+
         <img src="Images/prev.svg" id="prev" alt="<--"/>
         <img src="Images/next.svg" id="next" alt="-->"/>
        <!-- <button onclick="clickPrev()"><img id="prev" src="prev.svg"></button>
