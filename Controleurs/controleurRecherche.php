@@ -22,7 +22,7 @@ function affiche_page_resultat(){
 
 
 function recherche_avancee(){
-  $sport=recup_nom_sport()->fetchAll();
+  $sport=recup_all_sport()->fetchAll();
   if(isset($_POST['rechercher'])&& $_POST['rechercher']<>""){
     if($_POST['choix']=="groupe"){
       header('location: index.php?page=recherche_groupe&region='.$_POST['region'].'&sport='.$_POST['sport']);
