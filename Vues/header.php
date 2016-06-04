@@ -1,6 +1,3 @@
-
-<!DOCTYPE html>
-
 <html>
     <head>
         <meta charset="utf-8" />
@@ -78,7 +75,7 @@
                 </ul>
             </li>
 
-            <li class="nav-item"><a href="#">Forum</a></li>
+            <li class="nav-item"><a href="index.php?page=forum">Forum</a></li>
 
             <li class="nav-item"><a class="right" href="index.php?page=apropos">À Propos</a></li>
 
@@ -114,7 +111,7 @@
           </div>
 
           <div class="connexion">
-            <a href="index.php?page=connexion">Connexion</a>
+            <a href="index.php?page=page_accueil_connexion">Connexion</a>
           </div>
 
         </div>

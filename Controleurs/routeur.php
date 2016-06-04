@@ -19,9 +19,9 @@ require_once 'Controleurs/controleurAnnuaire.php';
 require_once 'Controleurs/controleurSalle.php';
 require_once 'Controleurs/controleurFAQ.php';
 require_once 'Controleurs/controleurRecherche.php';
-require_once 'controleurs/controleurAdmin.php';
-require_once 'controleurs/controleurForum.php';
-require_once 'controleurs/controleurSportParticipe.php';
+require_once 'Controleurs/controleurAdmin.php';
+require_once 'Controleurs/controleurForum.php';
+require_once 'Controleurs/controleurSportParticipe.php';
 
 
 
@@ -33,8 +33,12 @@ function router(){
     $accueil=afficher_accueil();
     break;
 
-    case "connexion":
+    case "connection":
     $connexion=connect();
+    break;
+
+    case"page_accueil_connexion":
+    $accueil_connexion=accueil_connexion();
     break;
 
     case "groupe":
@@ -256,16 +260,40 @@ function router(){
 
 
 
+
+  case "sport_participe":
+  $participe=sportparticipe();
+  break;
+
+  case "modifier_faq" :
+  $modif_faq=affiche_modif_faq($_GET['id']);
+  break;
+
+  case "supprimer_faq" :
+  $supp=supprimer_faq($_GET['id']);
+  break;
+
   case "forum":
   $accueil=afficher_sujet();
   break;
 
+<<<<<<< HEAD
+  case "sujet":
+  $sujet=afficher_sujet1();
+  $sujet2=ajouter_message();
+  break;
+
+  case "afficher_creer_sujet":
+  $aff=afficher_creer_sujet();
+  break;
+=======
 
 
+>>>>>>> cd0e825d9312f4a6e6b9a14c8cb96e468e1c9403
 
   case "creer_sujet":
   $sujet=creer_sujet();
-  $nouveau_sujet_forum=nouveau_sujet();
+  $ajout_sujet=ajouter_sujet();
   break;
 
 
@@ -279,6 +307,8 @@ function router(){
     break;
 
 
+<<<<<<< HEAD
+=======
   case "sport_participe":
   $participe=sportparticipe();
   break;
@@ -288,6 +318,7 @@ function router(){
     $supp=supprimer_faq($_GET['id']);
     break;
 
+>>>>>>> cd0e825d9312f4a6e6b9a14c8cb96e468e1c9403
 
     default:
     $_SESSION=array();

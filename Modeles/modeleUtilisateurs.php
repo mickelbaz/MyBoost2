@@ -6,8 +6,8 @@ function ajout(){
   $date="{$_POST["annee"]}-{$_POST["mois"]}-{$_POST["jour"]}";
 
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,region,pays,tel,mail,mot_de_passe,avatar)
-VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:pays,:tel,:mail,:mot_de_passe,:avatar)');
+  $req=$bdd->prepare('INSERT INTO sportif (nom,prenom,pseudo,sexe,date,adresse,code_postal,ville,region,pays,tel,mail,mot_de_passe)
+VALUES (:nom,:prenom,:pseudo,:sexe,:date,:adresse,:code_postal,:ville,:region,:pays,:tel,:mail,:mot_de_passe)');
 
    $req->execute(array(
     'nom'=>$_POST['nom'],
@@ -125,41 +125,5 @@ function verif_pseudo(){
         }
       }
 
-      function recup_sujet(){
-          $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-          $req = $bdd->query("SELECT sujet FROM forum");
-          return $req;
-      }
 
-      function count_sujets(){
-        $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-        $req = $bdd->query("SELECT max(id) FROM forum");
-        return $req;
-      }
-
-      function ajouter_sujet(){
-        $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-        $req=$bdd->prepare('UPDATE forum SET nom, sujet, message, id=? ');
-            $req->execute(Array(
-             'nom'=>$_POST['nom'],
-             'pseudo'=>$_POST['pseudo'],
-             'message'=>$_POST['message'] ));
-
-
-
-             $nom=$_POST['nom'];
-             $pseudo=$_POST['pseudo'];
-             $msg=$_POST['message'];
-
-           //////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-             $ok=mysql_query("myboost" , "INSERT INTO forum (nom,pseudo,message) VALUES
-             ('$nom','$pseudo','$msg')");
-
-        include '../Vues/vueForum.php';
-      }
-
-
-
-
-          ?>
+?>

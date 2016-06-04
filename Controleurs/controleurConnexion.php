@@ -3,6 +3,9 @@
 
 require_once 'Modeles/modeleUtilisateurs.php';
 
+function accueil_connexion(){
+  require_once 'Vues/vueConnexion.php';
+}
 
 function connect(){
 
@@ -12,7 +15,7 @@ function connect(){
       if(!$resultat){
         echo 'Pseudo ou mot de passe incorrect';
       }
-       else{
+       else {
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
 
@@ -22,7 +25,10 @@ function connect(){
 
       }
   }
+
+
     require_once 'Vues/vueConnexion.php';
+
   }
 
 
