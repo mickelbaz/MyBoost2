@@ -1,7 +1,10 @@
-<?php require_once 'Vues/header.php' ?>
+<?php require_once 'Vues/header.php'; ?>
 
 <?php
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+if (isset($_POST['Valider']) && $_POST['Valider']=="Valider" && $_POST['sujet']<>"" && $_POST['pseudo']<>""){
+ $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+ $bdd->exec('INSERT INTO sujet(sujet, pseudo) VALUES ("'.$_POST['pseudo'].'","'.$_POST['sujet'].'")'); }
+
 ?>
 
 <title>Le Forum de MyBoost</title>
@@ -9,22 +12,19 @@
 
 
 
-<body>
+<body><br>
   <?php
-foreach ($reponse as list($reponse)){
-    ?>
 
-  <table>
-	<tr>
-	<td>Sujet :</td>
-	<td><a href="index.php?page=sujet"><INPUT type="button" name="sujet" value=<?php echo $reponse; ?>/></td></a>
-	</tr>
-  </table>
+  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $req = $bdd->query("SELECT * FROM sujet");
+  while($donnees=$req->fetch()){
 
+    ?><a href="index.php?page=sujet&id=<?php echo $donnees['ID_sujet'];?>&sujet=<?php echo $donnees['sujet'];?>"><?php echo $donnees['ID_sujet'];echo("&nbsp;");echo $donnees['sujet'];?></a>
 
+    <br><br>
 
-<?php }?>
-<a href="index.php?page=creer_sujet"> <INPUT type="button" name="creer_sujet" size="30" value="Créer un sujet de discussion !"/></a>
+    <?php } ?>
+<a href="index.php?page=afficher_creer_sujet"> <INPUT type="button" size="30" value="Créer un sujet de discussion !"/></a>
   <br></br>
 
 </body>
