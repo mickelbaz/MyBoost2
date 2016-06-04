@@ -1,16 +1,11 @@
 <?php
 
-
 require_once 'Modeles/modeleUtilisateurs.php';
 
-function accueil_connexion(){
-  require_once 'Vues/vueConnexion.php';
-}
+
 
 function connect(){
-
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
-
       $resultat=verif_id()->fetch();
       if(!$resultat){
         echo 'Pseudo ou mot de passe incorrect';
@@ -25,10 +20,7 @@ function connect(){
 
       }
   }
-
-
     require_once 'Vues/vueConnexion.php';
-
   }
 
 
