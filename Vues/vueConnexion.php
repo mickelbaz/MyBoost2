@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Connection</title>
+        <title>Connexion</title>
         <link rel="stylesheet" type="text/css" href="Contenu/headerFooter.css">
     </head>
 

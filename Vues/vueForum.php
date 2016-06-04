@@ -2,7 +2,7 @@
 
 <?php
 if (isset($_POST['Valider']) && $_POST['Valider']=="Valider" && $_POST['sujet']<>"" && $_POST['pseudo']<>""){
- $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+ $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
  $bdd->exec('INSERT INTO sujet(sujet, pseudo) VALUES ("'.$_POST['pseudo'].'","'.$_POST['sujet'].'")'); }
 
 ?>
@@ -15,7 +15,7 @@ if (isset($_POST['Valider']) && $_POST['Valider']=="Valider" && $_POST['sujet']<
 <body><br>
   <?php
 
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req = $bdd->query("SELECT * FROM sujet");
   while($donnees=$req->fetch()){
 

@@ -1,7 +1,7 @@
 /*page*/
 @font-face{
   font-family: "Avenir Next LT Pro";
-  src:url(AvenirNextLTPro-Demi.otf);
+  src:url(Divers/AvenirNextLTPro-Demi.otf);
 }
 
 *{
@@ -443,24 +443,16 @@ footer{
   margin-bottom: 2em;
 }
 
+
 .rejoindre{
-
-  text-decoration: none;
-  border-style: solid;
-  border-width:thin;
-  border-color: white;
-  background-color: #ffd14e;
-
-
+  margin-top: 3.5em;
   text-align: center;
-  padding:0.8em;
-  height: 60%;
-  margin-top: 3em;
 }
-
 .rejoindre a{
-  color: black;
+  color:white;
+  font-size: 1.2em;
   text-decoration: none;
+  margin-bottom: 0em;
 }
 
 .faq a{

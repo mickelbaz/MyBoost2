@@ -277,7 +277,7 @@ function router(){
   $accueil=afficher_sujet();
   break;
 
-<<<<<<< HEAD
+
   case "sujet":
   $sujet=afficher_sujet1();
   $sujet2=ajouter_message();
@@ -286,10 +286,7 @@ function router(){
   case "afficher_creer_sujet":
   $aff=afficher_creer_sujet();
   break;
-=======
 
-
->>>>>>> cd0e825d9312f4a6e6b9a14c8cb96e468e1c9403
 
   case "creer_sujet":
   $sujet=creer_sujet();
@@ -307,8 +304,7 @@ function router(){
     break;
 
 
-<<<<<<< HEAD
-=======
+
   case "sport_participe":
   $participe=sportparticipe();
   break;
@@ -318,7 +314,6 @@ function router(){
     $supp=supprimer_faq($_GET['id']);
     break;
 
->>>>>>> cd0e825d9312f4a6e6b9a14c8cb96e468e1c9403
 
     default:
     $_SESSION=array();

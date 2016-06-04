@@ -2,7 +2,7 @@
 require_once 'Vues/header.php';
 
 
-$bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+$bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
 $req = $bdd->exec('INSERT INTO message(message,pseudo,ID_sujet) VALUES ("'.$_POST['discussion'].'","'.$_POST['pseudo'].'","'.$_POST['id'].'")');
 
 
@@ -10,7 +10,7 @@ echo($_GET["sujet"]);
 echo("<br>");
 echo("<br>");
 
-$bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+$bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
 $req = $bdd->query('SELECT * FROM message WHERE ID_sujet="'.$_GET["id"].'"');
 while($donnees=$req->fetch()){
     echo("-&nbsp;");
