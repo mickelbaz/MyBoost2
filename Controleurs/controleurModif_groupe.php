@@ -1,9 +1,7 @@
 <?php
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);?>
-
 <?php
-
 function affiche_modifgroupe($groupe){
   $donnees=afficher_groupe($groupe)->fetch();
   $membre=recup_membre($groupe)->fetchAll();

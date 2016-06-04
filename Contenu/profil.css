@@ -20,11 +20,8 @@
 #avatar{
   float: left;
   margin: 2em;
-  border: 0.1px solid black;
   height: 6em;
   width: 6em;
-
-  border-radius: 200px;
   transition: transform .3s ease;
 }
 
@@ -54,8 +51,8 @@
 
 .star{
   position: absolute;
-  left: 22em;
-  top: 17.5em;
+  left: 20.5em;
+  top: 18.5em;
 }
 h1 span {
   font-size: 0.6em;
@@ -204,4 +201,17 @@ tr{
 
 .evenement{
   color : #505a5c;
+
 }
+
+.calendrier h3{text-align: center;}
+.calendrier table{  border-collapse:collapse; text-align:center; font-weight:900 ; }
+.calendrier table td{  border:1px solid #A3A3A3;  width:80px;  height:80px;}
+.calendrier table th{  font-weight:bold;  color:blue;}
+.calendrier .lines:hover{  background:#DFDFDF;  cursor:pointer;}
+.calendrier .padding{  border:none;}
+.calendrier #months{text-align: center;}
+.calendrier .year{text-align: center;}
+.calendrier table{margin:auto;}
+.calendrier #next{height:40px; width:40px; float:right; position:relative; margin-right: 42%;}
+.calendrier #prev{height:40px; width:40px; float:left; position:relative; margin-left: 42%;}

@@ -10,7 +10,10 @@
 
 .content{
 	background-color: #edefed;
-	
+	padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
 }
 
 .formulaire{

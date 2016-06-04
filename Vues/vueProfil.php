@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
-    <title>Mon profil</title>
+    <title><?php echo $_SESSION['pseudo'] ?></title>
   </head>
   <body>
 
@@ -17,7 +17,7 @@
 
     <div class="top">
       <div class="avatar">
-        <img id="avatar" src="Images/Man_Silhouette.png"/>
+        <img id="avatar" src="Images/user.png"/>
       </div>
       <h1>  <?php echo $_SESSION['pseudo'] ?> <br><a href="index.php?page=modif"><img id="logomodif" class="modifier" src="Images/modif.png"/><span class="modifier"> Modifier mon compte</span></a></h1>
       <?php if($_SESSION['pseudo']=='admin'){?><img class="star" src="Images/star.png" /> <?php } ?>
@@ -27,7 +27,7 @@
             <thead>
                 <tr>
                   <th>
-                    <img src="Images/notepad.png" style="margin-left:13em; margin-bottom:1em;" />
+                    <img src="Images/list.png" style="margin-left:13em; margin-bottom:1em;" />
                   </th>
                 </tr>
                 <tr style="border-bottom:1px solid black;">
@@ -62,7 +62,7 @@
           <thead>
               <tr>
                 <th>
-                  <img src="Images/place.png" style="margin-left:13em; margin-bottom:1em;" />
+                  <img src="Images/home.png" style="margin-left:13em; margin-bottom:1em;" />
                 </th>
               </tr>
               <tr style="border-bottom:1px solid black;">
@@ -199,180 +199,151 @@
 </div>
 
 </div>
+<br>
+<br>
+<div class="calendrier">
+  <div class="title_category_calendrier">
+    <h3>Mon calendrier</h3>
+  </div>
 
+        <img src="Images/prev.svg" id="prev" alt="<--"/>
+        <img src="Images/next.svg" id="next" alt="-->"/>
+       <!-- <button onclick="clickPrev()"><img id="prev" src="prev.svg"></button>
+        <button onclick="clickNext()"><img id="next" src="next.svg"></button>
+        <a href="#"><img id="next" src="next.svg" ></a>
+    </div>  -->
+<?php
+
+date_default_timezone_set('Europe/Paris');
+
+?>
+
+    <div class="periods">
+        <div class="year"><?php echo date('Y');?> </div>
+        <p id="months"><?php echo date('M'); ?> </p>
+
+    <?php
+        $year   = date('Y') - 2;
+        $r      = array();
+        $date   = strtotime($year.'-01-01');
+        $days = array('Lundi','Mardi','Mercredi','Jeudi','Vendredi','Samedi','Dimanche');
+
+        while (date('Y', $date) < date('Y') + 4)
+        {
+
+            if(date('j', $date) == 1) {
+    ?>
+            <div class="month m<?php echo date('n-Y', $date); ?>">
+                <table>
+                    <thead>
+                        <tr>
+                            <?php foreach ($days as $d): /*on parcourt le tableau $date duquel on choppe les jours qu'on associe a $d */ ?>
+                                <th> <?php echo $d; /*On les affiche ensuite*/ ?>   </th>
+                            <?php endforeach ?>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+    <?php
+            }
+                        if(date('j', $date) == 1 and date('N', $date) != 1):
+    ?>
+                            <td colspan="<?php echo date('N', $date)-1;?>" class="padding"></td>
+    <?php
+                        endif;
+    ?>
+                            <td class="lines"><?php echo date('j', $date); ?></td>
+    <?php
+                        if(date('N', $date) == 7):
+    ?>
+                            </tr><tr>
+    <?php
+                        endif;
+
+            if(date('t', $date) == date('j', $date)):
+    ?>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+    <?php
+            endif;
+
+            $date= strtotime(date('Y-n-j',$date).' +1 DAY');
+        }
+    ?>
+
+</div>
 
 <br></br>
-<div class="calendrier">
-
-
-
-<script type="text/javascript">
-
-  function maxDays(mm, yyyy){
-  var mDay;
-  	if((mm == 3) || (mm == 5) || (mm == 8) || (mm == 10)){
-  		mDay = 30;
-    	}
-    	else{
-    		mDay = 31
-    		if(mm == 1){
-     			if (yyyy/4 - parseInt(yyyy/4) != 0){
-     				mDay = 28
-     			}
-  		   	else{
-     				mDay = 29
-    			}
-  		}
-    }
-  return mDay;
-  }
-  function changeBg(id){
-  	if (eval(id).style.backgroundColor != "yellow"){
-  		eval(id).style.backgroundColor = "yellow"
-  	}
-  	else{
-  		eval(id).style.backgroundColor = "#ffffff"
-  	}
-  }
-
-  function writeCalendar(){
-  var now = new Date
-  var dd = now.getDate()
-  var mm = now.getMonth()
-  var dow = now.getDay()
-  var yyyy = now.getFullYear()
-  var arrM = new Array("Janvier","February","March","April","May","June","July","August","September","October","November","December")
-  var arrY = new Array()
-  	for (ii=0;ii<=4;ii++){
-  		arrY[ii] = yyyy - 2 + ii
-  	}
-  var arrD = new Array("Dimanche","Mon","Tue","Wed","Thu","Fri","Sat")
-
-  var text = ""
-  text = "<form name=calForm>"
-  text += "<table border=1>"
-  text += "<tr><td>"
-  text += "<table width=100%><tr>"
-  text += "<td align=left>"
-  text += "<select name=selMonth onChange='changeCal()'>"
-  	for (ii=0;ii<=11;ii++){
-  		if (ii==mm){
-  			text += "<option value= " + ii + " Selected>" + arrM[ii] + "</option>"
-  		}
-  		else{
-  			text += "<option value= " + ii + ">" + arrM[ii] + "</option>"
-  		}
-  	}
-  text += "</select>"
-  text += "</td>"
-  text += "<td align=right>"
-  text += "<select name=selYear onChange='changeCal()'>"
-  	for (ii=0;ii<=4;ii++){
-  		if (ii==2){
-  			text += "<option value= " + arrY[ii] + " Selected>" + arrY[ii] + "</option>"
-  		}
-  		else{
-  			text += "<option value= " + arrY[ii] + ">" + arrY[ii] + "</option>"
-  		}
-  	}
-  text += "</select>"
-  text += "</td>"
-  text += "</tr></table>"
-  text += "</td></tr>"
-  text += "<tr><td>"
-  text += "<table border=1>"
-  text += "<tr>"
-  	for (ii=0;ii<=6;ii++){
-  		text += "<td align=center><span class=label>" + arrD[ii] + "</span></td>"
-  	}
-  text += "</tr>"
-  aa = 0
-  	for (kk=0;kk<=5;kk++){
-  		text += "<tr>"
-  		for (ii=0;ii<=6;ii++){
-  			text += "<td align=center><span id=sp" + aa + " onClick='changeBg(this.id)'>1</span></td>"
-  			aa += 1
-  		}
-  		text += "</tr>"
-  	}
-  text += "</table>"
-  text += "</td></tr>"
-  text += "</table>"
-  text += "</form>"
-  document.write(text)
-  changeCal()
-  }
-
-  function changeCal(){
-  var now = new Date
-  var dd = now.getDate()
-  var mm = now.getMonth()
-  var dow = now.getDay()
-  var yyyy = now.getFullYear()
-  var currM = parseInt(document.calForm.selMonth.value)
-  var prevM
-  	if (currM!=0){
-  		prevM = currM - 1
-  	}
-  	else{
-  		prevM = 11
-  	}
-  var currY = parseInt(document.calForm.selYear.value)
-  var mmyyyy = new Date()
-  mmyyyy.setFullYear(currY)
-  mmyyyy.setMonth(currM)
-  mmyyyy.setDate(1)
-  var day1 = mmyyyy.getDay()
-  	if (day1 == 0){
-  		day1 = 7
-  	}
-  var arrN = new Array(41)
-  var aa
-  	for (ii=0;ii<day1;ii++){
-  		arrN[ii] = maxDays((prevM),currY) - day1 + ii + 1
-  	}
-  	aa = 1
-  	for (ii=day1;ii<=day1+maxDays(currM,currY)-1;ii++){
-  		arrN[ii] = aa
-  		aa += 1
-  	}
-  	aa = 1
-  	for (ii=day1+maxDays(currM,currY);ii<=41;ii++){
-  		arrN[ii] = aa
-  		aa += 1
-  	}
-  	for (ii=0;ii<=41;ii++){
-  		eval("sp"+ii).style.backgroundColor = "#FFFFFF"
-  	}
-  var dCount = 0
-  	for (ii=0;ii<=41;ii++){
-  		if (((ii<7)&&(arrN[ii]>20))||((ii>27)&&(arrN[ii]<20))){
-  			eval("sp"+ii).innerHTML = arrN[ii]
-  			eval("sp"+ii).className = "c3"
-  		}
-  		else{
-  			eval("sp"+ii).innerHTML = arrN[ii]
-  			if ((dCount==0)||(dCount==6)){
-  				eval("sp"+ii).className = "c2"
-  			}
-  			else{
-  				eval("sp"+ii).className = "c1"
-  			}
-  			if ((arrN[ii]==dd)&&(mm==currM)&&(yyyy==currY)){
-  				eval("sp"+ii).style.backgroundColor="#90EE90"
-  			}
-  		}
-  	dCount += 1
-  		if (dCount>6){
-  			dCount=0
-  		}
-  	}
-  }
-</script>
-
-<script type="text/javascript">writeCalendar()</script>
 
 </div>
   </body>
+
+<script type="text/javascript">
+
+window.onload =function() {
+
+	nomsDesMois = new Array(0, "janvier", "février", "mars", "avril", "mai", "juin", "juillet", "août", "septembre", "octobre", "novembre", "décembre") ;
+
+
+	// Cache tous les mois
+	var mois = document.querySelectorAll(".month");
+
+	for (var i = mois.length - 1; i >= 0; i--) {
+
+		mois[i].style.display = 'none';
+	}
+
+	// Fais apparaitre le mois courant
+	var d = new Date();
+	var n = d.getMonth() + 1;
+	var y = d.getFullYear();
+							// .m6-2016
+	document.querySelector('.m' + n + '-' + y).style.display = '';
+
+
+	var months = document.querySelector("#months");
+	var year = document.querySelector(".year");
+
+	var prev = document.querySelector("#prev");
+	var next = document.querySelector("#next");
+
+	prev.addEventListener('click', function(){
+
+		document.querySelector('.m' + n + '-' + y).style.display = 'none';
+
+		n--;
+		if(n < 1) {
+			y--;
+			n = 12;
+		}
+
+		document.querySelector('.m' + n + '-' + y).style.display = '';
+
+		months.innerHTML = nomsDesMois[n];
+		year.innerHTML = y;
+	});
+
+	next.addEventListener('click', function(){
+
+		document.querySelector('.m' + n + '-' + y).style.display = 'none';
+
+		n++;
+		if(n > 12) {
+			y++;
+			n = 1;
+		}
+
+		document.querySelector('.m' + n + '-' + y).style.display = '';
+
+		months.innerHTML = nomsDesMois[n];
+		year.innerHTML = y;
+	});
+
+};
+
+</script>
 
 <?php require "Vues/footer.php"; ?>

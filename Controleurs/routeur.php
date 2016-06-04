@@ -225,29 +225,39 @@ function router(){
    $bannir=bannir_membre($_GET['pseudo'],$_GET['mail']);
    break;
 
-  case "supprimer_groupe" :
-  $supprimer=supprimer_groupe_admin($_GET['groupe']);
-  break;
+    case "supprimer_groupe" :
+    $supprimer=supprimer_groupe_admin($_GET['groupe']);
+    break;
 
-  case "modif_groupe_admin" :
-  $modif=modif_groupe_admin($_GET['groupe']);
-  break;
+    case "modif_groupe_admin" :
+    $modif=modif_groupe_admin($_GET['groupe']);
+    break;
 
-  case "afficher_clubs_admin" :
-  $club=afficher_club_admin();
-  break;
+    case "afficher_clubs_admin" :
+    $club=afficher_club_admin();
+    break;
 
-  case "supprimer_club" :
-  $supp=supprimer_club($_GET['club']);
-  break;
+    case "supprimer_club" :
+    $supp=supprimer_club($_GET['club']);
+    break;
 
-  case "supprimer_commentaire" :
-  $supp=supp_comment($_GET['commentaire']);
-  break;
+    case "supprimer_commentaire" :
+    $supp=supp_comment($_GET['commentaire']);
+    break;
 
-  case "ignorer_notif" :
-  $ignorer=ignorer_notif($_GET['groupe']);
-  break;
+    case "ignorer_notif" :
+    $ignorer=ignorer_notif($_GET['groupe']);
+    break;
+
+
+    case "forum":
+    $accueil=afficher_sujet();
+    break;
+
+    case "sujet":
+    $sujet=afficher_sujet1();
+    break;
+
 
 
 
@@ -267,6 +277,7 @@ function router(){
   $accueil=afficher_sujet();
   break;
 
+<<<<<<< HEAD
   case "sujet":
   $sujet=afficher_sujet1();
   $sujet2=ajouter_message();
@@ -275,6 +286,10 @@ function router(){
   case "afficher_creer_sujet":
   $aff=afficher_creer_sujet();
   break;
+=======
+
+
+>>>>>>> cd0e825d9312f4a6e6b9a14c8cb96e468e1c9403
 
   case "creer_sujet":
   $sujet=creer_sujet();
@@ -282,7 +297,28 @@ function router(){
   break;
 
 
+    case "sport_participe":
+    $participe=sportparticipe();
+    break;
 
+
+    case "modifier_faq" :
+    $modif_faq=affiche_modif_faq($_GET['id']);
+    break;
+
+
+<<<<<<< HEAD
+=======
+  case "sport_participe":
+  $participe=sportparticipe();
+  break;
+
+
+    case "supprimer_faq" :
+    $supp=supprimer_faq($_GET['id']);
+    break;
+
+>>>>>>> cd0e825d9312f4a6e6b9a14c8cb96e468e1c9403
 
     default:
     $_SESSION=array();

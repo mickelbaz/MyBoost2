@@ -492,3 +492,9 @@ footer img {
 footer img:hover {
   transform: scale(1.4);
 }
+
+.champ1 a{
+  text-decoration: none;
+  color: white;
+  font-size: 0.8em;
+}
