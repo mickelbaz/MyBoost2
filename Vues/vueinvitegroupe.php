@@ -30,8 +30,9 @@ if($dispo!=0 && isset($_SESSION['pseudo'])){?>
 </div>
 
 <div class="sport">
-<h1 class="name_sport"><?php echo $donnees[1] ?></h1>
+<a href="index.php?page=sport&sport=<?php echo $donnees[1]?>"><h1 class="name_sport"><?php echo $donnees[1] ?></h1></a>
 </div>
+
 </div>
 
 

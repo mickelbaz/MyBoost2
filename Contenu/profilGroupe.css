@@ -36,6 +36,11 @@
   background-color: #90c144;
   height: 7em;
   width: auto;
+
+}
+
+.sport a{
+  text-decoration: none;
 }
 
 .name_groupe{
