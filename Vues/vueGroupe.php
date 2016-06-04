@@ -64,7 +64,7 @@
           <td style="width:3em;">
             <img src="Images/star.png" alt="" />
           </td>
-          <td style="text-align:left; color:white; width:auto; padding-right:1em;">
+          <td style="text-align:left; color:white; width:auto; padding-right:1em; padding-top:1.2em;">
             <p>
               <?php
             if($_SESSION['pseudo']==$admin[0]){?>

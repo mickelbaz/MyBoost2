@@ -1,9 +1,6 @@
 <?php
 require_once 'Modeles/modeleForum.php';
 require_once 'Modeles/modeleUtilisateurs.php';
- ?>
-
-<?php
 
 
 function afficher_sujet(){

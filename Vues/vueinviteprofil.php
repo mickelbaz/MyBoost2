@@ -26,25 +26,25 @@
 
             <tbody>
                 <tr style="border-bottom:1px solid black;">
-                    <td style="padding:1em;">Date de naissance</td>
-                    <td><?php echo $a[4] ?></td>
+                    <td class="info_left" style="padding:1em;">Date de naissance</td>
+                    <td class="info_right"><?php echo $a[4] ?></td>
                 </tr>
 
                 <tr style="border-bottom:1px solid black;">
-                    <td style="padding:1em;">Sexe</td>
-                    <td><?php echo $a[9] ?></td>
+                    <td class="info_left" style="padding:1em;">Sexe</td>
+                    <td class="info_right"><?php echo $a[9] ?></td>
                 </tr>
                 <tr style="border-bottom:1px solid black;">
-                    <td style="padding:1em;">Ville</td>
-                    <td><?php echo $a[6] ?></td>
+                    <td class="info_left" style="padding:1em;">Ville</td>
+                    <td class="info_right"><?php echo $a[6] ?></td>
                 </tr>
                 <tr style="border-bottom:1px solid black;">
-                    <td style="padding:1em;">Région</td>
-                    <td><?php echo $a[11] ?></td>
+                    <td class="info_left" style="padding:1em;">Région</td>
+                    <td class="info_right"><?php echo $a[11] ?></td>
                 </tr>
                 <tr style="border-bottom:1px solid black;">
-                    <td style="padding:1em;">Pays</td>
-                    <td><?php echo $a[7] ?></td>
+                    <td class="info_left" style="padding:1em;">Pays</td>
+                    <td class="info_right"><?php echo $a[7] ?></td>
                 </tr>
             </tbody>
         </table>
@@ -58,12 +58,17 @@
         <div class="title_category">
           <h4>Mes sports</h4>
         </div>
-      <div class="images">
+      <div class="detail_category">
         <?php
         for ($i=0; $i<count($c); $i++){?>
-          <div class=groupe><?php echo $c[$i][0]; ?></div>
+          <div class=groupe><a href="index.php?page=sport&sport=<?php echo $c[$i][0]?>"><?php echo $c[$i][0]; ?></a></div>
           <?php
-        }?>
+        }
+        if(count($c)==0){?>
+          <tr><td>Aucun sport</td></tr>
+            <?php
+        }
+        ?>
 
         </div>
 
@@ -75,7 +80,7 @@
           <h4>Mes groupes</h4>
         </div>
 
-        <div class="images">
+        <div class="detail_category">
 
               <div class=groupe>
 
@@ -84,7 +89,7 @@
                 <?php
                 for ($i=0; $i<count($b); $i++){?>
                 <tr>
-                <td><?php echo $b[$i][0]; ?></td>
+                <td><a href="index.php?page=groupe&groupe=<?php echo $b[$i][0] ?>"><?php echo $b[$i][0]; ?></a></td>
               <?php
             }
             if(count($b)==0){?>
@@ -99,7 +104,7 @@
             <?php
             for ($i=0; $i<count($d); $i++){?>
             <tr>
-            <td><?php echo $d[$i][0]; ?></td>
+            <td><a href="index.php?page=groupe&groupe=<?php echo $d[$i][0]?>"><?php echo $d[$i][0]; ?></td>
           <?php
          }
          if(count($d)==0){?>
@@ -117,11 +122,11 @@
 <div class="evenement">
 <div class="category">
 
-  <div class="title_category">
-    <h4>Mes évènements</h4>
+  <div class="title_category_evenement">
+    <h4>Mes événements</h4>
   </div>
 
-  <div class="images">
+  <div class="detail_category">
 
         <div class=groupe>
 
@@ -131,7 +136,7 @@
             <?php
       }
       if(count($event)==0){?>
-        <tr><td>Aucun évènement</td></tr>
+        <tr><td>Aucun événement</td></tr>
           <?php
       }
       ?>

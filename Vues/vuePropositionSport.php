@@ -1,16 +1,25 @@
-<?php
-    require 'Vues/header.php';?>
-    <meta charset="utf-8" />
-    <title>Proposer un sport</title>
-    <link rel="stylesheet" type="text/css" href="/MyBoost2/Contenu/headerFooter.css">
+<?php require 'Vues/header.php';?>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" href="Contenu/formulaire.css" >
+    <title>Proposer un sport</title>
+  </head>
+  <body>
+
+
+<div class="content">
+
+
 
 <div class="formulaire">
-      <div id="title">
-        <p>PROPOSER UN SPORT</p>
-      </div>
 
         <FORM name="formulaire" method="post" action="">
+          <div id="title">
+            <p>PROPOSER UN SPORT</p>
+          </div>
       	<table>
       	<tr>
       	<td>Nom du sport :</td>
@@ -36,12 +45,18 @@
 
         </td>
       	</tr>
+        <tr colspan="2">
+
+        </tr>
       </table>
 <br>
-    <a><INPUT class="boutonvalider" type="submit" name='envoyer' value="Valider" style="width:10em"/></a>
+    <a><INPUT class="boutonvalider" type="submit" name='envoyer' value="Valider" style="width:10em; "/></a>
 
     </div>
-    <br><br><br><br><br><br>
+  <br>
+</div>
+  </body>
+</html>
 <?php
     require "Vues/footer.php";
 ?>

@@ -1,5 +1,7 @@
 .image{
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1, h4, h2{
@@ -29,10 +31,9 @@ tr td{
 
 
 
-a{
+.categorie a{
     text-decoration: none;
     color: white;
-    padding-right: 50px;
 
 }
 

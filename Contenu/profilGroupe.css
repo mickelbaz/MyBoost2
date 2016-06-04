@@ -9,6 +9,7 @@
 
 }
 
+
 .groupe{
   background-color: #5c71cb;
   height: 10em;
@@ -21,7 +22,6 @@
 .region{
   margin-right: 8em;
   margin-top: 1.5em;
-  display: flex;
   padding: 1em;
 }
 
@@ -93,10 +93,9 @@ h1 .modifier{
     text-decoration: none;
     margin-right:auto;
     margin-left:auto;
-
+    font-size: 1em;
     border-radius:2em;
     background-color: #343f40;
-
     text-align: center;
     justify-content: center;
 

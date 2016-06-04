@@ -1,9 +1,19 @@
 <?php require 'Vues/header.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+		<title>Ajouter un club</title>
+	</head>
+	<body>
+
+<div class="content">
+	<div class="formulaire">
+		<FORM name="formulaire" method="post" action="">
 
 
-<FORM name="formulaire" method="post" action="">
 
 	<p id="title">AJOUTER UN CLUB</p>
 	<table>
@@ -63,6 +73,11 @@
 
 <div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 </FORM>
-
+</div>
 <br></br>
+</div>
+
+</body>
+</html>
+
   <?php require 'Vues/footer.php' ?>

@@ -1,7 +1,7 @@
 <?php
 
 function membres_admin(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT pseudo,mail FROM sportif WHERE pseudo!=? ORDER BY pseudo ASC');
   $req->execute(array($_SESSION['pseudo']));
   return $req;

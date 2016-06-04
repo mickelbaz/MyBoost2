@@ -1,9 +1,8 @@
 <?php require 'Vues/header.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="Contenu/profilGroupe.css">
-
   <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="Contenu/profilGroupe.css">
     <title>Groupe "<?php echo $donnees[0] ?>"</title>
   </head>
 
@@ -51,7 +50,7 @@ if($dispo!=0 && isset($_SESSION['pseudo'])){?>
           <td style="width:3em;">
             <img src="Images/star.png" alt="" />
           </td>
-          <td style="text-align:left; color:white; width:6em;">
+          <td style="text-align:left; color:white; width:auto; padding-right:1em; padding-top:1.5em;">
             <p>
               <?php
             if($_SESSION['pseudo']==$admin[0]){?>
@@ -140,10 +139,10 @@ for($i=0;$i<count($membre);$i++){?>
 } ?>
 </div>
 
-</div>
+
 <br></br>
 
 
-
+</div>
 
 <?php  require 'Vues/footer.php' ?>

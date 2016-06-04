@@ -1,11 +1,21 @@
 <?php require 'Vues/header.php' ?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
+    <title>Résultat de la recherche</title>
+  </head>
+  <body>
 
-<link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
+  <div class="content">
 
-<h1>Résultat de la recherche</h1>
+    <div class="title">
+      <h1>Résultat de la recherche</h1>
+    </div>
 
-
-<h2>Groupes :</h2>
+<div class="result">
+<h2>Groupes</h2>
 <?php if(count($groupe)==0){
   echo 'Aucun résulat';
 }
@@ -22,8 +32,11 @@ else{
   }
 }?>
 
+</div>
 <br></br>
 
-
+</div>
+</body>
+</html>
 
 <?php require 'Vues/footer.php' ?>

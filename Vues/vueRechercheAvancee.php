@@ -1,6 +1,16 @@
 <?php require 'Vues/header.php'; ?>
-<link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
+    <title>Recherche avancée</title>
+  </head>
 
+  <body>
+
+    <div class="content">
+  
 <div class="image" style="text-align:center; margin-top:1em;">
   <img class="logo_loupe" src="Images/loupe.png"/>
 </div>
@@ -8,6 +18,8 @@
 <div class="title">
   <h1>Recherche Avancée</h1>
 </div>
+
+<div class="formulaire">
 
 
 <form name="recherche_avancee" method="post" action="">
@@ -73,6 +85,10 @@
 <div class="Valider"><input type="submit" name="rechercher" value="Lancer la recherche"/></div>
 
 </form>
+</div>
 
 <br></br>
+</div>
+</body>
+</html>
 <?php require 'Vues/footer.php' ?>

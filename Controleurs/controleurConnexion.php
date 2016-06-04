@@ -1,16 +1,9 @@
 <?php
 
-
 require_once 'Modeles/modeleUtilisateurs.php';
 
-function accueil_connexion(){
-  require_once 'Vues/vueConnexion.php';
-}
-
 function connect(){
-
     if (isset($_POST['connection']) && $_POST['connection']=="Valider"){
-
       $resultat=verif_id()->fetch();
       if(!$resultat){
         echo 'Pseudo ou mot de passe incorrect';
@@ -18,17 +11,11 @@ function connect(){
        else {
         session_start();
         $_SESSION['pseudo']=$_POST['pseudo'];
-
-        header("location: index.php?page=admin");
-
         header("location: index.php?page=accueil");
 
       }
   }
-
-
     require_once 'Vues/vueConnexion.php';
-
   }
 
 

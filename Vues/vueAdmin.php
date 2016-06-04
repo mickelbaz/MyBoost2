@@ -1,12 +1,18 @@
 <?php require 'Vues/header.php'; ?>
 
-<link rel="stylesheet" type="text/css" href="Contenu/admin.css">
-
-<body>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Contenu/admin.css">
+    <title>Administration</title>
+  </head>
+  <body>
 
   <div class="image">
     <img src="Images/admin.png" alt="" />
   </div>
+
           	<h1> Bienvenue dans l'espace administrateur </h1>
 
           	<div class=categorie>
@@ -61,7 +67,10 @@
 
    	 		</div>
         <br>
-          </body>
+
 
 <br></br>
+
+</body>
+</html>
 <?php require 'Vues/footer.php' ?>

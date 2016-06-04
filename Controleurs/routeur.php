@@ -38,7 +38,7 @@ function router(){
     break;
 
     case"page_accueil_connexion":
-    $accueil_connexion=accueil_connexion();
+    $accueil_connexion=connect();
     break;
 
     case "groupe":
@@ -302,7 +302,6 @@ function router(){
     case "modifier_faq" :
     $modif_faq=affiche_modif_faq($_GET['id']);
     break;
-
 
 
   case "sport_participe":

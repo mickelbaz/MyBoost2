@@ -190,7 +190,7 @@
     <?php
       }
       if(count($event)==0){?>
-        <tr><td>Aucun évènement</td></tr>
+        <tr><td>Aucun événement</td></tr>
           <?php
       }
       ?>
@@ -279,7 +279,6 @@ date_default_timezone_set('Europe/Paris');
 <br></br>
 
 </div>
-  </body>
 
 <script type="text/javascript">
 
@@ -345,5 +344,8 @@ window.onload =function() {
 };
 
 </script>
+
+
+  </body>
 
 <?php require "Vues/footer.php"; ?>
