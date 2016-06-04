@@ -7,15 +7,20 @@
 
     <div class="top">
       <div class="avatar">
-        <img id="avatar" src="Images/Man_Silhouette.png"/>
+        <img id="avatar" src="Images/user.png"/>
       </div>
       <h1>  <?php echo $a[10] ?> <br></h1>
     </div>
     <div class="info">
       <table class="infoperso" style="border-collapse:collapse;">
             <thead>
+              <tr>
+                <th>
+                  <img src="Images/list.png" style="margin-left:13em; margin-bottom:1em;" />
+                </th>
+              </tr>
                 <tr style="border-bottom:1px solid black;">
-                    <th id="title" colspan="2">Informations</th>
+                    <th id="title" colspan="2">INFORMATIONS</th>
                 </tr>
             </thead>
 

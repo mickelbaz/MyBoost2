@@ -14,7 +14,7 @@
 
     <div class="content">
     <div class="avatar">
-      <img id="avatar" src="Images/Man_Silhouette.png"/>
+      <img id="avatar" src="Images/user.png"/>
     </div>
 
     <div class="top">
