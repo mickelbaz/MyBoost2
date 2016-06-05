@@ -67,9 +67,7 @@ function verif(){
         if(!isset($_POST['condition'])){?>
             <script language="javascript">alert("Vous devez accepter les conditions générales !");</script>
           <?php
-        }else{?>
-
-          <?php
+        }else{
             ajout();
             session_start();
             $_SESSION['pseudo']=$_POST['pseudo'];

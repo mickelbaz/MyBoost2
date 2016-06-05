@@ -278,6 +278,8 @@ function router(){
   $supprimer=supprimer_discussion($_GET['sujet'],$_GET['id']);
   break;
 
+  
+
 
   case "sport_participe":
   $participe=sportparticipe();

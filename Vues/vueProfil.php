@@ -120,7 +120,12 @@
         for ($i=0; $i<count($c); $i++){?>
           <div class=groupe><a href="index.php?page=sport&sport=<?php echo $c[$i][0]?>"><?php echo $c[$i][0]; ?></a></div>
           <?php
-        }?>
+        }
+        if(count($c)==0){?>
+          <tr><td>Aucun sport</td></tr>
+            <?php
+        }
+        ?>
 
         </div>
 

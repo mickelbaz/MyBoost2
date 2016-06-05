@@ -30,7 +30,7 @@
 
             <div class="detail">
               <div class="image">
-                <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom?>.png" /></a>
+                <a href="index.php?page=sport&sport=<?php echo $nom;?>"><img src="Images/<?php echo $nom ?>.png" /></a>
 
               </div>
               <h4><?php echo $nom ?></h4>
