@@ -8,7 +8,6 @@
       require_once 'Modeles/modeleSports.php';
     ?>
 
-
   <html>
 
     <head>
@@ -41,19 +40,9 @@
       <br>
 <?php if(isset($_SESSION['pseudo'])){?>
 
-
-
-
+<center>
 <a class="sport_css" href="index.php?page=sport_participe&sport=<?php echo $_GET['sport'];?>">Participer</a>
 <br><br>
-<!--
-<a class="sport_css" href="">Chercher une salle / un terrain</a>
-<br><br>
-<a class="sport_css" href="">Chercher un partenaire / un groupe</a>
-</center>
-<br>
--->
-
 
       <?php
     }?>

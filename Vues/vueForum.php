@@ -1,30 +1,35 @@
 <?php require_once 'Vues/header.php'; ?>
 
-<?php
-if (isset($_POST['Valider']) && $_POST['Valider']=="Valider" && $_POST['sujet']<>"" && $_POST['pseudo']<>""){
- $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
- $bdd->exec('INSERT INTO sujet(sujet, pseudo) VALUES ("'.$_POST['pseudo'].'","'.$_POST['sujet'].'")'); }
-
-?>
 
 <title>Le Forum de MyBoost</title>
-<link rel="stylesheet" type="text/css" href="../Contenu/forum.css">
+<link rel="stylesheet" type="text/css" href="Contenu/forum.css">
 
 
-
-<body><br>
+<body>
+  <br>
+<table>
   <?php
-
-  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req = $bdd->query("SELECT * FROM sujet");
-  while($donnees=$req->fetch()){
-
-    ?><a href="index.php?page=sujet&id=<?php echo $donnees['ID_sujet'];?>&sujet=<?php echo $donnees['sujet'];?>"><?php echo $donnees['ID_sujet'];echo("&nbsp;");echo $donnees['sujet'];?></a>
+  foreach($sujet as list($id,$nom)){?>
+    <tr>
+      <td><a href="index.php?page=sujet&id=<?php echo $id ?>&sujet=<?php echo $nom ?>"><?php echo $nom?></a></td>
+      <?php
+      if($_SESSION['pseudo']=='admin'){?>
+          <td><a href="#" onclick="if (confirm('Supprimer ?')) window.location='index.php?page=supp_discussion&sujet=<?php echo $nom ?>&id=<?php echo $id ?>'; return false"><input type="button" name="supprimer" value="Supprimer cette discussion"/></a></td>
+        <?php
+      }?>
+      </tr>
+      <?php
+  }
+    ?>
+</table>
 
     <br><br>
 
-    <?php } ?>
-<a href="index.php?page=afficher_creer_sujet"> <INPUT type="button" size="30" value="Créer un sujet de discussion !"/></a>
+<?php if(isset($_SESSION['pseudo'])){?>
+  <a href="index.php?page=afficher_creer_sujet"> <INPUT type="button" size="30" value="Créer un sujet de discussion !"/></a>
+  <?php
+}?>
+
   <br></br>
 
 </body>

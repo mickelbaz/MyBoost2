@@ -242,23 +242,12 @@ function router(){
     break;
 
     case "supprimer_commentaire" :
-    $supp=supp_comment($_GET['commentaire']);
+    $supp=supp_comment($_GET['commentaire'],$_GET['club']);
     break;
 
     case "ignorer_notif" :
     $ignorer=ignorer_notif($_GET['groupe']);
     break;
-
-
-    case "forum":
-    $accueil=afficher_sujet();
-    break;
-
-    case "sujet":
-    $sujet=afficher_sujet1();
-    break;
-
-
 
 
   case "sport_participe":
@@ -277,41 +266,28 @@ function router(){
   $accueil=afficher_sujet();
   break;
 
-
-  case "sujet":
-  $sujet=afficher_sujet1();
-  $sujet2=ajouter_message();
-  break;
-
   case "afficher_creer_sujet":
-  $aff=afficher_creer_sujet();
-  break;
-
-
-  case "creer_sujet":
   $sujet=creer_sujet();
-  $ajout_sujet=ajouter_sujet();
   break;
 
+  case "sujet" :
+  $afficher_page=afficher_page($_GET['id'],$_GET['sujet']);
+  break;
 
-    case "sport_participe":
-    $participe=sportparticipe();
-    break;
-
-
-    case "modifier_faq" :
-    $modif_faq=affiche_modif_faq($_GET['id']);
-    break;
+  case "supp_discussion" :
+  $supprimer=supprimer_discussion($_GET['sujet'],$_GET['id']);
+  break;
 
 
   case "sport_participe":
   $participe=sportparticipe();
   break;
 
+  case "supp_message" :
+  $supprimer=supprimer_message($_GET['message'],$_GET['id'],$_GET['sujet']);
+  break;
 
-    case "supprimer_faq" :
-    $supp=supprimer_faq($_GET['id']);
-    break;
+
 
 
     default:

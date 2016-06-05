@@ -46,7 +46,7 @@
           ?>
             <form name="recherche" method="post" action="">
             <input type="text" name="name" placeholder="rechercher"/>
-            <input type="submit" name="valider" value="OK"/>
+            <input type="submit" name="valider_recherche" value="OK"/>
           </form>
         </div>
 
@@ -119,7 +119,7 @@
 
     </div>
 
-    
+
 
     <br><br>
     <nav>
@@ -156,5 +156,4 @@ sfHover = function() {
 
 </body>
 <?php
-  }
-  ?>
+  }  ?>
