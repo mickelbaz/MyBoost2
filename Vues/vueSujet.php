@@ -10,7 +10,18 @@
 
   <body>
 
-  <h2> <?php echo $_GET['sujet'] ?> </h2>
+    <div class="content">
+
+      <div class="image" style="text-align:center; margin-top:1em;">
+        <img class="logo_loupe" src="Images/chat.png"/>
+      </div>
+
+    <div class="title">
+      <h2>Sujet de discussion : "<?php echo $_GET['sujet'] ?>" </h2>
+    </div>
+
+    <div class="sujet">
+<br>
 
   <?php
 
@@ -46,13 +57,9 @@
   <?php
   }?>
     <br></br>
-  <div>
-
-
-    <br></br>
   </div>
-
+</div>
   </body>
-  
+
 </html>
 <?php require_once 'Vues/footer.php' ?>

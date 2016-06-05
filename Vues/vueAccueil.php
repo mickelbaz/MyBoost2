@@ -124,18 +124,12 @@
 
   else {?>
     <div class="presentation">
-
-      <div class="bougez">
-
-        <img src="Images/runer.png"/>
-        <h2>BOUGEZ</h2>
-          <div class="description">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac risus quis sapien vehicula varius sit amet id tellus. Nulla facilisi. Phasellus nec suscipit felis. Donec neque leo, convallis vel.
-            </p>
-          </div>
-
+      <div class="titre_inscrire">
+        <h2>Inscrivez-vous (gratuitement) ou connectez-vous pour accèder à l'ensemble des fonctionnalités MyBoost.</h2>
       </div>
+
+
+
 
       <div class="rencontrez">
 
@@ -153,6 +147,18 @@
 
         <img src="Images/calendar.png"/>
         <h2>PLANIFIEZ</h2>
+          <div class="description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac risus quis sapien vehicula varius sit amet id tellus. Nulla facilisi. Phasellus nec suscipit felis. Donec neque leo, convallis vel.
+            </p>
+          </div>
+
+      </div>
+
+      <div class="bougez">
+
+        <img src="Images/runer.png"/>
+        <h2>BOUGEZ</h2>
           <div class="description">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac risus quis sapien vehicula varius sit amet id tellus. Nulla facilisi. Phasellus nec suscipit felis. Donec neque leo, convallis vel.

@@ -158,10 +158,14 @@
 
 .presentation{
 	background-color: #edefed;
+	padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
 }
 
 .title_accueil{
-	background-color: #edeff0;
+	background-color: #ba4d44;
 	padding: 1em;
 	border-bottom: solid;
   border-bottom-color: #7d8287;
@@ -171,7 +175,7 @@
 
 .title_accueil h1{
 	text-align: center;
-	color: #2d3e4F;
+	color: white;
 	font-size: 3em;
 }
 
@@ -252,7 +256,5 @@ tr{
 }
 
 .description{
-	width: 40%;
-	margin-left: 23.5em;
-
+	justify-content: center;
 }

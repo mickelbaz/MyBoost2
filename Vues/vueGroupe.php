@@ -45,6 +45,10 @@
 
 
 <div class="sport">
+  <div class="image_sport">
+    <img src="Images/<?php echo $donnees[1]?>.png" alt="" />
+  </div>
+
 <a href="index.php?page=sport&sport=<?php echo $donnees[1]?>"><h1 class="name_sport"><?php echo $donnees[1] ?></h1></a>
 </div>
 

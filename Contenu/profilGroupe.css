@@ -43,7 +43,11 @@
   padding: 1em;
 }
 
-
+.image_sport{
+  position: absolute;
+  margin-top: 1.3em;
+  margin-left: 2em;
+}
 .salle{
   background-color: #6779bc;
   height: 10em;
