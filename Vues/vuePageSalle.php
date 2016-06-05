@@ -15,7 +15,7 @@
 </div>
 <br></br>
 <div class="image_coordonnees">
-  <img src="Images/home.png" />
+  <img src="Images/place.png" />
 </div>
 
 <table style="border-collapse:collapse;">
@@ -55,7 +55,7 @@ echo $pseudo ?>&nbsp&nbsp&nbsp le <?php echo $date  ?> :
 <br>
 <?php echo $note ?>/10 : <?php echo $commentaire?><br />
 <?php if($_SESSION['pseudo']=='admin'){?>
-<a href="#" onclick="if (confirm('Supprimer ce commentaire ?')) window.location='index.php?page=supprimer_commentaire&commentaire=<?php echo $commentaire?>&club=<?php echo $_GET['club']?>'; return false"><INPUT type="button" name="supp" value="Supprimer ce commentaire" /></a>
+<a href="#" onclick="if (confirm('Supprimer ce commentaire ?')) window.location='index.php?page=supprimer_commentaire&commentaire=<?php echo $commentaire?>'; return false"><INPUT type="button" name="supp" value="Supprimer ce commentaire" /></a>
   <?php
 }?>
 <br></br>
