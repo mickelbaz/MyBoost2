@@ -207,11 +207,11 @@
 for($i=0;$i<count($membre);$i++){?>
   <tr>
   <?php if($_SESSION['pseudo']==$membre[$i][0]){?>
-      <td><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></td>
+      <td><div class="membre"><a href="index.php?page=profil"><?php echo $membre[$i][0] ?></a></div></td>
     <?php
   }
   else{?>
-    <td><a href="index.php?page=profilvoir&pseudo=<?php echo $membre[$i][0] ?>"> <?php echo $membre[$i][0] ?></a></td>
+    <td><div class="membre"><a href="index.php?page=profilvoir&pseudo=<?php echo $membre[$i][0] ?>"> <?php echo $membre[$i][0] ?></a></div></td>
     <?php
       if($_SESSION['pseudo']==$admin[0]){?>
         <td><a href="#" onclick="if (confirm('Supprimer ce membre ?')) window.location='index.php?page=bannir&groupe=<?php echo $donnees[0]?>&membre=<?php echo $membre[$i][0]?>'; return false"><INPUT type="button" name="bannir" value="Supprimer ce membre"/></a></td>

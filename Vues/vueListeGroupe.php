@@ -26,7 +26,8 @@
 
   <tbody>
 
-        <?php
+    <?php
+
           $nombre=array();
           $nb_place=array();
           $dispo=array();
