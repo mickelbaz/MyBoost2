@@ -16,12 +16,11 @@ function afficher_page($id,$sujet) {
   require_once 'Vues/vueSujet.php';
 }
 
-
 function creer_sujet() {
   if (isset($_POST['Valider']) && $_POST['Valider']=="Valider" && $_POST['sujet']<>""){
     ajouter_sujet(); ?>
-    <script language="javascript">alert("Merci d'avoir ajouté votre sujet de discussion !");</script><?php
-    header('location: index.php?page=forum');
+    <script language="javascript">alert("Merci d'avoir ajouté votre sujet de discussion !");</script>
+    <?php header('location: index.php?page=forum');
   }
     require_once 'Vues/vueCreerSujet.php';
 }

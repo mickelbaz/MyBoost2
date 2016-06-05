@@ -1,11 +1,16 @@
 <?php require_once 'Vues/header.php'; ?>
-
-
-<title>Le Forum de MyBoost</title>
-<link rel="stylesheet" type="text/css" href="Contenu/forum.css">
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Contenu/forum.css">
+    <title>Forum</title>
+  </head>
 
 <body>
+  <div class="content">
+
+
   <br>
 <table>
   <?php
@@ -31,6 +36,9 @@
 }?>
 
   <br></br>
-
+</div>
 </body>
+
+
+</html>
 <?php require_once 'Vues/footer.php' ?>

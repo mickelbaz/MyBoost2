@@ -1,6 +1,6 @@
 <?php require 'Vues/header.php'; ?>
 
-<title>Le Forum de MyBoost - Créer un sujet de disccussion !</title>
+<title>Créer un sujet de discussion</title>
 <link rel="stylesheet" type="text/css" href="Contenu/headerFooter.css">
 
 
@@ -12,7 +12,7 @@
   	<FORM name="sujet" method="post" action="">
   	<table>
   	<tr>
-  	<td>Nom du Sujet:</td>
+  	<td>Nom du Sujet :</td>
   	<td><INPUT type="text" name="sujet" size="40" value="<?php if(isset($_POST['sujet'])){ echo htmlentities($_POST['sujet']);}?>"></td>
   	</tr>
   	<tr>
