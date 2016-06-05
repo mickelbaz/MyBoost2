@@ -228,10 +228,19 @@ for($i=0;$i<count($membre);$i++){?>
 } ?>
 </table>
 </div>
-
+<div class="fb-share-button" data-href="http://myboost.pingfiles.fr/index.php?page=groupe&amp;groupe=&lt;?php echo $donnees[0] ?&gt;" data-layout="button" data-mobile-iframe="true"></div>
 <br></br>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 
+</body>
 
 
 

@@ -8,9 +8,21 @@
     <title>Forum</title>
   </head>
 
-
     <body>
-      <br>
+
+      <div class="content">
+
+        <div class="image" style="text-align:center; margin-top:1em;">
+          <img class="logo_loupe" src="Images/chat.png"/>
+        </div>
+
+        <div class="title">
+          <h1>Forum</h1>
+        </div>
+
+      <div class="sujet">
+
+        <h2>Sujets de discussion</h2>
     <table>
       <?php
       foreach($sujet as list($id,$nom)){?>
@@ -26,6 +38,7 @@
       }
         ?>
     </table>
+    </div>
         <br><br>
 
     <?php if(isset($_SESSION['pseudo'])){?>
@@ -38,8 +51,8 @@
     }?>
 
       <br></br>
-
+</div>
     </body>
-    
+
 </html>
 <?php require_once 'Vues/footer.php' ?>

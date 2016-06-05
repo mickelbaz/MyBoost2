@@ -9,6 +9,24 @@
 
 }
 
+.content{
+  background-color: #edefed;
+	padding: 1em;
+	border-bottom: solid;
+  border-bottom-color: #7d8287;
+  border-width: thin;
+}
+
+.description{
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  margin:2em;
+  padding-top :2em;
+  padding-bottom: 2em;
+}
 
 .groupe{
   background-color: #5c71cb;

@@ -7,16 +7,16 @@
 <?php require 'Vues/header.php'; ?>
 
   <html>
-  
+
   <head>
   <title>
 	Participer à "<?php echo $_GET["sport"]; ?>"
   </title>
 
-  
+
       <body>
     <br>
-	
+
 	<?php
 try{
     $bdd = new PDO('mysql:host=localhost;dbname=myboostp_myboost;charset=utf8', 'myboostp_root', 'appG6D');
@@ -37,17 +37,17 @@ while ($donnees = $reponse->fetch()){
 <big><big>- <?php echo $donnees['nom']; ?> -</big></big><?php
 echo ("<br>");
 ?>
-<i>Description</i> : 
+<i>Description</i> :
 <?php
 echo $donnees['description'];
 echo ("<br>");
 ?>
-<i>Nombre de Places</i> : 
+<i>Nombre de Places</i> :
 <?php
 echo $donnees['nb_max'];
 echo ("<br>");
 ?>
-<i>Places Restantes</i> : 
+<i>Places Restantes</i> :
 <?php
 
 
@@ -68,9 +68,9 @@ echo ("<br><br>");
 echo ("<br>");
 }
 
-$reponse->closeCursor(); 
-	
-?>	  
+$reponse->closeCursor();
+
+?>
     </fieldset>
 
       <br>
