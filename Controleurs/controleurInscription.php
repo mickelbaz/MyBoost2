@@ -39,28 +39,7 @@ function verif(){
       <?php
       }
 
-      /*if (isset($_FILES['avatar']) AND !empty($_FILES['avatar']['name'])) {
-        $tailleMax = 2097152;
-        $extensionValides = array('jpg', 'jpeg', 'gif', 'png');
-        if ($_FILES['avatar']['size'] <= $tailleMax) {
-          $extensionUpload = strtolower(substr(strrchr($_FILES['avatar']['name'], '.'), 1));
-          if(in_array($extensionUpload, $extensionValides)) {
-            $chemin = "Images/Avatars/".$_SESSION['id'].".".$extensionUpload;
-            $resultat = move_uploaded_file($_FILES['avatar']['tmp_name'], $chemin);
 
-          }
-          else {?>
-              <script language="javascript">alert("Votre photo de profil doit être au format jpg, jpeg, gif ou png");</script>
-          <?php
-
-          }
-        }
-        else {?>
-            <script language="javascript">alert("Votre photo de profil ne doit pas dépasser 2 Mo");</script>
-        <?php
-
-        }
-      }*/
 
       if ($_POST['mot_de_passe']==$_POST['mot_de_passe2'] && $_POST['mail']==$_POST['mail2']
       && checkdate($_POST['mois'],$_POST['jour'], $_POST['annee'])&& verif_pseudo()==true && verif_mail()==true && verif_bannir()==false){
@@ -73,6 +52,15 @@ function verif(){
             ajout();
             session_start();
             $_SESSION['pseudo']=$_POST['pseudo'];
+
+            $destinataire=$_POST['mail'];
+            $sujet="Confirmation d'inscription sur MyBoost";
+            $entete="Inscription";
+            $message="Merci de votre inscription sur MyBoost ".$_POST['pseudo']. "!
+            ---------------------------
+            Ceci est un mail automatique, ne pas répondre";
+            mail($destinataire,$sujet,$message,$entete);
+
             header("location: index.php?page=profil");
         }
       }

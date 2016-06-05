@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!--<!DOCTYPE html>
+<html>-->
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="Contenu/headerFooter.css">
@@ -25,9 +25,7 @@
           <a href="index.php?page=faq"><p>Besoin d'aide ?<p></a>
           <a href="index.php?page=faq"><img src="Images/info.png" /></a>
       </div>
-    <?php
-    }
-    else{ ?>
+    <?php } else{ ?>
       <div class="rejoindre">
         <a href="index.php?page=inscription">Rejoignez-nous !</a>
       </div>
@@ -48,15 +46,7 @@
           <a href="index.php?page=faq"><p>Besoin d'aide ?<p></a>
           <a href="index.php?page=faq"><img src="Images/info.png" /></a>
       </div>
-
-
-
-
-
-
 </footer>
 </body>
-<?php
-  }
-  ?>
+<?php  } ?>
 </html>

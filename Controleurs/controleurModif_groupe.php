@@ -2,13 +2,10 @@
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);?>
 <?php
-function affiche_modifgroupe($groupe){
-  $donnees=afficher_groupe($groupe)->fetch();
-  $membre=recup_membre($groupe)->fetchAll();
-  require_once 'Vues/vueModif_groupe.php';
-}
 
 function modif_groupe($nom_groupe){
+  $donnees=afficher_groupe($nom_groupe)->fetch();
+  $membre=recup_membre($nom_groupe)->fetchAll();
   if (isset($_POST['envoyer']) && $_POST['envoyer']<>""){
     if ($_POST['nom']<>""  && $_POST['nb']<>""){
       replace_info($nom_groupe);
@@ -19,7 +16,7 @@ function modif_groupe($nom_groupe){
       <?php
     }
   }
-
+require_once 'Vues/vueModif_groupe.php';
 }
 
 
