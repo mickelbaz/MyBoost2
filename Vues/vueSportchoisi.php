@@ -49,7 +49,7 @@
 
 
 <center>
-<a class="sport_css" href="index.php?page=sport_participe&sport=<?php echo $_GET['sport'];?>">Participer</a>
+<div class="sport_css"><a href="index.php?page=sport_participe&sport=<?php echo $_GET['sport'];?>">Participer</a></div>
 <br><br>
 
       <?php
