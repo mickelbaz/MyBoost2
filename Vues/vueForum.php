@@ -24,7 +24,11 @@
     <br><br>
 
 <?php if(isset($_SESSION['pseudo'])){?>
-  <a href="index.php?page=afficher_creer_sujet"> <INPUT type="button" size="30" value="Créer un sujet de discussion !"/></a>
+  Créer un sujet de discussion :
+  <form name="nouveau_sujet" method="post" action="">
+  <input type=text name="sujet" size="50" />
+  <input type="submit" name="ok" value="OK"/>
+</form>
   <?php
 }?>
 

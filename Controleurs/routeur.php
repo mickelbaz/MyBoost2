@@ -266,9 +266,7 @@ function router(){
   $accueil=afficher_sujet();
   break;
 
-  case "afficher_creer_sujet":
-  $sujet=creer_sujet();
-  break;
+
 
   case "sujet" :
   $afficher_page=afficher_page($_GET['id'],$_GET['sujet']);

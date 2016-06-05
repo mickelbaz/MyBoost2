@@ -7,6 +7,10 @@ require_once 'Modeles/modeleUtilisateurs.php';
 
 function afficher_sujet(){
   $sujet = recup_sujet()->fetchAll();
+  if(isset($_POST['ok']) && $_POST['ok']<>"" && $_POST['sujet'] <>""){
+      ajouter_sujet();
+      header('location: index.php?page=forum');
+  }
   require_once 'Vues/vueForum.php';
 }
 
@@ -20,14 +24,7 @@ function afficher_page($id,$sujet) {
 }
 
 
-function creer_sujet() {
-  if (isset($_POST['Valider']) && $_POST['Valider']=="Valider" && $_POST['sujet']<>""){
-    ajouter_sujet(); ?>
-    <script language="javascript">alert("Merci d'avoir ajouté votre sujet de discussion !");</script><?php
-    header('location: index.php?page=forum');
-  }
-    require_once 'Vues/vueCreerSujet.php';
-}
+
 
 function supprimer_discussion($sujet,$id){
   $supp=supprimer_sujet($sujet,$id);
