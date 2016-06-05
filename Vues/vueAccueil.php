@@ -161,19 +161,9 @@
 
       </div>
 
-    </div>
+
   <?php } ?>
-
-
-
-
-
-
-<div class="presentation">
-
-
 </div>
-
 
 <!--
 <div class="carrousel">
