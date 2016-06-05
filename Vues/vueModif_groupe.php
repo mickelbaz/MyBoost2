@@ -1,3 +1,4 @@
+<?php require_once 'Vues/header.php'; ?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +8,7 @@
     <title>Modification du groupe</title>
   </head>
   <body>
-<?php require_once 'Vues/header.php'; ?>
+
   <div class="head_groupe">
     <div class="groupe">
       <h1 class="name_groupe"><?php echo $donnees[0] ?><br><a href="index.php?page=groupe&groupe=<?php echo $donnees[0]?>"><img id="logomodif" class="modifier" src="Images/back.png"/><span class="modifier"> Retour à la page du groupe</span></a></h1>
