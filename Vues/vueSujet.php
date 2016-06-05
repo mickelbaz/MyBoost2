@@ -1,50 +1,49 @@
 <?php
-require_once 'Vues/header.php';
-
-
-$bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-$req = $bdd->exec('INSERT INTO message(message,pseudo,ID_sujet) VALUES ("'.$_POST['discussion'].'","'.$_POST['pseudo'].'","'.$_POST['id'].'")');
-
-
-echo($_GET["sujet"]);
-echo("<br>");
-echo("<br>");
-
-$bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-$req = $bdd->query('SELECT * FROM message WHERE ID_sujet="'.$_GET["id"].'"');
-while($donnees=$req->fetch()){
-    echo("-&nbsp;");
-    ?><i><?php echo($donnees["pseudo"]); ?></i><?php
-    echo("&nbsp;:&nbsp;");
-    echo($donnees["message"]);
-    echo("<br>");
-}
-?>
+require_once 'Vues/header.php'; ?>
 
 
 <title>Le Forum de MyBoost</title>
-<link rel="stylesheet" type="text/css" href="../Contenu/forum.css">
-
-
+<link rel="stylesheet" type="text/css" href="Contenu/forum.css">
 
 <body>
-<?php echo($_SESSION["pseudo"]); ?>
-<form action="" method="post">
+<h2> <?php echo $_GET['sujet'] ?> </h2>
 
-<INPUT type="text" name="pseudo" size="15" placeholder="Entrez votre pseudo..."/>
+<?php
 
+if(count($message)==0){
+  echo 'Aucun message';
+}
+else{
 
-<INPUT type="text" name="discussion" size="50" placeholder="Commencez la discussion ici..."/>
+foreach($message as list($message,$pseudo,$date,$heure)){?>
+  <div class="message">
+   - <?php echo $pseudo?> le <?php echo $date?> à <?php echo $heure ?> : <?php echo $message ?>
+  <?php
+  if($_SESSION['pseudo']=='admin'){?>
+    <br><a href="#" onclick="if (confirm('Supprimer ?')) window.location='index.php?page=supp_message&message=<?php echo $message ?>&sujet=<?php echo $_GET['sujet']?>&id=<?php echo $_GET['id']?>'; return false"><input type="button" name="supp" value="Supprimer ce message"/></a>
+      <?php
+  }?>
+</div>
+  <?php
+  }
+}?>
 
+<br></br>
+<?php if(isset($_SESSION['pseudo'])){?>
+
+<form name="message" action="" method="post">
+
+<INPUT type="text" name="discussion" size="50" placeholder="Entrer votre message ici..."/>
 <input type="hidden" name="id" value="<?php echo($_GET["id"]); ?>">
-
-<input type="submit" name="Envoyer">
+<input type="submit" name="Envoyer" value="Envoyer">
 
 </form>
 
+<?php
+}?>
   <br></br>
 <div>
-<a href="index.php?page=afficher_creer_sujet"> <INPUT type="button" size="30" value="Créer un sujet de discussion !"/></a>
+
 
   <br></br>
 </div>

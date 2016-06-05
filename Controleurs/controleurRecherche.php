@@ -5,7 +5,7 @@ require_once 'Modeles/modeleSports.php';
 
 
 function redirection(){
-  if(isset($_POST['valider']) && $_POST['valider']<>""){
+  if(isset($_POST['valider_recherche']) && $_POST['valider_recherche']<>""){
     header ('location: index.php?page=resultatRecherche&recherche='.$_POST['name']);
     exit;
   }

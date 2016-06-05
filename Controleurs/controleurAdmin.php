@@ -65,9 +65,9 @@ function supprimer_club($club){
   header('location: index.php?page=afficher_clubs_admin');
 }
 
-function supp_comment($comment){
+function supp_comment($comment,$club){
   $supp=supp_commentaire($comment);
-  header('location: index.php?page=afficher_clubs_admin');
+  header('location: index.php?page=club&club='.$club);
 }
 
 

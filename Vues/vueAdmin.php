@@ -44,7 +44,7 @@
           		<table>
             		<tr>
                     <h4>
-                      <a href=".php" >Gérer les messages du forum</a>
+                      <a href="index.php?page=forum" >Gérer les messages du forum</a>
                     </h4>
             		</tr>
         		</table>

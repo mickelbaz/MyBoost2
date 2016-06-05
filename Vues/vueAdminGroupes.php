@@ -10,7 +10,7 @@
 <?php foreach ($groupes as list($nom,$description,$region)) {?>
             <tr style="border-bottom:1px solid black;">
             <td><?php echo $nom ?><br />
-             Description : <?php echo $description ?><br />
+            
              Région : <?php echo $region?><br></td>
             <td>
             <?php
