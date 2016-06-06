@@ -89,7 +89,7 @@
                 <?php
                 for ($i=0; $i<count($b); $i++){?>
                 <tr>
-                <td><a href="index.php?page=groupe&groupe=<?php echo $b[$i][0] ?>"><?php echo $b[$i][0]; ?></a></td>
+                <td><?php echo $b[$i][0]; ?></td>
               <?php
             }
             if(count($b)==0){?>
@@ -104,7 +104,7 @@
             <?php
             for ($i=0; $i<count($d); $i++){?>
             <tr>
-            <td><a href="index.php?page=groupe&groupe=<?php echo $d[$i][0]?>"><?php echo $d[$i][0]; ?></td>
+            <td><?php echo $d[$i][0]; ?></td>
           <?php
          }
          if(count($d)==0){?>

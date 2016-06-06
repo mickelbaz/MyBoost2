@@ -49,7 +49,7 @@
     <br><br>
     <textarea name="commentaire" placeholder="Laissez votre commentaire ici" rows="4" cols="45"></textarea>
     <br></br>
-    Note /5 :<INPUT type="number" size="4" name="note" min="0" max="5"/>
+    Note /5 <INPUT type="number" size="4" name="note" min="0" max="5"/>
     <br></br>
     <div class=Ok><INPUT type="submit" name='envoyer' value="OK"/></div>
     </FORM>

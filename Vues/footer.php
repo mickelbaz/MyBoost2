@@ -1,5 +1,4 @@
-<!--<!DOCTYPE html>
-<html>-->
+
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="Contenu/headerFooter.css">
@@ -14,7 +13,7 @@
           &nbsp;
           <a href="https://twitter.com/myb00st"><img src="Images/logotwit.png" alt="twitter"></a>
           &nbsp;
-        
+
           <p>
             MyBoost &copy; 2016 - Tous droits r&eacute;serv&eacute;s
           </p>

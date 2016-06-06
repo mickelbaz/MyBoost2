@@ -1,5 +1,6 @@
     <meta http-equiv="content-type" content="text/html">
     <link rel="stylesheet" href="Contenu/sportchoisi.css">
+    <link rel="stylesheet" href="Contenu/sports.css" >
 
     <meta charset="utf-8"/>
 
