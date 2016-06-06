@@ -1,15 +1,25 @@
 <?php require 'Vues/header.php'; ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+		<title>Création d'un événement</title>
+	</head>
+	<body>
 
-<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+		<div class="content">
 
+
+		<div class="formulaire">
 
 <FORM name="formulaire" method="post" action="">
 
-	<p id="title">CRÉATION D'UN EVENEMENT</p>
+	<p id="title">CRÉATION D'UN ÉVÉNEMENT</p>
 	<table>
 
 	<tr>
-	<td>Nom de l'évènement : </td>
+	<td>Nom de l'événement : </td>
 	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']);}?>"/></td>
 	</tr>
 
@@ -100,5 +110,9 @@
 
 	<div class="C"><INPUT type="submit" name="envoyer" value="Valider"/></div>
 	</FORM>
+</div>
 	<br></br>
+</div>
+</body>
+</html>
   <?php require 'Vues/footer.php'; ?>

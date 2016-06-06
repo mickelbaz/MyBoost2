@@ -38,9 +38,22 @@
 }
 
 .region{
-  margin-right: 8em;
-  margin-top: 1.5em;
-  padding: 1em;
+  background-color: #5c71cb;
+  height: 3em;
+  width: auto;
+  display: flex;
+  justify-content: space-between;
+  color : white;
+  text-align: center;
+}
+
+.region h2{
+  position: absolute;
+  right:1em;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0px;
 }
 
 .image_sport{

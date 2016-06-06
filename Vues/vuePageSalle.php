@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="Contenu/profilGroupe.css">
     <title>Club "<?php echo $infos[0][0] ?>"</title>
   </head>
-  
+
   <body>
 <div class="head_groupe">
 <div class="salle">
@@ -43,26 +43,27 @@
   </div>
   <div class="description">
 
-    <div class="commentaire">Votre avis nous intéresse !
-      <br></br>
+    <div class="commentaire">
+      <h2>Votre avis sur "<?php echo $infos[0][0] ?>" nous intéresse !</h2>
     <FORM name="commenter" method="post" action="#">
     <br><br>
     <textarea name="commentaire" placeholder="Laissez votre commentaire ici" rows="4" cols="45"></textarea>
     <br></br>
-    Note /5 : &nbsp&nbsp&nbsp&nbsp <INPUT type="number" size="4" name="note" min="0" max="5"/>
+    Note /5 :<INPUT type="number" size="4" name="note" min="0" max="5"/>
     <br></br>
     <div class=Ok><INPUT type="submit" name='envoyer' value="OK"/></div>
     </FORM>
     </div>
-    <br></br>
-    <br></br>
-
-    <div class="commentaire"><b>Tous les commentaires :</b>
-    <br></br>
-    <?php foreach ($comment as list($pseudo,$date,$commentaire,$note)){
-    echo $pseudo ?>&nbsp&nbsp&nbsp le <?php echo $date  ?> :
     <br>
-    <?php echo $note ?>/5 : <?php echo $commentaire?><br />
+
+    <div class="commentaire"><h3>Tous les commentaires :</h3>
+
+    <?php foreach ($comment as list($pseudo,$date,$commentaire,$note)){
+    echo $pseudo ?> le <?php echo $date  ?> :
+    <br>
+    <?php for ($i=0; $i < $note; $i++) { ?>
+      <img src="Images/star.png" alt="" />
+    <?php }  echo $commentaire?><br />
     <?php if($_SESSION['pseudo']=='admin'){?>
     <a href="#" onclick="if (confirm('Supprimer ce commentaire ?')) window.location='index.php?page=supprimer_commentaire&commentaire=<?php echo $commentaire?>'; return false"><INPUT type="button" name="supp" value="Supprimer ce commentaire" /></a>
       <?php

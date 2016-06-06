@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="Contenu/accueil.css">
-    <title>MyBoost - Le Site Web</title>
+    <title>MyBoost</title>
   </head>
   <body>
 
@@ -124,7 +124,7 @@
   else {?>
     <div class="presentation">
       <div class="titre_inscrire">
-        <h2>Inscrivez-vous (gratuitement) ou connectez-vous pour accèder à l'ensemble des fonctionnalités MyBoost.</h2>
+        <h2>Inscrivez-vous (gratuitement) ou connectez-vous pour accéder à l'ensemble des fonctionnalités MyBoost.</h2>
       </div>
 
 
