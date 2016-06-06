@@ -74,6 +74,10 @@ function verif(){
   }
 
 
+function affiche_condition(){
+  require 'Vues/vueConditionGenerale.php';
+}
+
 
 
 ?>

@@ -14,19 +14,23 @@
 
 <div class="groupe">
 
-  <h1 class="name_groupe">Groupe "<?php echo $donnees[0] ?>"<br>
-<?php $dispo=$place[0]-count($membre);
-if($dispo!=0 && isset($_SESSION['pseudo'])){?>
-    <a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/plus.png"/><span class="modifier"> Rejoindre le groupe</span></a></h1>
-  <?php
-} ?>
+  <h1 class="name_groupe">Groupe "<?php echo $donnees[0] ?>"<br><?php
 
-  <div class="region">
-      <h2>Région : <?php echo $donnees[3] ?></h2>
-  </div>
+  if (isset($_SESSION['pseudo'])){?>
+<a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/plus.png"/><span class="modifier"> Rejoindre le groupe</span></a><h1>
+  <?php
+}?>
+
 
 </div>
 
+
+<div class="region">
+
+  <h2>Région : <?php echo $donnees[3] ?></h2>
+
+
+</div>
 <div class="sport">
 <a href="index.php?page=sport&sport=<?php echo $donnees[1]?>"><h1 class="name_sport"><?php echo $donnees[1] ?></h1></a>
 </div>

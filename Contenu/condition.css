@@ -1,0 +1,22 @@
+@font-face{
+	font-family:"Avenir Next LT Pro";
+	src:url(AvenirNextLTPro-Demi.otf);
+}
+*{
+	font-family: Avenir Next LT Pro;
+
+}
+
+h1{
+  text-align: center;
+}
+
+div{
+  margin-left: 4em;
+  margin-right: 4em;
+}
+
+a{
+  color:black;
+  text-decoration: underline;
+}

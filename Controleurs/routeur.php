@@ -279,6 +279,10 @@ function router(){
   $supprimer=supprimer_message($_GET['message'],$_GET['id'],$_GET['sujet']);
   break;
 
+  case "condition_generale" :
+  $affiche_page=affiche_condition();
+  break;
+
 
 
 
