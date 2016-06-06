@@ -1,5 +1,4 @@
 <?php
-
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);
 
@@ -30,8 +29,6 @@ function supprimer_personne($pseudo){
 }
 
 function bannir_membre($pseudo,$mail){
-  $bannir=supprimer_personne_bdd($pseudo);
-  $ajout_bdd=membre_banni($pseudo,$mail);
   $destinataire=$mail;
   $sujet="Vous êtes banni !";
   $entete="Banni";
@@ -39,6 +36,8 @@ function bannir_membre($pseudo,$mail){
   ---------------------------
   Ceci est un mail automatique, ne pas répondre";
   mail($destinataire,$sujet,$message,$entete);
+  $bannir=supprimer_personne_bdd($pseudo);
+  $ajout_bdd=membre_banni($pseudo,$mail);
   header ('location: index.php?page=afficher_membres');
 }
 
@@ -74,9 +73,7 @@ function supprimer_club($club){
 
 function supp_comment($comment,$club){
   $supp=supp_commentaire($comment);
-  header('location: index.php?page=club&club='.$club);
+  header('location: index.php?page=afficher_clubs_admin');
 }
-
-
 
 ?>

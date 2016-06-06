@@ -119,30 +119,22 @@
     </div>
 </div>
 <br>
+<div class="title_category_evenement">
+  <h4>Mes événements</h4>
+</div>
+
 <div class="evenement">
-<div class="category">
 
-  <div class="title_category_evenement">
-    <h4>Mes événements</h4>
-  </div>
-
-  <div class="detail_category">
-
-        <div class=groupe>
-
-
-          <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe)){ ?>
-            <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> </div>
-            <?php
+    <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe,$lieu)){ ?>
+      <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> &nbsp à &nbsp <?php echo $lieu ?> &nbsp</div>
+    <?php
       }
       if(count($event)==0){?>
         <tr><td>Aucun événement</td></tr>
           <?php
       }
       ?>
-  </div>
-</div>
-</div>
+
 </div>
 
 

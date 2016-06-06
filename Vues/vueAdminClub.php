@@ -4,7 +4,7 @@
 
 
 
-<h2> Liste des groupes </h2>
+<h2> Liste des clubs </h2>
 
 <table class="infoperso" style="border-collapse:collapse;">
   <?php foreach($club as list($nom)){?>

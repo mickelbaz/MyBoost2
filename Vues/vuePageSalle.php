@@ -1,21 +1,13 @@
 <?php require 'Vues/header.php'; ?>
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="Contenu/profilGroupe.css">
     <title>Club "<?php echo $infos[0][0] ?>"</title>
   </head>
-  <body>
-
-
-
-<link rel="stylesheet" type="text/css" href="Contenu/profilGroupe.css">
-
-  <head>
-    <meta charset="utf-8" />
-    <title>Salle</title>
-  </head>
-
+  
   <body>
 <div class="head_groupe">
 <div class="salle">
@@ -70,15 +62,15 @@
     <?php foreach ($comment as list($pseudo,$date,$commentaire,$note)){
     echo $pseudo ?>&nbsp&nbsp&nbsp le <?php echo $date  ?> :
     <br>
-    <?php echo $note ?>/10 : <?php echo $commentaire?><br />
+    <?php echo $note ?>/5 : <?php echo $commentaire?><br />
     <?php if($_SESSION['pseudo']=='admin'){?>
     <a href="#" onclick="if (confirm('Supprimer ce commentaire ?')) window.location='index.php?page=supprimer_commentaire&commentaire=<?php echo $commentaire?>'; return false"><INPUT type="button" name="supp" value="Supprimer ce commentaire" /></a>
       <?php
     }?>
     <br></br>
     <?php
-    }?>
-    <?php if(count($comment)==0){?>
+    }
+    if(count($comment)==0){?>
       Aucun commentaire
     <?php
     }?>

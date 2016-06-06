@@ -14,8 +14,7 @@
           &nbsp;
           <a href="https://twitter.com/myb00st"><img src="Images/logotwit.png" alt="twitter"></a>
           &nbsp;
-          <a href="https://www.instagram.com/"><img src="Images/logoinsta.png" alt="insta"></a>
-          &nbsp;
+        
           <p>
             MyBoost &copy; 2016 - Tous droits r&eacute;serv&eacute;s
           </p>
@@ -35,8 +34,6 @@
           &nbsp;
           <a href="https://twitter.com/myb00st"><img src="Images/logotwit.png" alt="twitter"></a>
           &nbsp;
-          <a href="https://www.instagram.com/"><img src="Images/logoinsta.png" alt="insta"></a>
-          &nbsp;
           <p>
             MyBoost &copy; 2016 - Tous droits r&eacute;serv&eacute;s
           </p>
@@ -46,7 +43,9 @@
           <a href="index.php?page=faq"><p>Besoin d'aide ?<p></a>
           <a href="index.php?page=faq"><img src="Images/info.png" /></a>
       </div>
+
+      <?php  } ?>
 </footer>
 </body>
-<?php  } ?>
+
 </html>
