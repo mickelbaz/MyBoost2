@@ -15,6 +15,10 @@
 
 <FORM name="formulaire" method="post" action="">
 
+	<div class="image" style="text-align:center; margin-top:1em;">
+	  <img class="logo_loupe" src="Images/calendar-event.png"/>
+	</div>
+
 	<p id="title">CRÉATION D'UN ÉVÉNEMENT</p>
 	<table>
 
@@ -102,7 +106,7 @@
 
 		<tr>
 		<td>Nombre de participants maximum : </td>
-		<td><INPUT type="text" size="5" name="nb" value="<?php if(isset($_POST['nb'])){ echo htmlentities($_POST['nb']);}?>"/></td>
+		<td><INPUT type="number" name="nb" size:"5" value="<?php if(isset($_POST['nb'])){ echo htmlentities($_POST['nb']);}?>" min="2" max="100"/></td>
 		</tr>
 
   </table>
