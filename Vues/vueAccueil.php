@@ -106,10 +106,7 @@
       </tr>
     <?php
     }
-    if($dispo[$i]==0){?>
-      <tr><em>Aucune notification</em></tr>
-      <?php
-    }
+
   }?>
   </table>
   <br></br>
