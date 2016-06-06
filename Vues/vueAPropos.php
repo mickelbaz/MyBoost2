@@ -22,7 +22,8 @@
     border-width: thin;
     padding-top :2em;
     padding-bottom: 2em;
-    padding-left: 1em;
+    padding-left: 3em;
+    padding-right: 3em;
     text-align:center;
     margin-left:5em;
     margin-right:5em;">

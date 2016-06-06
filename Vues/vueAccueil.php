@@ -126,6 +126,8 @@
 
 
 
+    <div class="texte">
+
 
       <div class="rencontrez">
 
@@ -162,6 +164,8 @@
           </div>
 
       </div>
+
+    </div>
 
 
   <?php } ?>
