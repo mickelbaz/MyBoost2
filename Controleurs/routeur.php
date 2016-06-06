@@ -136,6 +136,7 @@ function router(){
     $nonparticipe=quitter_event($_GET['nom'],$_GET['event']);
     break;
 
+
     case "profilvoir" :
     $afficherprofil=affiche_membre($_GET['pseudo']);
     break;
@@ -285,6 +286,10 @@ function router(){
 
   case "condition_generale" :
   $affiche_page=affiche_condition();
+  break;
+
+  case "newadmin" :
+  $admin=nouvel_admin($_GET['groupe'],$_GET['membre']);
   break;
 
 
