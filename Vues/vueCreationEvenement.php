@@ -1,7 +1,17 @@
 <?php require 'Vues/header.php'; ?>
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+		<title>Création d'un événement</title>
+	</head>
+	<body>
 
-<link rel="stylesheet" type="text/css" href="Contenu/formulaire.css">
+		<div class="content">
 
+
+		<div class="formulaire">
 
 <FORM name="formulaire" method="post" action="">
 
@@ -100,5 +110,9 @@
 
 	<div class="C"><INPUT type="submit" name="envoyer" value="Valider"/></div>
 	</FORM>
+</div>
 	<br></br>
+</div>
+</body>
+</html>
   <?php require 'Vues/footer.php'; ?>

@@ -27,8 +27,8 @@
 
   <h2>Région : <?php echo $donnees[3] ?></h2>
 
-
 </div>
+
 <div class="sport">
   <div class="image_sport">
     <img src="Images/<?php echo $donnees[1]?>.png" alt="" />

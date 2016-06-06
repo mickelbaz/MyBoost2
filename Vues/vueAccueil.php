@@ -124,7 +124,7 @@
   else {?>
     <div class="presentation">
       <div class="titre_inscrire">
-        <h2>Inscrivez-vous (gratuitement) ou connectez-vous pour accèder à l'ensemble des fonctionnalités MyBoost.</h2>
+        <h2>Inscrivez-vous (gratuitement) ou connectez-vous pour accéder à l'ensemble des fonctionnalités MyBoost.</h2>
       </div>
 
 
