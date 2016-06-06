@@ -12,7 +12,7 @@ function ajouter_sport(){
 }
 
 function verif_sport($sport){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT nom FROM sport WHERE nom=?');
   $req->execute(array($sport));
   $donnee=$req->fetch();

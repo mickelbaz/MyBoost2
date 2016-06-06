@@ -174,7 +174,7 @@ function replace_admin($nom_groupe,$pseudo){
 
 
 function replace_info($nom_groupe){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('UPDATE groupe SET nom=?, nb_max=?  WHERE nom=?');
   $req->execute (array($_POST['nom'], $_POST['nb'], $nom_groupe));
   $req2=$bdd->prepare('UPDATE attente SET nom_groupe=? WHERE nom_groupe=?');
