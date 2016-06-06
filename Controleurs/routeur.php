@@ -178,6 +178,7 @@ function router(){
 
    case "gérer_groupe" :
    $afficher_liste_groupes=afficher_groupes();
+   break;
 
     case "resultatRecherche" :
     $page=affiche_page_resultat();

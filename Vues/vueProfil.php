@@ -1,15 +1,15 @@
 <?php require "Vues/header.php"; ?>
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
-    <title><?php //echo $_SESSION['pseudo'] ?></title>
-  </head>-->
+    <title><?php echo $_SESSION['pseudo'] ?></title>
+  </head>
   <body>
 
 
-
+</html>
     <link type="text/css" rel="stylesheet" href="Contenu/profil.css"/>
 
 
@@ -179,16 +179,12 @@
     </div>
 </div>
 <br>
+
+<div class="title_category_evenement">
+  <h4>Mes événements</h4>
+</div>
+
 <div class="evenement">
-
-<div>
-
-
-  <div class="title_category_evenement">
-    <h4>Mes événements</h4>
-  </div>
-
-  <div class="detail_category">
 
     <?php foreach($event as list($nom,$description, $date, $heure,$place,$groupe,$lieu)){ ?>
       <div class=liste><?php echo $nom ?>&nbsp organisé par le groupe <?php echo $groupe?>&nbsp le <?php echo $date ?>&nbsp à <?php echo $heure ?> &nbsp à &nbsp <?php echo $lieu ?> &nbsp</div>
@@ -199,9 +195,6 @@
           <?php
       }
       ?>
-  </div>
-
-</div>
 
 </div>
 <br>
@@ -281,7 +274,7 @@ date_default_timezone_set('Europe/Paris');
 
 </div>
 
-<br></br>
+<br><br>
 
 </div>
 

@@ -232,7 +232,7 @@ for($i=0;$i<count($membre);$i++){?>
 } ?>
 </table>
 </div>
-<div class="fb-share-button" data-href="http://myboost.pingfiles.fr/index.php?page=groupe&amp;groupe=&lt;?php echo $donnees[0] ?&gt;" data-layout="button" data-mobile-iframe="true"></div>
+<div class="fb-share-button" data-href="http://www.myboost.pingfiles.fr/index.php?page=profil" data-layout="button" data-mobile-iframe="true"></div>
 <br></br>
 
 <div id="fb-root"></div>

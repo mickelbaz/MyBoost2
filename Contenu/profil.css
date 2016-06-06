@@ -113,7 +113,8 @@ h1 .modifier{
     border-color: #505a5c;
     border-width: thin;
     text-align: center;
-    margin-left: 11em;
+    margin-left: auto;
+    margin-right: auto;
     color:#505a5c;
     margin-bottom: 2em;
 }
@@ -134,9 +135,16 @@ h1 .modifier{
 }
 
 .evenement{
-  width: 70%;
-  display : flex;
-  justify-content:center;
+  background-color: white;
+  border: solid;
+  border-color: #7d8287;
+  border-width: thin;
+  color: #7d8287;
+  padding-top :2em;
+  padding-bottom: 2em;
+  margin-left: 5em;
+  margin-right: 5em;
+  text-align: center;
 
 }
 
@@ -175,9 +183,6 @@ tr{
 
 }
 
-.evenement{
-  margin-left:12em;
-}
 
 .liste{
   display:block;
@@ -193,6 +198,9 @@ tr{
   padding-top :2em;
   padding-bottom: 2em;
   padding-left: 1em;
+  margin-bottom: 5em;
+  margin-left: 10em;
+  margin-right: 10em;
 }
 
 .detail_category a{

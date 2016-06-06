@@ -2,7 +2,6 @@
 session_start();
 error_reporting(E_ALL & ~E_NOTICE);?>
 <?php
-
 function modif_groupe($nom_groupe){
   $donnees=afficher_groupe($nom_groupe)->fetch();
   $membre=recup_membre($nom_groupe)->fetchAll();
@@ -18,8 +17,4 @@ function modif_groupe($nom_groupe){
   }
 require_once 'Vues/vueModif_groupe.php';
 }
-
-
-
-
 ?>

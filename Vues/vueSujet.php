@@ -11,8 +11,8 @@
   <body>
 
     <div class="content">
-
-      <div class="image" style="text-align:center; margin-top:1em;">
+<a href="index.php?page=forum" style="position: absolute; left: 4em; top:17em;"><img src="Images/back-2.png" alt="" /></a>
+      <div class="image" style="text-align:center; margin-top:1em; ">
         <img class="logo_loupe" src="Images/chat.png"/>
       </div>
 

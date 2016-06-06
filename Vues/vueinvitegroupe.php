@@ -20,7 +20,7 @@ if($dispo!=0 && isset($_SESSION['pseudo'])){?>
   <?php
 } ?>
 
-  <div class="region">
+  <div class="region" style="position: absolute; top:18em; right: 0.1em;">
 
       <h2>Région : <?php echo $donnees[3] ?></h2>
 
