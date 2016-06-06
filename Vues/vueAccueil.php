@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="Contenu/accueil.css">
-    <title>MyBoost - Le Site Web</title>
+    <title>MyBoost</title>
   </head>
   <body>
 

@@ -15,11 +15,11 @@
 
 <FORM name="formulaire" method="post" action="">
 
-	<p id="title">CRÉATION D'UN EVENEMENT</p>
+	<p id="title">CRÉATION D'UN ÉVÉNEMENT</p>
 	<table>
 
 	<tr>
-	<td>Nom de l'évènement : </td>
+	<td>Nom de l'événement : </td>
 	<td><INPUT type="text" name="nom" value="<?php if(isset($_POST['nom'])){ echo htmlentities($_POST['nom']);}?>"/></td>
 	</tr>
 
