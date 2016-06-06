@@ -22,9 +22,7 @@ if($dispo!=0 && isset($_SESSION['pseudo'])){?>
 } ?>
 
   <div class="region">
-
       <h2>Région : <?php echo $donnees[3] ?></h2>
-
   </div>
 
 </div>
