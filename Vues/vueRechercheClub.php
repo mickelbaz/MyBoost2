@@ -17,8 +17,9 @@
 
     <div class="result">
     <h2>Club</h2>
-    <?php if(count($club)==0){
-      echo 'Aucun résulat';
+    <?php if(count($club)==0){?>
+      <div class="aucun"><?php echo 'Aucun résulat'; ?></div>
+      <?php
     }
     else{
       foreach($club as list($nom)){?>

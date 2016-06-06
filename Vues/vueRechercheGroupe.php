@@ -16,8 +16,9 @@
 
 <div class="result">
 <h2>Groupes</h2>
-<?php if(count($groupe)==0){
-  echo 'Aucun résulat';
+<?php if(count($groupe)==0){?>
+  <div class="aucun"><?php echo 'Aucun résulat';?></div>
+  <?php
 }
 else{
   foreach($groupe as list($nom)){

@@ -32,12 +32,9 @@
        <INPUT type="text" name="pseudo" placeholder="Pseudo"/>
        <br><br>
        <INPUT type="password" name="mot_de_passe" placeholder="Mot de passe"/>
-        <p classe="oubli_mdp">
-          <a href="index.php?page=accueil"><em>mot de passe oublié ?</em></a>
-        </p>
     </div>
 
-
+<br>
         <div class="champ2"><INPUT type="submit" name='connection' value="Valider" /></div>
     </FORM>
 

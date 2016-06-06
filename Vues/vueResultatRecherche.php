@@ -3,22 +3,26 @@
 
 <link rel="stylesheet" type="text/css" href="Contenu/recherche.css">
 
-<br></br>
+
+<div class="content">
+
 <?php if($_GET['recherche']!=""){?>
-  <div class="titre"><h1>Résultat de la recherche "<?php echo $_GET['recherche']?>" :</h1></div>
+  <div class="title"><h1>Résultat de la recherche "<?php echo $_GET['recherche']?>" </h1></div>
   <?php
 }
 else{?>
-  <div class="titre"><h1>Résultat de la recherche : </h1></div>
+  <div class="title"><h1>Résultat de la recherche  </h1></div>
   <?php
 }?>
 
+<div class="tout">
 <div class="groupe">
   <h2>Groupes :</h2>
 
     <?php
-    if(count($groupe)==0){
-      echo "Aucun résultat";
+    if(count($groupe)==0){?>
+      <div class="aucun"><?php echo "Aucun résultat";?></div>
+      <?php
     }
     else{
     foreach($groupe as list($nom)){
@@ -38,8 +42,9 @@ else{?>
 <div class="membre">
   <h2>Membres :</h2>
     <?php
-    if(count($membre)==0){
-      echo "Aucun résultat";
+    if(count($membre)==0){?>
+      <div class="aucun"><?php echo "Aucun résultat"; ?></div>
+      <?php
     }
     else{
     foreach($membre as list($nom)){
@@ -61,8 +66,9 @@ else{?>
   <h2>Clubs :</h2>
 
     <?php
-    if(count($club)==0){
-      echo "Aucun résultat";
+    if(count($club)==0){?>
+      <div class="aucun"> <?php echo "Aucun résultat"; ?> </div>
+      <?php
     }
     else{
     foreach($club as list($nom)){?>
@@ -76,8 +82,9 @@ else{?>
 <div class="sport">
   <h2>Sports:</h2>
   <?php
-  if(count($sport)==0){
-    echo "Aucun résultat";
+  if(count($sport)==0){?>
+  <div class="aucun"><?php  echo "Aucun résultat"; ?></div>
+  <?php
   }
   else{
   foreach($sport as list($nom)){?>
@@ -86,6 +93,8 @@ else{?>
     }
   }?>
 </div>
+</div>
 
 <br></br>
+</div>
 <?php require 'Vues/footer.php' ?>
