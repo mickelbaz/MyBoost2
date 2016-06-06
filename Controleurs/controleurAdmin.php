@@ -32,6 +32,13 @@ function supprimer_personne($pseudo){
 function bannir_membre($pseudo,$mail){
   $bannir=supprimer_personne_bdd($pseudo);
   $ajout_bdd=membre_banni($pseudo,$mail);
+  $destinataire=$mail;
+  $sujet="Vous êtes banni !";
+  $entete="Banni";
+  $message="Vous avez été banni de MyBoost suite à la violation des conditions générales
+  ---------------------------
+  Ceci est un mail automatique, ne pas répondre";
+  mail($destinataire,$sujet,$message,$entete);
   header ('location: index.php?page=afficher_membres');
 }
 
