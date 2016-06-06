@@ -1,4 +1,4 @@
-    <meta http-equiv="content-type" content="text/html">
+<meta http-equiv="content-type" content="text/html">
     <link rel="stylesheet" href="Contenu/sportchoisi.css">
     <link rel="stylesheet" href="Contenu/sports.css" >
     <meta charset="utf-8"/>
@@ -19,22 +19,18 @@
 
 	<?php
 try{
-    $bdd = new PDO('mysql:host=localhost;dbname=myboostp_myboost;charset=utf8', 'myboostp', 'appG6D');
+    $bdd = new PDO('mysql:host=localhost;dbname=myboost;charset=utf8', 'root', 'root');
 }
 catch(Exception $e){
         die('Erreur : '.$e->getMessage());
 }
 $reponse = $bdd->query('SELECT * FROM groupe WHERE sport_groupe="'.$_GET["sport"].'"');
-
-
 ?>
 
     <fieldset class="sport">
 	<legend> Groupes contenant le sport "<?php echo $_GET["sport"]; ?>"</legend>
 <?php
-
 while ($donnees = $reponse->fetch()){
-
     if(verif_membre_groupe($donnees['nom'],$_SESSION['pseudo'])==true){
   ?>
     <big><big>- <?php echo $donnees['nom']; ?> -</big></big><?php
@@ -56,7 +52,6 @@ while ($donnees = $reponse->fetch()){
     while ($donnees1 = $places->fetch()){
       echo $donnees[nb_max]-$donnees1[0];
     }
-
     echo ("<br><br>");
     ?>
     <center>
@@ -100,17 +95,9 @@ else{?>
           </center>
           <?php
           echo ("<br>");
-
       }
   }
-
-
-
-
-
-
 $reponse->closeCursor();
-
 ?>
     </fieldset>
 

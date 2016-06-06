@@ -13,7 +13,9 @@
 	<div class="formulaire">
 		<FORM name="formulaire" method="post" action="">
 
-
+			<div class="image" style="text-align:center; margin-top:1em;">
+				<img class="logo_loupe" src="Images/locker.png"/>
+			</div>
 
 	<p id="title">AJOUTER UN CLUB</p>
 	<table>
