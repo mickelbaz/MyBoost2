@@ -119,7 +119,7 @@
 			<td>Téléphone :</td>
 			<td><INPUT type="text" name="tel" size="28" value="<?php if(isset($_POST['tel'])){ echo htmlentities($_POST['tel']);}?>"/></td>
 			</tr>
-			
+
 			<tr>
 			<td>Adresse mail :</td>
 			<td><INPUT type="email" name="mail" size="28" value="<?php if(isset($_POST['mail'])){ echo htmlentities($_POST['mail']);}?>"/></td>
@@ -138,7 +138,8 @@
 			</tr>
 			<tr></tr><tr></tr>
 			<tr>
-			<td colspan="2"><INPUT type="checkbox" name="condition" value="1" <?php if(isset($_POST['condition']) && $_POST['condition']=="1"){?> checked <?php } ?>/><em>&nbsp J'accepte les conditions générales du site</em></td>
+			<td colspan="2"><INPUT type="checkbox" name="condition" value="1" <?php if(isset($_POST['condition']) && $_POST['condition']=="1"){?> checked <?php } ?>/><em>&nbsp J'accepte les conditions générales du site</em>
+			&nbsp&nbsp&nbsp<a href="index.php?page=condition_generale" target="_blank"><em>Lire les conditions ici</em></a></td>
 			</tr>
 
 			</table>

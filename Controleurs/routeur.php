@@ -173,7 +173,7 @@ function router(){
     break;
 
    case "afficher_membres" :
-   $afficher_liste_membres=afficher_membres();
+   $afficher_liste_membres=afficher_les_membres();
    break;
 
    case "gérer_groupe" :
@@ -281,6 +281,10 @@ function router(){
 
   case "supp_message" :
   $supprimer=supprimer_message($_GET['message'],$_GET['id'],$_GET['sujet']);
+  break;
+
+  case "condition_generale" :
+  $affiche_page=affiche_condition();
   break;
 
 

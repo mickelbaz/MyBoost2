@@ -57,4 +57,10 @@ function verif(){
     }
       require_once 'Vues/vueInscription.php';
   }
+
+
+function affiche_condition(){
+  require 'Vues/vueConditionGenerale.php';
+}
+
 ?>

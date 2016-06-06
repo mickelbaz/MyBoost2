@@ -1,3 +1,5 @@
+<?php require_once 'Vues/header.php'; ?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,7 +9,7 @@
     <title>Modification du groupe</title>
   </head>
   <body>
-<?php require_once 'Vues/header.php'; ?>
+
   <div class="head_groupe">
     <div class="groupe">
       <h1 class="name_groupe"><?php echo $donnees[0] ?><br></h1>
@@ -32,5 +34,7 @@
 </form>
   </body>
   <br></br>
-    <?php require 'Vues/footer.php'; ?>
+    
   </html>
+
+  <?php require 'Vues/footer.php'; ?>
