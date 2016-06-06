@@ -1,25 +1,21 @@
-<meta http-equiv="content-type" content="text/html">
-    <link rel="stylesheet" href="Contenu/sportchoisi.css">
-    <link rel="stylesheet" href="Contenu/sports.css" >
-    <meta charset="utf-8"/>
-
-
 <?php require 'Vues/header.php'; ?>
 
-  <html>
-
+<!DOCTYPE html>
+<html>
   <head>
-  <title>
-	Participer à "<?php echo $_GET["sport"]; ?>"
-  </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Contenu/sportchoisi.css">
+    <link rel="stylesheet" href="Contenu/sports.css" >
+    <title>Participer à "<?php echo $_GET["sport"]; ?>"</title>
+  </head>
 
+  <body>
 
-      <body>
     <br>
 
 	<?php
 try{
-    $bdd = new PDO('mysql:host=localhost;dbname=myboost;charset=utf8', 'root', 'root');
+    $bdd = new PDO('mysql:host=localhost;dbname=myboostp_myboost;charset=utf8', 'myboostp_root', 'appG6D');
 }
 catch(Exception $e){
         die('Erreur : '.$e->getMessage());

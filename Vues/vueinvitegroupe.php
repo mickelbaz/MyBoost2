@@ -100,7 +100,7 @@
   else{?>
     <table style="border-collapse:collapse;">
       <tr style="border-bottom:1px solid black;">
-        <td>Nom</td><td>Decription</td><td>Date</td><td>Heure</td><td>Nombre de places disponibles</td></tr>
+        <td>Nom</td><td>Description</td><td>Date</td><td>Heure</td><td>Nombre de places disponibles</td></tr>
         <tr></tr>
       <?php
       $nombre=array();
