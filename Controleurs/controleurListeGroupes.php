@@ -32,7 +32,7 @@ function rejoindre($nom){
 
 function notif($groupe){
   attente($groupe);
-  header('location: index.php?page=ListeGroupes');
+  header('location: index.php?page=accueil');
 }
 
  ?>
