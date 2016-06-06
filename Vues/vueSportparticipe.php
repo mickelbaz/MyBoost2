@@ -19,7 +19,7 @@
 
 	<?php
 try{
-    $bdd = new PDO('mysql:host=localhost;dbname=myboostp_myboost;charset=utf8', 'myboostp_root', 'appG6D');
+    $bdd = new PDO('mysql:host=localhost;dbname=myboost;charset=utf8', 'root', 'root');
 }
 catch(Exception $e){
         die('Erreur : '.$e->getMessage());
