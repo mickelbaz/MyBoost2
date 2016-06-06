@@ -189,7 +189,7 @@ function replace_info($nom_groupe){
 
 function recup_invitation(){
   $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
-  $req=$bdd->prepare('SELECT nom_groupe,qui_invite FROM invitation WHERE invite=?');
+  $req=$bdd->prepare('SELECT DISTINCT nom_groupe,qui_invite FROM invitation WHERE invite=?');
   $req->execute(array($_SESSION['pseudo']));
   return $req;
 }
