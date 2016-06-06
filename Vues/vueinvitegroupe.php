@@ -17,7 +17,6 @@
   $nombre=count(recupmembre($donnees[0]));
   $nb_place=recup_place($donnees[0]);
   $dispo=$nb_place [0] - $nombre;
-
   if (isset($_SESSION['pseudo']) && $dispo!=0){?>
 <a href="#" onclick="if (confirm('Rejoindre ce groupe ?')) window.location='index.php?page=grouperejoint&groupe=<?php echo $donnees[0] ?>'; return false"><img id="logomodif" class="modifier" src="Images/plus.png"/><span class="modifier"> Rejoindre le groupe</span></a><h1>
   <?php
@@ -121,7 +120,6 @@
           <td><?php echo $dispo[$i]?></td>
             <?php
         }
-
       if($dispo[$i]==0){?>
         <td>Plus de places disponibles</td>
         <?php
