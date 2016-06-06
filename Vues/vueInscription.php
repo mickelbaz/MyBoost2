@@ -139,12 +139,12 @@
 			<tr></tr><tr></tr>
 			<tr>
 			<td colspan="2"><INPUT type="checkbox" name="condition" value="1" <?php if(isset($_POST['condition']) && $_POST['condition']=="1"){?> checked <?php } ?>/><em>&nbsp J'accepte les conditions générales du site</em>
-			&nbsp&nbsp&nbsp<a href="index.php?page=condition_generale" target="_blank"><em>Lire les conditions ici</em></a></td>
+			<br><br><a href="index.php?page=condition_generale" target="_blank"><em>Lire les conditions ici</em></a></td>
 			</tr>
 
 			</table>
 
-			<br></br>
+			<br>
 			<!--<div class="B">Valider</div>-->
 			<div class="C"><INPUT type="submit" name='envoyer' value="Valider" /></div>
 			</FORM>

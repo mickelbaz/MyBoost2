@@ -56,7 +56,7 @@
     </div>
     <br>
 
-    <div class="commentaire"><h3>Tous les commentaires :</h3>
+    <div class="commentaire"><h3>Tous les commentaires</h3>
 
     <?php foreach ($comment as list($pseudo,$date,$commentaire,$note)){
     echo $pseudo ?> le <?php echo $date  ?> :

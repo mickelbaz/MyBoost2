@@ -1,20 +1,20 @@
 <?php
 
 function membres_admin(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT pseudo,mail FROM sportif WHERE pseudo!=? ORDER BY pseudo ASC');
   $req->execute(array($_SESSION['pseudo']));
   return $req;
 }
 
 function groupes_admin(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->query('SELECT nom,description,region FROM groupe');
   return $req;
 }
 
 function supprimer_personne_bdd($pseudo){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('DELETE FROM sportif WHERE pseudo=?');
     $req->execute(array($pseudo));
     $req2=$bdd->prepare('DELETE FROM groupe WHERE pseudo_createur=?');
@@ -30,13 +30,13 @@ function supprimer_personne_bdd($pseudo){
 }
 
 function membre_banni($pseudo,$mail){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('INSERT INTO bannir (pseudo,mail) VALUES (:pseudo,:mail)');
     $req->execute(array('pseudo'=>$pseudo,'mail'=>$mail));
 }
 
 function supp_club($club){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('DELETE FROM salle WHERE nom=?');
     $req->execute(array($club));
     $req2=$bdd->prepare('DELETE FROM participe WHERE nom_evenement IN (SELECT nom FROM évènement WHERE lieu=?)');
@@ -46,39 +46,39 @@ function supp_club($club){
 }
 
 function supp_commentaire($commentaire){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('DELETE FROM commentaire WHERE commentaire=?');
     $req->execute(array($commentaire));
 }
 
 
 function add_commentaire($commentaire){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('INSERT INTO commentaire WHERE commentaire=?');
     $req->execute(array($commentaire));
 }
 
 function recup_faq(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->query('SELECT id,question,reponse FROM faq');
   return $req;
 }
 
 function recup_faq_id($id){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('SELECT id,question,reponse FROM faq WHERE id=?');
   $req->execute(array($id));
   return $req;
 }
 
 function modif_faq(){
-    $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+    $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
     $req=$bdd->prepare('UPDATE faq SET question=?, reponse=? WHERE id=?');
     $req->execute(array($_POST['question'],$_POST['reponse'],$_GET['id']));
 }
 
 function ajouter_faq(){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('INSERT INTO faq (question,reponse) VALUES(:question,:reponse)');
   $req->execute(array(
     'question'=>$_POST['question'],
@@ -87,7 +87,7 @@ function ajouter_faq(){
 }
 
 function supp_faq($id){
-  $bdd=new PDO('mysql:host=localhost; dbname=myboost; charset=utf8', 'root', 'root', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
+  $bdd=new PDO('mysql:host=localhost; dbname=myboostp_myboost; charset=utf8', 'myboostp_root', 'appG6D', array (PDO::ATTR_ERRMODE =>PDO::ERRMODE_EXCEPTION));
   $req=$bdd->prepare('DELETE FROM faq WHERE id=?');
   $req->execute(array($id));
 }

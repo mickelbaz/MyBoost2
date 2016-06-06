@@ -1,5 +1,4 @@
 <?php
-
 function afficher_sports(){
   $sport_aquatique=sport_par_type('aquatique')->fetchAll();
   $sport_ballon=sport_par_type('ballon')->fetchAll();
@@ -8,6 +7,4 @@ function afficher_sports(){
   $sport_combat=sport_par_type('combat')->fetchAll();
     require 'Vues/vueSports.php';
   }
-
-
 ?>
