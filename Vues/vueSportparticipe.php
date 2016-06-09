@@ -10,12 +10,10 @@
   </head>
 
   <body>
-
     <br>
-
 	<?php
 try{
-    $bdd = new PDO('mysql:host=localhost;dbname=myboostp_myboostp_myboost;charset=utf8', 'myboostp_root', 'appG6D');
+    $bdd = new PDO('mysql:host=localhost;dbname=myboostp_myboost;charset=utf8', 'myboostp_root', 'appG6D');
 }
 catch(Exception $e){
         die('Erreur : '.$e->getMessage());

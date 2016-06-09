@@ -1,6 +1,6 @@
 @font-face{
 	font-family:"Avenir Next LT Pro";
-	src:url(AvenirNextLTPro-Demi.otf);
+	src:url(../AvenirNextLTPro-Demi.otf);
 }
 *{
 	font-family: Avenir Next LT Pro;
